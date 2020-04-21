@@ -2,7 +2,7 @@ const config = {
 	"gatsby": {
 		"pathPrefix": "/",
 		"siteUrl": "https://docs.sensenet.com",
-		"gaTrackingId": null
+		"gaTrackingId": process.env.GA_TRACKING_ID
 	},
 	"header": {
     "logo": "",
@@ -20,9 +20,9 @@ const config = {
       { "text": "Integrations", "link": "/integrations/index"}
 		],
 		"search": {
-			"enabled": false,
-			"indexName": "",
-			"algoliaAppId": process.env.GATSBY_ALGOLIA_APP_ID,
+			"enabled": true,
+			"indexName": "Docs",
+      "algoliaAppId": process.env.GATSBY_ALGOLIA_APP_ID,
 			"algoliaSearchKey": process.env.GATSBY_ALGOLIA_SEARCH_KEY,
 			"algoliaAdminKey": process.env.ALGOLIA_ADMIN_KEY
 		}

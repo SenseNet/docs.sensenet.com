@@ -1195,3 +1195,31 @@ img {
   text-decoration: underline;
   cursor: pointer
 }
+
+/* algolia search results */
+
+.hitWrapper.showResults {
+  overflow-x: hidden;
+}
+.ais-Hits {}
+.ais-Hits-list {}
+.ais-Hits-item {
+  border-color: #eee;
+}
+.ais-Hits-item a {}
+.ais-Hits-item mark {
+  font-size: 1.17em;
+  background-color: #bde4e1;
+}
+.ais-Snippet {
+  font-size: 12px;
+}
+.ais-Snippet-highlighted {
+  background-color: #bde4e1;
+}
+
+.poweredBy {
+  margin-top: 20px;
+  border-color: #eee;
+  opacity: .8;
+}
