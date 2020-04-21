@@ -1,0 +1,6 @@
+```javascript
+https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Description%3Aabbreviate~0.8
+
+// the special characters should be url encoded
+// the actual query here is ?query=Description:abbreviate~0.8
+```
