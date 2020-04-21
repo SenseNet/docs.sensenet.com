@@ -54,7 +54,6 @@ const sideMenuConfig = {
   },
   tutorials: {},
   guides: {},
-  exampleApps: {},
   integrations: {}
 }
 

@@ -1,7 +1,7 @@
 const config = require("../../config.js");
 
-const pageQuery = `{
-  pages: allMdx {
+const docsQuery = `{
+  docs: allMdx(filter: {fileAbsolutePath: {regex: "/content/"}}) {
     edges {
       node {
         objectID: id
@@ -33,8 +33,8 @@ const indexName = config.header.search ? config.header.search.indexName : '';
 
 const queries = [
   {
-    query: pageQuery,
-    transformer: ({ data }) => flatten(data.pages.edges),
+    query: docsQuery,
+    transformer: ({ data }) => flatten(data.docs.edges),
     indexName: `${indexName}`,
     settings,
   },

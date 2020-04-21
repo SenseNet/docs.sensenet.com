@@ -12878,7 +12878,7 @@ react-instantsearch-core@^6.4.0:
     prop-types "^15.5.10"
     react-fast-compare "^3.0.0"
 
-react-instantsearch-dom@^6.0.0:
+react-instantsearch-dom@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.4.0.tgz#61c7e453652136ebc549e6427e2dab7d57519f07"
   integrity sha512-FyJaD+jVNt59KOd8Nt6nQrmueEEJNH0VmS9IlSwWbQz2NrkQniaCFm+k8G13LsAASOCq4vQ8ULG2up+WpJeS8w==
@@ -15349,9 +15349,9 @@ ua-parser-js@^0.7.18:
   integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
 
 unbzip2-stream@^1.0.9:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/unbzip2-stream/-/unbzip2-stream-1.4.1.tgz#151b104af853df3efdaa135d8b1eca850a44b426"
-  integrity sha512-sgDYfSDPMsA4Hr2/w7vOlrJBlwzmyakk1+hW8ObLvxSp0LA36LcL2XItGvOT3OSblohSdevMuT8FQjLsqyy4sA==
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/unbzip2-stream/-/unbzip2-stream-1.4.2.tgz#84eb9e783b186d8fb397515fbb656f312f1a7dbf"
+  integrity sha512-pZMVAofMrrHX6Ik39hCk470kulCbmZ2SWfQLPmTWqfJV/oUm0gn1CblvHdUu4+54Je6Jq34x8kY6XjTy6dMkOg==
   dependencies:
     buffer "^5.2.1"
     through "^2.3.8"
