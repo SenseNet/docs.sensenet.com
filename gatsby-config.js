@@ -55,14 +55,6 @@ const plugins = [
       anonymize: false,
     },
   },
-  {
-  resolve: `gatsby-plugin-hotjar-tracking`,
-    options: {
-      includeInDevelopment: false,
-      id: process.env.GATSBY_HOTJAR_TRACKING_ID,
-      sv: process.env.GATSBY_HOTJAR_SNIPPET_VERSION
-    }
-  },
 ];
 // check and add algolia
 if (config.header.search && config.header.search.enabled && config.header.search.algoliaAppId && config.header.search.algoliaAdminKey) {
@@ -91,6 +83,15 @@ if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
 } else {
   plugins.push('gatsby-plugin-remove-serviceworker');
 }
+plugins.push(
+  {
+    resolve: `gatsby-plugin-hotjar-tracking`,
+      options: {
+        includeInDevelopment: true,
+        id: process.env.GATSBY_HOTJAR_TRACKING_ID,
+        sv: process.env.GATSBY_HOTJAR_SNIPPET_VERSION
+      }
+})
 module.exports = {
   pathPrefix: config.gatsby.pathPrefix,
   siteMetadata: {
