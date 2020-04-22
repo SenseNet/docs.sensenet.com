@@ -24,7 +24,7 @@ const config = {
 			"indexName": "Docs",
       "algoliaAppId": process.env.GATSBY_ALGOLIA_APP_ID,
 			"algoliaSearchKey": process.env.GATSBY_ALGOLIA_SEARCH_KEY,
-			"algoliaAdminKey": process.env.ALGOLIA_ADMIN_KEY
+			"algoliaAdminKey": process.env.GATSBY_ALGOLIA_ADMIN_KEY
 		}
 	},
 	"sidebar": {
@@ -41,7 +41,7 @@ const config = {
 		"title": "sensenet | Documentation",
 		"description": "sensenet Documentation for developers",
 		"ogImage": null,
-		"docsLocation": "https://github.com/herflis/docs-temp/tree/master/content",
+		"docsLocation": "https://github.com/sensenet/docs.sensenet.com/tree/master/content",
 		"favicon": "https://www.sensenet.com/Root/Skins/sncom/images/favicon-32x32.png"
 	},
 	"pwa": {

@@ -1,4 +1,3 @@
-require("dotenv").config;
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
@@ -60,8 +59,8 @@ const plugins = [
   resolve: `gatsby-plugin-hotjar-tracking`,
     options: {
       includeInDevelopment: false,
-      id: process.env.HOTJAR_TRACKING_ID,
-      sv: process.env.HOTJAR_SNIPPET_VERSION
+      id: process.env.GATSBY_HOTJAR_TRACKING_ID,
+      sv: process.env.GATSBY_HOTJAR_SNIPPET_VERSION
     }
   },
 ];
@@ -70,8 +69,8 @@ if (config.header.search && config.header.search.enabled && config.header.search
   plugins.push({
     resolve: `gatsby-plugin-algolia`,
     options: {
-      appId: config.header.search.algoliaAppId, // algolia application id
-      apiKey: config.header.search.algoliaAdminKey, // algolia admin key to index
+      appId: process.env.GATSBY_ALGOLIA_APP_ID, // algolia application id
+      apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY, // algolia admin key to index
       queries,
       chunkSize: 10000, // default: 1000
     }}
