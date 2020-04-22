@@ -3,13 +3,7 @@ import { connectSearchBox } from "react-instantsearch-dom"
 
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
-import { Search } from "styled-icons/fa-solid/Search";
 
-const SearchIcon = styled(Search)`
-  width: 1em;
-  pointer-events: none;
-  margin-right: 10px
-`
 const focus = (props) => css`
   background: white;
   color: ${props => props.theme.darkBlue};
@@ -73,7 +67,6 @@ export default connectSearchBox(({ refine, ...rest }) => {
   }
   return (
     <Form className={'formElement'} onSubmit={preventSubmit}>
-      <SearchIcon />
       <Input
         className={'searchInput '}
         type="text"
