@@ -1236,3 +1236,24 @@ img {
   opacity: .8;
   padding-bottom: 10px;
 }
+
+/* language menu */
+
+
+.langButton {
+  border-right: solid 1px #eee !important;
+  border-radius: 0px !important;
+  padding: 10px 20px !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  background: #fff !important;
+  min-height: 64px !important;
+}
+.langButtonActive {
+  border-right: solid 1px #eee !important;
+  border-radius: 0px !important;
+  padding: 10px 20px !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  min-height: 4px !important;
+}
