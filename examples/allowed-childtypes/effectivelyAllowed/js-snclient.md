@@ -1,5 +1,4 @@
 ```javascript
-const result = await repository.getExplicitAllowedChildTypes({
-  idOrPath: "/Root/Content/IT",
-});
+const result = await repository.allowedChildTypes
+  .getExplicit("/Root/Content/IT");
 ```

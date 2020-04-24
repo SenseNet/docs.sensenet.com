@@ -1,10 +1,6 @@
 ```javascript
-const result = await repository.executeAction({
+const response = await repository.preview.getComments({
   idOrPath: '/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx',
-  oDataOptions: {
-    page: 3,
-  }
-  name: 'GetPreviewComments',
-  method: 'GET'
-})
+  page: 3
+});
 ```
