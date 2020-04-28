@@ -14,7 +14,7 @@ The following example shows you how you can restore an item from the trash to it
 
 <tab category="content-management" article="trash" example="restoreFromTrash" />
 
-## Restore items to a different destination
+## Restore items to different destination
 
  You are not only able to restore it to its original place, but setting a new target you can restore it to another destination if the settings there (permissions, allowed childtypes) make it possible:
 
