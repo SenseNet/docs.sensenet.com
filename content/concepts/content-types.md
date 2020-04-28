@@ -14,7 +14,7 @@ https://community.sensenet.com/docs/content-type/
   - appearance
   - validation
   - default value, etc
-  - disableing
+  - disabling
 # Custom content type
 # Content type definitions
 https://community.sensenet.com/docs/ctd/
