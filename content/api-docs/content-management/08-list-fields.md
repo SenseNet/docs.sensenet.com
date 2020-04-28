@@ -31,13 +31,13 @@ Following example shows how to use expando fields in an OData request as selecte
 
 ## List expando fields defined on a specified list
 
-sensenet lets you get the list of the custom fields added to an individual custom list requesting its [metadata](/api-docs/basic-concepts/metadata). Following request returns the Service Metadata Document of the specified instance that exposes the data model of the service in XML or JSON format:
+sensenet lets you get the list of the custom fields added to an individual custom list requesting its [metadata](/api-docs/basic-concepts/06-metadata). Following request returns the Service Metadata Document of the specified instance that exposes the data model of the service in XML or JSON format:
 
 <tab category="content-management" article="list-fields" example="metadata" />
 
 ## Add a new list field
 
-The following example demonstrates how can you add a new metadata field to a content list, along with setting configuration values of the field (e.g. `Compulsory` or `MaxValue`).:
+The following example demonstrates how can you add a new metadata field to a content list, along with setting configuration values of the field (e.g. `Compulsory` or `MinValue`).:
 
 <tab category="content-management" article="list-fields" example="addField" />
 

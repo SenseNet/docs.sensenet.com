@@ -1,5 +1,5 @@
 ```
-url: "/OData.svc/Content/IT('Document_Library')",
+url: "/OData.svc/Content/IT('Document_Library')/EditField",
 type: 'POST',
 data: "models=[" + JSON.stringify({
   Name: 'MyField1',
