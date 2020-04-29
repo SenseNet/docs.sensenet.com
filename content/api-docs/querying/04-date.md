@@ -46,7 +46,7 @@ The following example query returns contents created between the two given dates
 
 # Querying with dynamic template parameters
 
-Using template parameters helps you to use dynamic values in queries. For further information and full list of the available template parameters see the [related docs](/querying/11-template-parameters#list-of-builtin-template-parameters) and for some date query related help see the following examples.
+Using template parameters helps you to use dynamic values in queries. For further information and full list of the available template parameters see the [related docs](/api-docs/querying/11-template-parameters#listofbuilt-intemplateparameters) and for some date query related help see the following examples.
 
 This query returns the contents modified yesterday:
 
@@ -62,10 +62,8 @@ The following query returns the list of contents created in the last year:
 
 # Query by lifespan validity
 
-In some content management scenarios contents have lifespan information. This means the content is created but will be valid or available only on a defined date in the future and it may become invalid on another date. See lifespan in details in the [related doc at the API basic concepts](/basic-concepts/lifespan).
+In some content management scenarios contents have lifespan information. This means the content is created but will be valid or available only on a defined date in the future and it may become invalid on another date. See lifespan in details in the [related doc at the API basic concepts](/api-docs/basic-concepts/08-lifespan).
 
 Lifespan filtering is turned off by default. If you want to get results depending on the lifespan status of content (value of its `ValidFrom` and `ValidTill` fields), you can switch this filter on in your query as you can see in the following example:
 
 <tab category="querying" article="query-by-date" example="byLifespan" />
-
-

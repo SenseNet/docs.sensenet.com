@@ -51,10 +51,10 @@ The following HTTP methods can be used in requests to specify the expected opera
 
 | method ||
 | --- | --- |
-| GET | [getting one or more entities](/basic-concepts/01-entry). The URL contains all request information. |
-| PUT/PATCH | [modifying an entity](/content-management/02-update). The URL defines the entity and the request body contains a JSON object. This object describes the properties and new values of the requested entity. |
-| POST | [creating an entity](/content-management/01-create). The URL defines the parent entity and the request body contains a JSON object. The URL determines the container of the new entity. The JSON object describes the properties and initial values of the new entity. |
-| DELETE | [deleting an entity](/content-management/03-delete). The entity (defined in the URL) and its children will be deleted. |
+| GET | [getting one or more entities](/api-docs/basic-concepts/01-entry). The URL contains all request information. |
+| PUT/PATCH | [modifying an entity](/api-docs/content-management/02-update). The URL defines the entity and the request body contains a JSON object. This object describes the properties and new values of the requested entity. |
+| POST | [creating an entity](/api-docs/content-management/01-create). The URL defines the parent entity and the request body contains a JSON object. The URL determines the container of the new entity. The JSON object describes the properties and initial values of the new entity. |
+| DELETE | [deleting an entity](/api-docs/content-management/03-delete). The entity (defined in the URL) and its children will be deleted. |
 
 # Response
 

@@ -12,7 +12,7 @@ The `OR` operator is the default conjunction operator. This means that if there 
 
 <tab category="querying" article="query-multiple-predicates" example="or" />
 
-The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for event that have the type demo or meeting in the field EventType, use this query:
+The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for event that have the type demo and meeting in the field EventType, use this query:
 
 <tab category="querying" article="query-multiple-predicates" example="and" />
 
@@ -28,7 +28,7 @@ The `NOT` operator excludes content that contain the term after `NOT`. (It canno
 
 The "-" or prohibit operator excludes documents that contain the term after the "-" symbol.
 
-To search for content that contain "apple" but not "melon" use the query:
+To search for content that contain "upgrade" but not "demo" use the query:
 
 <tab category="querying" article="query-multiple-predicates" example="minus" />
 
