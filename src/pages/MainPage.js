@@ -35,22 +35,22 @@ const MainPage = () => {
                       <><li>API clients, frameworks and libs
                         <ul className="APIBoxList">
                           <li>
-                            <a href="" title="JavaScript client">
+                            <a href="/api-docs/basic-concepts" title="JavaScript client">
                               <img src={jsLogo} />
                             </a>
                           </li>
                           <li>
-                            <a href="" title=".NET client">
+                            <a href="/api-docs/basic-concepts" title=".NET client">
                               <img src={netLogo} />
                             </a>
                           </li>
                           <li>
-                            <a href="" title="ReactJS">
+                            <a href="/api-docs/basic-concepts" title="ReactJS">
                               <img src={reactLogo} />
                             </a>
                           </li>
                           <li>
-                            <a href="" title="Redux">
+                            <a href="/api-docs/basic-concepts" title="Redux">
                               <img src={reduxLogo} />
                             </a>
                           </li>
