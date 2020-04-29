@@ -38,6 +38,7 @@ function myFunction() {
   }
 }
 
+
 const Header = ({location}) => (
   <StaticQuery
     query={
@@ -77,6 +78,8 @@ const Header = ({location}) => (
         }
       } = data;
       const finalLogoLink = logo.link !== '' ? logo.link : '/';
+
+      const isActive = (link) => location.pathname.includes(link)
       return (
         <div className={'navBarWrapper'}>
           <nav className={location.pathname.includes('api-docs') ? 'navBarDefault' : 'navBarWithShadow'}>
@@ -96,7 +99,7 @@ const Header = ({location}) => (
                 {headerLinks.map((link, key) => {
                   if(link.link !== '' && link.text !== '') {
                     return(
-                      <li key={key}>
+                      <li key={key} className={isActive(link.name) ? 'mainMenuItemActive' : 'mainMenuItem'}>
                         <a className="sidebarLink" href={link.link} rel="noopener" dangerouslySetInnerHTML={{__html: link.text}} />
                       </li>
                     );

@@ -12,12 +12,12 @@ const config = {
 		"helpUrl": "https://gitter.im/SenseNet/sensenet",
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
 		"links": [
-      { "text": "API Docs", "link": "/api-docs/basic-concepts"},
-      { "text": "Example Apps", "link": "/example-apps/index"},
-      { "text": "Tutorials", "link": "/tutorials/index"},
-      { "text": "Concepts", "link": "/concepts/index"},
-      { "text": "Admin-ui Guides", "link": "/guides/index"},
-      { "text": "Integrations", "link": "/integrations/index"}
+      { "text": "API Docs", "link": "/api-docs/basic-concepts", "name": "api-docs"},
+      { "text": "Example Apps", "link": "/", "name": "example-apps"},
+      { "text": "Tutorials", "link": "/", "name": "tutorial"},
+      { "text": "Concepts", "link": "/concepts/index", "name": "concepts"},
+      { "text": "Admin-ui Guides", "link": "/", "name": "guides"},
+      { "text": "Integrations", "link": "/", "name": "integrations"}
 		],
 		"search": {
 			"enabled": true,
