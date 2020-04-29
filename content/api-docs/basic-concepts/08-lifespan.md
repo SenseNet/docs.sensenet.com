@@ -12,4 +12,4 @@ The lifespan filtering is turned off by default in sensenet, so if you want to g
 
 <tab category="basic-concepts" article="lifespan" example="lifespanfilter" />
 &nbsp;
-<note>Lifespan filtering requires a few other configuration and content managing steps. Check the <a href="/concepts/lifespan">related concept docs</a> for further information.</note>
+<note>Lifespan filtering requires a few other configuration and content managing steps. Check the <a href="/concepts/content-scheduling">related concept docs</a> for further information.</note>

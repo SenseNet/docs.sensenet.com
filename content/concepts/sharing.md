@@ -51,7 +51,7 @@ By deleting sharing entries using the Sharing API, the previously sent sharing l
 When you share something with an email address or a known user, the system send a notification email. It will contain a sharing link that the user will be able to follow to access the content. About forwarding this email to others please see the *Sharing modes* section above.
 
 <note>
-By default the notification feature for sharing is switched on, but is possible to switch it off globally or for a subtree or per sharing API calls (see <a href="/api-docs/sharing/#Notifications">here</a>). Notification emails can also be customized at these levels. See the <i>Configuration</i> section below for details.
+By default the notification feature for sharing is switched on, but is possible to switch it off globally or for a subtree or per sharing API calls (see <a href="/api-docs/sharing/#notifications">here</a>). Notification emails can also be customized at these levels. See the <i>Configuration</i> section below for details.
 </note>
 
 # Configuration

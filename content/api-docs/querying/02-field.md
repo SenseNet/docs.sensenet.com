@@ -10,7 +10,7 @@ You can define which fields should be saved to the index by marking them in the 
 
 It is also possible to switch off indexing for certain content types. In that case nobody will be able to find the instances made with those content types using queries, and the index will be smaller.
 
-About the possible indexing configurations and field definition see the [schema](/concepts/content-model) and the [content type concepts](/concepts/content-types).
+About the possible indexing configurations and field definition see the [schema](/concepts/content-models) and the [content type concepts](/concepts/content-types).
 
 Basically query by a field works by adding the chosen field name to the query with a value that you are looking for:
 

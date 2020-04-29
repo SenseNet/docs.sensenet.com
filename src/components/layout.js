@@ -108,7 +108,6 @@ const Layout = ({ children, location }) => {
         <RightSidebar location={location} />
       </RightSideBarWidth>
     </Wrapper>
-    }
   </MDXProvider>
   } else {
     container = <MDXProvider components={mdxComponents}>
@@ -123,7 +122,6 @@ const Layout = ({ children, location }) => {
           <RightSidebar location={location} />
         </RightSideBarWidth>
       </Wrapper>
-      }
     </MDXProvider>
   }
 

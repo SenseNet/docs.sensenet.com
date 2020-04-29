@@ -6,7 +6,7 @@ metaDescription: Exploring actions
 
 # Exploring actions
 
-Every content has executable actions in the sensenet content repository managed by the Action Framework. List of these actions are available via the `Actions` OData property. As it was mentioned at the [`$expand` option's section](/basic-concepts/03-select-expand/#expand) the `Actions` property's value can be expanded to get its children like a collection of actions and functions with all of their own properties.
+Every content has executable actions in the sensenet content repository managed by the Action Framework. List of these actions are available via the `Actions` OData property. As it was mentioned at the [`$expand` option's section](/api-docs/basic-concepts/03-select-expand/#expand) the `Actions` property's value can be expanded to get its children like a collection of actions and functions with all of their own properties.
 
 The content of the result collection depends on availability of each individual Action item, so they can be adjusted not only by their existence as a content, but by permission settings. So in the end this list will contain only those actions and function that can be executed by the current user on the given content.
 
