@@ -159,6 +159,10 @@ a:hover {
   display: flex;
   align-items: center;
 }
+.mainMenuItemActive {
+  border-bottom: solid #29a59b;
+}
+
 .formElement
 {
   background-color: transparent;
@@ -316,6 +320,8 @@ a:hover {
 }
 .navBarUL li {
   list-style-type: none;
+  padding: 10px 0px;
+  margin: 0 15px;
 }
 .navBarUL {
   -webkit-overflow-scrolling: touch;
@@ -327,7 +333,7 @@ a:hover {
   font-weight: 500;
   line-height: 1em;
   opacity: 1;
-  padding: 10px 15px;
+  display: inline-block;
 }
 .navBarNav
 {
@@ -1121,6 +1127,14 @@ img {
   padding: 15px;
 }
 
+.BoxTitleImg {
+  max-width: 40px;
+  max-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 .Box ul {
   margin: 0;
   padding: 0;
@@ -1131,11 +1145,18 @@ img {
   margin: 0;
   font-size: 12px;
   padding: 8px 0px;
+}
+
+.Box li.listitem {
   border-bottom: solid 1px #eee
 }
 
 .Box li a {
   color: #000
+}
+
+.Box li li {
+  padding: 8px 0 0;
 }
 
 .Box h3 {
@@ -1156,6 +1177,17 @@ img {
   position: absolute;
   left: 15px;
   bottom: 15px;
+}
+
+.APIBoxList li {
+  border: none;
+  display: inline-block;
+  margin: 15px 15px 0 0;
+}
+
+.APIBoxList img {
+  max-width: 30px;
+  max-height: 30px;
 }
 
 .Footer {
