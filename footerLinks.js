@@ -1,11 +1,11 @@
 const footer = [
   {
     title: 'Quickstart',
-    link: '/tutorials/quickstart'
+    link: '/'
   },
   {
     title: 'Troubleshooting',
-    link: '/troubleshooting'
+    link: '/'
   },
   {
     title: 'Contact us',
