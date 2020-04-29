@@ -6,7 +6,7 @@ metaDescription: Metadata OData option
 
 # Metadata
 
-This option controls the metadata content in output entities. It is invented for development purposes, most of the cases setting its value to reduced or hidden is sufficient and it also improves output readability.
+This option controls the metadata content in output entities. It is invented for development purposes, most of the cases setting its value to minimal or no is sufficient and it also improves output readability.
 
 There are three types of metadata:
 

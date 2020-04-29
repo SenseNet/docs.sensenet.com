@@ -36,6 +36,6 @@ Creating a user works the same way as creating other type of content in the repo
 
 # Creating a content by template
 
-sensenet provides you the possibility to create a content by a [content template](/concepts/content-template). In the following case the request will create a **workspace** with an **event list** under it with the name Calendar and fill its `Index` field with the value 2. Other field values will be filled by the default values defined on `CalendarTemplate` template. See the `__ContentTemplate` parameter:
+sensenet provides you the possibility to create a content by a [content template](/concepts/content-templates). In the following case the request will create a **workspace** with an **event list** under it with the name Calendar and fill its `Index` field with the value 2. Other field values will be filled by the default values defined on `CalendarTemplate` template. See the `__ContentTemplate` parameter:
 
 <tab category="content-management" article="create" example="createByTemplate" />

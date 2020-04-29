@@ -41,5 +41,5 @@ This example shows you how to move a content to the trash:
 <tab category="content-management" article="delete" example="moveTotheTrash" />
 &nbsp;
 <note>
-See the related docs about the trash functionality for more details <a href="/content-management/trash">here</a>.
+See the related docs about the trash functionality for more details <a href="/api-docs/content-management/07-trash">here</a>.
 </note>
