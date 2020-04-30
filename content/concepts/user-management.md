@@ -14,10 +14,10 @@ sensenet offers special and built-in groups and users by default. All users and 
 
 Built-in groups in sensenet are regular groups, meaning their membership can be freely modified. They are used in the default Content Repository structure extensively, but no hard-coded logic is built on them (except for the Administrators group, please do not delete that one). This means you can freely change or replace these groups with your own custom groups in your permission settings. The best practice however is that you build on them, using the suggested purpose in the following sections.
 
-## public domain 
+## Public domain 
 `(/Root/IMS/Public)` for the users
 
-## builtin domain (hidden)
+## Builtin domain (hidden)
 for technical users and groups that cannot be modified but its capabilities could be used in development
 
 **Visitor:** Everybody is a visitor until logging in. Therefore you cannot log in as a Visitor user because it represents users who are not logged in. It has a couple of permission settings in the default structure for content that should be accessible for everybody. in case you are building a public website with sensenet with a subtree that contains content that should be available to browse and open publicly, you have to work with Visitor and allow this technical user to see and open contents where it is necessary.
