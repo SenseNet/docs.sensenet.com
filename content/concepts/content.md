@@ -14,11 +14,11 @@ A specific content is identified by a unique id and also by its path in the repo
 
 # How should I imagine a content?
 
-Every content is built up of fields (a user content for example has a *name* field and *password* field among others). Different types of content can be created by defining a different set of fields. The type of the content is called the ```content type``` and defines the set of fields a content possesses and also the behavior of it.
+Every content is built up of fields (a user content for example has a *name* field and *password* field among others). Different types of content can be created by defining a different set of fields. The type of the content is called the ```content type``` and defines the set of fields a content possesses and also the behavior of it. Learn more about [content types](/concepts/content-types).
 
 # How can I store/browse my data?
 
-sensenet's administrative surface provides a handful of tools to manage content. You can create new content of the defined content types and fill their fields with data, you can define new content types of any kind, you can copy, move, delete, rename content and upload/download files into/from the content repository and many many more.
+sensenet administrative surface provides a handful of tools to manage content. You can create new content of the defined content types and fill their fields with data, you can define new content types of any kind, you can copy, move, delete, rename content and upload/download files into/from the content repository and many many more.
 
 # Accessing content through the REST API
 
