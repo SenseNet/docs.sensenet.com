@@ -7,7 +7,7 @@ metaDescription: "sensenet Content Management"
 For content management we mean the processes of storing, editing, organizing and delivering content.
 
 # What is content regarding to sensenet?
-In sensenet everything is a content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the [content repository](/concepts/content-repository). It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a [content tree](/concepts/content-tree), so you can always think in subtrees and inheritance when managing and presenting content.
+In sensenet everything is a content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the [content repository](/concepts/content). It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a [content tree](/concepts/content-tree), so you can always think in subtrees and inheritance when managing and presenting content.
 
 # Basic content management actions in sensenet
 All the features that can be called basic content management actions are included in sensenet, so you can create, edit or delete a content, copy or move it to another folder.
