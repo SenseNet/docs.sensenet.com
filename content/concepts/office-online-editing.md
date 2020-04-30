@@ -3,7 +3,7 @@ title: "Office Online Editing"
 metaTitle: "sensenet - Office Online Editing"
 metaDescription: "sensenet Office Online Editing"
 ---
-sensenet enables collaborative content management, thanks to [Office online editing](/concepts/office-online-editing) among others.
+sensenet enables collaborative content management, thanks to [Office Online editing](/concepts/office-online-editing) among others.
 
 Being able to collaborate on the same document contemporary saves you time of emailing files, store them, and also prevents you from having to reconcile multiple versions of the same document.
 
