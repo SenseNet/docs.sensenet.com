@@ -4,8 +4,7 @@ metaTitle: "sensenet - Trash"
 metaDescription: "sensenet Trash"
 ---
 
-# introduction
-sensenet has a trash feature. When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin (/Root/Trash). 
+When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin `/Root/Trash`. 
 
 The Trash Bin is a central place for deleted documents where you can browse, restore or delete content permanently. It is also possible to provide a local (workspace-level) trash for users.
 
@@ -39,9 +38,9 @@ When deleting a trashed item, the content will be permanently deleted
 If the trash is disabled, the popup informs you that the feature is turned off. Be careful because you may delete a content permanently. Your content can't be restored in this case.
 
 
-# workspace trash
+# Workspace trash
 
-It is possible to provide a workspace-level trash for users. Deleted content in fact will still be moved to the global Trash (/Root/Trash) but users will be able to see content deleted from a particular workspace in a folder under that workspace. This functionality is practically a filter for the global Trash and can be accessed by creating a SmartFolder under the workspace. You can place the SmartFolder anywhere under the workspace.
+It is possible to provide a workspace-level trash for users. Deleted content in fact will still be moved to the global Trash `(/Root/Trash)` but users will be able to see content deleted from a particular workspace in a folder under that workspace. This functionality is practically a filter for the global Trash and can be accessed by creating a SmartFolder under the workspace. You can place the SmartFolder anywhere under the workspace.
 
 Properties of the SmartFolder:
 - Folder name: anything - e.g. Workspace Trash
@@ -50,35 +49,30 @@ Properties of the SmartFolder:
 
 All content deleted under the workspace will be visible here and can be restored or deleted permanently. The deleted content are still accessible and restorable from the global Trash and all size and date settings are still applied.
 
-# trash bin options
-Trash Bin options can be edited through API. 
+# Trash bin options
+Trash Bin options can be edited through API.
 
-### Enable/disable the trash feature globally
-
-If the trash is enabled in the system, deleted content can be moved to the Trash Bin. You can find them on the path /Root/Trash.
+## Enable/disable the trash feature globally
+If the trash is enabled in the system, deleted content can be moved to the Trash Bin. You can find them on the path `/Root/Trash`.
 If you disable the trash, previously deleted content won't disappear, you or the owner can restore them freely. Content deleted with disabled trash will be removed permanently from the database.
 
-### Set the retention time of deleted contents
+## Set the retention time of deleted contents
+The value set here is the amount of time (in days) the content should stay in the trash before it could be permanently deleted. If the value is greater than 0, users (or any automation) cannot remove the content from the trash before the expiration date. Changing this value does not effect previously deleted content.
 
-The value set here is the days the content should stay in the trash before deleting it permanently. If the value is greater than 0, users (or any automatism) cannot remove the content from the trash before the expiration date. Changing this value does not effect previously deleted content.
-
-### Set the size of the Trash Bin
-
+## Set the size of the Trash Bin
 The size quota is the amount of content in megabytes that can be stored in the trash. This value is only a UI hint, it does not effect deleting content. If the size is exceeded the Trash Bin main page will display a message about how much space is used. The administrator should take care of purging content from the trash manually.
 
-### Set Trash Bag capacity
-
+## Set Trash Bag capacity
 If you provide a number greater than 0 as the Trash Bag capacity, only containers having a smaller number of children can be moved to the trash at the same time. This setting effects only one delete operation. In case this setting prevents you to delete a big subtree you can still delete those content one-by-one.
 
-### Enable/disable the trash feature on a container
+## Enable/disable the trash feature on a container
+You can enable or disable the trash feature on almost any container content. By default, the feature is enabled and deleted content go to the trash. You can change this on the Edit page of any folder or list. This setting affects only the container (list, workspace) you edit, and not the child folders.
 
-You can enable or disable the trash feature on almost any container content. By default, the feature is enabled and deleted content go to the trash. You can change this on the Edit page of any folder or list. This setting effects only the container (list, workspace) you edit, and not the child folders.
+# For devs
 
-# for devs
+## Trash bag
 
-### trash bag
-
-The Trash Bag is a simple container content that 'wraps' the deleted content. You can access the deleted item through the DeletedContent property of the Trash Bag.
+The Trash Bag is a simple container content that 'wraps' the deleted content. You can access the deleted item through the `DeletedContent` property of the Trash Bag.
 
 ```
 var dc = trashBag.DeletedContent;
@@ -86,6 +80,5 @@ if (dc != null)
 	contentLabel.Text = dc.DisplayName;
 ```
 
-### permissions
-
+## Permissions
 The content moved to the trash will preserve its actual permissions and the container Trash Bag will get all its inherited permissions. This means that if you delete a content that only few users can see, other users won't see it in the trash either.
