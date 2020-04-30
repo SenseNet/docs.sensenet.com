@@ -13,12 +13,12 @@ sensenet comes with a built-in role and permission system. These pre-defined rol
 
 sensenet offers special and built-in groups and users by default. Built-in groups in sensenet are regular groups, meaning their membership can be freely modified. They are used in the default Content Repository structure extensively, but no hard-coded logic is built on them. This means you can freely change or replace these groups with your own custom groups in your permission settings.
 
-There can be some cases when you need to create a new role, which is actually a new group. You just need to create the group and set the proper permission rules of this group, then add the users to it. This way, instead of setting permissions to individual users one by one, they will earn the permissions of the group automatically. For example, if you would like to create the role "Approval", you create the group "Approval". Then in the subtree you allow the permission "Approve" and put the required users into the group.
+There can be some cases when you need to create a new role, which is actually a new group. You just need to create the group and set the proper permission rules of this group, then add the users to it. This way, instead of setting permissions to individual users one by one, they will earn the permissions of the group automatically. For example, if you would like to create the role "Approval", you create a new group then in the subtree you allow the permission "Approve" and put the required users into the group.
 
 
 # Modifying an existing role
 
-It is possible to change the permission settings for groups, these changes follows the same logic of the creation of a new role: this means it is enough to set the new permissions (so make the changes) directly on the subtree for the group, the group member users will earn the permission setting automatically. A simple example is that for a certain group you want to allow/ deny the permission to see a content, for example a folder.
+It is possible to change the permission settings for groups. These changes follows the same logic of the creation of a new role: this means it is enough to set the new permissions (so make the changes) directly on the group, members will earn the permission settings automatically. A simple example is that for a certain group you want to allow/ deny the permission to see a content, for example a folder.
 
 # Permissions
 
