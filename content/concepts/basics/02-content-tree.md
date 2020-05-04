@@ -18,7 +18,7 @@ sensenet search engine provides you an easy and performant way to query content 
 
 # Content access and url resolution
 
-As it is mentioned above, every content in the content repository is not only identified by its unique id but also its path. If you move a content to another folder thus change its path, the system keeps track of the changes making it possible to use the (original) path as a link to the content.
+As it is mentioned above, every content in the content repository is not only identified by its unique id but also its path. If you move a content to another folder thus change its path, the system keeps track of the changes making it possible to use the path as a link to the content.
 
 # Permission inheritance
 
