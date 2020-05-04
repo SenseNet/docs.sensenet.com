@@ -22,6 +22,11 @@ const sideMenuConfig = {
   },
   concepts: {
     "forcedNavOrder": [
+      "/concepts/introduction",
+      "/concepts/what-is-headless-cms",
+      "/concepts/what-is-content-as-a-service",
+      "/concepts/what-is-snaas",
+      "/concepts/overview-of-snaas",
       "/concepts/content",
       "/concepts/content-models",
       "/concepts/content-tree",

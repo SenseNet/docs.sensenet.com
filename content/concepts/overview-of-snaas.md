@@ -1,10 +1,8 @@
 ---
-title: "Introduction"
-metaTitle: "sensenet - Concepts"
-metaDescription: "sensenet Concepts"
+title: "Overview of SNaaS"
+metaTitle: "sensenet - Overview of SNaaS"
+metaDescription: "sensenet - Overview of SNaaS"
 ---
-
-# What is sensenet
 
 sensenet is a content services platform (CSP) mainly for developers and development companies. It is a headless content management system (CMS) with enterprise grade security and permission system, versioning, dynamic content types and even more.
 
@@ -17,11 +15,12 @@ In sensenet everything is content. Documents, tasks, users, projects, even syste
 In practice this means that sensenet gives you everything you need to build a content based custom solution satisfying a wide variety of business needs.
 
 # How can you do it?
+
 You have the freedom to choose the database, framework, technology and programming language you prefer to build your solution, at all level of the application development, whether your project is a web, desktop or mobile development.
 
-# What is "sensenet as a service"?
-
 It is possible to install sensenet in your own environment or with SNaaS (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
+
+# How does SNaaS work?
 
 ![How does SNaaS work?](https://www.sensenet.com/try-it/images/Web%201920%20%E2%80%93%201.png)
 
@@ -29,4 +28,10 @@ A basic setup of sensenet as a service has three top level parts:
 
 - a **content repository** that is the storage and service layer
 - an **application** that uses the content of the connected content repository through API calls
-- sensenet **admin surface** that helps you do common content management tasks or setup and keep your system up to date
+- **sensenet admin surface** that helps you do common content management tasks or setup and keep your system up to date
+
+You can start exploring the capabilities of sensenet immediately. Please [contact us](https://sensenet.com/contact) to try out sensenet as a service as an early adopter!
+
+Are you a freshly registered content repository owner? Let us help you exploring the new home of your content with [this tutorial](/guides/admin-ui-basics).
+
+If you have not decided to register yet, you should definitely check out our demo repository, filled with various demo content or contact our experts and request a demo to see how sensenet can fit your needs.
