@@ -5,7 +5,7 @@ metaDescription: "sensenet Trash"
 ---
 
 # introduction
-sensenet has a trash feature. When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin (/Root/Trash). 
+sensenet has a trash feature. When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin (/Root/Trash).
 
 The Trash Bin is a central place for deleted documents where you can browse, restore or delete content permanently. It is also possible to provide a local (workspace-level) trash for users.
 
@@ -20,7 +20,7 @@ You can access delete action for basically every content in the doclib by clicki
 ![delete action](./img/delete_contextmenu.png)
 
 
-By default configuration, a confirmation popup appears, displaying content name and path, with an additional option to permanently delete the content (skipping trash). 
+By default configuration, a confirmation popup appears, displaying content name and path, with an additional option to permanently delete the content (skipping trash).
 ![confirm delete](./img/confirm.png)
 
 Deleted (trashed) items can be found in a specific folder having some extra parameter like retention time, quota for size and number of content. These limits can be customized.
@@ -28,7 +28,9 @@ Deleted (trashed) items can be found in a specific folder having some extra para
 
 Content from trash could be restored to a container chosen by the user. By default this container is the original parent of the deleted content, but the restore target could be chosen freely,
 
-**important:**  type of the restored content should be allowed on the chosen container.
+<note title="Important">
+Type of the restored content should be allowed on the chosen container.
+</note>
 
 Additional actions can also be performed on trashed items like edit or delete permanently.
 ![trash actions](./img/trash_actions.png)
@@ -51,7 +53,7 @@ Properties of the SmartFolder:
 All content deleted under the workspace will be visible here and can be restored or deleted permanently. The deleted content are still accessible and restorable from the global Trash and all size and date settings are still applied.
 
 # trash bin options
-Trash Bin options can be edited through API. 
+Trash Bin options can be edited through API.
 
 ### Enable/disable the trash feature globally
 
