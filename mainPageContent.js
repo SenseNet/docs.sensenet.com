@@ -75,7 +75,7 @@ const content = [
         link: '/concepts/content'
       },
     ],
-    link: '/concepts/what-is-sensenet',
+    link: '/concepts/introduction',
     img: '../images/concepts.png'
   },
   {

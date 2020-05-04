@@ -15,7 +15,7 @@ const config = {
       { "text": "API Docs", "link": "/api-docs/basic-concepts", "name": "api-docs"},
       { "text": "Example Apps", "link": "/", "name": "example-apps"},
       { "text": "Tutorials", "link": "/", "name": "tutorial"},
-      { "text": "Concepts", "link": "/concepts/what-is-sensenet", "name": "concepts"},
+      { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
       { "text": "Admin-ui Guides", "link": "/", "name": "guides"},
       { "text": "Integrations", "link": "/", "name": "integrations"}
 		],
