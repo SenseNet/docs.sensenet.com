@@ -4,7 +4,8 @@ const content = [
     title: 'API docs',
     description: 'Learn about API clients and frameworks',
     links: [],
-    link: '/api-docs'
+    link: '/api-docs/index',
+    img: '../images/api-docs.png'
   },
   {
     name: 'example-apps',
@@ -28,7 +29,8 @@ const content = [
         link: ''
       },
     ],
-    link: '/example-apps'
+    link: '',
+    img: '../images/example-apps.png'
   },
   {
     name: 'tutorials',
@@ -48,7 +50,8 @@ const content = [
         link: ''
       },
     ],
-    link: '/tutorials'
+    link: '',
+    img: '../images/tutorials.png'
   },
   {
     name: 'concepts',
@@ -57,7 +60,7 @@ const content = [
     links: [
       {
         title:'What is headless CMS',
-        link: ''
+        link: '/concepts/what-is-headless-cms'
       },
       {
         title:'What is CMS as a service',
@@ -65,14 +68,15 @@ const content = [
       },
       {
         title:'sensenet as a service overview',
-        link: ''
+        link: '/concepts/what-is-sensenet-as-a-service'
       },
       {
         title:'Content',
-        link: ''
+        link: '/concepts/content'
       },
     ],
-    link: '/concepts'
+    link: '/concepts/introduction',
+    img: '../images/concepts.png'
   },
   {
     name: 'guides',
@@ -96,7 +100,8 @@ const content = [
         link: ''
       },
     ],
-    link: '/guides'
+    link: '',
+    img: '../images/guides.png'
   },
   {
     name: 'usecases',
@@ -112,7 +117,8 @@ const content = [
         link: ''
       },
     ],
-    link: '/usecases'
+    link: '',
+    img: '../images/best-practice.png'
   },
 ]
 
