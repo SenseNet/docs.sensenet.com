@@ -95,9 +95,9 @@ export default class MDXRuntimeTest extends Component {
     let canonicalUrl = config.gatsby.siteUrl;
     canonicalUrl = config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
     canonicalUrl = canonicalUrl + mdx.fields.slug;
-
+let classname = mdx.fields.slug.split('/')[1]
     return (
-      <Layout {...this.props}>
+      <Layout {...this.props} className={classname}>
         <Helmet>
           {metaTitle ? <title>{metaTitle}</title> : null }
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
@@ -118,7 +118,7 @@ export default class MDXRuntimeTest extends Component {
             </Link>
           </Edit>
         </div>
-        <div className={'mainWrapper'}>
+        <div className={classname === 'api-docs' || classname === 'concepts' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
         <div className={'addPaddTopBottom'}>

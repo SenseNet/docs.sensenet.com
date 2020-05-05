@@ -14,22 +14,22 @@ const content = [
     links: [
       {
         title:'Image gallery',
-        link: ''
+        link: '/example-apps#imagegallery'
       },
       {
         title:'Todo app',
-        link: ''
+        link: '/example-apps#todoapp'
       },
       {
-        title:'DMS',
-        link: ''
+        title:'DMS demo',
+        link: '/example-apps#dmsdemo'
       },
       {
         title:'Memo app',
-        link: ''
+        link: '/example-apps#memoeditor'
       },
     ],
-    link: '',
+    link: '/example-apps',
     img: '../images/example-apps.png'
   },
   {

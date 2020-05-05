@@ -83,8 +83,6 @@ const SidebarLayout = ({ location }) => (
         const navItems = allMdx.edges.map((item, index) => {
           let innerItems;
           if(item !== undefined) {
-            console.log(item.node.fields.slug)
-            console.log(location.pathname)
             if ((item.node.fields.slug === location.pathname) || (`${item.node.fields.slug}/` === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
               if (item.node.tableOfContents.items) {
                 innerItems = item.node.tableOfContents.items.map((innerItem, index) => {

@@ -348,6 +348,9 @@ a:hover {
   color: rgb(59, 69, 78);
   max-width: 750px;
 }
+.fullWrapper {
+  color: rgb(59, 69, 78);
+}
 .navBarUL li a:hover {
   opacity: .7;
 }
@@ -356,7 +359,8 @@ pre {
   background-color: rgb(245, 242, 240) !important; /* !important; */
 }
 
-.mainWrapper ul, .mainWrapper ol {
+.mainWrapper ul, .mainWrapper ol,
+.fullWrapper ul, .fullWrapper ol {
   -webkit-padding-start: 40px;
   -moz-padding-start: 40px;
   -o-padding-start: 40px;
@@ -364,7 +368,8 @@ pre {
   padding: 0px 0px 0px 2em;
 }
 
-.mainWrapper ul li, .mainWrapper ol li {
+.mainWrapper ul li, .mainWrapper ol li,
+.fullWrapper ul li, .fullWrapper ol li {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
@@ -853,7 +858,8 @@ img {
   overflow: auto;
 }
 
-.mainWrapper code {
+.mainWrapper code,
+.fullWrapper code {
   background: none;
   border: none;
   border-radius: 4px;
@@ -958,7 +964,8 @@ img {
     display: inline-block;
   }
 
-  .mainWrapper {
+  .mainWrapper,
+  .fullWrapper {
     padding: 0 15px;
   }
 
@@ -1134,6 +1141,10 @@ img {
 
 .BoxInner {
   padding: 15px;
+}
+
+.BoxInner h3 a {
+  color: #000
 }
 
 .BoxTitleImg {

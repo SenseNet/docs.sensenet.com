@@ -49,7 +49,6 @@ const calculateTreeData = (edges, l) => {
   }, {items: []});
   const {forcedNavOrder = []} = sideMenuConfig[getConfigNameByLocation(l)];
   const tmp = [...forcedNavOrder];
-  console.log(tmp)
   tmp.reverse();
   return tmp.reduce((accu, slug) => {
     const parts = slug.split('/');
