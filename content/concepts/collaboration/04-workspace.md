@@ -28,7 +28,7 @@ In sensenet there are three predefined local groups (Owners, Members, Visitors) 
 
 You can use local groups when you are building up workspace templates as well. With this technique you can provide ready-made workspaces for your users.
 
-It is also possible to add local groups as members to global groups. This way you can easily extend the rights of global groups - for example built-in groups.
+> It is also possible to add local groups as members to global groups. This way you can easily extend the rights of global groups - for example built-in groups.
 
 ## Built-in local groups
 In sensenet there are three predefined local groups with three different permission levels.
