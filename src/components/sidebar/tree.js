@@ -86,7 +86,7 @@ const calculateTreeData = (edges, l) => {
 const Tree = ({edges, location}) => {
 
   const [treeData] = useState(() => {
-    if(['api-docs', 'concepts'].some(element => location.includes(element))){
+    if(['api-docs', 'concepts', 'concepts'].some(element => location.includes(element))){
       return calculateTreeData(edges, location);
     } else {
       return { items: []};

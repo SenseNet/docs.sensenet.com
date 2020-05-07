@@ -100,7 +100,7 @@ const content = [
         link: ''
       },
     ],
-    link: '',
+    link: '/guides/index',
     img: '../images/guides.png'
   },
   {
