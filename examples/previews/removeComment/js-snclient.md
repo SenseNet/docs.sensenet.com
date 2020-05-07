@@ -1,10 +1,6 @@
 ```javascript
-const result = await repository.executeAction({
+const response = await repository.preview.deleteComment({
   idOrPath: '/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx',
-  body: {
-    id: '1234'
-  }
-  name: 'DeletePreviewComment',
-  method: 'POST'
-})
+  commentId: '1234'
+});
 ```

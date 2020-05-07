@@ -1,7 +1,4 @@
 ```javascript
-const result = await repository.executeAction({
-  idOrPath: "/Root/Content/IT",
-  name: "CheckAllowedChildTypesOfFolders",
-  method: "GET",
-});
+const result = await repository.allowedChildTypes
+  .listEmpty("/Root/Content/IT");
 ```
