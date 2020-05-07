@@ -1,3 +1,4 @@
 ```javascript
-// Currently we don't have an api for that.
+// Returns in JSON format
+const result = await repository.getMetadata('/Root/Content/IT');
 ```
