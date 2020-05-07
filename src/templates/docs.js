@@ -11,7 +11,6 @@ import sideMenuConfig from '../../sidemenuConfig';
 import langs from '../components/mdxComponents/langs';
 
 
-const forcedNavOrder = sideMenuConfig.apiDocs.forcedNavOrder;
 
 const Edit = styled('div')`
   padding: 1rem 1.5rem;
@@ -53,10 +52,23 @@ export default class MDXRuntimeTest extends Component {
       }
     } = data;
     const gitHub = require('../components/images/github.svg');
+    const currentCategory = mdx.fields.slug.split('/')[1]
+
+    let forcedNavOrder = []
+
+    if(mdx.fields.slug.includes('api-docs'))
+    {
+      forcedNavOrder = sideMenuConfig.apiDocs.forcedNavOrder
+    } else if (mdx.fields.slug.includes('concepts')) {
+      forcedNavOrder = sideMenuConfig.concepts.forcedNavOrder
+    } else if (mdx.fields.slug.includes('guides')){
+      forcedNavOrder = sideMenuConfig.guides.forcedNavOrder
+    }
 
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
       .filter(slug => slug !== "/" && !isExample(slug))
+      .filter(slug => slug.split('/')[1] === currentCategory)
       .sort()
       .reduce(
         (acc, cur) => {
@@ -64,16 +76,16 @@ export default class MDXRuntimeTest extends Component {
             return { ...acc, [cur]: [cur] };
           }
 
-          const prefix = cur.split("/")[1];
-
-          if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
-            return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
+          const prefix = cur.split("/").slice(0, -1).join('/');
+          if (prefix && forcedNavOrder.find(url => url === prefix)) {
+            return { ...acc, [prefix]: [...acc[prefix], cur] };
           } else {
             return { ...acc, items: [...acc.items, cur] };
           }
         },
         { items: [] }
       );
+      console.log(navItems)
 
     const nav = forcedNavOrder
       .reduce((acc, cur) => {
@@ -121,9 +133,12 @@ let classname = mdx.fields.slug.split('/')[1]
         <div className={classname === 'api-docs' || classname === 'concepts' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
+        {!mdx.parent.relativePath.includes('example-apps') ?
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
-        </div>
+        </div> :
+        null
+      }
       </Layout>
     );
   }
