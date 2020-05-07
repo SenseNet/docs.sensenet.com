@@ -85,7 +85,6 @@ export default class MDXRuntimeTest extends Component {
         },
         { items: [] }
       );
-      console.log(navItems)
 
     const nav = forcedNavOrder
       .reduce((acc, cur) => {
