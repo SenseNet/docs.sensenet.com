@@ -4,7 +4,7 @@ title: "Workspace"
 metaTitle: "sensenet - Workspace"
 metaDescription: "sensenet Workspace"
 ---
-sensenet allows individuals in an organization to easily create and manage their own collaborative sites, called workspaces. A sensenet workspace is a special content type with libraries, lists and pages configured for a predefined goal. Workspaces may contain sub-workspaces, and further sub-workspaces as well, enabling you to create the best solution based on your business needs.
+sensenet allows individuals or a teams in an organization to easily create and manage their own collaborative spaces, called workspaces. A sensenet workspace is a special content type with libraries, lists and many other features configured for a predefined goal. Workspaces may contain sub-workspaces, and further sub-workspaces as well, enabling you to create the best solution based on your business needs.
 
 # Where to start?
 You can create a new workspace from built-in workspace types (Sales workspace, Document workspace, Project workspace, etc.), create one from scratch, or create a new template others can use. Every workspace has its own navigation, members (custom permissions) and many other settings that are related only to the given workspace.
