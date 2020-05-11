@@ -21,7 +21,7 @@ We can distinguish two different types of workspaces:
 
 You can have different workspaces completely separated (with workspace level user groups and trash), giving the opportunity to manage multiple company with different users on the same solution as an example.
 
-# Workspace local group 
+# Workspace local groups 
 In sensenet the default location of users and groups is the ``IMS folder``. However groups can be created under workspaces too. The main purpose of workspace local groups is to help permission management inside workspaces. They are located under the ``Groups`` system folder in workspaces, and workspace permissions can be defined for these groups.
 
 > If the local group structure is properly configured, the only thing workspace administrators should do when a new user is assigned to a workspace is to add them to the proper local group(s) instead of assigning permissions to individual users.
