@@ -348,6 +348,12 @@ a:hover {
   color: rgb(59, 69, 78);
   max-width: 750px;
 }
+.mainWrapper img {
+  max-width: 750px;
+}
+.fullWrapper {
+  color: rgb(59, 69, 78);
+}
 .navBarUL li a:hover {
   opacity: .7;
 }
@@ -356,7 +362,8 @@ pre {
   background-color: rgb(245, 242, 240) !important; /* !important; */
 }
 
-.mainWrapper ul, .mainWrapper ol {
+.mainWrapper ul, .mainWrapper ol,
+.fullWrapper ul, .fullWrapper ol {
   -webkit-padding-start: 40px;
   -moz-padding-start: 40px;
   -o-padding-start: 40px;
@@ -364,7 +371,8 @@ pre {
   padding: 0px 0px 0px 2em;
 }
 
-.mainWrapper ul li, .mainWrapper ol li {
+.mainWrapper ul li, .mainWrapper ol li,
+.fullWrapper ul li, .fullWrapper ol li {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
@@ -481,6 +489,7 @@ pre {
 .sideBarUL .item{
   list-style: none;
   padding: 0;
+  text-transform: uppercase;
 }
 .sideBarUL .item >a {
   color: rgba(0, 0, 0, 0.87);
@@ -491,6 +500,8 @@ pre {
   width: 100%;
   padding-right: 35px;
   padding-left: 15px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 .sideBarUL .item>a:hover {
   background-color: #bde4e1;
@@ -506,6 +517,12 @@ pre {
 
 .sideBarUL  .item .item{
   margin-left: 16px;
+  text-transform: none;
+}
+
+.sideBarUL  .item .item .item a {
+  text-transform: none;
+  font-weight: 500;
 }
 
 .firstLevel>ul>.item{
@@ -844,7 +861,8 @@ img {
   overflow: auto;
 }
 
-.mainWrapper code {
+.mainWrapper code,
+.fullWrapper code {
   background: none;
   border: none;
   border-radius: 4px;
@@ -949,7 +967,8 @@ img {
     display: inline-block;
   }
 
-  .mainWrapper {
+  .mainWrapper,
+  .fullWrapper {
     padding: 0 15px;
   }
 
@@ -1097,7 +1116,7 @@ img {
   width: calc(1/3*100% - (1 - 1/3)*50px);
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
   position: relative;
-  min-height: 270px;
+  min-height: 280px;
   border: #E2E2E2 1px;
   background-color: #F6F6F6;
 }
@@ -1125,6 +1144,10 @@ img {
 
 .BoxInner {
   padding: 15px;
+}
+
+.BoxInner h3 a {
+  color: #000
 }
 
 .BoxTitleImg {

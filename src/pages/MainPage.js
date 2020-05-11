@@ -24,8 +24,10 @@ const MainPage = () => {
                 <div className="Box" key={`box-${index}`}>
                 <div className="BoxInner">
                   <h3>
-                    <img src={getImgFromName(c.name)} className="BoxTitleImg" />
+                    <a href={c.link}>
+                      <img src={getImgFromName(c.name)} className="BoxTitleImg" />
                     {c.title}
+                    </a>
                   </h3>
                   <div className="BoxDescription">{c.description}</div>
                   <ul>
@@ -73,7 +75,6 @@ const MainPage = () => {
 export default MainPage
 
 const getImgFromName = (name) => {
-  console.log(name)
   let img
   switch(name){
     case 'api-docs':

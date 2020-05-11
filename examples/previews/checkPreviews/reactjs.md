@@ -1,10 +1,6 @@
 ```javascript
-const result = await repository.executeAction({
+const response = await repository.preview.check({
   idOrPath: '/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx',
-  name: 'CheckPreviews',
-  method: 'POST',
-  body: {
-    generateMissing: true
-  }
-})
+  generateMissing: true
+});
 ```

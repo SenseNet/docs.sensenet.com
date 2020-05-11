@@ -1,3 +1,6 @@
 ```javascript
-// Currently there is no api to access a single property value
+const result = await repository.getPropertyValue(
+  "/Root/Content/IT",
+  "DisplayName"
+);
 ```
