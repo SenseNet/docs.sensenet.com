@@ -62,7 +62,30 @@ const sideMenuConfig = {
     ],
   },
   tutorials: {},
-  guides: {},
+  guides: {
+    "forcedNavOrder": [
+      "/guides/getting-started",
+      "/guides/search",
+      "/guides/content-management",
+      "/guides/users-and-groups",
+      "/guides/roles-and-permissions",
+      "/guides/working-with-content-types",
+      "/guides/localization",
+      "/guides/setup",
+      "/guides/customization",
+    ],
+    "collapsedNav": [
+      "/guides/getting-started",
+      "/guides/search",
+      "/guides/content-management",
+      "/guides/users-and-groups",
+      "/guides/roles-and-permissions",
+      "/guides/working-with-content-types",
+      "/guides/localization",
+      "/guides/setup",
+      "/guides/customization",
+    ],
+  },
   integrations: {}
 }
 

@@ -14,22 +14,22 @@ const content = [
     links: [
       {
         title:'Image gallery',
-        link: ''
+        link: '/example-apps#imagegallery'
       },
       {
         title:'Todo app',
-        link: ''
+        link: '/example-apps#todoapp'
       },
       {
-        title:'DMS',
-        link: ''
+        title:'DMS demo',
+        link: '/example-apps#dmsdemo'
       },
       {
         title:'Memo app',
-        link: ''
+        link: '/example-apps#memoeditor'
       },
     ],
-    link: '',
+    link: '/example-apps',
     img: '../images/example-apps.png'
   },
   {
@@ -85,22 +85,22 @@ const content = [
     links: [
       {
         title:'Dashboard',
-        link: ''
+        link: '/guides/customization/05-dashboard-customization'
       },
       {
         title:'Command palette',
-        link: ''
+        link: '/guides/search/03-command-palette'
       },
       {
         title:'Personal settings',
-        link: ''
+        link: '/guides/customization/00-personal-settings'
       },
       {
         title:'Managing users and groups',
         link: ''
       },
     ],
-    link: '',
+    link: '/guides/index',
     img: '../images/guides.png'
   },
   {
