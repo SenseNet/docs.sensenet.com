@@ -55,4 +55,4 @@ In every workspace you can:
 - turn on/off approval for any content in the workspace
 
 # Usage
-Workspace is a good solution when you want to create separate units (subsites, teams, companies) inside your solution. It is important to define custom workspace type and set permissions properly right at the beginnig of the project. This way you can facilitate your work on the long run.
+Workspace is a good solution when you want to create separate units (subsites, teams, companies, user profiles) inside your solution. It is important to define custom workspace type and set permissions properly right at the beginnig of the project. This way you can facilitate your work on the long run.
