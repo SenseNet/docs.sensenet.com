@@ -129,7 +129,7 @@ let classname = mdx.fields.slug.split('/')[1]
             </Link>
           </Edit>
         </div>
-        <div className={classname === 'api-docs' || classname === 'concepts' ? `mainWrapper` : `fullWrapper`}>
+        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
         {!mdx.parent.relativePath.includes('example-apps') ?

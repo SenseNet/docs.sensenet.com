@@ -16,7 +16,7 @@ const config = {
       { "text": "Example Apps", "link": "/example-apps", "name": "example-apps"},
       { "text": "Tutorials", "link": "/", "name": "tutorial"},
       { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
-      { "text": "Admin-ui Guides", "link": "/", "name": "guides"},
+      { "text": "Admin-ui Guides", "link": "/guides/index", "name": "guides"},
       { "text": "Integrations", "link": "/", "name": "integrations"}
 		],
 		"search": {

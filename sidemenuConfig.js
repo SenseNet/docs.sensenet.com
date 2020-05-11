@@ -72,7 +72,7 @@ const sideMenuConfig = {
       "/guides/working-with-content-types",
       "/guides/localization",
       "/guides/setup",
-      "/guides/dashboard-customization",
+      "/guides/customization",
     ],
     "collapsedNav": [
       "/guides/getting-started",
@@ -83,7 +83,7 @@ const sideMenuConfig = {
       "/guides/working-with-content-types",
       "/guides/localization",
       "/guides/setup",
-      "/guides/dashboard-customization",
+      "/guides/customization",
     ],
   },
   integrations: {}

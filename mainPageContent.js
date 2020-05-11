@@ -85,15 +85,15 @@ const content = [
     links: [
       {
         title:'Dashboard',
-        link: ''
+        link: '/guides/customization/05-dashboard-customization'
       },
       {
         title:'Command palette',
-        link: ''
+        link: '/guides/search/03-command-palette'
       },
       {
         title:'Personal settings',
-        link: ''
+        link: '/guides/customization/00-personal-settings'
       },
       {
         title:'Managing users and groups',
