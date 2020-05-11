@@ -14,12 +14,12 @@ In sensenet, versioning is disabled by default. It can be enabled for folders or
 
 Versioning mode can be set as the followings:
 
-| | |
-|-|-|
-|**None**|The default setting of the Root folder, no versioning.|
-|**Inherited**|The folder inherits its versioning mode from its parent. This is the default setting for all other content.|
-|**Major only**|Only major versions (1.0, 2.0,...) are preserved.|
-|**Major and minor**|Every version is preserved (1.0, 1.1, 1.2,...).|
+| Name | Number | Description |
+|-|-|-|
+|**None**|0|The default setting of the Root folder, no versioning.|
+|**Inherited**|1|The folder inherits its versioning mode from its parent. This is the default setting for all other content.|
+|**Major only**|2|Only major versions (1.0, 2.0,...) are preserved.|
+|**Major and minor**|3|Every version is preserved (1.0, 1.1, 1.2,...).|
 
 With the following example you switch on versioning for a workspace:
 
