@@ -132,7 +132,7 @@ let classname = mdx.fields.slug.split('/')[1]
         <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
-        {!mdx.parent.relativePath.includes('example-apps') ?
+        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') ?
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div> :
