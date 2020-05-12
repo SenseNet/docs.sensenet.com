@@ -60,7 +60,7 @@ const content = [
     links: [
       {
         title:'What is headless CMS',
-        link: '/concepts/what-is-headless-cms'
+        link: '/concepts/introduction/02-what-is-headless-cms'
       },
       {
         title:'What is CMS as a service',
@@ -68,11 +68,11 @@ const content = [
       },
       {
         title:'sensenet as a service overview',
-        link: '/concepts/what-is-sensenet-as-a-service'
+        link: '/concepts/introduction/04-what-is-snaas'
       },
       {
         title:'Content',
-        link: '/concepts/content'
+        link: '/concepts/basics'
       },
     ],
     link: '/concepts/introduction',
