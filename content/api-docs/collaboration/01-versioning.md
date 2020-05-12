@@ -39,7 +39,7 @@ Content in the repository can have several non-numeric version states:
 
 # Get current version of a content
 
-Current version is always saved as a value of the field `Version` on every content. As you can see in th following code snippet you can get the current versionnumber as any of the common field values:
+Current version is always saved as a value of the field `Version` on every content. As you can see in the following code snippet you can get the current version number as any of the common field values:
 
 <tab category="collaboration" article="versioning" example="versionNumber" />
 
@@ -85,7 +85,7 @@ It can happen that you don't want publish your changes and you want to withdraw 
 
 # Force undo changes
 
-It is also possible to undo other users' changes on a document. This thing is really useful when somebody leave a content in checked out (locked) and does not able or willing to finish the work on the content. If you are allowed to do that (it can be set with permissions) with the next snippet you can you can undo changes made by another user and return to the previous version:
+It is also possible to undo other users' changes on a document. This feature is really useful when somebody leave a content in checked out (locked) and does not able or willing to finish the work on the content. If you are allowed to do that (it can be set with permissions) with the next snippet you can undo changes made by another user and return to the previous version:
 
 <tab category="collaboration" article="versioning" example="forceUndoChanges" />
 
