@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Saved queries"
 metaDescription: "sensenet API - Saved queries"
 ---
 
-For empower teamwork and make users life easier in sensenet is possible to save queries. It is useful if you have recurring tasks with the same result sets and you need to work with the uptodate result lists without writing the fitting queries every time. It is also useful if you want to share your result set with another users because the queries could be saved as private or public ones.
+For empower teamwork and make users life easier in sensenet is possible to save queries. It is useful if you have recurring tasks with the same result sets and you need to work with the up-to-date result lists without writing the fitting queries every time. It is also useful if you want to share your result set with another users because the queries could be saved as private or public ones.
 
 # Save a query
 
@@ -20,6 +20,6 @@ A private query means it will be available only for the current user because the
 
 # Get saved queries
 
-With GetQueries you cam get Query content that are relevant in the current context. The result set can contain both private and public queries, but you can filter by type adding the param `onlyPublic`. In the next example you can see how to get only the private queries:
+With GetQueries you can get Query content that are relevant in the current context. The result set can contain both private and public queries, but you can filter by type adding the param `onlyPublic`. In the next example you can see how to get only the private queries:
 
 <tab category="collaboration" article="saved-queries" example="getSavedQueries" />
