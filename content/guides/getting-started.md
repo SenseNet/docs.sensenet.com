@@ -18,7 +18,9 @@ To test the admin ui without your own repo, you can log in to ours by clicking (
 ![Login to demo repo](./img/login.png)
 
 # Menu and dashboard
-Once logged in you can see the admin ui in its whole beauty with different actions in the left pane menu. These options (by default) are the following:
+Once logged in you can see the admin ui in its whole beauty with different actions in the left pane menu and a nice dashboard with the most important info about your repo.
+
+By default the sidebar has the following items:
 
 ![dasboard](./img/dashboard.png)
 
