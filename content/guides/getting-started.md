@@ -55,7 +55,7 @@ Thanks to office online editing, some documents (like word and excel files) can 
 sensenet has a built-in preview generator which allow users to open pdf, docx, txt and other files in ready only mode.
 Clicking open on a supported file will bring up the already generated preview images of the content in question.
 
-![Open document preview](./img/preview.gif)
+![Open document preview](./img/preview.png)
 
 ## Add new
 
