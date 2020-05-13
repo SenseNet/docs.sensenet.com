@@ -20,7 +20,7 @@ You can open a page by simply clicking on it.
 
 ## Search by path
 
-You can search content in the current repository (or the last used one) by starting to type it's path (It should start with '/Root'). You will get a with the suggestions and open content items by simply clicking on them.
+You can search content in the current repository (or the last used one) by starting to type it's path (It should start with '/Root'). You will get a dropdown with the suggestions and open content items by simply clicking on them.
 
 ## Search with a content query
 
