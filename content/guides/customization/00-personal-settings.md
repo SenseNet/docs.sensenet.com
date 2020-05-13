@@ -8,6 +8,8 @@ There are several things that you can customize according to your taste on the A
 
 The settings are stored in a JSON format but you can get some help with the available settings by pressing the **CTRL+SPACE** combo.
 
+Your personal settings are stored in your browsers local storage, so it won't be there if you use another browser or clear the browser cache, but can be recreated or overwritten anytime again and if there's no custom settings in the local storage, you can see and use the admin-ui by the default settings.
+
 ## Default, Mobile, Desktop, Tablet
 
 Some settings can depend on the device that you use. You can set different settings for these devices - and a default value that will be applied if you don't provide a setting on device level.
