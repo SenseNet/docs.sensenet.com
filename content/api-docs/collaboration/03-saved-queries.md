@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Saved queries"
 metaDescription: "sensenet API - Saved queries"
 ---
 
-For empower teamwork and make users life easier in sensenet is possible to save queries. It is useful if you have recurring tasks with the same result sets and you need to work with the uptodate result lists without writing the fitting queries every time. It is also useful if you want to share your result set with another users because the queries could be saved as private or public ones.
+For empower teamwork and make users life easier in sensenet is possible to save queries. It is useful if you have recurring tasks with the same result sets and you need to work with the up-to-date result lists without writing the fitting queries every time. It is also useful if you want to share your result set with another users because the queries could be saved as private or public ones.
 
 # Save a query
 
