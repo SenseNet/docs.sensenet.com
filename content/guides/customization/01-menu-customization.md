@@ -37,11 +37,11 @@ There are 3 possible values for choosing the type of the drawer:
 
 **mini-variant** - This can be opened and closed as it is shown below. _This is currently the default setting for desktop mode_
 
-![drawer mini-variant](../img/drawer-mini-variant.png "Drawer mini-variant"){:height="600px"}
+![drawer mini-variant](../img/drawer-mini-variant.png "Drawer mini-variant")
 
 **permanent** - In this mode the drawer is always open.
 
-![drawer permanent](../img/drawer-permanent.png "Drawer permanent"){:height="600px"}
+![drawer permanent](../img/drawer-permanent.png "Drawer permanent")
 
 **temporary** - In this mode there is no sidebar only a hamburger menu in the top left corner. _This is currently the default setting for mobile mode_
 
@@ -53,9 +53,9 @@ Every drawer item has 3 properties, `settings`, `itemType`, `permissions`.
 
 The `settings` property changes for item types, there are items that don't have settings at all.
 
-The `itemType` is a predefined string you can see the possible values with pressing **CTRL+SPACE** in the editor.
+The `itemType` is a predefined string, that can be chosen by built-in menu types, like 'Content' or 'Seatup', you can see the possible values with pressing **CTRL+SPACE** in the editor.
 
-The `permissions` property is an array of objects that has a path and action property. The name of the action that will be checked against the path.
+The `permissions` property is an array of objects that has a path and action property. The name of the action that will be checked against the path. With this param you can set, that existence of which actions are required to see and use the menuitem. For example the to see the Localization menu item the user should have permission allowed to add a new localization file into this container, in other words 'Add' action should be available for him on the Localization folder.
 
 ```json
 {
