@@ -4,7 +4,7 @@ metaTitle: "sensenet Admin UI - Personal settings"
 description: Some guidance on what can you personalize on the Admin UI
 ---
 
-There are several things that you can customize according to your taste on the Admin UI. You can do most of them in the Personal Settings page. You can open your settings by clicking on the gear ⚙️ icon in the bottom left corner on the drawer.
+There are several things that you can customize according to your taste on the Admin UI. You can do most of them in the Personal Settings page. You can open your settings by using the 'Personal settings' menuitem from the user menu.
 
 The settings are stored in a JSON format but you can get some help with the available settings by pressing the **CTRL+SPACE** combo.
 
