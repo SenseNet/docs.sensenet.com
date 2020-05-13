@@ -20,6 +20,6 @@ A private query means it will be available only for the current user because the
 
 # Get saved queries
 
-With GetQueries you cam get Query content that are relevant in the current context. The result set can contain both private and public queries, but you can filter by type adding the param `onlyPublic`. In the next example you can see how to get only the private queries:
+With GetQueries you can get Query content that are relevant in the current context. The result set can contain both private and public queries, but you can filter by type adding the param `onlyPublic`. In the next example you can see how to get only the private queries:
 
 <tab category="collaboration" article="saved-queries" example="getSavedQueries" />
