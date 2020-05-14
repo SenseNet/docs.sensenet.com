@@ -7,24 +7,22 @@ metaDescription: "sensenet admin-ui - Getting started"
 sensenet has an admin ui to manage repos and do basic content management actions. In the following you can read about the different features of the admin surface.
 
 # Login
-You can login to the admin ui ([admin.sensenet.com](https://admin.sensenet.com/?repoUrl=https%3A//dev.demo.sensenet.com)) with multiple users who has different permission roles.
 
-![Login with businesscat](./img/login_businesscat.gif)
+Since admin ui is a central place to manage sensenet repositories, everyone uses the same site and login screen. First, you need to type the **url of the repository** you want to connect to, then log in with username and password.
+![Log in to your repo](./img/reposcreen.png)
 
-# Users
-|   | username | password |
-| - | -------- | -------- |
-| admin |	businesscat |	businesscat |
-| developer |	devdog |	devdog |
-| editor |	editormanatee |	editormanatee |
+To test the admin ui without your own repo, you can log in to ours by clicking ([here](https://admin.sensenet.com/?repoUrl=https%3A//dev.demo.sensenet.com)).
 
-# Repos
-On the login screen you also need to type the repo URL to which you want to connect (in this case https://dev.demo.sensenet.com)
+> You will be logged in with an **admin user** called Business Cat.
 
-# Menu
-Once logged in you can see the admin ui in its whole beauty with different actions in the left pane menu. These options (by default) are the following:
+![Login to demo repo](./img/login.png)
 
-![sidebar](./img/sidebar.gif)
+# Menu and dashboard
+Once logged in you can see the admin ui in its whole beauty with different actions in the left pane menu and a nice dashboard with the most important info about your repo.
+
+By default the sidebar has the following items:
+
+![dasboard](./img/dashboard.png)
 
 **search**: execute custom searches, build and save queries
 
@@ -32,11 +30,13 @@ Once logged in you can see the admin ui in its whole beauty with different actio
 
 **users and groups**: manage users and groups, roles and identities
 
+**trash**: a place for all trashed items
+
 **content types**: manage content types ([more about content types](/concepts/content-management/03-content-types))
 
 **localization**: manage string resources
 
-**setup**: configure the sensenet system ([more about setup](/guides/setup))
+**setup**: configure sensenet system ([more about setup](/guides/setup))
 
 <note title="pro tip">Menu items can be customized in personal settings.</note>
 
@@ -57,22 +57,15 @@ Thanks to office online editing, some documents (like word and excel files) can 
 sensenet has a built-in preview generator which allow users to open pdf, docx, txt and other files in ready only mode.
 Clicking open on a supported file will bring up the already generated preview images of the content in question.
 
-![Open document preview](./img/preview.gif)
+![Open document preview](./img/preview.png)
 
 ## Add new
 
-By clicking plus button in the bottom right corner you can add content to repo either by uploading or creating.
+By clicking plus button in the sidebar you can add content to repo either by uploading or creating.
 
 <note title="pro tip">Allowed types under a specific content can be set by modifying <a href="/concepts/content-management/06-allowed-childtypes">allowed child types</a> property of the content.</note>
 
-![Create content](./img/create.gif)
-
-# Command palette
-
-Command palette is a query feature with extended functionality to make life easier for the user.
-[Learn more](/guides/search) about advanced functionalities.
-
-![Create content](./img/admin-ui-personal-setting-theme.gif)
+![Create content](./img/add_new.gif)
 
 # Personal settings
 
@@ -82,9 +75,8 @@ In personal settings you can customize the admin surface
 - events and logging
 - language
 - display additional menu items
-- switch between light/dark theme
 
 <note title="pro tip">You can bring up intellisense with ctrl+space shortcut to get context based suggestions.
 <a href="/guides/dashboard-customization">Learn more</a> about personal settings in admin ui.</note>
 
-![Change theme](./img/admin-ui-personal-setting-theme.gif)
+![personal settings](./img/personal_settings.gif)
