@@ -29,7 +29,7 @@ The Drawer can be customized with the [personal settings](/guides/customization/
 
 You should see exactly one menu item that looks like this.
 
-![query view](../img/posts/query-view.png "Query view")
+![query view](../img/query-view.png "Query view")
 
 There are few options that you can use for customization:
   - description - this is shown in the tooltip of the icon
