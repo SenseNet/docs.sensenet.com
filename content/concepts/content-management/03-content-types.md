@@ -36,15 +36,38 @@ some example from the default set:
 
 # Content type hierarchy
 
-Content types can inherit fields from their ancestors. For example a domain type inherits all the fields of the basic folder type. A content type may only inherit fields from a single type thus the content types are arranged in a simple tree hierarchy. Inherited field configuration can be overridden in derived types. Field inheritance and overriding is defined in the content type definition of the type.
+Content types are organized into hierarchy according to inheritance. Any content type may inherit from another one. The topmost content type in the inheritance hierarchy is the ``GenericContent`` (with handler ``SenseNet.ContentRepository.GenericContent``), every content type must inherit from this, or any of its descendant. When a child content type is inherited from a parent content type it means that the child content type contains all the fields of the parent, even if they are not defined in the child CTD - and also they share common implemented logic.
+
+## Field inheritance
+
+A content type inherits its fields from its parent content type (defined by the ``parentType`` attribute). This means that only additional fields have to be defined in the type’s CTD. The inherited fields apply to the content type as defined on the parent type, but may also be overridden. The following apply to field inheritance:
+
+- fields of all ancestors are inherited: ie. fields of parent type of the direct parent are also available in the current type
+- all fields of the parent type are inherited: deleting a field that has been defined on an ancestor type is not possible
+- a field is inherited from parent when it is not defined in the current type’s CTD
+- if a field is defined in a CTD it overrides parent’s field of the same name
+- if a field is defined in a CTD with empty markup the parent’s field of the same name is overridden with empty data
+- when inheriting a field the first order elements of the configuration element are inherited (these are defined by the field definition)
 
 # Breaking inheritance
 
 
 # Field settings and validations
-  - appearance
-  - validation
+https://wiki.sensenet.com/Field_Setting
+Every field has a ``FieldSetting`` object serving as a configuration element inside the content type definition.
+
+- appearance
+- validation
+The FieldSetting not only specifies the type of information but it also validates according to its implementation. Validation can happen automatically on saving a content, or manually from code. The Field is able to store the validation status (valid, invalid, reason of error), thus if a validation has occurred the field will be revalidated if its data has changed or a previous validation has failed.
+  
   - default value, etc
+  
+ DefaultValue: default value of the field. jScript functions can be used to define dynamic default values. If the field does not appear on the ui, this element has no effect. Only takes effect in case the user adds a new content, edit forms do not use default values.
+  
+Indexing: indexing settings of the field. 
+Compulsory: indicates if the field is compulsory
+
+
   - disabling
   
   
@@ -101,7 +124,7 @@ Below you can see a fully featured skeleton of a content type definition xml:
 </ContentType>
 ```
 
-The content type definition xml of a content type can be edited on the admin ui or through OData REST API (see How to create a Content Type for details).
+The content type definition xml of a content type can be edited on the admin ui or through OData REST API (see How to create a Content Type for details)https://community.sensenet.com/docs/tutorials/how-to-create-a-content-type/.
 
 https://community.sensenet.com/docs/ctd/
 # Usage (advantages)
