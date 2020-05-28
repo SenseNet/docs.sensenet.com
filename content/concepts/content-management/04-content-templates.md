@@ -10,13 +10,13 @@ Content template can be a single content - e.g. a Word document containing a com
 Content templates can reside in the following places:
 
 - global templates: /Root/ContentTemplates
-- local templates: in ContentTemplates system folders on Site, Workspace or local content level
+- local templates: in ContentTemplates system folders on Workspace, Library or local content level
 
 Every content template resides in a folder named by its content type. In this folder there can be multiple content templates - like multiple document templates in the /Root/ContentTemplates/File folder. Templates can have any name but it is advisable to give a name that reflects the type of the template.
 
 # Creating a template
 
-Content templates are content of the same type as they are defined for. For example document templates are files; library or list templates are document libraries or memo lists. To create a content template you simply need to create a new content under the appropriate folder (named by the type). You can set any property of the content template or add child content (e.g. custom views for libraries), they will be part of the template.
+Content templates are content of the same type as they are defined for. For example document templates are files; library or list templates are document libraries or memo lists. To create a content template you simply need to create a new content under the appropriate folder (named by the type). You can set any property of the content template or add child content (e.g. libraries and lists for a workspace), they will be part of the template.
 
 # Modify or deleting a template
 
@@ -43,9 +43,7 @@ After creating a content using a template the security settings that were set di
 Content templates can be defined on the following levels:
 
 - global: global folder, see above
-- site: ContentTemplates system folder under a site
 - workspace: ContentTemplates system folder under a workspace
 - local: ContentTemplates system folder under any content - e.g. document library
 
-When the user opens a new menu the system looks for content templates defined for all content types that are allowed there. It starts under the current content (e.g. content list), than moves up to the workspace, site and finally the global level. Content templates can override each other by name. This means if you define a local content template with a name that exists above on the workspace, site or global level, it will override them.
-
+When the user creates new content the system looks for content templates defined for all content types that are allowed there. It starts under the current content (e.g. content list), than moves up to the workspace and finally the global level. Content templates can override each other by name. This means if you define a local content template with a name that exists above on the workspace, site or global level, it will override them.

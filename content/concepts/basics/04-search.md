@@ -41,10 +41,9 @@ The search engine is responsible for providing these two important components:
 The query engine is responsible for executing a query that is already compiled to a generic SnQuery object. It compiles the query to the language understandable by the underlying index technology. In sensenet the current default implementation uses the Lucene engine for indexing and querying content items.
 
 The **_indexing engine_** is an implementation of an interface that defines methods for writing IndexDocuments to the index. These index documents are generic, they hold all the meta information by which we can search for content items in the repository. To learn more about how indexing works in sensenet, please visit the Field indexing article.
-
+Query result always depends on permissions. If you don't have the permission to a particular document that has been retrieved as part of a query result, then the whole query result will appear, except for that particular content.
 # Usage
 sensenet content repository is a query based system, which means every content or image you see on the portal is collected by a very sophisticated and fast query engine. As an end-user, developer or administrator you get the solution to find, filter and sort content even in a huge and constantly expanding repository.
 You can find several usage and examples in the API docs [https://docs.sensenet.com/api-docs/querying].
-
 
 
