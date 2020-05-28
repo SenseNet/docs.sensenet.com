@@ -18,7 +18,7 @@ Every content template resides in a folder named by its content type. In this fo
 
 Content templates are content of the same type as they are defined for. For example document templates are files; library or list templates are document libraries or memo lists. To create a content template you simply need to create a new content under the appropriate folder (named by the type). You can set any property of the content template or add child content (e.g. libraries and lists for a workspace), they will be part of the template.
 
-# Modify or deleting a template
+# Modify or delete a template
 
 You can modify or delete a content template at any time. They are not connected to the content created using them in any way. For this reason, modifying a template will not modify a content previously created.
 
