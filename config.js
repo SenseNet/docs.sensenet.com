@@ -14,9 +14,9 @@ const config = {
 		"links": [
       { "text": "API Docs", "link": "/api-docs/basic-concepts", "name": "api-docs"},
       { "text": "Example Apps", "link": "/example-apps", "name": "example-apps"},
-      { "text": "Tutorials", "link": "/", "name": "tutorial"},
+      { "text": "Tutorials", "link": "/tutorials/index", "name": "tutorials"},
       { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
-      { "text": "Admin-ui Guides", "link": "/guides/index", "name": "guides"},
+      { "text": "Guides", "link": "/guides/index", "name": "guides"},
       { "text": "Integrations", "link": "/", "name": "integrations"}
 		],
 		"search": {

@@ -61,7 +61,22 @@ const sideMenuConfig = {
       "/concepts/document-previews",
     ],
   },
-  tutorials: {},
+  tutorials: {
+    "forcedNavOrder": [
+      "/tutorials/content",
+      "/tutorials/content-types",
+      // "/tutorials/user-management",
+      // "/tutorials/permission-management",
+      "/tutorials/install"
+    ],
+    "collapsedNav": [
+      "/tutorials/content",
+      "/tutorials/content-types",
+      // "/tutorials/user-management",
+      // "/tutorials/permission-management",
+      "/tutorials/install"
+    ]
+  },
   guides: {
     "forcedNavOrder": [
       "/guides/getting-started",

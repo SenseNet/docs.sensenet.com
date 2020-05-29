@@ -50,7 +50,7 @@ const content = [
         link: ''
       },
     ],
-    link: '',
+    link: '/tutorials',
     img: '../images/tutorials.png'
   },
   {

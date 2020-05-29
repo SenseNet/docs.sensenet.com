@@ -18,6 +18,8 @@ const calculateTreeData = (edges, l) => {
 
   edges.filter(({node: {fields: {slug}}}) => slug !== l.split('/')[1])
 
+
+
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
     let {items: prevItems} = accu;
@@ -33,6 +35,7 @@ const calculateTreeData = (edges, l) => {
       }
       prevItems = tmp.items;
     }
+    console.log(accu.items)
     const existingItem = prevItems.find(({label}) => label === parts[parts.length - 1]);
     if (existingItem) {
       existingItem.url = slug;
@@ -86,14 +89,13 @@ const calculateTreeData = (edges, l) => {
 const Tree = ({edges, location}) => {
 
   const [treeData] = useState(() => {
-    if(['api-docs', 'concepts', 'guides'].some(element => location.includes(element))){
+    if(['api-docs', 'concepts', 'guides', 'tutorials'].some(element => location.includes(element))){
       return calculateTreeData(edges, location);
     } else {
       return { items: []};
     }
   });
   const defaultCollapsed = {};
-
   treeData.items.forEach(item => {
     if (sideMenuConfig[getConfigNameByLocation(location)].collapsedNav && sideMenuConfig[getConfigNameByLocation(location)].collapsedNav.includes(item.url)) {
       defaultCollapsed[item.url] = true;
@@ -155,6 +157,8 @@ const getConfigNameByLocation = (location) => {
       c = 'concepts'
     } else if(location.split('/')[1]  === 'guides') {
       c = 'guides'
+    } else if(location.split('/')[1]  === 'tutorials') {
+      c = 'tutorials'
     } else {
       c = 'apiDocs'
   }

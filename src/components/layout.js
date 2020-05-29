@@ -98,7 +98,7 @@ const Layout = ({ children, location }) => {
 
     </MDXProvider>
   }
-  else if(location.pathname.includes('example-apps') || location.pathname.includes('tutorials')) {
+  else if(location.pathname.includes('example-apps')) {
     container = <MDXProvider components={mdxComponents}>
     <Wrapper>
       <Content>
