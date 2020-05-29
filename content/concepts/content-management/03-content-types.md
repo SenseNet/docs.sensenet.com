@@ -16,7 +16,7 @@ For example a User has a name, e-mail address, etc. - these fields of the user `
 
 # Default content types
 
-In sensenet we provide a default set of predefined content types. These types can be used in any solution built with sensenet but additional (custom) content types can be configured as well according to business needs.
+A default set of predefined content types is provided in sensenet. These types can be used in any solution built with sensenet but additional (custom) content types can be configured as well according to business needs.
 
 some example from the default set:
 - user
@@ -28,17 +28,17 @@ some example from the default set:
 
 # Custom content type
 
-Since many feature are tied to content types (AllowedChildType, content template) it is strongly suggested to create custom content types according to your solution's architecture. Default content types can be used in your solution but cannot be modified (in SNaaS). You can create custom content type by inheritng from ``GenericContent`` or any other content type in the tree.
+Since many feature are tied to content types (AllowedChildType, content template) it is strongly suggested to create custom content types according to your solution's architecture. Default content types can be used in your solution but cannot be modified or deleted (in SNaaS). You can create custom content type by inheriting from ``GenericContent`` or any other content type in the tree.
 
 # Content type hierarchy
 
-Content types are organized into hierarchy according to inheritance. Any content type may inherit from another one. The topmost content type in the inheritance hierarchy is the ``GenericContent`` (with handler ``SenseNet.ContentRepository.GenericContent``), every content type must inherit from this, or any of its descendant. When a child content type is inherited from a parent content type it means that the child content type contains all the fields of the parent, even if they are not defined in the child CTD - and also they share common implemented logic.
+Content types are organized into a hierarchy according to inheritance. Any content type may inherit from another one. The topmost content type in the inheritance hierarchy is the ``GenericContent`` (with handler ``SenseNet.ContentRepository.GenericContent``), every content type must inherit from this, or any of its descendant. When a child content type is inherited from a parent content type it means that the child content type contains all the fields of the parent, even if they are not defined in the child CTD - and also they share common implemented logic.
 
 > Multiple inheritance is not allowed so content types are arranged in a simple tree.
 
 ## Field inheritance
 
-A content type inherits its fields from its parent content type (defined by the ``parentType`` attribute). This means that only additional fields have to be defined in the type’s CTD. The inherited fields apply to the content type as defined on the parent type, but may also be overridden. The following apply to field inheritance:
+A content type inherits its fields from its parent (and upper ancestor) content type (defined by the ``parentType`` attribute). This means that only additional fields have to be defined in the type’s CTD. The inherited fields apply to the content type as defined on the parent type, but may also be overridden. The following apply to field inheritance:
 
 - fields of all ancestors are inherited: ie. fields of parent type of the direct parent are also available in the current type
 - all fields of the parent type are inherited: deleting a field that has been defined on an ancestor type is not possible
@@ -47,7 +47,7 @@ A content type inherits its fields from its parent content type (defined by the 
 - if a field is defined in a CTD with empty markup the parent’s field of the same name is overridden with empty data
 - when inheriting a field the first order elements of the configuration element are inherited (these are defined by the field definition)
 
-> Every detail of a field (e.g: name, visibility, compulsory) can be ovverriden on child level allowing you to break inheritance field by field.
+> Every detail of a field (e.g: name, visibility, compulsory) can be overridden on child level allowing you to break inheritance field by field.
 
 # Allowed child types
 
@@ -120,8 +120,8 @@ Below you can see a fully featured skeleton of a content type definition xml:
 </ContentType>
 ```
 
-The content type definition xml of a content type can be edited on the admin ui or through OData REST API ([see How to create a Content Type for details](https://community.sensenet.com/docs/tutorials/how-to-create-a-content-type/)).
+The content type definition xml of a content type can be edited on the admin ui or through OData REST API ([see How to create a Content Type for details](/tutorials/content-types/how-to-create-a-content-type/)).
 
 # Usage (advantages)
 
-Sensenet content type approach enables you to define custom content types in a system according to your needs. This allows great flexibility on content level.  You can freely use predefined content types available in the system or create your own by inheriting from ``GenericContent`` or any other existing content type. It is recommended to define the required custom content types right at the beginning of your project and build your solution afterwards.
+Sensenet content type approach enables you to define custom content types in a system according to your needs. This allows great flexibility on content level. You can freely use predefined content types available in the system or create your own by inheriting from ``GenericContent`` or any other existing content type. It is recommended to define the required custom content types right at the beginning of your project and build your solution afterwards.
