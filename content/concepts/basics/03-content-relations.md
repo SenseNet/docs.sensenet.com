@@ -36,8 +36,6 @@ Reference field holds many options to customize its behaviour. You can define th
 Reference field works flawlessly with other parts of the system. For example when a reference is moved to another place or it has been renamed, it does not affect the content it is referenced by (the moved/renamed reference is still visible in the feference field).
 Concerning permission handling, if the current user does not have see permissions to one of the references, that reference is not visible for the user at all.
 When a content with a reference field is copied, the newly created content will hold the same references as the source content.
-
-
 > Copying source content references along with the source content does not affect this behavior, the newly created content will hold references to the originally referenced content and not the newly created copies.
 
 
