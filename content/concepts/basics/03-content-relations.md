@@ -31,21 +31,14 @@ Content types are defined in a type hierarchy. A content type may be inherited f
 
 The reference field is used for defining references to other content(s). When a content holds references pointing to other content (for example a group referencing users) it is done with a reference field.
 
-The following apply to the behavior of the field:
+Reference field holds many options to customize its behaviour. You can define the **number of references** the field can hold; set **default reference** for a certain content type (all newly created content will contain the predefined references); restrict referable content by **type** or **location**; or define a set of referable content with a query.
 
-- **number of references:** a reference field can be configured to hold either one or more references
-- **default reference:** one or more default references can be set via field configuration
-- **types of referable content:** types of referable content can be restricted
-- **location of referable content:** location of referable content can be restricted
-- **set of referable content:** set of referable content can be defined with an optional query
-- **moving/renaming references:** when a reference is moved to another place or it has been renamed, it does not affect the content it is referenced by - the moved/renamed reference is still visible in the feference field
-- **permission handling:** if the current user does not have see permissions to one of the references, that reference is not visible for the user
-- **copying content with references:** when a content with a reference field is copied, the newly created content will hold the same references as the source content. 
+Reference field works flawlessly with other parts of the system. For example when a reference is moved to another place or it has been renamed, it does not affect the content it is referenced by (the moved/renamed reference is still visible in the feference field).
+Concerning permission handling, if the current user does not have see permissions to one of the references, that reference is not visible for the user at all.
+When a content with a reference field is copied, the newly created content will hold the same references as the source content.
+
 
 > Copying source content references along with the source content does not affect this behavior, the newly created content will hold references to the originally referenced content and not the newly created copies.
-
-## Configuration
-When configuring the reference field you can define whether multiple references are allowed or only a single content can be referenced. You can restrict referenced content by content type or location (in the tree). Default referenced content(s) can also be defined so when a new content is created it will automatically have a predefined set of content in the reference field.
 
 
 # Binaries
