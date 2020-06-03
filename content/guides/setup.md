@@ -11,7 +11,7 @@ Generally settings are created for administrators or editors to let them customi
 
 As settings are simple text files, they can be edited in the admin surface's text editor. When you modify a settings file, the framework takes care of refreshing the values in the cache, so your features will automatically get the new values.
 
-## Portal.settings {#portal-settings}
+## Portal.settings
 
 All settings related to the surface and behavior of the web application can be found here, from the cache header settings of different file types to the default content type of uploaded images and the allowed origin values.
 
@@ -99,7 +99,7 @@ You can also customize the list of allowed http headers for CORS requests (for e
 }
 ```
 
-## OAuth.settings {#oauth-settings}
+## OAuth.settings
 
 When users register or login using one of the configured OAuth providers (like Google or Facebook), these settings control the type and place of the newly created users as content items in the repository.
 
@@ -108,7 +108,7 @@ When users register or login using one of the configured OAuth providers (like G
 | UserType | string | Name of the ```ContentType``` with which the user should be created. |
 | Domain   | string | Name of the ```Domain``` where the user should be created. |
 
-## DocumentPreview.settings {#documentpreview-settings}
+## DocumentPreview.settings
 
 In this section you can customize the behavior of the Document Preview feature â€“ for example the font style of the watermark displayed on documents or the number of the initially generated preview images.
 
@@ -125,7 +125,7 @@ In this section you can customize the behavior of the Document Preview feature â
 | WatermarkOpacity | number | Opacity of the text |
 | WatermarkPosition | BottomLeftToUpperRight, UpperLeftToBottomRight, Top, Bottom, Center | Watermark text orientation. |
 
-## OfficeOnline.settings {#officeonline-settings}
+## OfficeOnline.settings
 
 To open or edit Office documents in the browser, the system needs to know the address of the Office Online Server that provides the user interface for the feature. In this section you can configure that and other OOS-related settings.
 
@@ -133,7 +133,7 @@ To open or edit Office documents in the browser, the system needs to know the ad
 | ---- | --- | ----------- |
 | OfficeOnlineUrl | string | Url of the Office Online Server |
 
-## Indexing.settings {#indexing-settings}
+## Indexing.settings
 
 In this section you can customize the indexing behavior (for example the text extractor used in case of different file types) of the system.
 
@@ -150,7 +150,7 @@ To add a new text extractor or override an existing one you will need to configu
 }
 ```
 
-## Sharing.settings {#sharing-settings}
+## Sharing.settings
 
 You can switch ON or OFF notifications or customize the notification emails here.
 
