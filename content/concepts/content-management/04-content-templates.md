@@ -37,7 +37,7 @@ See example under API docs [https://docs.sensenet.com/api-docs/content-managemen
 
 Content templates can be controlled by permissions the same way as any other content. If the user has no permission for a particular template she will not be able to create content using that template.
 After creating a content using a template the security settings that were set directly on the content template are also copied to the new content. All settings set on the destination parent will be inherited by the new content naturally.
-
+To build a separate micro permission system locally it is enough to add local groups to wokspace templates.
 # Content template hierarchy
 
 Content templates can be defined on the following levels:
