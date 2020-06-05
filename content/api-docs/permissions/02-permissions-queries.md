@@ -1,7 +1,14 @@
 ---
-title: Permission Queries
-metaTitle: "sensenet API - Permission Queries"
-metaDescription: "Permission Queries"
+title: Complex Permission Queries
+metaTitle: "sensenet API - Complex Permission Queries"
+metaDescription: "Complex Permission Queries"
 ---
 
-# Permission queries
+GetRelatedIdentities
+GetRelatedPermissions
+GetRelatedItems
+
+GetRelatedIdentitiesByPermissions
+GetRelatedItemsOneLevel
+GetAllowedUsers
+GetParentGroups
