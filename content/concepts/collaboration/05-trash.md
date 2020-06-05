@@ -4,7 +4,7 @@ metaTitle: "sensenet - Trash"
 metaDescription: "sensenet Trash"
 ---
 
-When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin `/Root/Trash`. 
+When you delete a document or a folder, and the trash feature is enabled (enabled by default), the content will be wrapped into a special container called the Trash Bag, and will be moved to the Trash Bin `/Root/Trash`.
 
 The Trash Bin is a central place for deleted documents where you can browse, restore or delete content permanently. It is also possible to provide a local (workspace-level) trash for users.
 
@@ -16,14 +16,14 @@ Delete operation allows users to transfer content (documents, folders or whole w
 Contents can be deleted through API calls, but these actions are also available on the admin ui:
 
 You can access delete action for basically every content in the doclib by clicking context menu (...) or right click on item.
-![delete action](./img/delete_contextmenu.png)
+![delete action](../img/delete_contextmenu.png)
 
 
 By default configuration, a confirmation popup appears, displaying content name and path, with an additional option to permanently delete the content (skipping trash).
-![confirm delete](./img/confirm.png)
+![confirm delete](../img/confirm.png)
 
 Deleted (trashed) items can be found in a specific folder having some extra parameter like retention time, quota for size and number of content. These limits can be customized.
-![trash](./img/trasheditem.png)
+![trash](../img/trasheditem.png)
 
 Content from trash could be restored to a container chosen by the user. By default this container is the original parent of the deleted content, but the restore target could be chosen freely,
 
@@ -32,10 +32,10 @@ Type of the restored content should be allowed on the chosen container.
 </note>
 
 Additional actions can also be performed on trashed items like edit or delete permanently.
-![trash actions](./img/trash_actions.png)
+![trash actions](../img/trash_actions.png)
 
 When deleting a trashed item, the content will be permanently deleted
-![delete from trash](./img/permanentdelete.png)
+![delete from trash](../img/permanentdelete.png)
 
 If the trash is disabled, the popup informs you that the feature is turned off. Be careful because you may delete a content permanently. Your content can't be restored in this case.
 

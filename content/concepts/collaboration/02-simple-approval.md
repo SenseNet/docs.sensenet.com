@@ -11,7 +11,7 @@ Simple approval adds an extra step to the default publishing process. When appro
 It is important to differentiate roles like author and editor. Approval feature works best if permissions are defined correctly and the whole process is tailor made to the business logic.
 
 # Steps
-![approval steps](./img/approval.png)
+![approval steps](../img/approval.png)
 
 First, a draft is born by the author which will be then sent for review - the system creates a version labeled `Pending for approval`. This version is visible only for administrators and users who have permission to Approve or Reject it.
 
