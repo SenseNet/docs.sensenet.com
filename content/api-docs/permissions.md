@@ -29,16 +29,54 @@ sensenet has a flexible permission system for controlling the accessibility of c
 
 # What is a permission entry?
 
+Permission entry is the base building block of sensenet's permission management, represents a user or a group content and its permission settings. When you want to allow or deny permissions on a content or a subtree for a user you're actually adding a new permission entry or modifying an existing one. All permission entries contain an identity (user or group), the info whether the actual entry is defined on an ancestor (permissions are inherited) and list of all the permissions and the settings are made on the current content for the entry.
+
+```
+{
+  "identity": {
+    "id": 1154,
+    "path": "/Root/IMS/Public/businesscat",
+    "name": "businesscat",
+    "displayName": "Business Cat",
+    "domain": null,
+    "kind": "user"
+  },
+  "propagates": true,
+  "permissions": {
+    "See": null,
+    "Preview": null,
+    "PreviewWithoutWatermark": null,
+    "PreviewWithoutRedaction": null,
+    "Open": null,
+    "OpenMinor": null,
+    "Save": null
+    ...
+  }
+}
+```
+
 # Get permission entries of a content
 
+<tab category="preview" article="permissions" example="getPermissionEntries" />
+
 # Get a permissions entry of a specific user or group
+
+<tab category="preview" article="permissions" example="getPermissionEntry" />
 
 > info|local group-okra is működik ofc
 
 # Check user access
 
+<tab category="preview" article="permissions" example="getPermissions" />
+
 # How can I check why a user cannot access a content?
+
+<tab category="preview" article="permissions" example="hasPermission" />
 
 # How can I check why a user cannot save a content?
 
+<tab category="preview" article="permissions" example="canSave" />
+
 # Check if I can see the permission settings
+
+<tab category="preview" article="permissions" example="canSeePermissions" />
