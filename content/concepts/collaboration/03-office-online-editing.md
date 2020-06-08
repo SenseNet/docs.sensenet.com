@@ -7,6 +7,8 @@ sensenet enables collaborative content management, thanks to [Office Online edit
 
 Being able to collaborate on the same document contemporary saves you time of emailing files, store them, and also prevents you from having to reconcile multiple versions of the same document.
 
+![working on the same document](../img/office_online.gif)
+
 # How does it work
 There is no special co-authoring mode and no command to begin co-authoring. You can edit the file as you normally do, and if others are also editing the document, Office will alert you of their presence. You can open the document (word, excel files) right in the browser and the service will save the changes automatically.
 

@@ -12,13 +12,15 @@ Tree structure lets you organize, group your content easily by creating separate
 
 This kind of data storage makes it possible to store content of multiple different projects (public website, intranet, document management app, etc.) in one repository. By creating multiple subtrees with folders or workspaces you can build up custom content structures and every subtree can have its own permission settings, roles and configurations, considering who can access it and what it will be used for.
 
+![workspace tree](../img/workspace.png)
+
 # Searching in subtrees
 
-sensenet search engine provides you an easy and performant way to query content in the repository. You can make it even more efficient building separate subtrees for separate use cases. This way the system will only search those part of the tree that are related making the search itself much faster and effective.
+sensenet search engine provides you an easy and performant way to query content in the repository. You can make it even more efficient building separate subtrees for separate use cases. This way the system will only search those part of the tree that are related making the search itself much faster and effective. For examples see the related [API references](/api-docs/querying/01-id-path).
 
 # Content access and url resolution
 
-As it is mentioned above, every content in the content repository is not only identified by its unique id but also its path. If you move a content to another folder thus change its path, the system keeps track of the changes making it possible to use the path as a link to the content.
+As it is mentioned above, every content in the content repository is not only identified by its unique id but also its path. If you move a content to another folder thus change its path, the system keeps track of the changes making it possible to use the path as a link to the content. For example the *IT* workspace's `Path` is /Root/Content/IT which means it is in *Content* container which is children of the *Root* folder and the workspace is accessible through the /Root/Content/IT url.
 
 # Permission inheritance
 
