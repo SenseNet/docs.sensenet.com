@@ -6,23 +6,23 @@ metaDescription: "Complex Permission Queries"
 
 GetRelatedIdentities
 
-<tab category="preview" article="permission-queries" example="getRelatedIdentities" />
+<tab category="permissions" article="permission-queries" example="getRelatedIdentities" />
 
 GetRelatedPermissions
-<tab category="preview" article="permission-queries" example="getRelatedPermissions" />
+<tab category="permissions" article="permission-queries" example="getRelatedPermissions" />
 
 GetRelatedItems
-<tab category="preview" article="permission-queries" example="getRelatedItems" />
+<tab category="permissions" article="permission-queries" example="getRelatedItems" />
 
 GetRelatedIdentitiesByPermissions
 
-<tab category="preview" article="permission-queries" example="getRelatedIdentitiesByPermissions" />
+<tab category="permissions" article="permission-queries" example="getRelatedIdentitiesByPermissions" />
 GetRelatedItemsOneLevel
 
-<tab category="preview" article="permission-queries" example="getRelatedItemsOneLevel" />
+<tab category="permissions" article="permission-queries" example="getRelatedItemsOneLevel" />
 GetAllowedUsers
 
-<tab category="preview" article="permission-queries" example="getAllowedUsers" />
+<tab category="permissions" article="permission-queries" example="getAllowedUsers" />
 GetParentGroups
 
-<tab category="preview" article="permission-queries" example="getParentGroups" />
+<tab category="permissions" article="permission-queries" example="getParentGroups" />

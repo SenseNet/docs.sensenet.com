@@ -10,22 +10,22 @@ sensenet has a flexible permission system for controlling the accessibility of c
 
 |  |  |
 |--|--|
-|See|controls whether the user is allowed to see the content (ie. visible in a list, but field data cannot be accessed)|
-|Restricted preview|controls whether the user is allowed to see a preview of a document. All field data can be accessed, except binary fields.|
-|Preview without watermark|controls whether the user is allowed to see a preview of a document without a watermark. All field data can be accessed, except binary fields.|
-|Preview without redaction|controls whether the user is allowed to see a preview of a Content (e.g. a document) without redaction. All field data can be accessed, except binary fields.|
-|Open|controls whether the user is allowed to open the content to see and access its field data|
-|Open minor|controls whether the user is allowed to open minor versions of the content and see corresponding field data|
-|Save|controls saving of the content|
-|Publish|controls publishing of the content|
-|Force undo checkout|controls whether the user is allowed to undo pending changes when the content is checked out by someone else|
-|Add new|controls creation of new content under the given container|
-|Approve|controls approval of the content|
-|Delete|controls deletion of the content|
-|Recall old version|controls whether the user is permitted to restore an old version of the content|
-|See permissions|controls whether the user is allowed to see permission settings for the content|
-|Set permissions|controls whether the user is allowed to change permission settings for the content|
-|Run application|controls whether the user is allowed to use the content by an application.|
+|**See**|controls whether the user is allowed to see the content (ie. visible in a list, but field data cannot be accessed)|
+|**Restricted permissions**|controls whether the user is allowed to see a permissions of a document. All field data can be accessed, except binary fields.|
+|**Preview without watermark**|controls whether the user is allowed to see a permissions of a document without a watermark. All field data can be accessed, except binary fields.|
+|**Preview without redaction**|controls whether the user is allowed to see a permissions of a Content (e.g. a document) without redaction. All field data can be accessed, except binary fields.|
+|**Open**|controls whether the user is allowed to open the content to see and access its field data|
+|**Open minor**|controls whether the user is allowed to open minor versions of the content and see corresponding field data|
+|**Save**|controls saving of the content|
+|**Publish**|controls publishing of the content|
+|**Force undo checkout**|controls whether the user is allowed to undo pending changes when the content is checked out by someone else|
+|**Add new**|controls creation of new content under the given container|
+|**Approve**|controls approval of the content|
+|**Delete**|controls deletion of the content|
+|**Recall old version**|controls whether the user is permitted to restore an old version of the content|
+|**See permissions**|controls whether the user is allowed to see permission settings for the content|
+|**Set permissions**|controls whether the user is allowed to change permission settings for the content|
+|**Run application**|controls whether the user is allowed to use the content by an application.|
 
 # What is a permission entry?
 
@@ -57,26 +57,40 @@ Permission entry is the base building block of sensenet's permission management,
 
 # Get permission entries of a content
 
-<tab category="preview" article="permissions" example="getPermissionEntries" />
+With the next example you are able to get the list of entries with permission settings on the specified content:
+
+<tab category="permissions" article="permissions" example="getPermissionEntries" />
 
 # Get a permissions entry of a specific user or group
 
-<tab category="preview" article="permissions" example="getPermissionEntry" />
+You can add a specific user or group to the example above to filter the entry list and get only those that are related to the given entity in this case to the *Editors* group:
 
-> info|local group-okra is működik ofc
+<tab category="permissions" article="permissions" example="getPermissionEntry" />
+&nbsp;
+<note severity="info">Above mentioned method could be used with workspace local groups as well.</note>
 
 # Check user access
 
-<tab category="preview" article="permissions" example="getPermissions" />
+The next example shows you how you can check whether a user can or cannot access a content. We do not specify a user in the following example that means the system will check the permissions of the currently logged-in user:
+
+<tab category="permissions" article="permissions" example="hasPermission" />
 
 # How can I check why a user cannot access a content?
 
-<tab category="preview" article="permissions" example="hasPermission" />
+Of course you can use the above mentioned stuff to check access of a specified user using the identity param:
+
+<tab category="permissions" article="permissions" example="hasPermissionUser" />
+&nbsp;
+<note severity="info">Groups, users or even workspace local groups can be added as identity.</note>
 
 # How can I check why a user cannot save a content?
 
-<tab category="preview" article="permissions" example="canSave" />
+You can search permission entries by all the available permissions, as in the following example by Save for knowing if the given user is able to save the content or not:
+&nbsp;
+<tab category="permissions" article="permissions" example="canSave" />
 
 # Check if I can see the permission settings
 
-<tab category="preview" article="permissions" example="canSeePermissions" />
+The above mentioned things are available if the user who use them are allowed to see permissions so he has *SeePermissions* permission allowed. You can also check wether a user can see permissions or not as in the above mentioned examples but now with the *SeePermissions*:
+
+<tab category="permissions" article="permissions" example="canSeePermissions" />
