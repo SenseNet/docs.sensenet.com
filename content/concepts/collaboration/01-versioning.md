@@ -6,7 +6,7 @@ metaDescription: "sensenet Versioning"
 
 Versioning is the management of changes to documents and other information stored in a file system or repository.
 The versioning system of sensenet also provides mechanisms for keeping the published version of a document visible to non-editor users, while you continue to work on the latest, draft version.
-In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, by setting the value of the Versioning Mode field. Subfolders inherit versioning settings by default. 
+In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, by setting the value of the Versioning Mode field. Subfolders inherit versioning settings by default.
 When a new Content is created in the Content Repository with versioning enabled, it is assigned the initial version number, depending on the versioning mode. Changes made to the document will result in a bump of the version number, with old versions tracked for possible rollbacks.
 
 # Does sensenet also version content types or users?
@@ -32,6 +32,8 @@ Content in the repository can have several non-numeric version states:
 - **R (Rejected):** If a content is not correct, the user with approving rights can reject it. This means it is not published and should be refined.
 
 These states are related to the approval process, you can read more about it under [Approval](/concepts/simple-approval).
+
+![approval steps](../img/approval.png)
 
 # Versioning and visibility
 Visitors in general are only allowed to view the last public versions of a content. This is controlled by the Open minor permissions: a user who does not possess the open minor permission for a content will only see the last public version of a content, and will never see any changes that correspond to a draft version or that are not yet approved. The other important thing here to bear in mind is that if a document gets rejected it does not mean that the document is not visible for the public. It only means that the last version that was rejected will not be visible to the public.

@@ -8,6 +8,24 @@ Using sensenet you are able to use trash just like in Windows. When you delete a
 
 The trash bin is a central place for deleted documents where you can browse, restore or delete content permanently just as you do with any other content in the repository. The Trash bin contains the items wrapped in separate trash bags. The followings can be executed only on this type of contents.
 
+## Switch Trash on and off globally
+
+Trash is a workspace content (/Root/Trash) so that you are able to disable it by changing its `IsAction` field's value to false. As you can see in the next example it can be done with a simple patch request called on '/Root/Trash':
+
+<tab category="content-management" article="trash" example="disableTrashGlobally" />
+
+## Disable Trash for a specific container
+
+It is also possible to switch off Trash for a container (folder or list) by changing the affected content's `TrashDisabled` field's value to false. This field is available by default on every content (it is defined on GenericContent). In the next example you can see how to switch off trash functionality for a workspace:
+
+<tab category="content-management" article="trash" example="disableTrashOnAContent" />
+
+## Configure trash options
+
+There are a few possible configurations that can be made related to Trash (for further information see the related [guide](/guides/content-management/trash)). Since Trash is a content as everything else in sensenet its configureable options are available as fields and can be changed with a simple patch request. See in the next example how you can change all the config options of Trash at once:
+
+<tab category="content-management" article="trash" example="trashOptions" />
+
 ## Restore items from the trash
 
 The following example shows you how you can restore an item from the trash to its original place:
