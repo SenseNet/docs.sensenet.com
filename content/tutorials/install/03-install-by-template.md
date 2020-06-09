@@ -21,6 +21,8 @@ https://github.com/SenseNet/sn-vs-projecttemplates
 
 	git clone https://github.com/SenseNet/sn-vs-projecttemplates
 
+	![clone repo](../img/01-clone-projecttemplates.png)
+
 2. .NetCore project examples are in the "netcore" subfolder. Select the appropriate projects for your need.
 To install sensenet two project will be needed. One is the netcore webapp as the sensenet api obviously, 
 and an installer to create the database and the sensenet repository for this api.
@@ -36,10 +38,14 @@ automatically restores nuget packages too:
 
 	dotnet publish SnWebApplication.Api.Sql.TokenAuth.csproj -c Release -o webFolderPath
 
+	![create webfolder](../img/03-publish-webfolder.png)
+
 Don't forget to set the connection string to your mssql database and identity server url in appsettings.json or with environment variables before start the application.
 
 	ConnectionStrings.SnCrMsSql
 	sensenet.authentication.authority
+
+	![webapp configuration](../img/04-webapp-settings.png)
 
 4. before start the service, we have to create the repository as mentioned eralier. For this we 
 have a sample project in sn-vs-projecttemplates under "src\netcore\SnDemoConsoleInstaller" subfolder.
@@ -55,6 +61,8 @@ for content imports only:
 for snadmin packages:
 	sensenet.install.packages
 
+	![installer configuration](../img/06-consoleinstaller-appsettings.png)
+
 	*before you run console installer you will have to create an empty database with the same name on your database server. If it is not
 	available, the consoleinstaller will throw the following error:
 		Unhandled exception. System.Data.SqlClient.SqlException (0x80131904): Cannot open database "YourDatabaseName" requested by the login. The login failed.
@@ -65,10 +73,19 @@ You can either build, publish this project and run the executable or run directl
 
 	dotnet run SnConsoleInstaller.csproj -c Release
 
+	![run installer](../img/07-run-consoleinstaller.png)
+
 5. The consoleinstaller will create the lucene index in the file system along with the database. We have to copy this index under the webfolder before start the service.
 
+	![copy index folder](../img/08-copy-lucene.png)
 	
 6. now that our repository is prepared we have to create an IIS site, set path to the webfolder we had deployed the api and set application pool to no managed code.
 (.Netcore has to be installed on the IIS server to be able to serve .netcore projects.)
 
+	![create iis site](../img/09-create-IIS-site.png)
+
+	![no managed code](../img/10-set-no-managed-code.png)
+
 7. if everything is set up properly now we can connect to this repo through admin ui.
+
+	![celebrate](../img/12-adminui.png)
