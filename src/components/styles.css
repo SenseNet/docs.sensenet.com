@@ -359,7 +359,7 @@ a:hover {
 }
 pre {
   border: 0 !important;
-  background-color: rgb(245, 242, 240) !important; /* !important; */
+  background-color: rgb(30, 30, 30); /* !important; */
 }
 
 .mainWrapper ul, .mainWrapper ol,
