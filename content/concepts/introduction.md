@@ -27,3 +27,9 @@ Thanks to its API-first approach it is easy to integrate with, and gives more fr
 It is possible to install sensenet in your own environment or with ([SNaaS](/concepts/introduction/04-what-is-snaas)) (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored and hosted securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
 
 As open source software sensenet's backend and frontend components' source code is fully public, stored on github. If you want to fully understand how it works in deep or want to help us improve sensenet and fix a bug or contribute a new feature, feel free to do it in the [GitHub repositories under the Sense/Net](https://github.com/SenseNet) organization.
+
+# Need help?
+
+- demo
+- community support (github, stackoverflow, github)
+- commercial support (onboarding support, ticketing system, personal help, tailormade offers for every need)

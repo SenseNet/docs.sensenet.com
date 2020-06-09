@@ -23,4 +23,11 @@ A basic setup of sensenet has three top level parts:
 - central admin surface
 - flexible pricing plans (based on # of content, request, user)
 
+# sensenet cloud
+
+- our infrastructure
+- secure and everything
+- hosted in europe
+- future plans make it possible to choose between multiple cloud services
+
 Are you interested in having your own repository in the sensenet cloud? [Contact us](https://sensenet.com/contact#earlyadopter), be an early adopter and get a repository free for a try-out.
