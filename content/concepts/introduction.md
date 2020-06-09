@@ -4,8 +4,8 @@ metaTitle: "sensenet - What is sensenet"
 metaDescription: "sensenet What is sensenet"
 ---
 
-sensenet is a headless content management system (CMS) [link to: what is a headless cms] built mainly for developers and development companies.
-Basically it’s a content repository where you can store your contents and reach it through REST API.
+sensenet is a [headless content management system (CMS)](/concepts/introduction/02-what-is-headless-cms) built mainly for developers and development companies.
+Basically it's a content repository where you can store your contents and reach it through APIs.
 It’s a solid base of your custom solution offering enterprise grade security and permission system, versioning, dynamic content types and even more.
 
 # What can you do with it?
@@ -18,10 +18,10 @@ In practice this means that sensenet gives you everything you need to build a co
 
 # How can you do it?
 
-Once you understand the ([„everything is a content”](/concepts/basics)) mindset, you can implement your own business logic by creating custom ([content models](/concepts/content-management/02-content-models)) or using predefined ones as well.
+Once you understand the (["everything is a content"](/concepts/basics)) mindset, you can implement your own business logic by creating custom ([content types](/concepts/content-management/02-content-models)) or using predefined ones as well.
 
-In sensenet the delivery of content happens through API calls. Your solution requests the content as and when it’s needed.
+In sensenet the delivery of content happens through APIs. Your solution requests the content as and when it's needed.
 
-Thanks to its API-first concept it is easy to integrate with, and gives more freedom to the developer to choose the database, framework and programming language at all level of the application development, whether it’s a web, desktop or mobile development project.
+Thanks to its API-first approach it is easy to integrate with, and gives more freedom to the developer to choose the database, framework and programming language at all level of the application development, whether it's a web, desktop or mobile development project.
 
-It is possible to install sensenet in your own environment or with ([SNaaS](/concepts/introduction/04-what-is-snaas)) (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
+It is possible to install sensenet in your own environment or with ([SNaaS](/concepts/introduction/04-what-is-snaas)) (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored and hosted securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
