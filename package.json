@@ -28,7 +28,7 @@
     "emotion-theming": "^10.0.19",
     "fs": "0.0.1-security",
     "gatsby": "^2.18.10",
-    "gatsby-cli": "^2.12.37",
+    "gatsby-cli": "^2.12.44",
     "gatsby-link": "^2.2.27",
     "gatsby-plugin-algolia": "^0.5.0",
     "gatsby-plugin-anchor-links": "^1.1.1",

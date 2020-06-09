@@ -4,30 +4,24 @@ metaTitle: "sensenet - What is sensenet"
 metaDescription: "sensenet What is sensenet"
 ---
 
-
-# What is sensenet
-
-sensenet is a content services platform (CSP) mainly for developers and development companies. It is a headless content management system (CMS) with enterprise grade security and permission system, versioning, dynamic content types and even more.
+sensenet is a [headless content management system (CMS)](/concepts/introduction/02-what-is-headless-cms) built mainly for developers and development companies.
+Basically it's a content repository where you can store your contents and reach it through APIs.
+It’s a solid base of your custom solution offering enterprise grade security and permission system, versioning, dynamic content types and even more.
 
 # What can you do with it?
 
 You can create, store, edit, organize and publish any type of content.
 
-In sensenet everything is content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the content repository. It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a content tree, so you can always think in subtrees and inheritance when managing and presenting content.
+In sensenet everything is ([content](/concepts/basics)). Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the content repository. It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a ([content tree](/concepts/basics/02-content-tree)), so you can always think in subtrees and inheritance when managing and presenting content.
 
 In practice this means that sensenet gives you everything you need to build a content based custom solution satisfying a wide variety of business needs.
 
 # How can you do it?
-You have the freedom to choose the database, framework, technology and programming language you prefer to build your solution, at all level of the application development, whether your project is a web, desktop or mobile development.
 
-# What is "sensenet as a service"?
+Once you understand the (["everything is a content"](/concepts/basics)) mindset, you can implement your own business logic by creating custom ([content types](/concepts/content-management/02-content-models)) or using predefined ones as well.
 
-It is possible to install sensenet in your own environment or with SNaaS (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
+In sensenet the delivery of content happens through APIs. Your solution requests the content as and when it's needed.
 
-![How does SNaaS work?](https://www.sensenet.com/try-it/images/Web%201920%20%E2%80%93%201.png)
+Thanks to its API-first approach it is easy to integrate with, and gives more freedom to the developer to choose the database, framework and programming language at all level of the application development, whether it's a web, desktop or mobile development project.
 
-A basic setup of sensenet as a service has three top level parts:
-
-- a **content repository** that is the storage and service layer
-- an **application** that uses the content of the connected content repository through API calls
-- sensenet **admin surface** that helps you do common content management tasks or setup and keep your system up to date
+It is possible to install sensenet in your own environment or with ([SNaaS](/concepts/introduction/04-what-is-snaas)) (sensenet as a service) you can get access to a sensenet instance, this means all your content and data are stored and hosted securely by us saving you from all maintenance related tasks and installation, ensuring easy onboarding, updates and patches.
