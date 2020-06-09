@@ -67,14 +67,16 @@ const sideMenuConfig = {
       "/tutorials/content-types",
       // "/tutorials/user-management",
       // "/tutorials/permission-management",
-      "/tutorials/install"
+      "/tutorials/install",
+      "/tutorials/docker"
     ],
     "collapsedNav": [
       "/tutorials/content",
       "/tutorials/content-types",
       // "/tutorials/user-management",
       // "/tutorials/permission-management",
-      "/tutorials/install"
+      "/tutorials/install",
+      "/tutorials/docker"
     ]
   },
   guides: {
