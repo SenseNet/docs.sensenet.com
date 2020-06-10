@@ -14,7 +14,7 @@ Since everything is a content is sensenet, managing users and groups through the
 
 # Disable a user
 
-Disabling user account could be really useful if you want to lock out a user from the repository but you have to keep the user itself and all the data that are connected to him/her. In other words after disabling a user everything (contents, owners, modifiers, etc.) remain the same as before except that the affected user cannot login. `Enable` is a simple boolean field on the User content type and its value can be changed just like other metadata of a content. Using the following code you can lock out `editormanatee` user from a demo repository:
+Disabling user account could be really useful if you want to lock out a user from the repository but you have to keep the user itself and all the data that are connected to him/her. In other words after disabling a user everything (contents, owners, modifiers, etc.) remain the same as before except that the affected user cannot login. `Enabled` is a simple boolean field on the User content type and its value can be changed just like other metadata of a content. Using the following code you can lock out `editormanatee` user from a demo repository:
 
 <tab category="users-and-groups" article="users-and-groups" example="disableUser" />
 
