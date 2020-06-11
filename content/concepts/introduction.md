@@ -30,6 +30,8 @@ As open source software sensenet's backend and frontend components' source code 
 
 # Need help?
 
-- demo
-- community support (github, stackoverflow, github)
-- commercial support (onboarding support, ticketing system, personal help, tailormade offers for every need)
+sensenet community is always ready to help you, feel free to ask code-level questions on [stackoverflow](https://stackoverflow.com/questions/tagged/sensenet), add bug reports or feature requests on [GitHub](https://github.com/SenseNet/sensenet) or chat with us on [gitter](https://gitter.im/SenseNet/sensenet).
+
+In case you want to speak with us and learn how to work with sensenet and hear about its capabilities in deep, please [contact us to schedule an appointment](https://sensenet.com/contact#demo) for a demo session.
+
+It is of course possible to get commercial support. As a subscriber of one of the payed SNaaS plans you get access to our ticketing system, where your can report bugs and ask help from our support team. It is also possible to get special support services like project onboarding, developer consultations, workshops, [contact us](https://sensenet.com/contact) with your needs and get a tailormade offer.
