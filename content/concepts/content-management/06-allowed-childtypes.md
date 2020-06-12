@@ -48,8 +48,6 @@ The allowed child types definition on a content (whether it comes from CTD or fr
 # Content allowing all types
 It might happen that a certain content does not impose a restriction on allowed types. In this case any type is allowed to be created under that content. Since this however imposes a security risk as executable types can also be created at these locations, creating a content of any type under such locations is only allowed for users of specified groups. 
 
-```
-```
 If the user is not a member of any enlisted group he/she will not be able to create anything under locations where allowed child types list is empty.
 
 # Inheriting types
