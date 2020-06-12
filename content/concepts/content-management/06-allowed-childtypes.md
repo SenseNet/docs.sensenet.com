@@ -48,14 +48,13 @@ The allowed child types definition on a content (whether it comes from CTD or fr
 # Content allowing all types
 It might happen that a certain content does not impose a restriction on allowed types. In this case any type is allowed to be created under that content. Since this however imposes a security risk as executable types can also be created at these locations, creating a content of any type under such locations is only allowed for users of specified groups. 
 
-The above permission is configured with the following web.config key:
 ```
-<add key="AdminGroupPathsForAllowedcontentTypes" value="/Root/IMS/BuiltIn/Portal/Administrators,/Root/IMS/Demo/Developers"/>
 ```
 If the user is not a member of any enlisted group he/she will not be able to create anything under locations where allowed child types list is empty.
 
 # Inheriting types
-A **Folder** or a **Page** always inherits these settings from its parent content. You cannot set the allowed child types property of any specific Folder or Page item nor in the CTD (this restriction is valid both for admin ui and API as well). Therefore whatever allowed child types settings you specify for a list containing a Folder, these settings will also apply for the children of the Folder placed in this list. This ensures that if you build structures in a content list using folders, your list settings will never be overridden on a lower level.
+A **Folder** always inherits these settings from its parent content. You cannot set the allowed child types property of any specific Folder item nor in the CTD (this restriction is valid both for admin ui and API as well). Therefore whatever allowed child types settings you specify for a list containing a Folder, these settings will also apply for the children of the Folder placed in this list. This ensures that if you build structures in a content list using folders, your list settings will never be overridden on a lower level.
 
-# Special type
-A **SystemFolder** can be created anywhere in the content repository, regardless of its parent content’s allowed child types settings, if the user is granted to see permissions on the SystemFolder content type. This ensures that developers can create SystemFolders without having to modify the allowed child types of the individual content. Also, a SystemFolder does not specify any allowed types by default, so all types are allowed under a new SystemFolder. Allowed types however can be configured for a SystemFolder instance.
+# Special (or technical) type
+A **SystemFolder** can be created anywhere in the content repository, regardless of its parent content’s allowed child types settings, if the user is granted to see permissions on the SystemFolder content type. This ensures that developers can create SystemFolders without having to modify the allowed child types of the individual content. Also, a SystemFolder does not specify any allowed types by default, so all types are allowed under a new SystemFolder. Allowed types however can be configured for a SystemFolder instance. 
+SystemFolder is used mainly for storing settings or other technical contents.
