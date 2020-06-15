@@ -34,4 +34,4 @@ sensenet community is always ready to help you, feel free to ask code-level ques
 
 In case you want to speak with us and learn how to work with sensenet and hear about its capabilities in deep, please [contact us to schedule an appointment](https://sensenet.com/contact#demo) for a demo session.
 
-It is of course possible to get commercial support. As a subscriber of one of the payed SNaaS plans you get access to our ticketing system, where your can report bugs and ask help from our support team. It is also possible to get special support services like project onboarding, developer consultations, workshops, [contact us](https://sensenet.com/contact) with your needs and get a tailormade offer.
+It is of course possible to get commercial support. As a subscriber of one of the paid SNaaS plans you get access to our ticketing system, where your can report bugs and ask help from our support team. It is also possible to get special support services like project onboarding, developer consultations, workshops, [contact us](https://sensenet.com/contact) with your needs and get a tailormade offer.
