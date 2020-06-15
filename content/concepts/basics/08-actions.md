@@ -8,6 +8,8 @@ Most of the operations done on content in sensenet is governed via Actions. An A
 
 Under the hood OData operations are integrated into the sensenet via the *Action Framework*. sensenet actions behave as OData operations. The action in Action Framework is the extensibility point: every 3rd party action appears automatically in OData metadata if the current user has enough permissions.
 
+![action menu](../img/actions.gif)
+
 # Built-in actions
 
 As it was mentioned in the introduction there are tons of built-in actions (operations) in sensenet. There are versioning related, permission related, user management related actions, there are many different use cases for them but the way they should be used is the same. They can be invoked on a content, have a unique name and can have optional a required parameters. An action call is always something similar, like the following:
