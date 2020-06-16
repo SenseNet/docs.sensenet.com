@@ -12,7 +12,7 @@ Under the hood OData operations are integrated into the sensenet via the *Action
 
 # Built-in actions
 
-As it was mentioned in the introduction there are tons of built-in actions (operations) in sensenet. There are versioning related, permission related, user management related actions, there are many different use cases for them but the way they should be used is the same. They can be invoked on a content, have a unique name and can have optional a required parameters. An action call is always something similar, like the following:
+As it was mentioned in the introduction there are tons of built-in actions (operations) in sensenet. There are actions related to versioning, permission and user management. Use cases can be very different but the way they should be used is the same. They can be invoked on a content, have a unique name and can have optional and required parameters. An action call is always something similar, like the following:
 
 ```
 https://myproject.com/OData.svc/Content('MyContent')/ActionName
