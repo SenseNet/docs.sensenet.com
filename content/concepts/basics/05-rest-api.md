@@ -8,7 +8,6 @@ sensenet offers a rich API allowing you to manage, integrate and deliver content
 
 sensenet content repository is an [OData](https://www.odata.org/) producer which means your application can consume our [OData](https://www.odata.org/) service to create web and mobile apps or any other type of content based application. It supports CRUD operations, properties, binary streams, paging options, custom queries and many more.
 
-The requested resource can be any content in the repository (since everything is a content in sensenet, it could be really anything) that is permitted for the current user.
 
 [dig deeper into sensenet REST API](/api-docs/basic-concepts)
 
