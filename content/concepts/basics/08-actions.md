@@ -6,7 +6,7 @@ metaDescription: "sensenet Actions"
 
 Most of the operations done on content in sensenet is governed via Actions. An Action is basically a command, instructing the system to use a specific component, to get or update the addressed content item's properties. All of these actions can be invoked through OData REST API. There are many built-in ones and developers can publish custom operations as actions as well.
 
-Under the hood OData operations are integrated into the sensenet via the *Action Framework*. sensenet actions behave as OData operations. The action in Action Framework is the extensibility point: every 3rd party action appears automatically in OData metadata if the current user has enough permissions.
+Under the hood OData operations are integrated into sensenet via the *Action Framework*. sensenet actions behave as OData operations. The action in Action Framework is the extensibility point: every 3rd party action appears automatically in OData metadata if the current user has enough permissions.
 
 ![action menu](../img/actions.gif)
 
@@ -28,13 +28,13 @@ Actions are always connected to contents and it is also possible to look at them
 
 # Accessibility
 
-Actions could be contents in the repository too, and as every other content sensenet Actions are also covered by the permission system. Which means you are not only able to set permissions on a content or for a subtree but you are also able to control the access of the actions. This way you are able to define which type of user are able to do a task and which are not (e.g. you can allow the *Editors* group to use the **Approve** action but not allow it for *Developers*). There is a separate permission for dealing with these kind of things. Its name is RunApplication and with allowing it on an action content for a user you give him permissions to execute the operation.
+Actions could be contents in the repository too, and as every other content, sensenet Actions are also covered by the permission system. Which means you are not only able to set permissions on a content or for a subtree but you are also able to control the access of the actions. This way you are able to define which type of user are able to do a task and which are not (e.g. you can allow the *Editors* group to use the **Approve** action but not allow it for *Developers*). There is a separate permission for dealing with these kind of things. Its name is RunApplication and by allowing it on an action content for a user you give him permissions to execute the operation.
 
 It is also possible to add custom rules to an action like you expect the user to have a special permission to use the affected action. For example you need the user to have permission to delete content as well in order to approve it. Every action has a field *RequiredPermissions* that let you add as many required permissions as you need in your custom solution.
 
 # Custom action groups and lists
 
-Another advantage of storing actions as contents in the repository is that you can create loosley groups of them. That means you can create custom menus dinamically just using the *Scenario* feature of sensenet. *Scenario* is actually a field on every action content where you can add custom Scenario names freely. Basically this name will be the name of your group (e.g. UserMenu) and later you can refer to it later when you request */Actions* on a content like the following:
+Another advantage of storing actions as contents in the repository is that you can create loosley groups of them. That means you can create custom menus dinamically just using the *Scenario* feature of sensenet. *Scenario* is actually a field on every action content where you can add custom Scenario names freely. Basically this name will be the name of your group (e.g. UserMenu) and you can refer to it later when you request */Actions* on a content like the following:
 
 ```
 https://myproject.com/OData.svc/Content('MyContent')/Actions?scenario=UserMenu

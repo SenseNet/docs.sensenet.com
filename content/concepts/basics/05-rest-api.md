@@ -16,7 +16,7 @@ The requested resource can be any content in the repository (since everything is
 
 The requested resource can be any content in the repository that is permitted for the current user. Since everything is a content in sensenet this means that every item (user, folder, document, etc) can be accessed through the same API.
 
-Resources can be accessed as individual entities or as collections (containers) of content. Bases on the way of accessing the result will contain a content's or its children's metadata. The response is always in json format which you can easily process and build into your own application.
+Resources can be accessed as individual entities or as collections (containers) of content. Based on the way of accessing the result will contain a content's or its children's metadata. The response is always in json format which you can easily process and build into your own application.
 
 [more about content delivery](/api-docs/basic-concepts/01-entry)
 
@@ -33,4 +33,3 @@ All content in the repository is secured by the permission system, which means u
 # Extend the API
 
 sensenet's REST API is also expandable in many ways. Possiblity of filtering, querying or ordering the results provided by sensenet services give you all the tools you need to add custom business logic to your API calls. Additionally it is possible to add custom APIs (custom [Actions](/concepts/basics/08-actions)) if you have the on premise version.
-
