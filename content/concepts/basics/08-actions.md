@@ -34,7 +34,7 @@ It is also possible to add custom rules to an action like you expect the user to
 
 # Custom action groups and lists
 
-Another advantage of storing actions as contents in the repository is that you can create loosley groups of them. That means you can create custom menus dinamically just using the *Scenario* feature of sensenet. *Scenario* is actually a field on every action content where you can add custom Scenario names freely. Basically this name will be the name of your group (e.g. UserMenu) and you can refer to it later when you request */Actions* on a content like the following:
+Another advantage of storing actions as contents in the repository is that you can create loosely connected groups of them. That means you can create custom menus dynamically just using the *Scenario* feature of sensenet. *Scenario* is actually a field on every action content where you can add custom Scenario names freely. Basically this name will be the name of your group (e.g. UserMenu) and you can refer to it later when you request */Actions* on a content like the following:
 
 ```
 https://myproject.com/OData.svc/Content('MyContent')/Actions?scenario=UserMenu
