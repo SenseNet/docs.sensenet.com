@@ -5,6 +5,7 @@ metaDescription: "sensenet What is sensenet"
 ---
 
 sensenet is an open source [headless content management system (CMS)](/concepts/introduction/02-what-is-headless-cms) built mainly for developers and development companies.
+
 Basically it's a content repository where you can store your contents and reach it through APIs.
 It’s a solid base of your custom solution offering enterprise grade security and permission system, versioning, dynamic content types and even more.
 
