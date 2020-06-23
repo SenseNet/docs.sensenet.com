@@ -2,8 +2,8 @@
 url: "/OData.svc/Root/Content('IT')/GetRelatedItemsOneLevel",
 type: 'POST',
 data: "models=[" + JSON.stringify({
-  "level": "AllowedOrDenied",
-  "member": "/Root/IMS/Public/Editors",
+  "permissionLevel": "AllowedOrDenied",
+  "memberPath": "/Root/IMS/Public/Editors",
   "permissions": ["Open"]
 }) + "]"
 ```

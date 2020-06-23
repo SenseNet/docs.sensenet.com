@@ -24,7 +24,7 @@ You are not only able to allow a permission but also you can deny it, as in the 
 
 <tab category="permissions" article="permission-management" example="denyDelete" />
 &nbsp;
-<note title="Deny is always stronger than allow" severity="error">If you set a deny permission for a certain user, it does not matter if she has allow permission inherited from above or through a group membership - she will not be able to access that feature. You can only make deny permission disappear on lower levels only if you break permission inheritance on a subfolder and remove the deny permission there.</note>
+<note title="Deny is always stronger than allow" severity="error">If you set a deny permission for a certain user, it does not matter if he/she has allow permission inherited from above or through a group membership - he/she will not be able to access that feature. You can only make deny permission disappear on lower levels only if you break permission inheritance on a subfolder and remove the deny permission there.</note>
 
 # Break inheritance
 
