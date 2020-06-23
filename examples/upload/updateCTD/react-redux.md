@@ -1,2 +1,10 @@
 ```javascript
+store.dispatch(Actions.uploadRequest(
+  '/Root/System/Schema/ContentTypes',
+  file,
+  "ContentType",
+  false,
+  null,
+  "Binary",
+))
 ```

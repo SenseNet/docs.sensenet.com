@@ -1,2 +1,10 @@
 ```javascript
+store.dispatch(Actions.uploadRequest(
+  '/Root/Content/IT/Document_Library',
+  file,
+  "sampledata.xlsx",
+  false,
+  null,
+  "Binary"
+))
 ```
