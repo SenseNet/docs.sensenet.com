@@ -1,7 +1,7 @@
 ```javascript
 store.dispatch(Actions.uploadRequest(
   '/Root/Content/IT/Document_Library',
-  null,
+  undefined,
   "MyMarkdown.md",
   false,
   {

@@ -4,7 +4,7 @@ store.dispatch(Actions.uploadRequest(
   file,
   "sampledata.xlsx",
   false,
-  null,
+  undefined,
   "Binary"
 ))
 ```

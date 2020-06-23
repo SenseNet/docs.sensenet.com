@@ -1,7 +1,7 @@
 ```javascript
 store.dispatch(Actions.uploadRequest(
   '/Root/System/Settings',
-  null,
+  undefined,
   "MyCustom.settings",
   false,
   {

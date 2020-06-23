@@ -4,7 +4,7 @@ store.dispatch(Actions.uploadRequest(
   file,
   "ContentType",
   false,
-  null,
+  undefined,
   "Binary",
 ))
 ```
