@@ -181,7 +181,7 @@ app.UseSenseNetOdata();
 ```
 
 ### Configuration
-sensenet works with the official `IConfiguration` API provided by .Net Core. That means you can define config values in any of the well-known ways (appSettings.json, environment, etc.), we do not define any restrictions.
+sensenet works with the official `IConfiguration` API provided by .Net Core. That means you can define config values in any of the well-known ways (appSettings.json, environment, etc.).
 
 sensenet features rely on predefined configuration values that usually reside under the `sensenet` section - with the exception of database connection strings that are stored in the standard `ConnectionStrings` section.
 
