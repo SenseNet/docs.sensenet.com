@@ -1,7 +1,7 @@
 ---
-title: "Additional database installation"
-metaTitle: "sensenet - Additional database installation"
-metaDescription: "sensenet - Additional database installation"
+title: "Database installation"
+metaTitle: "sensenet - database installation"
+metaDescription: "sensenet - database installation"
 ---
 
 # Database installation
@@ -99,6 +99,19 @@ The following is an appSettings example that contains the connection string to t
   "ConnectionStrings": {
     "SnCrMsSql": "[your sql connection string]"
   }
+}
+```
+
+Defining additional packages or import folders works this way (see the install code snippet above where it uses these config values):
+
+```json
+{
+    "sensenet": {
+        "install": {
+            "packages": [ "c:\\package1.zip" ],
+            "import": [ "c:\\import" ]
+        }
+    }
 }
 ```
 

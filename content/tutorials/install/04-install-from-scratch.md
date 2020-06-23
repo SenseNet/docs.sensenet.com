@@ -11,7 +11,7 @@ metaDescription: "sensenet - How to install sensenet from scratch"
 # First things first: the environment
 A sensenet application architecture contains a couple of components and we offer several implementations for those:
 
-- web applcation
+- web application
 - database: in-memory or SQL
 - Lucene index: local or centralized
 - communication: RabbitMQ, MSMQ
@@ -24,11 +24,13 @@ Choosing the required packages is based on which implementation you want to use.
 ## Database
 This is likely the fist decision you make. If you only want to try sensenet without having a _persistent_ content repository, the easiest and fastest way to start is to use an **in-memory repository** - without having to install a SQL database. Please bear in mind that in that case all your changes will be lost when you stop the application: your modifications live only for the life cycle of the application.
 
-In any other case you will have to create a **console application** as an installer tool. This application can be used later to install additional sensenet packages and perform export or import operations.
+In any other case you will have to create a **console application** as an installer tool or use the installer template we provide. This application can be used later to install additional sensenet packages and perform export or import operations.
 
-To learn more about installing the database, follow [this link]().
+To learn more about installing the database, follow [this link](/041-database-installation).
 
 # The web application
+> New to sensenet? Use one of our built-in web application [templates](/03-install-by-template)!
+
 You will need either an existing or a new Asp.Net web application to start with. You can use any of the built-in Asp.Net web app templates, because sensenet provides only the platform and the repository - authentication, UI and all app-specific layers are the responsibility of the application.
 
 ![Web application](../img/tutorials/install/web-create.png)
@@ -67,7 +69,14 @@ In this example we rely on the official JWT authentication package, but you can 
 Microsoft.AspNetCore.Authentication.JwtBearer
 ```
 
-## Application start
+## Authentication
+It is important to note that authentication is out of scope for this document. Setting the current user in the Asp.Net http context should be done automatically by the choosen authentication technology. As you will see below, sensenet sets its own current User property based on that value.
+
+To keep this install document simple we added a temporary middleware that will set the `Administrator` as the current user. Please remove that code in production and let the auth process determine the current user.
+
+In production we recommend using [IdentityServer](/06-configuring-identity-server) for authenticating users.
+
+## Application start code
 There are two things you need to do at app start time:
 
 - start the repository
@@ -172,6 +181,16 @@ app.UseSenseNetAuthentication(options =>
     options.AddJwtCookie = true;
 });
 
+//TEMP AUTHENTICATION: remove this code in production!!! ///////
+app.Use(async (context, next) =>
+{
+    // the current user will always be the admin
+    User.Current = User.Administrator;
+    if (next != null)
+        await next();
+});
+////////////////////////////////////////////////////////////////
+
 app.UseAuthorization();
 
 // Add the sensenet binary handler
@@ -187,6 +206,10 @@ sensenet features rely on predefined configuration values that usually reside un
 
 The following is an appSettings example that contains the connection string and IdentityServer url as the authority. These are the two values required by this example app.
 
+Please fill the connections string with your own that points to the database you created during [database installation](/041-database-installation).
+
+Setting the authority is not necessary if you are using the temporary auth code above that sets the admin as the current user.
+
 ```json
 {
   "ConnectionStrings": {
@@ -199,3 +222,19 @@ The following is an appSettings example that contains the connection string and 
   }
 }
 ```
+
+## Starting the application
+Before you can start the app, please copy the **Lucene index folder** created during [database installation](/041-database-installation) to the `App_Data` folder in the root folder of your web application. You should see a similar structure:
+
+```txt
+[web folder]
+ |
+ + App_Data
+    |
+    + LocalIndex
+       |
+       + 20200506160639
+       
+```
+
+Now you can start the web application and send OData requests to the repository.
