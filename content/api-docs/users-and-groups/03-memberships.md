@@ -20,4 +20,4 @@ Users with appropriate permissions allowed can add new members to a group. The l
 
 Users with the appropriate permissions allowed are also able to remove members from a group using. The list of members to be deleted should be provided in the `contentIds` parameter as list of user or group ids.
 
-<tab category="users-and-groups" article="memberships" example="addMember" />
+<tab category="users-and-groups" article="memberships" example="removeMember" />

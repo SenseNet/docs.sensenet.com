@@ -42,6 +42,10 @@ const content = [
         link: ''
       },
       {
+        title:'About on premise installation',
+        link: ''
+      },
+      {
         title:'Getting started with sn and React',
         link: ''
       },

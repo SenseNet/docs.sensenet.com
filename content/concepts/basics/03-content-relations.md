@@ -49,8 +49,8 @@ This field can store any kind of binary without length restrictions. This is ver
 
 # Attachments
 Following the reference and binary field logic, it's easy to add attachments to a content by combining these two content relations.
-
-(should be extended)
+The advantage of this that no content is duplicated and contents can be referenced from basically any part of the tree.
+Multiple reference option allows ``1:n`` connection via reference field, and ``n:1`` as well by using query in the reference field.
 
 # Allowed child types
 In sensenet content repository it is possible to define restrictions on what content types the different containers can contain. You can configure ``AllowedChildTypes`` in the content type definition of the different types. For example a calendar can only contain events, a document library can only contain folders and files, etc. These settings can be overridden on the specific content, for example you can modify any of your document libraries to contain images too.

@@ -1,7 +1,7 @@
 ---
-title: "Content Management"
-metaTitle: "sensenet - Content Management"
-metaDescription: "sensenet Content Management"
+title: "Content"
+metaTitle: "sensenet - Content"
+metaDescription: "sensenet Content"
 ---
 
 For content management we mean the processes of storing, editing, organizing and delivering content.
