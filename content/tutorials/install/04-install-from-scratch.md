@@ -33,8 +33,6 @@ To learn more about installing the database, follow [this link](/041-database-in
 
 You will need either an existing or a new Asp.Net web application to start with. You can use any of the built-in Asp.Net web app templates, because sensenet provides only the platform and the repository - authentication, UI and all app-specific layers are the responsibility of the application.
 
-![Web application](../img/tutorials/install/web-create.png)
-
 ## NuGet packages
 As we mentioned before: the list of packages to install depends on the environment. Please choose the ones you need from this list, and add all additional packages later when you need extra features.
 

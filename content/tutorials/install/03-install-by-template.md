@@ -27,12 +27,11 @@ git clone https://github.com/SenseNet/sn-vs-projecttemplates
 
 # Install the project
 
-The .Net Core project examples are in the *netcore* subfolder. Select the appropriate projects for your need.
+The .Net Core project examples are in the *netcore* subfolder. Select the appropriate projects for your need. See the list of available templates and their content in the main [readme](https://github.com/SenseNet/sn-vs-projecttemplates).
 
-To install sensenet two project will be needed. One is the netcore webapp for the sensenet services obviously, and an installer to create the database and the sensenet repository for this API.
+To install sensenet two project will be needed. One is the netcore webapp for the sensenet service, and an installer to create the database and the sensenet repository for this API.
 
-The following example will use `SnWebApplication.Api.Sql.TokenAuth` project to demonstrate an install.
-This version of sensenet API use an MSSQL database and a local [Lucene](/tutorials/install/042-configuring-search-service) folder.
+The following example will use `SnWebApplication.Api.Sql.TokenAuth` project to demonstrate the install process. This version of sensenet API use an MSSQL database and a local [Lucene](/tutorials/install/042-configuring-search-service) folder.
 
 For authentication it connects to an external [Identity Server](/tutorials/install/06-configuring-identity-server).
 
