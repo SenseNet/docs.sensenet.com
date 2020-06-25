@@ -1,5 +1,5 @@
 ```
-url: "/OData.svc/Root/Content/IT('Document_Library')/SetPermission",
+url: "/OData.svc/Root/Content/IT('Document_Library')/SetPermissions",
 type: 'POST',
 data: "models=[" + JSON.stringify({
     "r":[{
