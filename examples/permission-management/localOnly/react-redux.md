@@ -1,2 +1,12 @@
 ```javascript
+store.dispatch(Actions.setPermissions(
+  '/Root/Content/IT/Document_Library',
+  [
+    {
+      identity:"/Root/IMS/Public/Editors",
+      localOnly:true,
+      AddNew:"allow"
+    },
+  ]
+))
 ```
