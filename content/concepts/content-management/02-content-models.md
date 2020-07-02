@@ -8,6 +8,8 @@ sensenet organizes content into content repositories, that allows you to group a
 The content repository contains many different types of content. A content type is a special content in the content repository that defines the structure and functions of contents. For example a User has a name, e-mail address, etc. - these are the fields of the User content type.
 
 Each repository has a content model, a schema that represents the content types you create. This is project-specific, so it is your own. It is important defining the business logic and creating the content types at the beginning of the project.
+    
+Content model is basically the mix of schemas, content types, templates and structure of your project. Below you can learn about the properties that will form the content model of your project.
 
 # Content type hierarchy
 Content types can inherit fields from their ancestors. For example a Domain type inherits all the fields of the basic Folder type. A content type may only inherit fields from a single type thus the content types are arranged in a simple tree hierarchy. Inherited field configuration can be overridden in derived types. Field inheritance and overriding is defined in the content type definition (CTD) of the type.
