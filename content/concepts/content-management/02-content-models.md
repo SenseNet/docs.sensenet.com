@@ -20,7 +20,6 @@ The _Name_ field together with its location is the main identifier of the conten
 
 The _DisplayName_ is the user-friendly human readable name of content and can contain any kind of characters without restrictions. Generally, when a content is displayed on the front-end, the value of the DisplayName property is shown. Changing the DisplayName is a simple operation and does not cause broken links (because changing only the DisplayName does not change the url).
 
-
 The DisplayName is the main display name of the Content. It acts as a legible, human readable name and may contain punctuations and accented characters as well. Generally, when a content is displayed on the front-end, the value of the DisplayName property is shown. Changing the DisplayName is a simple operation and does not cause broken links (because changing only the DisplayName does not change the url).
 Since it can be very time consuming to provide a Name and a DisplayName for a content at the same time - especially in cases when the Name can be derived from the DisplayName - sensenet provides automatic name generation mechanisms both on client and server side. 
 
@@ -36,9 +35,9 @@ A Content Type Definition is an xml-format configuration file that holds informa
 
 The Content Type Definition xml of a content type can be edited.
 
+To learn more about content types, check out this [link](/concepts/content-management/03-content-types)
 # Fields
 
-generic content main fields
 
 The following elements build up the field definition:
 •	Field: root element, holds basic information in attributes.
