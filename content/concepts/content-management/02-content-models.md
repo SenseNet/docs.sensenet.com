@@ -4,7 +4,8 @@ metaTitle: "sensenet - Content Model and Schema"
 metaDescription: "sensenet Content Model and Schema"
 ---
 
-sensenet organizes content into content repositories, that allows you to group all the related content for a project together. Since everything is a content is sensenet this repository includes documents, workspaces, users, settings, workspaces and many more.
+sensenet organizes content into content repositories, that allows you to group all the related content for a project together. Since everything is a content is sensenet this repository includes documents, workspaces, users, settings, and many more.
+The content repository contains many different types of content. A content type is a special content in the content repository that defines the structure and functions of contents. For example a User has a name, e-mail address, etc. - these are the fields of the User content type.
 
 Each repository has a content model, a schema that represents the content types you create. This is project-specific, so it is your own. It is important defining the business logic and creating the content types at the beginning of the project.
 
