@@ -53,3 +53,8 @@ One of sensenet's built-in workspace is the project workspace. It is tipically u
 To create a content template you simply need to create a new content under the appropriate folder (named by the type). You can set any property of the content template or add child content (e.g. libraries and lists for a workspace), they will be part of the template.
 
 # Modeling a contract
+
+Content types define the structure and functions of contents.
+A contract, for example, can have several fields, like title, customer, date, registration number, you can also add signature field.
+Default content types can be used in your solution but cannot be modified or deleted (in SNaaS). You can create custom content type by inheriting from GenericContent or any other content type in the tree.
+ 
