@@ -22,7 +22,7 @@ Since it can be very time consuming to provide a Name and a DisplayName for a co
 
 # Content type properties
 
-The content repository contains many different types of content. Content vary in structure and even in function. Different types of content contain different fields. In sensenet built-in content types are available, but also possible to create custom ones.
+The content repository contains many different types of content. Content vary in structure and even in function. Different types of content contain different fields. In sensenet built-in content types are available, but it's also possible to create custom ones.
 A Content Type Definition is an xml-format configuration file that holds information about:
 •	the type name, description
 •	properties that control how content of this type look and behave (icon, preview generation, indexing)
