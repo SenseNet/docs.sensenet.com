@@ -47,6 +47,8 @@ The following elements build up the field definition:
 A content type inherits its fields from its parent content type (defined by the parentType attribute). This means that only additional fields have to be defined in the type’s CTD. The inherited fields apply to the content type as defined on the parent type, but may also be overridden. 
 
 # Modeling a project workspace
+In sensenet everything is content. When you create a new article, workspace or just upload a document you are creating a content. But you do not always want to start from scratch. There are pre-built workspaces in sensenet containing lists and libraries for a special purpose. These are predefined templates for creating new content.
 One of sensenet's built-in workspace is the project workspace. It is tipically used for collaborative projects. It is possible to define the list, libraries and other content types users can create in the workspace.
+To create a content template you simply need to create a new content under the appropriate folder (named by the type). You can set any property of the content template or add child content (e.g. libraries and lists for a workspace), they will be part of the template.
 
 # Modeling a contract
