@@ -29,7 +29,7 @@ Headless content management system (CMS) is the trend of the years past. It is b
 
 # Usecases
 
-- Build web application with a technology you are familiar with (like LEGO)
+- Build web application with a technology you are familiar with
 - Native Mobile Apps
 - Enrich product information on ecommerce sites
 - Realize solution for special business needs
