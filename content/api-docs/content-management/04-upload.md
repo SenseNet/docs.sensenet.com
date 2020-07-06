@@ -50,8 +50,6 @@ The first response will be `5062*3196*True` (or similar). This value must be pas
 
 Following examples shows how to create a simple text file adding its raw text (this thing could be useful if you are working with text files' (e.g. .json, .txt, .md, .xml) content directly in the browser):
 
-// TODO: ide berakni, hogy a ctd és localization és settings fájl változtatás most így müx, vagy esetleg példa
-
 <tab category="content-management" article="upload" example="uploadRawText" />
 
 # Update a CTD
