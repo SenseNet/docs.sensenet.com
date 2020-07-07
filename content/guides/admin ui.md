@@ -41,43 +41,7 @@ By default the sidebar has the following items:
 
 <note title="pro tip">Menu items can be customized in personal settings.</note> - _____I'M not sure about this anymore_____
 
-# Content
+# Miscellaneous
 
-In the content pane you can browse the content repo and execute basic document management actions (open, edit properties, copy, move, delete). You can find these actions by clicking the three-dot menu on a content row.
-
-Please note that different content types has different actions.
-
-![Content management](./img/content.gif)
-
-## Edit
-
-Thanks to office online editing, some documents (like word and excel files) can be opened and edited without any desktop app involved.
-
-## Preview
-
-sensenet has a built-in preview generator which allow users to open pdf, docx, txt and other files in ready only mode.
-Clicking open on a supported file will bring up the already generated preview images of the content in question.
-
-![Open document preview](./img/preview.png)
-
-## Add new
-
-By clicking plus button in the sidebar you can add content to repo either by uploading or creating.
-
-<note title="pro tip">Allowed types under a specific content can be set by modifying <a href="/concepts/content-management/06-allowed-childtypes">allowed child types</a> property of the content.</note>
-
-![Create content](./img/adminui_addNEW.png)
-
-# Personal settings
-
-In personal settings you can customize the admin surface
-
-- content views
-- events and logging
-- language
-- display additional menu items
-
-<note title="pro tip">You can bring up intellisense with ctrl+space shortcut to get context based suggestions.
-<a href="/guides/dashboard-customization">Learn more</a> about personal settings in admin ui.</note>
-
-![personal settings](./img/personal_settings.gif)
+You can log out or switch between dark and light theme by clicking on your avatar at the top right corner.
+![avatar](./img/logout_dark.png)
