@@ -14,11 +14,11 @@ sensenet offers special and built-in groups and users by default. All users and 
 
 Built-in groups in sensenet are regular groups, meaning their membership can be freely modified. They are used in the default Content Repository structure extensively, but no hard-coded logic is built on them (except for the Administrators group, please do not delete that one). This means you can freely change or replace these groups with your own custom groups in your permission settings. The best practice however is that you build on them, using the suggested purpose in the following sections.
 
-## Public domain 
+## Public domain
 `(/Root/IMS/Public)` for the users
 
 ## Builtin domain (hidden)
-for technical users and groups that cannot be modified but its capabilities could be used in development
+For technical users and groups that cannot be modified but its capabilities could be used in development
 
 **Visitor:** Everybody is a visitor until logging in. Therefore you cannot log in as a Visitor user because it represents users who are not logged in. It has a couple of permission settings in the default structure for content that should be accessible for everybody. in case you are building a public website with sensenet with a subtree that contains content that should be available to browse and open publicly, you have to work with Visitor and allow this technical user to see and open contents where it is necessary.
 
@@ -51,7 +51,7 @@ By default only the Admin user is a member of this group, but you can add more m
 sensenet offers you a sophisticated permission system, giving you the possibility to apply permission rules according to the logic you prefer.
 Using role-based permissions, you can assign users to roles taking advantage of predefined permission settings. Role based access control provides management of users and the actions they can execute on contents (for example built-in permissions such as See, Open, Save, Delete etc. and it is also possible to add custom ones as well.
 Define roles based on the business logic right at the beginning of your project so it will be much easier to handle permission related tasks (like add/remove a user) in the long run.
-To learn more go to [role based permission](/concepts/role-based-permissions/)
+To learn more go to [role based permission](/concepts/user-and-permission-management/03-role-based-permissions)
 
 # Workspace local groups
 In sensenet the default location of users and groups is the IMS folder. However, we can create groups under workspaces too. The main purpose of Workspace local groups is to help permission management inside workspaces. They are located under the Groups system folder in workspaces, and workspace permissions can be defined for these groups. If the local group structure is properly configured, the only thing workspace administrators should do when a new user is assigned to a workspace is to add them to the proper local group(s) instead of assigning permissions to individual users. In sensenet there are three predefined local groups (Owners, Members, Visitors) that cover the most important use cases but there are no limitations to add or remove groups or modify the default behavior. Groups are contents too (like almost everything in sensenet), so you can add additional groups to workspaces as easily as you add folders. Populating a group with users is an easy task as well using our group management GUI with instant search capability. Of course, as aeverything else, groups can be managed through API as well.

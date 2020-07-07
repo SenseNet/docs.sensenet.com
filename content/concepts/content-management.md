@@ -7,16 +7,16 @@ metaDescription: "sensenet Content"
 For content management we mean the processes of storing, editing, organizing and delivering content.
 
 # What is content regarding to sensenet?
-In sensenet everything is a content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the [content repository](/concepts/content). It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a [content tree](/concepts/content-tree), so you can always think in subtrees and inheritance when managing and presenting content.
+In sensenet everything is a content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the [content repository](/concepts/basics/03-content-relations). It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a [content tree](/concepts/basics/02-content-tree), so you can always think in subtrees and inheritance when managing and presenting content.
 
 # Basic content management actions in sensenet
 All the features that can be called basic content management actions are included in sensenet, so you can create, edit or delete a content, copy or move it to another folder.
 
-To learn more go to [Actions](/concepts/actions)
+To learn more go to [Actions](/concepts/basics/08-actions)
 
 # Can anybody do anything?
 Content management is a collaborative process where every user has its own part (for example a user can have the permission to create a new content, he/she can open and see a content, but doesn’t have the permission to edit or delete it.). Permission management is critical in such system as we have to specify what the user can or cannot do with a certain content.
-Since sensenet content repository is a tree based hierarchical content structure it ensures permission inheritance, so it is enough to set a permission rule one time and it comes down in lower levels of the tree. This means, if you set a permission on a document library it will be automatically applied to subfolders and contents ([document level permission](/concepts/document-level-permissions)). You can easily set a permission also for a group and this way control the accessibility of predefined contents ([role based permission](/concepts/role-based-permissions)).
+Since sensenet content repository is a tree based hierarchical content structure it ensures permission inheritance, so it is enough to set a permission rule one time and it comes down in lower levels of the tree. This means, if you set a permission on a document library it will be automatically applied to subfolders and contents ([document level permission](/concepts/user-and-permission-management/02-document-level-permissions)). You can easily set a permission also for a group and this way control the accessibility of predefined contents ([role based permission](/concepts/user-and-permission-management/03-role-based-permissions)).
 
 ## Built-in and custom permissions
 There is a set of basic built-in permissions, such as See, Open, Save, Delete etc., and it is even possible to add custom ones as well.

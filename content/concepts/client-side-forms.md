@@ -4,7 +4,7 @@ metaTitle: "sensenet - Client Side Forms"
 metaDescription: "sensenet Client Side Forms"
 ---
 
-As you probably heard before, in sensenet everything is a content. This philosophy provides many advantages when working with sensenet because the only difference between contents are the fields they have. This facilitates the way of managing different [type of contents](/concepts/content-types).
+As you probably heard before, in sensenet everything is a content. This philosophy provides many advantages when working with sensenet because the only difference between contents are the fields they have. This facilitates the way of managing different [type of contents](/concepts/content-management/03-content-types).
 
 Based on this logic, defining a new content type with custom fields, opens the possibility to create client side forms easily.
 
@@ -20,7 +20,7 @@ Schema represents the content model of the repository, the content types you cre
 # Views
 The content is there in the repository, how it will be visible to the users only depends on you. You can get fields and possible values by API calls and display it in your solution based on your taste and needs.
 
-Generating forms by content types dynamically is also possible with sensenet javascript client library that contains a  mapper (which binds fields to controls) and the required controls written in ReactJs. 
+Generating forms by content types dynamically is also possible with sensenet javascript client library that contains a  mapper (which binds fields to controls) and the required controls written in ReactJs.
 
 # Fields
 [illustration of a custom content type with questions as fields]
