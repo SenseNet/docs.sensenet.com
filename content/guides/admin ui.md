@@ -8,14 +8,15 @@ sensenet has an admin ui which enables you to connect to your repos and do basic
 
 # Login
 
-Since admin ui is a central place to manage sensenet repositories, everyone uses the same site and login screen. First, you need to type the **url of the repository** you want to connect to, then log in with username and password.
-![Log in to your repo](./img/reposcreen.png)
+Admin ui is a central place to manage sensenet repositories by logging in to a specific repo with the correct credentials.
+First, enter **repository URL** then log in using your email address (and password) or your Google, GitHub account.
 
-To test the admin ui without your own repo, you can log in to ours by clicking ([here](https://admin.sensenet.com/?repoUrl=https%3A//dev.demo.sensenet.com)).
+![repo url](./img/adminui_repo.png)
+![login](./img/admin-ui_logincredentials.png)
+
+If you don't have a repo yet, you can log in to our demo repository by clicking the big blue button either on repo url or login screen (see above).
 
 > You will be logged in with an **admin user** called Business Cat.
-
-![Login to demo repo](./img/login.png)
 
 # Menu and dashboard
 Once logged in you can see the admin ui in its whole beauty with different actions in the left pane menu and a nice dashboard with the most important info about your repo.
@@ -38,7 +39,7 @@ By default the sidebar has the following items:
 
 **setup**: configure sensenet system ([more about setup](/guides/setup))
 
-<note title="pro tip">Menu items can be customized in personal settings.</note>
+<note title="pro tip">Menu items can be customized in personal settings.</note> - _____I'M not sure about this anymore_____
 
 # Content
 
