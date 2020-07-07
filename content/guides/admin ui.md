@@ -23,7 +23,7 @@ Once logged in you can see the admin ui in its whole beauty with different actio
 
 By default the sidebar has the following items:
 
-![dasboard](./img/dashboard.png)
+![dasboard](./img/dashboard_new.png)
 
 **search**: execute custom searches, build and save queries
 
@@ -66,7 +66,7 @@ By clicking plus button in the sidebar you can add content to repo either by upl
 
 <note title="pro tip">Allowed types under a specific content can be set by modifying <a href="/concepts/content-management/06-allowed-childtypes">allowed child types</a> property of the content.</note>
 
-![Create content](./img/add_new.gif)
+![Create content](./img/adminui_addNEW.png)
 
 # Personal settings
 
