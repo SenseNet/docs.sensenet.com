@@ -39,7 +39,7 @@ By default the sidebar has the following items:
 
 **setup**: configure sensenet system ([more about setup](/guides/setup))
 
-<note title="pro tip">Menu items can be customized in personal settings.</note> - _____I'M not sure about this anymore_____
+<note title="pro tip">Additional items can be added to the menu bar. Learn how [LINK].</note> 
 
 # Miscellaneous
 
