@@ -3,7 +3,7 @@ title: "Office Online Editing"
 metaTitle: "sensenet - Office Online Editing"
 metaDescription: "sensenet Office Online Editing"
 ---
-sensenet enables collaborative content management, thanks to [Office Online editing](/concepts/office-online-editing) among others.
+sensenet enables collaborative content management, thanks to [Office Online editing](/concepts/collaboration/03-office-online-editing) among others.
 
 Being able to collaborate on the same document contemporary saves you time of emailing files, store them, and also prevents you from having to reconcile multiple versions of the same document.
 
@@ -20,8 +20,8 @@ The versioning system of sensenet also provides mechanisms for keeping the last 
 
 # Permissions
 Managing and editing documents is strictly related to permissions as well. It is not necessary (or not even allowed) that everybody has access to all the information, all the content.
-sensenet enables you to set permissions [role based](/concepts/role-based-permissions) or on [document level](/concepts/document-level-permissions).
-There is a set of basic built-in permissions, such as See, Open, Save, Delete etc., and it is even possible to add [custom ones](/concepts/custom-roles-and-permissions). It is possible to manage them through the admin surface or with the [User Management and Permission APIs](/api-docs/users-and-groups).
+sensenet enables you to set permissions [role based](/concepts/user-and-permission-management/03-role-based-permissions) or on [document level](/concepts/user-and-permission-management/02-document-level-permissions).
+There is a set of basic built-in permissions, such as See, Open, Save, Delete etc., and it is even possible to add [custom ones](/concepts/user-and-permission-management/04-custom-roles-and-permissions). It is possible to manage them through the admin surface or with the [User Management and Permission APIs](/api-docs/users-and-groups).
 
 # Under the hood
 To be able to configure this feature on the admin ui you need to have Office Online server and client side subscription. If you have your Office Online server installed and ready, the only thing you have to do is to set its url as the `OfficeOnlineUrl` in the Office Online setting on the Setup page of the admin ui.
