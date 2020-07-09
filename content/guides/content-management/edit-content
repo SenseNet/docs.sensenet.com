@@ -1,0 +1,22 @@
+---
+title: "edit-content"
+metaTitle: "sensenet admin-ui - edit-content"
+metaDescription: "sensenet admin-ui - edit-content"
+---
+
+Contents can be edited right on the admin ui. Different content types has different fields which can be edited by selecting "Edit" action from the right click (or three dots) menu of a content item. 
+
+# Field editing
+![content-edit](content/guides/img/content-edit.png)
+
+In this example you can see the edit view of a calendar event. Here you can modify "Title", "Location", "Start/End date" and other fields available on the content.
+
+For comparison, here's the edit view of an image (jpg).
+![image-edit](content/guides/img/image-edit.png)
+
+
+# Office online editing
+
+Beside editing the fields of different content items, sensenet supports office online editing in case of word, excel and powerpoint files.
+
+This allow users to open office documents without a desktop app and to collaborate (edit the same document at the same time). 
