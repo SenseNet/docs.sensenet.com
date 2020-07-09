@@ -8,7 +8,7 @@ In sensenet everything is a content. Documents, tasks, users, projects, even sys
 
 # Walking on the tree
 
-![tree](./img/content-tree.png)
+![tree](/content/guides/img/content-tree.png)
 
 When the content pane (globe icon) is selected from the left side menu, the tree is revealed in its full beauty. Container items can be opened/closed with a single click. On the right side of the screen, you can see the content of the currently selected container. You can easily distinguish different levels of the tree thanks to the indentation of child elements and the breadcrumb at the upper side of the screen will always tell where you are (what is selected) in the tree. 
 
