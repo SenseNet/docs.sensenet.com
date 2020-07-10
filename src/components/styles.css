@@ -241,7 +241,7 @@ a:hover {
 .headerTitle {
   height: auto;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87) !important;
 }
@@ -1068,15 +1068,12 @@ img {
 .snIcon.sensenet:before {content: '\e800'}
 
 .SearchContainer {
-  text-align: center;
-  padding: 50px;
+  text-align: left;
 }
 
 .BorderedContainer {
-  width: 30%;
-  margin: 0 auto;
-  border: solid 1px #ccc;
-  border-radius: 20px;
+  width: 100%;
+  border: none;
   padding: 5px 10px;
   text-align: left;
   position: relative;
@@ -1102,7 +1099,7 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 100px;
+  margin: 100px 100px 0;
 }
 
 .BoxContainer > div {

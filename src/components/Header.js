@@ -6,6 +6,7 @@ import './styles.css';
 import config from '../../config.js';
 import { faGitter, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SearchBar from '../components/SearchBar';
 
 import Loadable from 'react-loadable';
 import LoadingProvider from './mdxComponents/loading';
@@ -87,7 +88,21 @@ const Header = ({location}) => (
               <Link to={finalLogoLink} className={'navBarBrand'}>
                 <img className={'img-responsive displayInline'} src={Logo} alt={'logo'} />
               </Link>
+              <Link to={finalLogoLink}>
               <div className={"headerTitle displayInline"} dangerouslySetInnerHTML={{__html: headerTitle}} />
+              </Link>
+              <ul className={'navBarUL navBarNav navBarULRight'}>
+                <li className="divider hiddenMobile"></li>
+                  {helpUrl !== '' ?
+                    (<li style={{margin: 0}}><a href={helpUrl}><FontAwesomeIcon style={{width: '20px'}} icon={faGitter} /></a></li>) : null
+                  }
+                  {githubUrl !== '' ?
+                    (<li className={'githubBtn'}>
+                      <GitHubButton href={githubUrl} data-show-count="true" aria-label="Star on GitHub">Star</GitHubButton>
+                    </li>) : null}
+                  <li className="divider hiddenMobile"></li>
+              </ul>
+              <SearchBar />
               <span onClick={myFunction} className={'navBarToggle'}>
                 <span className={'iconBar'}></span>
                 <span className={'iconBar'}></span>
@@ -105,23 +120,6 @@ const Header = ({location}) => (
                     );
                   }
                 })}
-                {helpUrl !== '' ?
-                  (<li><a href={helpUrl}><FontAwesomeIcon style={{width: '20px'}} icon={faGitter} /></a></li>) : null
-                }
-                {(tweetText !== '' || githubUrl !== '') ?
-                  (<li className="divider hiddenMobile"></li>): null
-                }
-                {tweetText !== '' ?
-                  (<li>
-                    <a href={'https://twitter.com/intent/tweet?&text=' + tweetText} target="_blank" rel="noopener">
-                    <FontAwesomeIcon style={{width: '20px', height: '20px'}} icon={faTwitter} />
-                    </a>
-                   </li>) : null
-                }
-                {githubUrl !== '' ?
-                  (<li className={'githubBtn'}>
-                    <GitHubButton href={githubUrl} data-show-count="true" aria-label="Star on GitHub">Star</GitHubButton>
-                  </li>) : null}
               </ul>
             </div>
           </nav>
