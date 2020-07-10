@@ -18,7 +18,6 @@ To create the folder for example into the  Image Library in Marketing worspace, 
 ![add new](../img/add_new.gif)
 
 In the opening window you can give the folder name, you can define the lifespan (the content is valid, visible from date to date), and also you can define the indexing. This last one is useful while filtering and sorting the content: for example you create different contents at the same time and you would like to put them in custom order, so you give them an index value, this way you can filter and order them based on this indexing.
-[screenshot create new]
 
 In the sensenet content repository it is possible to define restrictions on what content types the different containers can contain (allowed child type). For example a Calendar can only contain Events, a Document Library can only contain Folders and Files, etc. This allows you to create a much more precisely defined content structure and provides control on the long run. These settings can be overridden on the specific content, for example you can modify any of your document libraries to contain images too. To learn more go to _allowed child type_ [link]
 
