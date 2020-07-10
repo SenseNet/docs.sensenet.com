@@ -24,6 +24,8 @@ In the sensenet content repository it is possible to define restrictions on what
 # Upload file
 It is possible to create a new content in sensenet also by uploading a file or a complete folder. You can do it in the same way, by clicking on Add in the menu in the left and select Upload. 
 It is possible to upload images, pdf, word, excel or ppt files, also bulk upload feature is available.
-[screenshot upload file]
+
+
+![upload file](./img/upload_file.png)
 
 Basically, all the new content you would like to create in sensenet you can do in the same way, using the _Add_ function in the Menu on the left.
