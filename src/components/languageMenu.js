@@ -61,7 +61,7 @@ const LanguageMenu = (props) => {
 
   return (
 <div className={classes.wrapper}>
-      <AppBar position="static" style={{ background: '#eee', color: 'rgba(0, 0, 0, 0.87)'}}>
+      <AppBar  className={'hiddenMobile'} position="static" style={{ background: '#eee', color: 'rgba(0, 0, 0, 0.87)'}}>
         <Toolbar>
           {langs.map(l =>{
             const name = l.name

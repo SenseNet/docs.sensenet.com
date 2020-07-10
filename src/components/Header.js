@@ -91,8 +91,8 @@ const Header = ({location}) => (
               <Link to={finalLogoLink}>
               <div className={"headerTitle displayInline"} dangerouslySetInnerHTML={{__html: headerTitle}} />
               </Link>
-              <ul className={'navBarUL navBarNav navBarULRight'}>
-                <li className="divider hiddenMobile"></li>
+              <ul className={'navBarUL navBarNav navBarULRight hiddenMobile'}>
+                <li className="divider"></li>
                   {helpUrl !== '' ?
                     (<li style={{margin: 0}}><a href={helpUrl}><FontAwesomeIcon style={{width: '20px'}} icon={faGitter} /></a></li>) : null
                   }
@@ -100,7 +100,7 @@ const Header = ({location}) => (
                     (<li className={'githubBtn'}>
                       <GitHubButton href={githubUrl} data-show-count="true" aria-label="Star on GitHub">Star</GitHubButton>
                     </li>) : null}
-                  <li className="divider hiddenMobile"></li>
+                  <li className="divider"></li>
               </ul>
               <SearchBar />
               <span onClick={myFunction} className={'navBarToggle'}>
