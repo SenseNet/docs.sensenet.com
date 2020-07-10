@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   panel: {
     marginTop: '20px',
     paddingLeft: '10px',
-    width: '625px',
+    width: '80%',
     overflow: 'auto',
   }
 }));
