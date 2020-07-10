@@ -15,7 +15,7 @@ Click on _Content_ in the menu structure on the left. You will see the basic bui
 To create the folder for example into the  Image Library in Marketing worspace, open this specific folder by clicking on it. Click on _Add_ on the top of the Menu on the left and in the opening bar you will see all the content types you can create in this folder. Among other content types (like Calendar, Memo ect.) you have the possibility to create _Folder_.
 
 
-![admin ui content](../img/add_new.png)
+![admin ui content](../img/add_new.gif)
 
 In the opening window you can give the folder name, you can define the lifespan (the content is valid, visible from date to date), and also you can define the indexing. This last one is useful while filtering and sorting the content: for example you create different contents at the same time and you would like to put them in custom order, so you give them an index value, this way you can filter and order them based on this indexing.
 [screenshot create new]
