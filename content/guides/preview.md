@@ -9,7 +9,7 @@ sensenet has a powerful preview feature available on the admin ui (and through A
 # Preview in action
 Once a file is uploaded, the system (depending on the configuration) starts generating preview images in the background. After the process is finished, the preview of the file is accessible by double clicking the content or by selecting "preview" from the action menu.
 
-![preview](/content/guides/img/preview.png)
+![preview](/content/guides/img/preview_n.png)
 
 The preview tool has some basic feature like zoom or document rotation accessible by the action buttons in the top row. Here you can also toogle the thumbnail pane or add comment to any part of the document.
 
