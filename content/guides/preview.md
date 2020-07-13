@@ -19,4 +19,5 @@ Now place the marker in the document by single clicking the desired place. Write
 
 ![preview_comment](/content/guides/img/preview_comment.png)
 
-> To learn more deatils about the preview feature, check the [document preview](../concepts/document-previews) part in the concept docs).
+
+**To learn more deatils about the preview feature, check the [document preview](../concepts/document-previews) part in the concept docs).**
