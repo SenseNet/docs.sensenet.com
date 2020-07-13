@@ -18,3 +18,5 @@ To add a comment to a document, open preview then click "toogle commments" butto
 Now place the marker in the document by single clicking the desired place. Write your comment in the text field and click submit. That's it. Existing comments (from all users) will appear in the comment list along with markers in the document (only in preview mode).
 
 ![preview_comment](/content/guides/img/preview_comment.png)
+
+> To learn more deatils about the preview feature, check the [document preview](../concepts/document-previews) part in the concept docs).
