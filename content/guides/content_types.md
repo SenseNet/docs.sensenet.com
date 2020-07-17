@@ -7,7 +7,7 @@ metaDescription: "sensenet admin-ui - content types"
 As you probably know, in sensenet, everything is [content](/content/concepts/content-management), and every content is derived from a content type.
 A content type is a special content in the repository which defines the structure and functions of contents. Content types are defined by a (xml like) configuration file called content type definition or CTD.
 
-> [Learn more about content types](content/concepts/content-management/03-content-types).
+> [Learn more about content types(concept docs)](content/concepts/content-management/03-content-types)
 
 # Editing CTD (content type definition)
 
