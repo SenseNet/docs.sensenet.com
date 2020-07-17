@@ -19,6 +19,6 @@ When the content pane (globe icon) is selected from the left side menu, the tree
 By right clicking on an item, you can perform actions even from the tree.
 Such actions could be "Add", "Browse", "Copy to", "Edit" and so on. 
 
-![tree_options](/content/guides/img/content-tree_options.png)
-
 > Available actions depends on the content type of the item you clicked
+
+![tree_options](/content/guides/img/content-tree_options.png)
