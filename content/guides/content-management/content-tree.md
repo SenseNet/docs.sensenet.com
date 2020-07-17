@@ -6,7 +6,7 @@ metaDescription: "sensenet admin-ui - content-tree"
 
 In sensenet everything is a content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the content repository. It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a content tree, so you can always think in subtrees and inheritance when managing and presenting content.
 
-> [Learn more about content tree](/content/concepts/basics/02-content-tree)
+> [Learn more about content tree (concept docs)](/content/concepts/basics/02-content-tree)
 
 # Walking on the tree
 
