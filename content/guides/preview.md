@@ -6,7 +6,7 @@ metaDescription: "sensenet admin-ui - Preview"
 
 sensenet has a powerful preview feature available on the admin ui (and through API as well). It enables to preview multiple types of documents right in the browser (no download or any third party application needed).
 
-> [Learn more about the preview feature](../concepts/document-previews).
+> [Learn more about the preview feature (concept docs)](../concepts/document-previews)
 
 # Preview in action
 Once a file is uploaded, the system (depending on the configuration) starts generating preview images in the background. After the process is finished, the preview of the file is accessible by double clicking the content or by selecting "preview" from the action menu.
