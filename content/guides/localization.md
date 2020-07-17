@@ -21,7 +21,7 @@ By double clicking on any of these xml files here, a basic editor surface reveal
 
 By right clicking on a string resource file, you can select additional actions as well:
 - **browse** action will show the different fields and values the xml has, like Name, Displayname, Version etc.
-- You can also **download** the string resource if you want and edit on your local computer then upload it when you're done through OData REST API
+- you can also **download** the string resource if you want and edit on your local computer then upload it when you're done through OData REST API
 
 > We plan to rethink the string resource editor in the future so it will be able to do more without leaving the admin ui.
 
