@@ -4,9 +4,8 @@ metaTitle: "sensenet admin-ui - trash"
 metaDescription: "sensenet admin-ui - trash"
 ---
 
-In sensenet deleted content goes to the trash (this is a system default setting). You can find them by clicking on the trash icon in the left menu. 
-
-![trash](/content/guides/img/trashbin.png)
+In sensenet deleted content goes to the trash (this is a system default setting). You can find them by clicking on the trash icon in the left menu. >
+> [Learn more about trash feature](/content/concepts/collaboration/05-trash)
 
 # Deleting an item
 
