@@ -13,7 +13,7 @@ You have the newly defined content type: a form. But how will your users fill th
 Every time a user fills the fields (questions) of this content and submits it, a new instance is created (filled form), containing all the answers given in the form (saved to the corresponding fields).
 
 ## Schemas
-Fields of content types can have different types and different configurations, just like questions on a survey. So if you have your questions, you can easily select the matching types using a wide variety of field types from simple text and number fields to more complex ones containing multiple options to choose, or even al ist of links as answers. The fields can also be used to refine your questions by setting minimum or maximum values, making a question/field required to fill, or adding more complex rules like email or phone number validation.
+Fields of content types can have different types and different configurations, just like questions on a survey. So if you have your questions, you can easily select the matching types using a wide variety of field types from simple text and number fields to more complex ones containing multiple options to choose, or even a list of links as answers. The fields can also be used to refine your questions by setting minimum or maximum values, making a question/field required to fill, or adding more complex rules like email or phone number validation.
 
 Schema represents the content model of the repository: the content types you create. This schema contains all the types, their fields and field configurations, and can be downloaded from your repository on the fly (through OData REST API) that lets you build custom UI for your form.
 
