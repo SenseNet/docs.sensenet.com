@@ -6,7 +6,7 @@ metaDescription: "sensenet Actions"
 
 Most of the operations with content in sensenet is governed via Actions. An Action is basically a command, instructing the system to use a specific component, to get or update the properties of the addressed content item. All of these actions can be invoked through OData REST API. There are many built-in actions in sensenet, and developers can publish custom operations as actions as well.
 
-Under the hood, OData operations are integrated into sensenet via the *Action Framework*. Sensenet actions behave as OData operations. The action in Action Framework is the extensibility point: every 3rd party action appears automatically in OData metadata if the current user has enough permissions.
+Under the hood, OData operations are integrated into sensenet via the *Action Framework*. **sensenet** actions behave as OData operations. The action in Action Framework is the extensibility point: every 3rd party action appears automatically in OData metadata if the current user has enough permissions.
 
 ![action menu](../img/actions.gif)
 
