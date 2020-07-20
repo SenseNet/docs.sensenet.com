@@ -25,21 +25,19 @@ By default the sidebar has the following items:
 
 ![dasboard](./img/dashboard_new.png)
 
-**search**: execute custom searches, build and save queries
+**search**: execute custom searches, build and save queries - [more about search in admin ui](/content/guides/search)
 
-**content**: explore and manage your content in the repository
+**content**: explore and manage your content in the repository - [more about content tree in admin ui](/content/guides/content-management/content-tree)
 
 **users and groups**: manage users and groups, roles and identities
 
-**trash**: a place for all trashed items
+**trash**: a place for all trashed items - [more about trash in admin ui](/content/guides/content-management/trash)
 
-**content types**: manage content types ([more about content types](/concepts/content-management/03-content-types))
+**content types**: manage content types ([more about content types in admin ui](/content/guides/content_types)
 
-**localization**: manage string resources
+**localization**: manage string resources - ([more about localization in admin ui](/content/guides/localization)
 
 **setup**: configure sensenet system ([more about setup](/guides/setup))
-
-<note title="pro tip">Additional items can be added to the menu bar. Learn how [LINK].</note> 
 
 # Miscellaneous
 
