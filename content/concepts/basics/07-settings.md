@@ -4,14 +4,14 @@ metaTitle: "sensenet - Settings"
 metaDescription: "sensenet Settings"
 ---
 
-Sensenet has a number of modules and features that provide a way to customize their behavior by offering settings. It is an essential part of any application: how it stores and handles settings. Keeping this in mind, we wanted to provide a framework that is easy to use and customize, enabling developers to make custom modules that are more flexible and easier to configure.
+**sensenet** has a number of modules and features that provide a way to customize their behavior by offering settings. It is an essential part of any application: how it stores and handles settings. Keeping this in mind, we wanted to provide a framework that is easy to use and customize, enabling developers to make custom modules that are more flexible and easier to configure.
 
 ![Setup dashboard](../../guides/img/setup-dashboard.png "Setup dashboard on the admin surface")
 
 # Settings is a content too
 In sensenet, settings are stored as content in the content repository. The advantage of this is that changing a setting does not involve site restart, and values can be managed in one central place.
 
-Another advantage of storing settings as content is that you are able to provide a rich UI for administrators to manage them. Settings are actually json files, so it is easy to build a dedicated UI for creating or editing settings in your app, or simply updating them using OData.
+Another advantage of storing settings as content is that you are able to provide a rich UI for administrators to manage them. Settings are actually JSON files, so it is easy to build a dedicated UI for creating or editing settings in your app, or simply updating them using OData.
 
 # Local and global settings
 Settings in sensenet can be either global or local.
@@ -43,6 +43,6 @@ You have two options here:
 - edit the whole text using the OData Upload action
 - send a POST or PATCH OData request to create or modify settings
 
-> Since settings files are in json format, the properties are exposed as regular fields of the settings content. This lets you access and even modify setting values directly through OData without having to edit the text.
+> Since settings files are in JSON format, the properties are exposed as regular fields of the settings content. This lets you access and even modify setting values directly through OData without having to edit the text.
 
 > ([Learn how to change settings](/guides/setup))
