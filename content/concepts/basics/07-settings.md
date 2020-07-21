@@ -34,7 +34,7 @@ To achieve this, the system uses a path parameter. That is the content path that
 
 ## Usage
 The variety of settings enables a multitude of usage. Let's have watermark settings as an example. In sensenet it is possible to set a watermark globally for each and every preview image. In addition to that, you can define different watermarks for different workspaces (which will then overwrite global settings) or even set watermark to a specific doclib.
-Watermark is just one example how versatile settings in sensenet can be, thanks mainly to [hierarchical tree structure](/concepts/content-tree) which forms the base of our content repository.
+Watermark is just one example how versatile settings in sensenet can be, thanks mainly to [hierarchical tree structure](concepts/basics/02-content-tree) which forms the base of our content repository.
 
 # Editing settings through OData
 Settings content can be edited through OData as any other content in the Content Repository.

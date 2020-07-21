@@ -6,7 +6,7 @@ metaDescription: "sensenet Content Scheduling"
 
 Lifespan management is a feature which allows arbitrary content items in a sensenet repository to be shown only in a pre-defined period of time. These content items can appear at a specified date and can disappear at another specified date. It is also possible to make a content item appear at a given time and have it stay there indefinitely or to make it disappear at a specified time.
 
-Lifespan management in sensenet is intended to be both user-friendly and performant. This means that lifespan management can be enabled individually for any content and can be enabled for queries, but is by default disabled.
+Lifespan management in sensenet is intended to be both user-friendly and performant. This means that lifespan management can be enabled individually for any content and can be enabled for queries, but it is disabled by default.
 
 The feature needs to be enabled on the content type for which lifespan management is desired by allowing the necessary fields to be shown on the user interface. If this is done, users who create items of that content (on the admin-ui or through REST API) can enable it on content items individually by filling the related fields.
 

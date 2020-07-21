@@ -66,7 +66,7 @@ Having different mail subjects and bodies per subtree is possible as well, becau
 If you are interested in how to share and manage sharing related content through REST API check the [API docs](/api-docs/sharing). Every above mentioned feature and functionality is available through the API.
 
 # Sharing FAQ
-What happens when something that is related to a shared content or a user changes?
+## What happens when something that is related to a shared content or a user changes?
 
 ## What happens when a user is deleted?
 All sharing information and permissions related to them will be removed.
