@@ -10,7 +10,7 @@ As a user, a developer or a repository administrator you get a simple but powerf
 
 # Indexing
 
-For every content [content](/concepts/content-management) the field values can be indexed so that when you search for a term the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value you want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
+For every [content](/concepts/content-management) the field values can be indexed so that when you search for a term the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value you want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
 
 [more about indexing](/concepts/basics/04-search#metadataindexing,searchingbyfields)
 
