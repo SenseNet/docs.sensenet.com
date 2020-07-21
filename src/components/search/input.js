@@ -56,7 +56,7 @@ const Form = styled.form`
   flex-direction: row-reverse;
   align-items: center;
   @media only screen and (max-width: 767px) {
-    width: 90%;
+    width: 80%;
     margin-left: 0px;
   }
 `
