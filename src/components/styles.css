@@ -632,6 +632,15 @@ pre {
   margin-right: 5px;
 }
 
+.onpremBtn {
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 1px 10px;
+  color: #fff;
+  border-color: #0291D3;
+  background-color: #0291D3;
+}
+
 .addPaddTopBottom {
   padding: 50px 0;
 }
