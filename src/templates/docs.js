@@ -125,17 +125,17 @@ let classname = mdx.fields.slug.split('/')[1]
           <h1 className={'title'}>
             {mdx.fields.title}
           </h1>
-          <Edit className={'mobileView'}>
+          {mdx.parent.relativePath && !mdx.parent.relativePath.includes('rest-api-references') ? <Edit className={'mobileView'}>
             <Link className={'gitBtn'} to={`${docsLocation}/${mdx.parent.relativePath}`}>
               <img src={gitHub} alt={'Github logo'} /> Edit on GitHub
             </Link>
-          </Edit>
+          </Edit> : null }
         </div>
         {mdx.frontmatter.onPremOnly ? <span className={'onpremBtn'}>on-premise only</span> : null}
         <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
-        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') ?
+        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') && !mdx.parent.relativePath.includes('rest-api-references') ?
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div> :
