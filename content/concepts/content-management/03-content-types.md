@@ -4,7 +4,7 @@ metaTitle: "sensenet - Content Types"
 metaDescription: "sensenet Content Types"
 ---
 
-The content repository contains many different types of content. Content vary in structure and even in function. Different types of content contain different fields and may also implement different business logic. The fields and business logic of a content is defined by its type - the content type.
+The content repository contains many different types of content. Content vary in structure and even in function. Different types of content contain different fields and may also implement different business logic. The fields and business logic of a content are defined by their type - the content type.
 
 # Content Types
 
@@ -63,7 +63,7 @@ The content type definition (CTD) for different content types holds the field de
 > Different field types have different field settings however there are a couple common settings that are available for all fields.
 
 The ``FieldSetting`` not only specifies the type of information but it also **validates** according to its implementation. Validation can happen automatically on saving a content, or manually from code. The field is able to store the validation status (valid, invalid, reason of error), thus if a validation has occurred the field will be revalidated if its data has changed or a previous validation has failed.
-  
+
 JavaScript functions can be used to define **dynamic default values**. If the field does not appear on the ui, this element has no effect. Only takes effect in case the user adds a new content, edit forms do not use default values.
 
 In sensenet there's option to set **appearance** of each field defining wheteher the specific field should be visible on automatically generated views (like new, edit or browse).
@@ -124,4 +124,4 @@ The content type definition xml of a content type can be edited on the admin ui 
 
 # Usage (advantages)
 
-Sensenet content type approach enables you to define custom content types in a system according to your needs. This allows great flexibility on content level. You can freely use predefined content types available in the system or create your own by inheriting from ``GenericContent`` or any other existing content type. It is recommended to define the required custom content types right at the beginning of your project and build your solution afterwards.
+sensenet content type approach enables you to define custom content types in a system according to your needs. This allows great flexibility on content level. You can freely use predefined content types available in the system or create your own by inheriting from ``GenericContent`` or any other existing content type. It is recommended to define the required custom content types right at the beginning of your project and build your solution afterwards.

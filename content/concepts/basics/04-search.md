@@ -41,6 +41,6 @@ Content Query has always been one of the most important features in sensenet. It
 
 # Usage
 sensenet content repository is a query based system, which means every content or image you see on the portal is collected by a very sophisticated and fast query engine. As an end-user, developer or administrator you get the solution to find, filter and sort content even in a huge and constantly expanding repository.
-You can find several usage and examples in the API docs [https://docs.sensenet.com/api-docs/querying].
+You can find several usage and examples in the [API docs](https://docs.sensenet.com/api-docs/querying).
 
 

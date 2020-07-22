@@ -63,12 +63,14 @@ export default class MDXRuntimeTest extends Component {
       forcedNavOrder = sideMenuConfig.concepts.forcedNavOrder
     } else if (mdx.fields.slug.includes('guides')){
       forcedNavOrder = sideMenuConfig.guides.forcedNavOrder
+    } else if (mdx.fields.slug.includes('tutorials')){
+      forcedNavOrder = sideMenuConfig.tutorials.forcedNavOrder
     }
 
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
       .filter(slug => slug !== "/" && !isExample(slug))
-      .filter(slug => slug.split('/')[1] === currentCategory)
+      // .filter(slug => slug.split('/')[1] === currentCategory)
       .sort()
       .reduce(
         (acc, cur) => {
@@ -123,16 +125,17 @@ let classname = mdx.fields.slug.split('/')[1]
           <h1 className={'title'}>
             {mdx.fields.title}
           </h1>
-          <Edit className={'mobileView'}>
+          {mdx.parent.relativePath && !mdx.parent.relativePath.includes('rest-api-references') ? <Edit className={'mobileView'}>
             <Link className={'gitBtn'} to={`${docsLocation}/${mdx.parent.relativePath}`}>
               <img src={gitHub} alt={'Github logo'} /> Edit on GitHub
             </Link>
-          </Edit>
+          </Edit> : null }
         </div>
-        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' ? `mainWrapper` : `fullWrapper`}>
+        {mdx.frontmatter.onPremOnly ? <span className={'onpremBtn'}>on-premise only</span> : null}
+        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
-        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') ?
+        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') && !mdx.parent.relativePath.includes('rest-api-references') ?
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div> :
@@ -167,6 +170,7 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        onPremOnly
       }
     }
     allMdx {
