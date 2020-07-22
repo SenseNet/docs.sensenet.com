@@ -10,9 +10,9 @@ In sensenet, one of the most important technical aspects is how we index content
 ![search](../img/search.gif)
 
 # Metadata indexing, searching by fields
-For every content [link], the field values can be indexed, so when you search for a term, the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value we want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
+For every [content](/content/concepts/content-management), the field values can be indexed, so when you search for a term, the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value we want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
 
-Sensenet uses the Lucene search engine for indexing and to provide a fast mechanism for returning query results. Apart from the indexing of some basic built-in properties, each field can be configured separately according to the way you want to index it.
+**sensenet** uses the Lucene search engine for indexing and to provide a fast mechanism for returning query results. Apart from the indexing of some basic built-in properties, each field can be configured separately according to the way you want to index it.
 
 Please note that this decision is usually made in development time. Although it is possible to switch to another search engine later, it will involve reindexing the whole content repository.
 The point of having a search module is that it provides a generic search interface for the content repository; a technology-independent search layer. Queries are expressed in a text or code (LINQ) format and are compiled to the language of the configured engine. Developers may create and execute queries without knowing which engine will execute them.
@@ -27,7 +27,7 @@ Some of the built-in analyzers (StandardAnalyzer and StopAnalyzer) use a stop-wo
 You can configure the indexing and storing mode, analyzer, and the association of Field IndexHandler in every Field. All elements are optional because all elements have default values.
 
 # Search in uploaded docs
-Binary fields are special fields that hold the actual content of a file. In sensenet, it is possible to index documents to let users search for uploaded files. Sensenet is able to index not only the metadata of documents (like creation date or author), but the binary content itself. The latter is called text extracting.
+Binary fields are special fields that hold the actual content of a file. In sensenet, it is possible to index documents to let users search for uploaded files. **sensenet** is able to index not only the metadata of documents (like creation date or author), but the binary content itself. The latter is called text extracting.
 Sensenet provides different search features to make search results even more effective.
 _Full text search_: In a sensenet content repository, you are able to search in any metadata field of any content. As the field values can be indexed for every content, when you search for a field value, the related content will appear in the result set. Without adding a field name into the query to search for, the search engine will look into all the fields whose value is indexed.
 _Fuzzy search_ : It allows you to identify non-exact matches of your target item. You can get relevant search results even if you have a typo in your query or a different verbal tense. You can define which differences are accepted and which ones are not.
@@ -40,6 +40,5 @@ Content Query has always been one of the most important features in sensenet. It
 
 # Usage
 The sensenet content repository is a query-based system, which means every content or image you see on the portal is collected by a sophisticated and fast query engine. As an end-user, developer, or administrator you get the solution to find, filter and sort content even in a huge and constantly expanding repository.
-You can find several examples for its use within our API docs [https://docs.sensenet.com/api-docs/querying].
-
+You can find several examples for its use within our [API docs](/content/api-docs/querying).
 
