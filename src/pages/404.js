@@ -1,4 +1,4 @@
-const MainPage = () => {
+const ErrorPage = () => {
   return(
     <>
     <h1>Ooops</h1>
@@ -7,3 +7,4 @@ const MainPage = () => {
     </>
   )
 }
+export default ErrorPage
