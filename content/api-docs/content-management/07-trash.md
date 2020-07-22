@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Trash"
 metaDescription: "Managing the Trash"
 ---
 
-Using sensenet you are able to use trash just like in Windows. When you delete a document or a folder, it will not be deleted permanently by default. You can find it in the repository's trash bin, and you can restore it. There are several configs and settings related to the trash functionality and the global trash bin. See the related [concept docs](/concepts/trash) for further information.
+Using sensenet you are able to use trash just like in Windows. When you delete a document or a folder, it will not be deleted permanently by default. You can find it in the repository's trash bin, and you can restore it. There are several configs and settings related to the trash functionality and the global trash bin. See the related [concept docs](/concepts/collaboration/05-trash) for further information.
 
 The trash bin is a central place for deleted documents where you can browse, restore or delete content permanently just as you do with any other content in the repository. The Trash bin contains the items wrapped in separate trash bags. The followings can be executed only on this type of contents.
 
