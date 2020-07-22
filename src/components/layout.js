@@ -98,7 +98,7 @@ const Layout = ({ children, location }) => {
 
     </MDXProvider>
   }
-  else if(location.pathname.includes('example-apps') || location.pathname.includes('tutorials')) {
+  else if(location.pathname.includes('example-apps')) {
     container = <MDXProvider components={mdxComponents}>
     <Wrapper>
       <Content>
@@ -107,6 +107,15 @@ const Layout = ({ children, location }) => {
       <RightSideBarWidth className={'hiddenMobile'}>
         <RightSidebar location={location} />
       </RightSideBarWidth>
+    </Wrapper>
+  </MDXProvider>
+  }
+  else if(location.pathname.includes('rest-api-references')) {
+    container = <MDXProvider components={mdxComponents}>
+    <Wrapper>
+      <Content>
+        <MaxWidth>{children}</MaxWidth>
+      </Content>
     </Wrapper>
   </MDXProvider>
   } else {

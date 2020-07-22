@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
 import '../components/styles.css';
 import content from '../../mainPageContent'
 
@@ -18,7 +17,6 @@ import reduxLogo from '../images/redux.png'
 const MainPage = () => {
   return(
     <>
-      <SearchBar />
             <div className="BoxContainer">
               {content.map((c, index) =>
                 <div className="Box" key={`box-${index}`}>
