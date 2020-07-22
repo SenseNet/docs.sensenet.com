@@ -4,15 +4,15 @@ metaTitle: "sensenet - What is a headless CMS"
 metaDescription: "sensenet - What is a headless CMS"
 ---
 
-Headless content management system (CMS) is the trend of the years past. It is built as a content repository where you can store your contents and reach it through RESTful APIs. It is reactive: another system requests the content as and when it’s needed. Since it is a headless CMS there is no ui, so you have the freedom to build it based on your requirements. Thanks to its API-first concept it is easy to integrate with and gives more freedom to the developer to choose framework for his project.
+The concept of a headless content management system (CMS) is the trend of these past years. It is built as a content repository where you can store your content and reach it through RESTful APIs. It is reactive: another system requests the content as and when it is needed. Since it is headless, there is no user interface (UI), giving you freedom to build it according to your requirements. Due to its API-first concept, it is easy to integrate with and provides more freedom to developers to choose framework for their projects.
 
-# What's a headless CMS anyway?
+# What is a headless CMS anyway?
 
 - loosely connected, often interchangeable components
 - easy to integrate with
 - scalable
 - fast and flexible content delivery
-- future proof
+- future-proof
 - few publisher and developer dependencies
 - simple deployment
 - good for content centric solutions
@@ -21,16 +21,16 @@ Headless content management system (CMS) is the trend of the years past. It is b
 
 | | Headless CMS | Traditional CMS |
 |-| ------------ | --------------- |
-|Integration|Easy to integrate thanks to API first approach|All the content and the source code coexist and are bounded tightly, increasing complexity|
+|Integration|Easy to integrate due to its API-first approach|All the content and the source code coexist and are bounded tightly, increasing complexity|
 |Flexibility|Optional technology stack (database, framework, programming language)|Site must be written with a specific programming language or with a specific framework|
-|Customazibility|Fully customizable|Built-in ui building blocks that you can choose from and customize|
-|Setup and deployment|No install, easy upgrade|Requires a database + specific server hosting, and regular maintenance|
-|Security|Delivered as SNaaS, you don't have to bother with security issues|Security upgrades and database backups required|
+|Customizability|Fully customizable|Built-in UI building blocks that you can choose from and customize|
+|Setup and deployment|No installation, easy upgrade|Requires a database + specific server hosting and regular maintenance|
+|Security|Delivered as SNaaS, you do not have to worry about security issues|Security upgrades and database backups required|
 
-# Usecases
+# Use cases
 
-- Build web application with a technology you are familiar with
+- Build web applications with a technology you are familiar with
 - Native Mobile Apps
 - Enrich product information on ecommerce sites
-- Realize solution for special business needs
-- In case fully customized ui is required
+- Realize solutions for special business needs
+- In case fully customized UI is required
