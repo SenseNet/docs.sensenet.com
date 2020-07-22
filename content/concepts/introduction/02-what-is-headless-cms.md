@@ -4,7 +4,7 @@ metaTitle: "sensenet - What is a headless CMS"
 metaDescription: "sensenet - What is a headless CMS"
 ---
 
-The concept of a headless content management system (CMS) is the trend of these past years. It is built as a content repository where you can store your content and reach it through RESTful APIs. It is reactive: another system requests the content as and when it is needed. Since it is a headless, there is no user interface (UI), giving you freedom to build it according to your requirements. Due to its API-first concept, it is easy to integrate and provides more freedom to developers to choose framework for their projects.
+The concept of a headless content management system (CMS) is the trend of these past years. It is built as a content repository where you can store your content and reach it through RESTful APIs. It is reactive: another system requests the content as and when it is needed. Since it is headless, there is no user interface (UI), giving you freedom to build it according to your requirements. Due to its API-first concept, it is easy to integrate with and provides more freedom to developers to choose framework for their projects.
 
 # What is a headless CMS anyway?
 
