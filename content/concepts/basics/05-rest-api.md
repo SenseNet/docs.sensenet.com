@@ -31,4 +31,4 @@ All content in the repository is secured by the permission system, which means u
 
 # Extend the API
 
-Sensenet's REST API is also expandable in many ways. It is possible to filter, query, or order the results provided by sensenet. Its services provide you all the tools you need to add custom business logic to your API calls. Additionally, you can also add custom APIs (custom [Actions](/concepts/basics/08-actions)) if you have the on-premise version.
+**sensenet** REST API is also expandable in many ways. It is possible to filter, query, or order the results provided by sensenet. Its services provide you all the tools you need to add custom business logic to your API calls. Additionally, you can also add custom APIs (custom [Actions](/concepts/basics/08-actions)) if you have the on-premise version.
