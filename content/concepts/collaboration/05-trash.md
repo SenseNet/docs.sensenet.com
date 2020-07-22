@@ -34,7 +34,7 @@ Type of the restored content should be allowed on the chosen container.
 Additional actions can also be performed on trashed items like edit or delete permanently.
 ![trash actions](../img/trash_actions.png)
 
-When deleting a trashed item, the content will be permanently deleted
+When deleting a trashed item, the content will be permanently deleted.
 ![delete from trash](../img/permanentdelete.png)
 
 If the trash is disabled, the popup informs you that the feature is turned off. Be careful because you may delete a content permanently. Your content can't be restored in this case.

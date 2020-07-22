@@ -6,7 +6,7 @@ metaDescription: "sensenet Content Templates"
 
 In sensenet everything is content. When you create a new article, workspace or just upload a document you are creating a content. But you do not always want to start from scratch. Sometimes you want to have pre-filled values in fields, predefined document templates (e.g. containing a company logo in the header) or a whole pre-built workspace containing lists and libraries for a special purpose. This is what content templates are for: they are predefined templates for creating new content.
 
-Content template can be a single content - e.g. a Word document containing a company logo or menu items - or a whole content structure, for example a pre-built workspace. 
+Content template can be a single content - e.g. a Word document containing a company logo or menu items - or a whole content structure, for example a pre-built workspace.
 Content templates can reside in the following places:
 
 - global templates: /Root/ContentTemplates
@@ -31,7 +31,7 @@ When you open a New menu anywhere it will contain the following items for every 
 
 After selecting a content template the user will be presented a content view for that content type and will be able to see and change the predefined template fields (depending on the content view). When the user presses the Done editing button the whole template will be copied to the destination place. E.g. if the template is of the workspace type, all its lists and libraries will be present at the destination place.
 
-See example under API docs [https://docs.sensenet.com/api-docs/content-management/01-create]
+See example under [API docs](https://docs.sensenet.com/api-docs/content-management/01-create)
 
 # Permissions and security
 
