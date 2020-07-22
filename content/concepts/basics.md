@@ -20,7 +20,7 @@ Every content is built up of fields (a user content for example has a *name* fie
 
 # How can I store/browse my data?
 
-The sensenet administrative dashboard provides a handful of tools to manage content. You can create new content of the defined content types and fill their fields with data. You can also define new content types of any kind. You can copy, move, delete, and rename content as well as upload/download files into/from the content repository. And that is just the basics. The options for managing your content are nearly endless.
+The sensenet admin UI provides a handful of tools to manage content. You can create new content of the defined content types and fill their fields with data. You can also define new content types of any kind. You can copy, move, delete, and rename content as well as upload/download files into/from the content repository. And that is just the basics. The options for managing your content are nearly endless.
 
 # Accessing content through the REST API
 
