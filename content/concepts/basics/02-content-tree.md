@@ -8,7 +8,7 @@ A sensenet content repository is basically a tree structure of the various store
 
 # Structured storage of content
 
-The tree structure lets you organize and group your content easily by creating separate subtrees. It is not only important because of the possibility to configure content accessibility for different types of users on different parts of the tree, but also because of the inheritance of data like content types, underlying business logic, metadata field configurations, and settings.
+The tree structure lets you organize and group your content easily by creating separate subtrees. It is not only important because of the possibility to configure content accessibility for different types of users on different parts of the tree, but also because of the inheritance of data like underlying business logic of content types, metadata field configurations and settings.
 
 This kind of data storage makes it possible to store content of multiple different projects (public website, intranet, document management app, etc.) in one repository. By creating multiple subtrees with folders or workspaces, you can build up custom content structures, while every subtree can have its own permission settings, roles, and configurations with regards to who can access it and what it will be used for.
 
@@ -38,4 +38,4 @@ Settings files can be global or local. Local settings files override global ones
 
 # Content type inheritance
 
-Content types are defined in a type hierarchy: a content type may be inherited from another type, automatically inheriting its fields and the underlying business logic (handler). A content type may only inherit fields from a single type because of the tree structure. Multiple inheritance is not allowed. Inherited field configuration can be overridden in derived types. For example, a custom `CompanyUser` type inherited from the built-in User type will have all the fields that are defined on the `User`, and can also have additional ones related to its specialities).
+Content types are defined in a type hierarchy: a content type may be inherited from another type, automatically inheriting its fields and the underlying business logic (handler). A content type may only inherit fields from a single type because of the tree structure. Multiple inheritance is not allowed. Inherited field configuration can be overridden in derived types. For example, a custom `CompanyUser` type inherited from the built-in User type will have all the fields that are defined on the `User`, and can also have additional ones related to its specialities.
