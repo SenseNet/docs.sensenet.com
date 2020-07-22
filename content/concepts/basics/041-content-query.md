@@ -24,7 +24,7 @@ In more complex situations, you may need some filtering based on the type or pla
 
 # Security
 
-In sensenet, there are many contents that we consider security critical such as users, confidential documents, or system content. As this platform is based on Content Query that lets users find content in the repository easily, we need to make sure that no one can access information that they do not have permissions for.
+In sensenet, there are many contents that we consider security critical such as users, confidential documents or system content. As this platform is based on Content Query that lets users find content in the repository easily, we need to make sure that no one can access information that they do not have permissions for.
 
 When a user executes a query, the result list will contain only the content that the user has permissions for. There is no way for the user to access other content using a query, only the permitted ones. This is baked into the system, because we filter the results based on appropriate permissions. This means that even if somebody hijacked the query somehow, they will not be able to access sensitive information.
 
