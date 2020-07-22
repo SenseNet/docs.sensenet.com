@@ -21,7 +21,7 @@ Resources can be accessed as individual entities or as collections (containers) 
 
 # Content management and beyond
 
-Sensenet's REST API is not only a content delivery API, as it also supports CRUD and other operations for managing content: uploading, versioning, approval or setting permissions, etc.
+**sensenet** REST API is not only a content delivery API, as it also supports CRUD and other operations for managing content: uploading, versioning, approval or setting permissions, etc.
 
 [Explore all the possibilities](/api-docs/content-management)
 
