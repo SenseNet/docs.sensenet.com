@@ -52,7 +52,7 @@ The advantage of this is that no content is duplicated, and contents can be refe
 Multiple reference option allows ``1:n`` connection via reference field, as well as ``n:1`` by using query in the reference field.
 
 # Allowed child types
-In the sensenet content repository, it is possible to define restrictions on what content types the different containers can hold. You can configure ``AllowedChildTypes`` in the content type definition for the different types. For example a calendar can only contain events, a document library can only contain folders and files, etc. These settings can be overridden on the specific content: for example, you can modify any of your document libraries to contain images, too.
+In the sensenet content repository, it is possible to define restrictions on what content types the different containers can hold. You can configure ``AllowedChildTypes`` in the content type definition for the different types. For example a calendar can only contain events, a document library can only contain folders and files, etc. These settings can be overridden on the specific content: for example, you can modify any of your document libraries to contain images too.
 There are also some special types that behave differently: for example, a folder can never define child types, as it will always inherit its parent settings. A ``SystemFolder`` will allow every type by default and can be created anywhere in the repository.
 
 > [Learn more about allowed child types](/concepts/content-management/06-allowed-childtypes)
