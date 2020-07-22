@@ -15,7 +15,7 @@ A sensenet content repository is an [OData](https://www.odata.org/) producer, wh
 
 The requested resource can be any content in the repository that is permitted for the current user. Since everything is content in sensenet, every item (user, folder, document, etc.) can be accessed through the same API.
 
-Resources can be accessed as individual entities or as collections (containers) of content. Based on the way of access, the result will contain the metadata of a content or its children's. The response is always in json format, which you can easily process and build into your own application.
+Resources can be accessed as individual entities or as collections (containers) of content. Based on the way of access, the result will contain the metadata of a content or its children's. The response is always in JSON format, which you can easily process and build into your own application.
 
 [More about content delivery](/api-docs/basic-concepts/01-entry)
 
