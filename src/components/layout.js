@@ -109,6 +109,15 @@ const Layout = ({ children, location }) => {
       </RightSideBarWidth>
     </Wrapper>
   </MDXProvider>
+  }
+  else if(location.pathname.includes('rest-api-references')) {
+    container = <MDXProvider components={mdxComponents}>
+    <Wrapper>
+      <Content>
+        <MaxWidth>{children}</MaxWidth>
+      </Content>
+    </Wrapper>
+  </MDXProvider>
   } else {
     container = <MDXProvider components={mdxComponents}>
       <Wrapper>

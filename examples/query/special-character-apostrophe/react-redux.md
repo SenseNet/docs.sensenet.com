@@ -1,5 +1,5 @@
 ```javascript
 store.dispatch(Actions.fetchContent("/Root/Content/IT", {
- query: 'InFolder:"(1+1):2"'
+ query: 'InFolder:"/Root/Content/IT/(1+1):2"'
 }))
 ```
