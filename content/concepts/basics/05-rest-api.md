@@ -4,7 +4,7 @@ metaTitle: "sensenet - REST API"
 metaDescription: "sensenet REST API"
 ---
 
-Sensenet provides a rich API allowing you to manage, integrate, and deliver content on all types of clients, devices, and platforms. This section explains the API structure and other main concepts in greater detail.
+**sensenet** provides a rich API allowing you to manage, integrate, and deliver content on all types of clients, devices, and platforms. This section explains the API structure and other main concepts in greater detail.
 
 A sensenet content repository is an [OData](https://www.odata.org/) producer, which means your application can consume our [OData](https://www.odata.org/) service to create web and mobile apps or any other type of content-based applications. It supports CRUD operations, properties, binary streams, paging options, custom queries, and many more.
 
