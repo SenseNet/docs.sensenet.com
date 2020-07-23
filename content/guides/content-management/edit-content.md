@@ -15,7 +15,6 @@ Once you're done editing, click *submit* to save your changes to the content.
 
 As mentioned above, different content types has different fields.
 For comparison, here's the edit view of an image (jpg):
-
 ![image-edit](/content/guides/img/image-edit.png)
 
 
