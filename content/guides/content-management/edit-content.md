@@ -21,7 +21,7 @@ For comparison, here's the edit view of an image (jpg):
 
 # Office Online editing
 
-Beside editing the fields of different content items, sensenet supports office online editing in case of word, excel and powerpoint files.
+Beside editing the fields of different content items, sensenet supports Office Online editing in case of word, excel and powerpoint files.
 
 This allow users to open office documents without a desktop app and to collaborate (edit the same document at the same time).
 
