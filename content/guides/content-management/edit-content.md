@@ -8,9 +8,11 @@ Contents can be edited right on the admin ui. Different content types has differ
 
 # Field editing
 
+In this example you can see the edit view of a calendar event. Here you can modify *Title*, *Location*, *Start/End date* and other fields available on the content.
+
 ![content-edit](/content/guides/img/content-edit.png)
 
-In this example you can see the edit view of a calendar event. Here you can modify *Title*, *Location*, *Start/End date* and other fields available on the content.
+Once you're done editing, click *submit* to save your changes to the content. 
 
 For comparison, here's the edit view of an image (jpg).
 
