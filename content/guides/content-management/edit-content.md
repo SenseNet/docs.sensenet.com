@@ -15,8 +15,21 @@ For comparison, here's the edit view of an image (jpg).
 ![image-edit](/content/guides/img/image-edit.png)
 
 
-# Office online editing
+# Office Online editing
 
 Beside editing the fields of different content items, sensenet supports office online editing in case of word, excel and powerpoint files.
 
-This allow users to open office documents without a desktop app and to collaborate (edit the same document at the same time). d
+This allow users to open office documents without a desktop app and to collaborate (edit the same document at the same time).
+
+To open a document in the online editor, click on the right click (or three dots) menu on a compatible content (in this case a docx file) and select *Edit in Office Online* option.
+
+![Edit in Office Online option](/content/guides/img/office_edit_menu.png)
+
+After this, a feature packed online editor reveals itself where you can do many things you are used to in Office. You can edit the same document at the same time and all the changes are saved automatically.
+You can go back to the content tree with the *cancel* button at the bottom right corner.
+
+> please note that the feature set is limited compared to a full-fledged desktop Office
+
+![Office Online editor](/content/guides/img/office_editor.png)
+
+> [learn more about Office Online editing (concept docs)](/content/concepts/collaboration/03-office-online-editing)
