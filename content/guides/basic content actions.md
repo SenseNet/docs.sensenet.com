@@ -21,6 +21,7 @@ You can reach them easily on the admin ui.
 
 Actions are always connected to content. As such, you can look at them from the side of the content as well. That means you can always check which actions are available for a content without doing any special moves or writing custom code. 
 List of the available actions are stored on the content metadata.
+To see which actions are available for a specific content do a right click or open the action menu (three dots).
 
 You are able to complete bulk actions, such as _Delete_, _Move_, and _Copy_ by selecting the desired files, or with _Select All_ function, all of them.
 
