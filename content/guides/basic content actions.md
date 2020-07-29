@@ -17,7 +17,7 @@ The basic content actions are:
 
 You can reach them easily on the admin ui.
 
-![actions](/content/guides/img/actions.gif)
+![actions](/content/concepts/img/actions.gif)
 
 Actions are always connected to content. As such, you can look at them from the side of the content as well. That means you can always check which actions are available for a content without doing any special moves or writing custom code. 
 List of the available actions are stored on the content metadata.
