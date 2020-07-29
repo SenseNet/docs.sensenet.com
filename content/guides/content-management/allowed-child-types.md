@@ -25,7 +25,7 @@ The above settings will ensure that whenever you create a new content of this sp
 When types are locally defined for a specific content it overwrites the CTD settings of its type. This way you can freely modify allowed child type settings for a specific content, and modifications in CTD will not affect the child type settings of that content in any ways. The local allowed child type settings of a content is stored in the AllowedChildTypes field.
 
 
-![AllowedChildType](../img/AllowedChildType.png)
+![AllowedChildType](/content/concepts/img/AllowedChildType.png)
 
 For example, go to IT Workspace/ Image Library, opening the action menu with right click you will find Edit mode. Here you can find edit and define which content types this folder can contain.
 
