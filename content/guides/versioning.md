@@ -11,7 +11,7 @@ In sensenet versioning is disabled by default.
 
 You can enable versioning for folders or content lists by selecting the folder/file, clicking _Edit_ and selecting the _Versioning Mode_.
 
-![versioning](../img/versioning.png)
+![versioning](/content/guides/img/versioning.png)
 
 Subfolders inherit versioning settings by default.
 
@@ -26,10 +26,10 @@ _Major and minor_: Every version is preserved (1.0, 1.1, 1.2,…). In this mode,
 
 Following example shows you how to checkout (lock) a document:
 
-![checkout_file](../img/checkout_file.png)
+![checkout_file](/content/guides/img/checkout_file.png)
 
 In the same way you can checkin the file.
 
 To know if a file is currently checked out see the symbol.
 
-![locked_file](../img/locked_file.png)
+![locked_file](/content/guides/img/locked_file.png)
