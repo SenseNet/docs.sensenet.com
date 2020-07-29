@@ -10,12 +10,12 @@ Let's see how you can create for example a new folder.
 Folders are nodes in sensenet's tree structure. They can contain files and/ or other folders. You can create easily a new one, but first you need to select where you would like to create it.
 Click on _Content_ in the menu structure on the left. You will see the basic built-in workspaces in sensenet, containing default content types, folders and files. For example Marketing workspace contains Document Library, Image library, Memos, Calendar etc., all of these contains different contents.
 
-![admin ui content](./img/admin_ui_content.png)
+![admin ui content](/content/guides/img/admin_ui_content.png)
 
 To create the folder for example into the  Image Library in Marketing worspace, open this specific folder by clicking on it. Click on _Add_ on the top of the Menu on the left and in the opening bar you will see all the content types you can create in this folder. Among other content types (like Calendar, Memo ect.) you have the possibility to create _Folder_.
 
 
-![add new](../img/add_new.gif)
+![add new](/content/guides/img/add_new.gif)
 
 In the opening window you can give the folder name, you can define the lifespan (the content is valid, visible from date to date), and also you can define the indexing. This last one is useful while filtering and sorting the content: for example you create different contents at the same time and you would like to put them in custom order, so you give them an index value, this way you can filter and order them based on this indexing.
 
@@ -26,6 +26,6 @@ It is possible to create a new content in sensenet also by uploading a file or a
 It is possible to upload images, pdf, word, excel or ppt files, also bulk upload feature is available.
 
 
-![upload file](./img/upload_file.png)
+![upload file](/content/guides/img/upload_file.png)
 
 Basically, all the new content you would like to create in sensenet you can do in the same way, using the _Add_ function in the Menu on the left.
