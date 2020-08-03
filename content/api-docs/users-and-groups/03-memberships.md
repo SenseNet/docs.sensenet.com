@@ -21,3 +21,15 @@ Users with appropriate permissions allowed can add new members to a group. The l
 Users with the appropriate permissions allowed are also able to remove members from a group using. The list of members to be deleted should be provided in the `contentIds` parameter as list of user or group ids.
 
 <tab category="users-and-groups" article="memberships" example="removeMember" />
+
+# Get all group memberships (roles) of a user
+
+With using following example you can get the list of all the groups where the given user is a member. Since groups can be also members of other groups this means that the list will contain both the direct and the inherited memberships. The list is available as the value of a special field on the type User which means you work with it a the same way as you use fields in general.
+
+<tab category="users-and-groups" article="memberships" example="allRoles" />
+
+# Get the list of groups where the user is directly added as a member
+
+The list above contains all the group memberships without filtering out the indirect ones and the following examples show you how you can get only those ones where the given user is a direct member (added as a referenced content in the groups' `Members` field). Following solution is based on a special field as well like the one above.
+
+<tab category="users-and-groups" article="memberships" example="directRoles" />
