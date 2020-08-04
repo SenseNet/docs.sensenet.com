@@ -1,5 +1,5 @@
 ---
-title: "admin ui"
+title: "Getting started"
 metaTitle: "sensenet admin-ui - Getting started"
 metaDescription: "sensenet admin-ui - Getting started"
 ---
@@ -25,17 +25,17 @@ By default the sidebar has the following items:
 
 ![dasboard](./img/dashboard_new.png)
 
-**search**: execute custom searches, build and save queries - [more about search in admin ui](/content/guides/search)
+**search**: execute custom searches, build and save queries - [more about search in admin ui](/guides/search)
 
-**content**: explore and manage your content in the repository - [more about content tree in admin ui](/content/guides/content-management/content-tree)
+**content**: explore and manage your content in the repository - [more about content tree in admin ui](/guides/content-management/content-tree)
 
 **users and groups**: manage users and groups, roles and identities
 
-**trash**: a place for all trashed items - [more about trash in admin ui](/content/guides/content-management/trash)
+**trash**: a place for all trashed items - [more about trash in admin ui](/guides/content-management/trash)
 
-**content types**: manage content types ([more about content types in admin ui](/content/guides/content_types)
+**content types**: manage content types ([more about content types in admin ui](/guides/content_types)
 
-**localization**: manage string resources - ([more about localization in admin ui](/content/guides/localization)
+**localization**: manage string resources - ([more about localization in admin ui](/guides/localization)
 
 **setup**: configure sensenet system ([more about setup](/guides/setup))
 

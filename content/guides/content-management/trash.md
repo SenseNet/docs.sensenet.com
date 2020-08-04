@@ -1,21 +1,21 @@
 ---
-title: "admin ui - trash"
-metaTitle: "sensenet admin-ui - trash"
-metaDescription: "sensenet admin-ui - trash"
+title: "Trash"
+metaTitle: "sensenet - Trash"
+metaDescription: "sensenet - Trash"
 ---
 
-In sensenet deleted content goes to the trash (this is a system default setting). You can find them by clicking on the trash icon in the left menu.
-> [Learn more about trash feature (concept docs)](/content/concepts/collaboration/05-trash)
+In sensenet deleted content goes to the trash (this is a system default). You can find them by clicking on the trash icon in the left menu.
+> [Learn more about trash feature (concept docs)](/concepts/collaboration/05-trash)
 
 # Deleting an item
 
 Delete is available via the action menu (three dots or right click) of a content item.
 
-![delete](/content/guides/img/delete_action.png)
+![delete](../img/delete_action.png)
 
 The system displays a confirmation dialog where you can confirm or cancel the process and you also have the possibility to permanently delete the content (and skip trash).
 
-![delete dialog](/content/guides/img/delete_confirm.png)
+![delete dialog](../img/delete_confirm.png)
 
 # Trash actions
 
