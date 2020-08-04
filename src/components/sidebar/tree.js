@@ -18,6 +18,8 @@ const calculateTreeData = (edges, l) => {
 
   edges.filter(({node: {fields: {slug}}}) => slug !== l.split('/')[1])
 
+
+
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
     let {items: prevItems} = accu;
@@ -33,6 +35,7 @@ const calculateTreeData = (edges, l) => {
       }
       prevItems = tmp.items;
     }
+    console.log(accu.items)
     const existingItem = prevItems.find(({label}) => label === parts[parts.length - 1]);
     if (existingItem) {
       existingItem.url = slug;
@@ -93,7 +96,6 @@ const Tree = ({edges, location}) => {
     }
   });
   const defaultCollapsed = {};
-
   treeData.items.forEach(item => {
     if (sideMenuConfig[getConfigNameByLocation(location)].collapsedNav && sideMenuConfig[getConfigNameByLocation(location)].collapsedNav.includes(item.url)) {
       defaultCollapsed[item.url] = true;
