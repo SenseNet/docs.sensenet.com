@@ -7,14 +7,14 @@ const config = {
 	"header": {
     "logo": "",
 		"logoLink": "/",
-		"title": "Documentation",
+		"title": `<div style="font-family: 'Roboto Light'"><strong style="font-family: Roboto">sense</strong>net</div><div style="font-family: 'Roboto Light';font-size:16px">docs</div>`,
 		"githubUrl": "https://github.com/SenseNet/sensenet",
 		"helpUrl": "https://gitter.im/SenseNet/sensenet",
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
 		"links": [
       { "text": "API Docs", "link": "/api-docs/basic-concepts", "name": "api-docs"},
       { "text": "Example Apps", "link": "/example-apps", "name": "example-apps"},
-      { "text": "Tutorials", "link": "/tutorials/index", "name": "tutorials"},
+      { "text": "Tutorials", "link": "/tutorials/getting-started/getting-started-with-sensenet-rest-api", "name": "tutorial"},
       { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
       { "text": "Guides", "link": "/guides/index", "name": "guides"},
       { "text": "Integrations", "link": "/", "name": "integrations"}

@@ -91,6 +91,6 @@ You can search permission entries by all the available permissions, as in the fo
 
 # Check if I can see the permission settings
 
-The above mentioned things are available if the user who use them are allowed to see permissions so he has *SeePermissions* permission allowed. You can also check wether a user can see permissions or not as in the above mentioned examples but now with the *SeePermissions*:
+The above mentioned things are available if the user who use them are allowed to see permissions so he/she has *SeePermissions* permission allowed. You can also check wether a user can see permissions or not as in the above mentioned examples but now with the *SeePermissions*:
 
 <tab category="permissions" article="permissions" example="canSeePermissions" />

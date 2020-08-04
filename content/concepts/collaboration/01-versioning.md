@@ -31,7 +31,7 @@ Content in the repository can have several non-numeric version states:
 - **P (Pending):** When approval is enabled in a folder or list, then contents cannot be published without approval. After sending a content for approval it remains in pending for approval state, until somebody with sufficient rights approves it.
 - **R (Rejected):** If a content is not correct, the user with approving rights can reject it. This means it is not published and should be refined.
 
-These states are related to the approval process, you can read more about it under [Approval](/concepts/simple-approval).
+These states are related to the approval process, you can read more about it under [Approval](/concepts/collaboration/02-simple-approval).
 
 ![approval steps](../img/approval.png)
 
@@ -44,5 +44,5 @@ To configure user permissions to work with versioning you can use the following 
 - **Recall old version:** controls whether the user is permitted to restore an old version of the Content.
 - **Delete old version:** controls whether the user is allowed to delete an old version of the Content
 
-# usage (advantages)
+# Usage (advantages)
 Versioning is important for documents that undergo a lot of revision and redrafting. It is particularly important for electronic documents because they can easily be changed by a number of different users. These changes may not be immediately apparent. Knowing which version of a document you are looking at is important, for example, if you are trying to find out which version of a policy is currently in force, or which version of a policy was in use at a particular time. Version control is also important if you are working on a collaborative document with a number of contributors and/or with frequent revisions.
