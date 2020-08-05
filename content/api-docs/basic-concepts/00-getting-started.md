@@ -30,6 +30,10 @@ You can connect to sensenet from either a **console application**, a **desktop a
 
 <note title="sensenet as a remote service">The following .Net examples will help you connect to a remote sensenet service. To work in an in-proc environment when you have access to the server-side API of sensenet and a direct access to the repository database requires a different approach.</note>
 
+If you are looking for a basic .Net Console application example that connects to a sensenet repository, please check out the source code here:
+
+- [.Net Client Console application](https://github.com/SenseNet/sn-vs-projecttemplates/tree/master/src/netcore/SnConsoleClient)
+
 # Include the dependencies
 
 Let's add the following dependencies to your project.
