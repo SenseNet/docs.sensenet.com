@@ -21,7 +21,4 @@ By double clicking on any of these items here, a basic editor surface reveals. Y
 
 > You can also copy the CTD and edit it on your local machine (instead on the admin ui) then upload it when you're done through OData REST API.
 
-**Important:**
-Existing contents, derived from the CTD you edited, won't be affected by the changes (it will only affects newly created contents).
-
 
