@@ -104,7 +104,7 @@ const content = [
         link: ''
       },
     ],
-    link: '/guides/index',
+    link: '/guides/getting-started',
     img: '../images/guides.png'
   },
   {
