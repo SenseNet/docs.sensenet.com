@@ -4,6 +4,10 @@ const footer = [
     link: '/'
   },
   {
+    title: 'API references',
+    link: '/rest-api-references'
+  },
+  {
     title: 'Troubleshooting',
     link: '/'
   },
