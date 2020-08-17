@@ -51,15 +51,16 @@ You can also query by a boolean field as it is shown in the following example. T
 It is also possible to query by a choice field. Since choice options could have a value and the (localized) title you have to format your query according to which one you want to search for. See the following choice field's options
 
 ```xml
-<Field name="Breed" type="Choice">
-  <Configuration>
-    <Options>
-      <Option value="0">British shorthair</Option>
-      <Option value="1">Siamese</Option>
-      <Option value="2">Main coon</Option>
-    </Options>
-  </Configuration>
-</Field>
+<Field name="MemoType" type="Choice">
+      <DisplayName>Memo</DisplayName>
+      <Configuration>
+        <Options>
+          <Option value="generic" selected="true">Generic</Option>
+          <Option value="iso">ISO</Option>
+          <Option value="iaudit">Internal audit</Option>
+        </Options>
+      </Configuration>
+    </Field>
 
 ```
 
