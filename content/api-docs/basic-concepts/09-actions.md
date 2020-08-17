@@ -30,20 +30,41 @@ The response will be something similar like the following:
 ```json
 {
   "d": {
-    "Actions": [
+    "__count": 10,
+    "results": [
       {
-        "Name": "Edit",
-        "DisplayName": "Edit",
+        "__metadata": {
+          "uri": "",
+          "type": "Action",
+          "actions": [],
+          "functions": []
+        },
+        "Name": "Add",
+        "DisplayName": "Add",
         "Index": 0,
-        "Icon": "edit",
-        "Url": "/Root/Content('IT')?action=Edit"
+        "Icon": "add",
+        "Url": "",
+        "IsODataAction": false,
+        "ActionParameters": [],
+        "Scenario": "ContextMenu",
+        "Forbidden": false
       },
       {
-        "Name": "Delete",
-        "DisplayName": "Delete",
-        "Index": 3,
-        "Icon": "delete",
-        "Url": "/Root/Content('IT')"
+        "__metadata": {
+          "uri": "",
+          "type": "Action",
+          "actions": [],
+          "functions": []
+        },
+        "Name": "Browse",
+        "DisplayName": "Browse",
+        "Index": 0,
+        "Icon": "browse",
+        "Url": "",
+        "IsODataAction": false,
+        "ActionParameters": [],
+        "Scenario": "ContextMenu",
+        "Forbidden": false
       },
       ...
 ```
