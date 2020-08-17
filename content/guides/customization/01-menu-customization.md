@@ -4,20 +4,20 @@ metaTitle: "sensenet Admin UI - Customize the menu"
 description: This article gives a brief overview about the customization of the Drawer (the left side menu) on the Admin UI.
 ---
 
-The Drawer component is the left side navigation menu. It lets you access the [personal settings](/guides/customization/00-personal-settings/), [setup](/guides/setup) and more other menupoints.
+The Drawer component is the left side navigation menu. It lets you access the [personal settings](./00-personal-settings/), [setup](../setup) and more other menupoints.
 
 ## Customization
 
-You can customize the drawer within the [personal settings](/guides/customization/00-personal-settings/). You can set drawer options for multiple devices. For example mobile, tablet, desktop and in general for default. There are 3 main options:
+You can customize the drawer within the [personal settings](./00-personal-settings/). You can set drawer options for multiple devices. For example mobile, tablet, desktop and in general for default. There are 3 main options:
 
 1. [enabled](#enabled) - boolean value (it can be `true` or `false`)
 2. [type](#type) - string value (`"mini-variant"`, `"permanent"`, `"temporary"`)
-3. [items](#items) - array of DrawerItem (this is a complex type, look for examples below)
+3. [items](#items) - array of custom DrawerItems (this is a complex type, look for examples below)
 
 ### Enabled
 
 This it the simplest setting that can enable or disable the drawer itself.
-> Don't worry if you disabled the drawer and can't find personal settings. You can access it from the [Command palette](/guides/search/03-command-palette) with typing in _personal settings_ and pressing enter.
+> Don't worry if you disabled the drawer and can't find personal settings. You can access it from the [Command palette](./03-command-palette) with typing in _personal settings_ and pressing enter.
 
 Example setting:
 
@@ -49,94 +49,46 @@ There are 3 possible values for choosing the type of the drawer:
 
 ### Items
 
+With items you are able to add custom menu items to the drawer.
+
 Every drawer item has 3 properties, `settings`, `itemType`, `permissions`.
 
-The `settings` property changes for item types, there are items that don't have settings at all.
+The `settings` contains basic configurations of a drawer item:
 
-The `itemType` is a predefined string, that can be chosen by built-in menu types, like 'Content' or 'Setup', you can see the possible values with pressing **CTRL+SPACE** in the editor.
+|--|--|
+|appPath| string | it will be added to the url to define context |
+|root| string | root path of the menu |
+|icon| string | name of the icon of the drawer item |
+|title| string | this title will be displayed in the menu next to the icon |
+|columns|Array of strings| list of fields names (columns) that you want to display when user opens this menu|
+
+The `itemType` is a predefined string, that should be set to `CustomContent` in case you want to add a custom menu item, you can see the possible values with pressing **CTRL+SPACE** in the editor.
 
 The `permissions` property is an array of objects that has a path and action property. The name of the action that will be checked against the path. With this param you can set, that existence of which actions are required to see and use the menuitem. For example the to see the Localization menu item the user should have permission allowed to add a new localization file into this container, in other words 'Add' action should be available for him on the Localization folder.
 
 ```json
 {
-  "default": {
-    "drawer": {
-      "items": [
-        {
-          "itemType": "Localization",
-          "permissions": [
+   "default": {
+      "drawer": {
+         "items": [
             {
-              "path": "/Root/Localization",
-              "action": "Add"
+               "itemType": "CustomContent",
+               "settings": {
+                  "columns": [
+                     "DisplayName",
+                     "CreatedBy"
+                  ],
+                  "appPath": "profiles",
+                  "root": "/Root/Profiles",
+                  "icon": "User",
+                  "title": "Profiles"
+               }
             }
-          ]
-        }
-      ]
-    }
-  }
+         ]
+      }
+   }
 }
 ```
 
-Item types without settings:
 
-- `Content Types` - shows list of [content type definitions](/concepts/content-management/03-content-types)
-- `Localization` - shows list of localization resources
-- `Search` - shows list of saved queries
-- `Setup` - shows a sensenet related [settings](/guides/setup)
-- `Trash` - shows list of items that are not deleted permanently
-- `Version info` - shows information about admin-ui and sensenet versions
-- `Users and groups` - shows list of users and groups
-
-Item types with settings:
-
-- [Dashboard](/guides/customization/05-dashboard-customization)
-
-```json
-{
-  "itemType": "Dashboard",
-  "settings": {
-    "dashboardName": "main",
-    "description": "This is the main dashboard",
-    "icon": "SystemFolder",
-    "title": "Dashboard"
-  }
-}
-```
-
-- Query - this works like a smart folder, shows a list of query result
-  - term - is a [content query](/concepts/basics/041-content-query)
-  - columns - array of columns to display. These are the name of the fields on the content
-
-```json
-{
-  "itemType": "Query",
-  "settings": {
-    "description": "5 Files that modified recently",
-    "icon": "LinkList",
-    "title": "Recent files",
-    "term": "+Type:File .REVERSESORT:ModificationDate .TOP:5",
-    "columns": ["DisplayName", "ModifiedBy", "ModificationDate"]
-  }
-}
-```
-
-- Content - lets you explore and manage your content
-  - browseType - can take 3 values
-    - simple - shows the content in a simple list
-    - explore - shows a tree on the left side and a simple list on the right
-    - commander - two lists side by side
-  - root - content will be displayed below this level
-
-```json
-{
-  "itemType": "Content",
-  "settings": {
-    "description": "Explore your content",
-    "icon": "Workspace",
-    "title": "Content",
-    "columns": ["DisplayName", "ModifiedBy", "ModificationDate"],
-    "browseType": "explorer",
-    "root": "/Root"
-  }
-}
-```
+![custom drawer item for profiles](../img/custom-draweritem.png "custom drawer item for profiles")
