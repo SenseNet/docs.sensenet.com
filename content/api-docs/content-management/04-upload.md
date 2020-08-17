@@ -76,6 +76,4 @@ Following example shows you how the whole request looks like in this case:
 
 If the upload process was interrupted, the database may contain a partially uploaded file. If the file existed before the upload operation, you can simply revert to the previous version by choosing the Undo changes action. Partially uploaded new files can only be deleted. If you try to upload the file again, the upload process will be restarted and the whole file will be uploaded again from the beginning. It is only possible to continue a previously interrupted upload process if you have the **chunk token** received from the first request and know the exact position where the upload process stopped. sensenet offers a possibility to resume a previously interrupted upload process.
 
-// TODO ->
-
 <tab category="content-management" article="upload" example="uploadResume" />

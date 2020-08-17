@@ -61,6 +61,97 @@ With the next example you are able to get the list of entries with permission se
 
 <tab category="permissions" article="permissions" example="getPermissionEntries" />
 
+# Get full access control list of a content
+
+With the following sample you can get the list of all the entries (users and groups) that have permmissions settings (inherited or direct) on the given content:
+
+<tab category="permissions" article="permissions" example="getAcl" />
+
+The response of the request above looks like the following:
+
+```
+{
+      "id": 1284,
+      "path": "/Root/Content/Sales",
+      "inherits": true,
+      "entries": [
+         {
+            "identity": {
+               "id": 7,
+               "path": "/Root/IMS/BuiltIn/Portal/Administrators",
+               "name": "Administrators",
+               "displayName": "Administrators",
+               "domain": null,
+               "kind": "group",
+               "avatar": null
+            },
+            "ancestor": "/Root/Content"
+            "inherited": true,
+            "propagates": true,
+            "permissions": {
+               "See": {
+                  "value": "allow",
+                  "from": "/Root/Content",
+                  "identity": "/Root/IMS/BuiltIn/Portal/Administrators"
+               },
+               "Preview": {
+                  "value": "allow",
+                  "from": "/Root/Content"
+               },
+               "PreviewWithoutWatermark": {
+                  "value": "allow",
+                  "from": "/Root/Content"
+               },
+               "PreviewWithoutRedaction": {
+                  "value": "allow",
+                  "from": "/Root/Content"
+               },
+               "Open": {
+                  "value": "allow",
+                  "from": "/Root/Content"
+               },
+               ...
+            }
+         },
+         {
+            "identity": {
+               "id": 1159,
+               "path": "/Root/IMS/Public/devdog",
+               "name": "devdog",
+               "displayName": "Developer Dog",
+               "domain": null,
+               "kind": "user"
+            },
+            "inherited": false,
+            "propagates": true,
+            "permissions": {
+               "See": {
+                  "value": "allow",
+                  "from": null
+               },
+               "Preview": {
+                  "value": "allow",
+                  "from": null
+               },
+               "PreviewWithoutWatermark": {
+                  "value": "allow",
+                  "from": null
+               },
+               "PreviewWithoutRedaction": {
+                  "value": "allow",
+                  "from": null
+               },
+               "Open": {
+                  "value": "allow",
+                  "from": null
+               },
+               ...
+            }
+         },
+      ]
+   }
+```
+
 # Get a permissions entry of a specific user or group
 
 You can add a specific user or group to the example above to filter the entry list and get only those that are related to the given entity in this case to the *Editors* group:

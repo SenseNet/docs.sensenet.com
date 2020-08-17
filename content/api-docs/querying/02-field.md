@@ -45,3 +45,30 @@ Following example shows how to get the list of tasks that's completion rate is l
 You can also query by a boolean field as it is shown in the following example. The query returns the list of critical workspaces (e.g. content that's IsCritical field's value is `true`).
 
 <tab category="querying" article="query-by-field" example="byBoolean" />
+
+# Query by choice field (localized value)
+
+It is also possible to query by a choice field. Since choice options could have a value and the (localized) title you have to format your query according to which one you want to search for. See the following choice field's options
+
+```xml
+<Field name="Breed" type="Choice">
+  <Configuration>
+    <Options>
+      <Option value="0">British shorthair</Option>
+      <Option value="1">Siamese</Option>
+      <Option value="2">Main coon</Option>
+    </Options>
+  </Configuration>
+</Field>
+
+```
+
+In the following example you can see that if you simply use a verb as a possible value of a choice field it will search for it as a choice option's text, in this case for 'British shorthair' cats.
+
+<tab category="querying" article="query-by-field" example="byChoiceLocalized" />
+
+# Query by choice field (value)
+
+If you use localized titles for the choice options you may need to query by value that is common even if the title could be used and displayed in various languages. In this case you have to use the '$' sign with the value.
+
+<tab category="querying" article="query-by-field" example="byChoice" />

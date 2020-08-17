@@ -4,7 +4,21 @@ metaTitle: "sensenet Admin UI - Query based menuitem"
 description: This article helps you to add a query based menu item and screen to the drawer on the Admin UI.
 ---
 
-The Drawer can be customized with the [personal settings](/guides/customization/00-personal-settings) editor. To add a new menu item select the ⚙️ icon on the left side menu and copy and paste the code below.
+The Drawer can be customized with the [personal settings](./00-personal-settings) editor you can add custom menu items binding them to subtrees or subfolder by your choice. If you want to create a menu item based on query results it is also possible combining [SmartFolder](/concepts/basics/041-content-query#smartfolder) type and custom drawer items.
+
+# Create a SmartFolder with a custom query
+
+Add a new content with the type SmartFolder with the following query (with this query you can get the list of memos with the word *meeting* in their title):
+
+```+TypeIs:Memo +DisplayName:*meeting*```
+
+If you open your newly created SmartFolder you can see that it grouped all those memos from the repository that have the word *meeting* in their title.
+
+![SmartFolder children](../img/meeting_notes.png "SmartFolder children")
+
+# Add a custom drawer item to open the SmartFolder
+
+With addig a custom drawer item to the menu binded to the above mentioned SmartFolder, you can basically create a quick link to the query results. Add the following to the personal settings:
 
 ```json
 {
@@ -12,12 +26,12 @@ The Drawer can be customized with the [personal settings](/guides/customization/
     "drawer": {
       "items": [
         {
-          "itemType": "Query",
+          "itemType": "CustomContent",
           "settings": {
-            "description": "5 Files that modified recently",
-            "icon": "LinkList",
-            "title": "Recent files",
-            "term": "+Type:File .REVERSESORT:ModificationDate .TOP:5",
+            "title": "Meeting notes",
+            "icon": "MemoList",
+            "root": "/Root/Content/Meeting notes",
+            "appPath": "meeting-notes",
             "columns": ["DisplayName", "ModifiedBy", "ModificationDate"]
           }
         }
@@ -29,11 +43,11 @@ The Drawer can be customized with the [personal settings](/guides/customization/
 
 You should see exactly one menu item that looks like this.
 
-![query view](../img/query-view.png "Query view")
+![meeting notes drawer item](../img/meeting_notes.png "meeting notes drawer item")
 
 There are few options that you can use for customization:
-  - description - this is shown in the tooltip of the icon
-  - icon - predefined set of icons you can choose from. Use CTRL + SPACE to see possible values
+  - icon - name of the icon that you want to display in the drawer
   - title - this is shown in two places. In the tooltip and in the view as well
-  - term - is a [content query](/concepts/basics/041-content-query)
   - columns - array of columns to display. These are the name of the fields on the content
+  - root - content that should be the root of the custom menu, in this case the path of the **SmartFolder**
+  - appPath - this name will be added to the url as the scope of the menu, in this case *https://admin.sensenet.com/custom/explorer/meeting-notes/*

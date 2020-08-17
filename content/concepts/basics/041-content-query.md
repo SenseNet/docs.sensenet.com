@@ -29,3 +29,13 @@ In sensenet, there are many contents that we consider security critical such as 
 When a user executes a query, the result list will contain only the content that the user has permissions for. There is no way for the user to access other content using a query, only the permitted ones. This is baked into the system, because we filter the results based on appropriate permissions. This means that even if somebody hijacked the query somehow, they will not be able to access sensitive information.
 
 The most sensitive personal data is the password of a user. To make sure that it is safe, sensenet does not index the *Password* and *PasswordHash* fields - and this cannot be changed by any configuration. This behavior is hardcoded.
+
+# Smartfolder
+
+**SmartFolder** is a very powerful feature of sensenet. You can define a query to collect content from anywhere in the repository and present them as children of a SmartFolder. Smartfolder is a special type of content in the repository with a specific field to contain a query.
+
+![smartfolder query](../img/smartfolder.png)
+
+After saving a Smartfolder with a query it will group the results as its virtual children (the actual contents remain at their original location). This way you can create virtual group of content that match your requirements and you can work with them at the same time and place even if they are far far away from each other in separate workspaces, libraries or folders.
+
+![smartfolder children](../img/smartfolder_children.png)
