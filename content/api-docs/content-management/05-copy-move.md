@@ -8,7 +8,7 @@ You can copy or move single or multiple content at once. With copy the system cr
 
 <note severity="info">Always check the allowed child types set on the chosen target container, because it can result in an unsuccessful copy or move if the target does not allow the types you want to move.</note>
 &nbsp;
-<note severity="info">Another limitation is that a children of a content list cannot be copied or moved to another content list since there could be custom local fields added to the source list that are not available on the target list and could cause data loss. A workaround for this (if you do not mind losing list field data) is to first move the content to a temporary folder outside of the source list than move it to the target location.</note>
+<note severity="info">Another limitation is that a children of a content list cannot be copied or moved to another content list since there could be custom local fields added to the source list that are not available on the target list and could cause data loss. A workaround for this (if you do not mind losing list field data) is to first move the content to a temporary folder outside of the source list then move it to the target location.</note>
 
 ## Copy a single content
 

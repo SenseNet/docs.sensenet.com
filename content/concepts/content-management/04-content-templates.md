@@ -46,4 +46,4 @@ Content templates can be defined on the following levels:
 - workspace: ContentTemplates system folder under a workspace
 - local: ContentTemplates system folder under any content - e.g. document library
 
-When the user creates new content the system looks for content templates defined for all content types that are allowed there. It starts under the current content (e.g. content list), than moves up to the workspace and finally the global level. Content templates can override each other by name. This means if you define a local content template with a name that exists above on the workspace, site or global level, it will override them.
+When the user creates new content the system looks for content templates defined for all content types that are allowed there. It starts under the current content (e.g. content list), then moves up to the workspace and finally the global level. Content templates can override each other by name. This means if you define a local content template with a name that exists above on the workspace, site or global level, it will override them.

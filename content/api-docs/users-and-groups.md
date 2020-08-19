@@ -20,7 +20,7 @@ Disabling user account could be really useful if you want to lock out a user fro
 
 # Creating roles (groups)
 
-Role functionality in sensenet can be achieved with using groups. Group is a special content type that holds members (that can be users or even another groups) as references in one of its fields. Creating a new role means you have to create a new group content and add the required users and groups as members, so than it will be ready to have custom permissions allowed or denied across the system. With the following code snippet you can create a new role for publishers adding an existing user and a group as its two members:
+Role functionality in sensenet can be achieved with using groups. Group is a special content type that holds members (that can be users or even another groups) as references in one of its fields. Creating a new role means you have to create a new group content and add the required users and groups as members, so then it will be ready to have custom permissions allowed or denied across the system. With the following code snippet you can create a new role for publishers adding an existing user and a group as its two members:
 
 <tab category="users-and-groups" article="users-and-groups" example="createRole" />
 

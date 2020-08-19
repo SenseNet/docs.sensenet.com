@@ -8,8 +8,8 @@ const footer = [
     link: '/rest-api-references'
   },
   {
-    title: 'Troubleshooting',
-    link: '/'
+    title: 'FAQ',
+    link: '/faq/content-types'
   },
   {
     title: 'Contact us',
