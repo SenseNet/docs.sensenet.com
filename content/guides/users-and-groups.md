@@ -49,8 +49,11 @@ Mandatory fields are always marked with an asterisk*. Without filling these fiel
 
 # Organizational unit
 
-An organizational unit is basically a container item for both users and groups. It can be used to organize items (groups and users) in different "categories" to easily keep track of things on the long run.
+An organizational unit is basically a container item for both users and groups. It can be used to organize items (groups and users) in different "categories" to easily keep track of things on the long run. After a new org. unit is created, it apperas in the tree of the users and groups section. You can create or move new items here.
 
+> new organizational unit can be created the same way as a user or group
+
+![Organizational unit](./img/userandgroups_orgunit_tree.png)
 
 
 
