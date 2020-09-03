@@ -15,3 +15,7 @@ Changing a field's type is not possible since the field types can be quite diffe
 # Can I change my type's parent type?
 
 No, it is not possible to change the ParentType of a content type.
+
+# I've created a new content type but it is not listed in the 'Add new' dropdown. What could be the problem?
+
+# why a field is not visible on the edit/new form?
