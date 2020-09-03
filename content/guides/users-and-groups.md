@@ -23,7 +23,7 @@ In *USERS* tab the following columns are displayed:
 
 By clicking a role you can manage members of that specific group.
 
-![Manage users](./img/usersandgroups_users_manage.png)
+![Manage users](./img/userandgroups_users_manage.png)
 
 To create a new user, just click on the *Add new* button and select *User* then fill the fields of the new item. If you want, you can add an avatar as well so the user can be recognized more easily on different views (avatar can appear in created by or modified by columns for example).
 Mandatory fields are always marked with an asterisk*. Without filling these fields you won't be able to submit the new user.
@@ -41,7 +41,7 @@ Mandatory fields are always marked with an asterisk*. Without filling these fiel
 
 In *Members* column you can see the total number of members of each group and you can also manage them by clicking them.
 
-![Manage groups](./img/usersandgroups_groups_manage.png)
+![Manage groups](./img/userandgroups_groups_manage.png)
 
 To create a new group, just click on the *Add new* button and select *Group* then fill the fields of the new item.
 Mandatory fields are always marked with an asterisk*. Without filling these fields you won't be able to submit the new group.
