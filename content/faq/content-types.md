@@ -10,7 +10,7 @@ If there's no content instance with the chosen type, then you can simply delete 
 
 # How can I change the type of a field?
 
-Changing a field's type is not possible since the field types can be quite different and the related values in most of the cases cannot be migrated. If you are sure you do not need the field with its current type, remove it from the content type definition, save it (if there were any content in the repository that had this field filled with value, it will be removed from these contents as well) and then you can freely add a new field with the same name but with another type.
+Changing a field's type is not possible since the field types can be quite different and the related values in most of the cases cannot be migrated. If you are sure you do not need the field with its current type, remove it from the content type definition, save it (the field will be removed from existing contents as well along with their value) and then you can freely add a new field with the same name but with another type.
 
 # Can I change my type's parent type?
 
