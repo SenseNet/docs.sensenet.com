@@ -68,7 +68,19 @@ const sideMenuConfig = {
       "/guides/customization",
     ],
   },
-  integrations: {}
+  integrations: {},
+  faq: {
+    "forcedNavOrder": [
+      "/faq/content-types",
+      "/faq/versioning",
+      "/faq/permissions"
+    ],
+    "collapsedNav": [
+      "/faq/content-types",
+      "/faq/versioning",
+      "/faq/permissions"
+    ],
+  }
 }
 
 module.exports = sideMenuConfig;
