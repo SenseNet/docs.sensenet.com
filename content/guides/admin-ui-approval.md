@@ -6,7 +6,7 @@ metaDescription: "sensenet admin-ui - Approval"
 
 # Approval
 
-On the admin ui you can manage simple approval feature, that adds an extra step to the default publishing process. 
+On the admin-ui you can enable simple approval feature, that adds an extra step to the default publishing process. 
 When approval is turned on, contents needs to be sent for approval and can only be published when the review is finished and modification requests has been adapted (if applicable). 
 In sensenet, approval is disabled by default. It can be enabled for folders or content lists by right click on it, than selecting _Edit_. 
 Here you can enable/disable Approval under _Content Approval_ section.
