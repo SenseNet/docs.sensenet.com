@@ -33,3 +33,10 @@ With using following example you can get the list of all the groups where the gi
 The list above contains all the group memberships without filtering out the indirect ones and the following examples show you how you can get only those ones where the given user is a direct member (added as a referenced content in the groups' `Members` field). Following solution is based on a special field as well like the one above.
 
 <tab category="users-and-groups" article="memberships" example="directRoles" />
+
+# Get the list of workspaces where the given user is member
+
+It is a common use case to list the workspaces that are related to a user. The closest workspace is stored on every content as a reference, so you get the required info with simply expanding the `Workspace` field. Following example shows you how to get the list of workspaces where the given user is a member of a local group.
+
+<tab category="users-and-groups" article="memberships" example="workspaceMembers" />
+
