@@ -13,7 +13,7 @@ const footer = [
   },
   {
     title: 'Contact us',
-    link: 'https://www.sensenet.com/contact'
+    link: 'https://www.sensenet.com/contact-us'
   },
   {
     title: 'Gitter',
@@ -25,7 +25,7 @@ const footer = [
   },
   {
     title: 'Release notes',
-    link: 'https://community.sensenet.com/releases/'
+    link: 'https://www.sensenet.com/backend-updates'
   },
 ]
 
