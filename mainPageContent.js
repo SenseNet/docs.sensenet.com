@@ -88,20 +88,20 @@ const content = [
     description: 'Here you find how to work with the admin-ui. You can learn about the dashboards, command palette, etc.',
     links: [
       {
-        title:'Dashboard',
-        link: '/guides/customization/05-dashboard-customization'
+        title:'Content management',
+        link: '/guides/content-management'
       },
       {
-        title:'Command palette',
-        link: '/guides/search/03-command-palette'
+        title:'Search',
+        link: '/guides/search'
       },
       {
-        title:'Personal settings',
-        link: '/guides/customization/00-personal-settings'
+        title:'Versioning',
+        link: '/guides/content-management/08-versioning'
       },
       {
         title:'Managing users and groups',
-        link: ''
+        link: '/guides/users-and-groups'
       },
     ],
     link: '/guides/getting-started',
