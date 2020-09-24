@@ -3,17 +3,17 @@ const footer = [
     title: 'Quickstart',
     link: '/'
   },
-  {
-    title: 'API references',
-    link: '/rest-api-references'
-  },
+  // {
+  //   title: 'API references',
+  //   link: '/rest-api-references'
+  // },
   {
     title: 'FAQ',
     link: '/faq/content-types'
   },
   {
     title: 'Contact us',
-    link: 'https://www.sensenet.com/contact'
+    link: 'https://www.sensenet.com/contact-us'
   },
   {
     title: 'Gitter',
@@ -25,7 +25,7 @@ const footer = [
   },
   {
     title: 'Release notes',
-    link: 'https://community.sensenet.com/releases/'
+    link: 'https://www.sensenet.com/backend-updates'
   },
 ]
 

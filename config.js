@@ -29,7 +29,7 @@ const config = {
 	},
 	"sidebar": {
 		"links": [
-      { "text": "Contact", "link": "https://sensenet.com/contact"},
+      { "text": "Contact", "link": "https://sensenet.com/contact-us"},
       { "text": "Blog", "link": "https://blog.sensenet.com"},
       { "text": "Community", "link": "https://community.sensenet.com"},
       { "text": "Careers", "link": "https://jobs.sensenet.com"},
