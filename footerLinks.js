@@ -3,10 +3,10 @@ const footer = [
     title: 'Quickstart',
     link: '/'
   },
-  {
-    title: 'API references',
-    link: '/rest-api-references'
-  },
+  // {
+  //   title: 'API references',
+  //   link: '/rest-api-references'
+  // },
   {
     title: 'FAQ',
     link: '/faq/content-types'
