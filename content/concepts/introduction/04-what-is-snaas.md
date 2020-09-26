@@ -27,4 +27,4 @@ A basic setup of sensenet has three top-level parts:
 
 SNaaS is now hosted on our own cloud infrastructure in Europe. In the future, we plan to support other popular and well-known cloud providers as well and allow our subscribers to choose the one they need or love. We aim to make content delivery even faster by taking advantage of CDN, provided by cloud providers.
 
-Are you interested in having your own repository in the sensenet cloud? [Contact us](https://sensenet.com/contact#earlyadopter), be an early adopter, and get a free repository for a try-out.
+Are you interested in having your own repository in the sensenet cloud? [Contact us](https://sensenet.com/contact-us), be an early adopter, and get a free repository for a try-out.

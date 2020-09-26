@@ -33,6 +33,6 @@ As an open-source software, the source code of sensenet backend and frontend com
 
 The sensenet community is always ready to help you! Feel free to ask code-level questions on [stackoverflow](https://stackoverflow.com/questions/tagged/sensenet), add bug reports or feature requests on [GitHub](https://github.com/SenseNet/sensenet), or chat with us on [gitter](https://gitter.im/SenseNet/sensenet)!
 
-In case you would like to speak with us and see how to use sensenet while learning about its capabilities in detail, please [contact us, and we will schedule an appointment](https://sensenet.com/contact#demo) for a demo session.
+In case you would like to speak with us and see how to use sensenet while learning about its capabilities in detail, please [contact us, and we will schedule an appointment](https://sensenet.com/contact-us) for a demo session.
 
-It is also possible to get commercial support. As a subscriber to one of the paid SNaaS plans, you get access to our ticketing system, where your can report bugs and ask help from our support team. You can get special support services like project onboarding, developer consultations, and workshops. [Contact us](https://sensenet.com/contact) with your needs and get a tailormade offer.
+It is also possible to get commercial support. As a subscriber to one of the paid SNaaS plans, you get access to our ticketing system, where your can report bugs and ask help from our support team. You can get special support services like project onboarding, developer consultations, and workshops. [Contact us](https://sensenet.com/contact-us) with your needs and get a tailormade offer.
