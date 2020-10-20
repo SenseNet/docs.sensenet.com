@@ -44,5 +44,9 @@ To configure user permissions to work with versioning you can use the following 
 - **Recall old version:** controls whether the user is permitted to restore an old version of the Content.
 - **Delete old version:** controls whether the user is allowed to delete an old version of the Content
 
+# Collaborative editing and conflicts
+
+It's a common scenario in content management when multiple users have access to a content for editing and the system should avoid conflicts between changes made simultaneously. sensenet lets you lock content with using check-out that makes it unaccessible to edit for other users until it is checked in. To enable this functionality, you have to switch on versioning for a chosen content or branch. As it is stated above in this case the content's state became **Locked** and can be modified only by the user who locked it.
+
 # Usage (advantages)
 Versioning is important for documents that undergo a lot of revision and redrafting. It is particularly important for electronic documents because they can easily be changed by a number of different users. These changes may not be immediately apparent. Knowing which version of a document you are looking at is important, for example, if you are trying to find out which version of a policy is currently in force, or which version of a policy was in use at a particular time. Version control is also important if you are working on a collaborative document with a number of contributors and/or with frequent revisions.
