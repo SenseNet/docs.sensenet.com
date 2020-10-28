@@ -39,17 +39,6 @@ When deleting a trashed item, the content will be permanently deleted.
 
 If the trash is disabled, the popup informs you that the feature is turned off. Be careful because you may delete a content permanently. Your content can't be restored in this case.
 
-# Workspace trash
-
-It is possible to provide a workspace-level trash for users. Deleted content in fact will still be moved to the global Trash `(/Root/Trash)` but users will be able to see content deleted from a particular workspace in a folder under that workspace. This functionality is practically a filter for the global Trash and can be accessed by creating a SmartFolder under the workspace. You can place the SmartFolder anywhere under the workspace.
-
-Properties of the SmartFolder:
-- Folder name: anything - e.g. Workspace Trash
-- Autofilters: disable
-- Query: +InTree:'/Root/Trash' +TypeIs:TrashBag +WorkspaceId:@@CurrentWorkspace.Id@@
-
-All content deleted under the workspace will be visible here and can be restored or deleted permanently. The deleted content are still accessible and restorable from the global Trash and all size and date settings are still applied.
-
 ## Permissions
 The content moved to the trash will preserve its actual permissions and the container Trash Bag will get all its inherited permissions. This means that if you delete a content that only few users can see, other users won't see it in the trash either.
 

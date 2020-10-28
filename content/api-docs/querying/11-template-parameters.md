@@ -23,7 +23,6 @@ These are the built-in parameters that you can use in your queries:
 | **CurrentTime** | Current time, e.g.:10/23/2010 14:30:00 |
 | **CurrentMonth** |	Current month |
 | **CurrentContent** |	Current content |
-| **CurrentWorkspace** |	Current workspace |
 | **Today**	| Equivalent to CurrentDate and CurrentDay: represents the start of the current day (00:00 AM). |
 | **Yesterday**	| Start of the previous day. |
 | **Tomorrow**	| Start of the next day. |
@@ -51,17 +50,17 @@ See another example query that returns the list of today's events:
 
 # Templates with properties
 
-If the parameter represents another content (like CurrentUser or CurrentWorkspace), you can use any field of that content by naming it after the parameter and a dot (. sign):
+If the parameter represents another content (like CurrentUser), you can use any field of that content by naming it after the parameter and a dot (. sign):
 
-The following query returns every task that is created within the current workspace and has its due date in the next week:
+The following query returns every task that is created by the current user and has its due date in the next week:
 
-<tab category="querying" article="query-template-parameters" example="nextWeekTasksInTheCurrentWorkspace" />
+<tab category="querying" article="query-template-parameters" example="nextWeekTasksOfAUser" />
 &nbsp;
 <note severity="info">
 Notice the apostrophes around the template. Since a path may contain characters like '-' that are special characters in the query language, it is best to put templates like this inside quotation marks.
 </note>
 
-Properties can also be chained like in the next example where we query for get the list of users who where created before the current workspace's manager was:
+Properties can also be chained like in the next example where we query for get the list of users who where created before the current user's manager was:
 
 <tab category="querying" article="query-template-parameters" example="chainingProperties" />
 
