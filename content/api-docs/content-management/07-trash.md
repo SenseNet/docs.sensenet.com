@@ -22,7 +22,7 @@ It is also possible to switch off Trash for a container (folder or list) by chan
 
 ## Configure trash options
 
-There are a few possible configurations that can be made related to Trash (for further information see the related [guide](/guides/content-management/trash)). Since Trash is a content as everything else in sensenet its configureable options are available as fields and can be changed with a simple patch request. See in the next example how you can change all the config options of Trash at once:
+There are a few possible configurations that can be made related to Trash (for further information see the related [concept documentation](/concepts/collaboration/05-trash)). Since Trash is a content as everything else in sensenet its configureable options are available as fields and can be changed with a simple patch request. See in the next example how you can change all the config options of Trash at once:
 
 <tab category="content-management" article="trash" example="trashOptions" />
 
