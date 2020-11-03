@@ -42,7 +42,7 @@ const config = {
 		"description": "sensenet Documentation for developers",
 		"ogImage": null,
 		"docsLocation": "https://github.com/sensenet/docs.sensenet.com/tree/master/content",
-		"favicon": "https://www.sensenet.com/Root/Skins/sncom/images/favicon-32x32.png"
+		"favicon": "/src/assets/img/favicon.ico"
 	},
 	"pwa": {
 		"enabled": false, // disabling this will also remove the existing service worker.

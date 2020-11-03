@@ -1,5 +1,5 @@
 ---
-title:  "How to authenticate with a sensenet repository from a .Net client"
+title:  "Authentication from a .Net client"
 category: Tutorials
 index: 0
 version: v7.0
@@ -10,7 +10,7 @@ description: This tutorial shows you how to make authenticated calls to sensenet
 # How to authenticate with a sensenet repository from a .Net client
 Unless you are working with publicly available content - like blog posts - it is necessary to make **athenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net application.
 
-> To learn more about the sensenet authentication flow and components, please visit [this article]().
+> To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/authentication).
 >
 > If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.
 >
@@ -52,7 +52,7 @@ var tokenStore = provider.GetService<TokenStore>();
 ```
 
 ## Set up the connection to the sensenet service
-Create a server object and provide your sensenet service url and authentication token. The token is received from our auth server (which uses **IdentityServer 4** to manage tokens). 
+Create a server object and provide your sensenet service url and authentication token. The token is received from our auth server (which uses **IdentityServer 4** to manage tokens).
 
 ```csharp
 // define sensenet service url

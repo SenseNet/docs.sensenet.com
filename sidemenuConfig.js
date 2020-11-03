@@ -25,6 +25,7 @@ const sideMenuConfig = {
       "/concepts/introduction",
       "/concepts/basics",
       "/concepts/content-management",
+      "/concepts/fields",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
       "/concepts/client-side-forms",
@@ -36,10 +37,12 @@ const sideMenuConfig = {
   tutorials: {
     "forcedNavOrder": [
       "/tutorials/getting-started",
+      "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
     ],
     "collapsedNav": [
+      "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
     ],
