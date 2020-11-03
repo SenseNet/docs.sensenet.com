@@ -42,4 +42,4 @@ If the trash is disabled, the popup informs you that the feature is turned off. 
 ## Permissions
 The content moved to the trash will preserve its actual permissions and the container Trash Bag will get all its inherited permissions. This means that if you delete a content that only few users can see, other users won't see it in the trash either.
 
-See how to configure and manage Trash [trough OData REST API](/api-docs/content-management/07-trash) or on the [admin surface](/guides/content-management/trash).
+See how to configure and manage Trash [trough OData REST API](/api-docs/content-management/07-trash) or on the [admin surface](/guides/content-management/07-trash).
