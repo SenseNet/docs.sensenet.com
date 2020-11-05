@@ -401,9 +401,7 @@ a:hover {
   opacity: .7;
 }
 pre {
-  border: 0 !important;
-  background-color: rgb(245, 242, 240) !important; /* !important; */
-}
+  border: 0 !important;}
 
 .mainWrapper ul, .mainWrapper ol,
 .fullWrapper ul, .fullWrapper ol {
