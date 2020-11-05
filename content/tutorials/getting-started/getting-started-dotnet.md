@@ -7,7 +7,6 @@ tags: [dotnet, getting started, client]
 description: This tutorial shows you how to start using sensenet with the .Net client API.
 ---
 
-# Getting started with sensenet and the .Net client
 In this tutorial we will export a folder structure containing subfolders and files to the file system, using the .Net Client library for sensenet.
 
 You'll find the full source code at the end of this article.
