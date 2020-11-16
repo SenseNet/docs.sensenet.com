@@ -26,6 +26,7 @@ const sideMenuConfig = {
       "/concepts/basics",
       "/concepts/content-management",
       "/concepts/fields",
+      "/concepts/content-types",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
       "/concepts/client-side-forms",
