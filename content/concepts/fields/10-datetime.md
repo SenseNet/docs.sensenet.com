@@ -6,11 +6,7 @@ metaDescription: "sensenet DateTime field"
 
 DateTime is a field that stores a date and a time value.
 
-# Field handler
-- handler: `SenseNet.ContentRepository.Fields.DateTimeField`
-- short name: **DateTime**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="CreationDate" type="DateTime">
@@ -42,3 +38,7 @@ The above example configures the DateTime field so that:
 
 - it stores the date and time values
 - it stores the date/time in the index in seconds
+
+# React field controls
+
+DateTime field can be represented by DatePicker or DateTimePicker controls, depending on the field's `DateTimeMode` property. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-datepicker--new-mode)

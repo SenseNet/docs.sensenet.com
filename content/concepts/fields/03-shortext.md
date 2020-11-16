@@ -6,16 +6,11 @@ metaDescription: "sensenet ShortText field"
 
 *ShortText* field is used for storing short strings. Maximum length of the stored data is 450 characters (this value however can be limited to a lower value in the [field setting](/concepts/fields/01-field-setting) of the field). If you want to store text strings longer than this consider using the [LongText field](/concepts/fields/04-longtext).
 
-The following apply to the behavior of the Field:
+The following apply to the behavior of the field:
 
 - **Regular expression**: data input can be validated against a regular expression defined in the [field setting](/concepts/fields/01-field-setting).
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.ShortTextField`
-- short name: **ShortText**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="ShortDesc" type="ShortText">
@@ -60,8 +55,9 @@ The above example configures the ShortText Field so that:
 - default value is set to *hello world*
 - at most 15 characters are allowed to be inserted
 - at least 3 characters are expected to be inserted
-- Field value is editable (not read-only)
-- Field can contain only letters and numbers
+- field value is editable (not read-only)
+- field can contain only letters and numbers
 
-# Field control
+# React field controls
 
+ShortText field's default React field control is the ShortText control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-shorttext--new-mode)

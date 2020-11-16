@@ -10,12 +10,7 @@ In a Binary field any kind of binary data can be stored without length restricti
 
 - **Import/Export**: Binary field data can be exported to a single file / imported from a single file.
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.BinaryField`
-- short name: **Binary**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="BinaryData" type="Binary">
@@ -51,3 +46,5 @@ The above example configures the Binary Field so that:
 - the field is editable (not read-only)
 - filling the field is not necessary
 - the field is rendered with a textarea by default and binary content can be inserted as a text
+
+Binary field's default React field control is the FileUpload control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-fileupload--new-mode)

@@ -6,12 +6,7 @@ metaDescription: "sensenet Number field"
 
 Number field is used for storing any kind of number data. In a Number field any kind of data can be stored that can be translated as a number, such as: byte, integer, double, decimal, unsigned integer.
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.NumberField`
-- short name: **Number**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="Data1" type="Number">
@@ -51,3 +46,7 @@ The above example configures the Number field so that:
 - the minimal value has to be at least 1
 - the maximal value can be set up to 99.5 (remark that the Min and MaxValue can be defined by decimal number)
 - the data is displayed with 4 decimal numbers
+
+# React field controls
+
+Number field's default React field control is the Number control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-number--new-mode)
