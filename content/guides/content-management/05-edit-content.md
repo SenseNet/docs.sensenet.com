@@ -4,7 +4,7 @@ metaTitle: "sensenet admin-ui - Edit content"
 metaDescription: "sensenet admin-ui - Edit content"
 ---
 
-Contents can be edited right on the admin ui. Different [content types](/concepts/content-management/03-content-types) has different [fields](/concepts/content-management/031-fields) which can be edited by selecting "Edit" action from the right click (or three dots) menu of a content item.
+Contents can be edited right on the admin ui. Different [content types](/concepts/content-types) has different [fields](/concepts/content-management/031-fields) which can be edited by selecting "Edit" action from the right click (or three dots) menu of a content item.
 
 # Field editing
 
