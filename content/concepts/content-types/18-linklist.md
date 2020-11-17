@@ -9,7 +9,7 @@ LinkList is a container type for storing links.
 # Features
 
 - LinkList is a regular conatainer for storing items, this one is created to store Links
-- LinkLists are created under Contents (/Root/Content)
+- LinkLists are usually created inside workspaces.
 
 # Parent type
 
@@ -18,8 +18,6 @@ ItemList
 # Content handler
 
 `SenseNet.ContentRepository.ContentList`
-
-//TODO
 
 # Special fields
 

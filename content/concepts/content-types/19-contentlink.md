@@ -4,13 +4,13 @@ metaTitle: "sensenet - Contentlink"
 metaDescription: "sensenet Contentlink"
 ---
 
-A content that propagates most of the fields of another content.
+A ContentLink is a mirror of another content. It propagates most of the fields of the referenced content. This content type is useful when you want to display a content somewhere else in the content tree but want to manage changes in a single place, so a copy would not be sufficient.
 
 # Features
 
-- Any content can be a reference regardless of its type
-- The link shows the attributes of the set reference
-- Editing or deleting the link does not affect the reference content
+- Any content can be a reference regardless of its type.
+- The link shows the attributes of the set reference.
+- Editing or deleting the link does not affect the reference content.
 
 # Parent type
 
@@ -19,8 +19,6 @@ A content that propagates most of the fields of another content.
 # Content handler
 
 `SenseNet.ContentRepository.ContentLink`
-
-//TODO
 
 # Special fields
 

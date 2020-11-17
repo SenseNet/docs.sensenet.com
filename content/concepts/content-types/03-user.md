@@ -12,6 +12,7 @@ User is the base type for creating user content. Logging into sensenet could be 
 - password is never persisted to repository, only the hash of the password which exposes no security threats
 - users are created under a specific Domain (/Root/IMS/Public)
 - users may be organized under [OrganizationalUnits](/concepts/content-types/05-organizational-unit) and referenced in [Groups](/concepts/content-types/04-group) to model organizational hierarchy and to define custom permission levels and roles in the repository
+- User profile: if this feature is enabled, when a new user is created a dedicated profile workspace is also created for them to store their documents, tasks and memos.
 
 # Parent type
 

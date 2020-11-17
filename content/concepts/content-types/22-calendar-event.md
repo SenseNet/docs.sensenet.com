@@ -4,12 +4,11 @@ metaTitle: "sensenet - Calendar Event"
 metaDescription: "sensenet Calendar Event"
 ---
 
-A content type for defining calendar events
+A content type for defining calendar events.
 
 # Features
 
-- Calendar Events are created under Contents (/Root/Content)
-- There is a specified container for links: [Event Calendar](/concepts/content-types/20-event-calendar)
+- Calendar Events are created under [Event Calendars](/concepts/content-types/20-event-calendar), usually inside workspaces.
 
 # Parent type
 
@@ -18,8 +17,6 @@ ListItem
 # Content handler
 
 `SenseNet.ContentRepository.CalendarEvent`
-
-//TODO
 
 # Special fields
 
@@ -32,7 +29,7 @@ ListItem
 | **AllDay**                 | `Boolean`   | Boolean field to store if the event takes a whole day or not     |
 | **EventUrl**               | `ShortText` | The url of the event                                             |
 | **RequiresRegistration**   | `Boolean`   | Boolean field to store if the event requires registration or not |
-| **RegistrationForm**       | `Reference` | Reference for the registration form if the event has             |
+| **RegistrationForm**       | `Reference` | Reference for the registration form if the event has one            |
 | **OwnerEmail**             | `ShortText` | The email of the event owner                                     |
 | **NotificationMode**       | `Choice`    | Notification mode of the event                                   |
 | **EmailTemplate**          | `LongText`  | An email template of the event                                   |

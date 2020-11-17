@@ -8,9 +8,8 @@ A special container type to store calendar events.
 
 # Features
 
-- EventList is a regular conatainer for storing items, this one is created to store Enents
-- EventLists are created under Contents (/Root/Content)
-
+- The Event Calendar (or EventList) is a regular container for storing Events.
+- EventLists are usually created inside workspaces.
 
 # Parent type
 
@@ -20,13 +19,11 @@ ItemList
 
 `SenseNet.ContentRepository.ContentList`
 
-//TODO
-
 # Special fields
 
 | Name            | Type        | Description    |
 | --------------- | ----------- | -------------- |
-| **RegistrationFolder**        | `Reference` | Registration folder |
+| **RegistrationFolder**        | `Reference` | Registration folder (currently not available) |
 
 # Example
 

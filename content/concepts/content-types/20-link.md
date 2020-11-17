@@ -4,13 +4,12 @@ metaTitle: "sensenet - Link"
 metaDescription: "sensenet Link"
 ---
 
-A link that navigates to a URL
+A link that navigates to a URL.
 
 # Features
 
-- LinkLists are created under Contents (/Root/Content)
-- The url field can be restricted by regexp
-- There is a specified container for links: [LinkList](/concepts/content-types/18-linklist)
+- Links are usually created under [LinkLists](/concepts/content-types/18-linklist) inside workspaces.
+- The url field can be restricted by a regular expression.
 
 # Parent type
 
@@ -19,8 +18,6 @@ ListItem
 # Content handler
 
 `SenseNet.ContentRepository.GenericContent`
-
-//TODO
 
 # Special fields
 
