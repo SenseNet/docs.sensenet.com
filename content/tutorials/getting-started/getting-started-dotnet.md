@@ -7,7 +7,6 @@ tags: [dotnet, getting started, client]
 description: This tutorial shows you how to start using sensenet with the .Net client API.
 ---
 
-# Getting started with sensenet and the .Net client
 In this tutorial we will export a folder structure containing subfolders and files to the file system, using the .Net Client library for sensenet.
 
 You'll find the full source code at the end of this article.
@@ -28,7 +27,8 @@ using SenseNet.Client;
 ## Set up the connection to the sensenet service
 Create a server object and provide your sensenet service url.
 
-> If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.
+<note severity="info">If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.</note>
+<div>&nbsp;</div>
 
 ```csharp
 static async Task Main(string[] args)
@@ -42,10 +42,14 @@ static async Task Main(string[] args)
     ClientContext.Current.AddServer(server);
 }
 ```
-
-> **Important**: In this tutorial we assume that all the content items you are working with are **public** (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the **Set permissions** page hit the Make content public button.
->
-> To access private content, please check out how to add [authentication](../authentication/how-to-authenticate-dotnet) to your client application.
+<div>&nbsp;</div>
+<note severity="info">**Important**: In this tutorial we assume that all the content items you are working with are **public** (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the **Set permissions** page hit the Make content public button.
+</note>
+&nbsp;
+&nbsp;
+<note severity="info">
+To access private content, please check out how to add [authentication](../authentication/how-to-authenticate-dotnet) to your client application.
+</note>
 
 ## Load and iterate through a content collection
 First we want to load all child items in an existing folder.
@@ -135,3 +139,4 @@ class Program
     }
 }
 ```
+<div>&nbsp;</div>
