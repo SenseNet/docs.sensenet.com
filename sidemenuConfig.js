@@ -83,6 +83,46 @@ const sideMenuConfig = {
       "/faq/versioning",
       "/faq/permissions"
     ],
+  },
+  restapi: {
+    "forcedNavOrder": [
+      "/restapi/adsync",
+      "/restapi/authentication",
+      "/restapi/binary",
+      "/restapi/collaboration",
+      "/restapi/contentandschema",
+      "/restapi/contentmanagement",
+      "/restapi/contenttypes",
+      "/restapi/indexing",
+      "/restapi/officeonlineediting",
+      "/restapi/other",
+      "/restapi/permissions",
+      "/restapi/preview",
+      "/restapi/queries",
+      "/restapi/security",
+      "/restapi/sharing",
+      "/restapi/tools",
+      "/restapi/usersandgroups"
+    ],
+    "collapsedNav": [
+      "/restapi/adsync",
+      "/restapi/authentication",
+      "/restapi/binary",
+      "/restapi/collaboration",
+      "/restapi/contentandschema",
+      "/restapi/contentmanagement",
+      "/restapi/contenttypes",
+      "/restapi/indexing",
+      "/restapi/officeonlineediting",
+      "/restapi/other",
+      "/restapi/permissions",
+      "/restapi/preview",
+      "/restapi/queries",
+      "/restapi/security",
+      "/restapi/sharing",
+      "/restapi/tools",
+      "/restapi/usersandgroups"
+    ],
   }
 }
 
