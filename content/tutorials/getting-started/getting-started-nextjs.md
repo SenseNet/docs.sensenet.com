@@ -184,43 +184,39 @@ The loadCollection function is querying the children of our Blog from the API. Y
 ```tsx
 import React from "react";
 import { repository } from "../api";
-import Link from "next/link";
 
-const Blog = ({ posts }) => {
-  return (
+const BlogPost = ({ post }) => {
+  return post ? (
+    <article>
+      <h1>{post.DisplayName}</h1>
+      <section>
+        <p>Author: {post.Author}</p>
+        <p>Publish date: {post.Date}</p>
+      </section>
+      <section dangerouslySetInnerHTML={{ __html: post.Body }} />
+    </article>
+  ) : (
     <>
-      <h1>My new blog</h1>
-
-      {!posts?.length ? (
-        <p>No posts.</p>
-      ) : (
-        <ul>
-          {posts.map((post) => (
-            <li key={post.Id}>
-              <Link href="/blog/[post]" as={`blog/${post.Name}`}>
-                <a>{post.DisplayName}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <h1>404</h1>
+      <p>Post not found.</p>
     </>
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
   try {
-    const posts = await repository.loadCollection({
-      path: "/Root/Content/MyBlog",
+    const res = await repository.load({
+      idOrPath: `/Root/Content/MyBlog/${context.params.post}`,
+      oDataOptions: { select: "all" },
     });
 
-    return { props: { posts: posts.d.results } };
+    return { props: { post: res.d } };
   } catch (error) {
-    return { props: { posts: null } };
+    return { props: { post: null } };
   }
 };
 
-export default Blog;
+export default BlogPost;
 ```
 
 The load function is querying a content's data from the API.
