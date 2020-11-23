@@ -53,5 +53,4 @@ The above example configures the LongText field so that:
 
 # React field controls
 
-LongText field can be rendered with two type of field control based on `TextType` property's value. With `TextType` `LongText` a simple multiple textbox will be displayed, but with value `RichText` it will be displayed as a RichTextEditor. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-textarea--new-mode)
-
+LongText field can be rendered with two type of field control based on `TextType` property's value. With `TextType` `LongText` a simple textarea will be displayed, but with value `RichText` it will be displayed as a RichTextEditor. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-textarea--new-mode)

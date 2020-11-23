@@ -31,7 +31,7 @@ The following properties can be set in the field's configuration:
 
 - **AllowMultiple**: (optional) allows multiple selection.
 - **AllowExtraValue**: (optional) allows to add an extra value to the field.
-- **DisplayChoices**: (optional) specifies the type of the field control which will handle the current field ('DropDown','RadioButtons','CheckBoxes').
+- **DisplayChoice**: (optional) specifies the type of the field control which will handle the current field ('DropDown','RadioButtons','CheckBoxes').
 
 # Fully featured example
 
@@ -50,7 +50,7 @@ The following properties can be set in the field's configuration:
           <Option value="SUV">SUV</Option>
           <Option value="Van">Van</Option>
         </Options>
-        <DisplayChoices>RadioButtons</DisplayChoices>
+        <DisplayChoice>RadioButtons</DisplayChoice>
       </Configuration>
 </Field>
 ```
