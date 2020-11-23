@@ -41,4 +41,4 @@ The above example configures the DateTime field so that:
 
 # React field controls
 
-DateTime field can be represented by DatePicker or DateTimePicker controls, depending on the field's `DateTimeMode` property. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-datepicker--new-mode)
+DateTime field can be represented by DatePicker control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-datepicker--new-mode)

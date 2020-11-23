@@ -64,4 +64,4 @@ The above example configures the Choice field so that:
 
 # React field controls
 
-Choice field can be rendered in multiple ways based on its configuration. If the field can contain multiple options as a value, it can be rendered as a CheckboxGroup, if it can have only one selected value, you can choose between DropDownList and RadioButtonGroup controls. On how to use them, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-checkboxgroup--new-mode)
+Choice field can be rendered in multiple ways based on its configuration. If the field can contain multiple options as a value, it can be rendered as a CheckboxGroup or a DropDownList (default is CheckboxGroup), if it can have only one selected value, you can choose between DropDownList and RadioButtonGroup controls (default is DropDownList). On how to use them, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-checkboxgroup--new-mode)
