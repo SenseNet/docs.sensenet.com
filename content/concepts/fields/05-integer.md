@@ -6,11 +6,7 @@ metaDescription: "sensenet Integer field"
 
 Integer field is used for storing a whole number with value between -(2^31-1) and (2^31-1).
 
-# Field handler
-- handler: `SenseNet.ContentRepository.Fields.IntegerField`
-short name: **Integer**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="NumberOfPages" type="Integer">
@@ -44,3 +40,7 @@ The above example configures the Integer field so that:
 
 - the minimum allowed value is 10
 - the maximum allowed value is 100
+
+# React field controls
+
+Integer field's default React field control is the Number control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-number--new-mode)

@@ -65,3 +65,7 @@ The above example configures the Reference Field so that:
 - only File and Folder content types can be added as references
 - content can only be referenced from under _/Root/System_ and _/Root/Sites_
 - by default _/Root/System/SystemPlugins_ and _/Root/System/Schema_ is referenced
+
+# React field controls
+
+Reference field can be displayed with multiple controls depending on number or type of referenced items. For single reference fields or for user references the suggested control is Autocomplete and for multiple reference fields we suggest to use ReferenceGrid (TagsInput is also available, but not usable without a custom control mapper that overrides the default one). On how to use them, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-referencegrid--new-mode)

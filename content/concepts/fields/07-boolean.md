@@ -6,12 +6,7 @@ metaDescription: "sensenet Boolean field"
 
 The Boolean field is used for storing a boolean value (true or false).
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.BooleanField`
-- short name: **Boolean**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="IsSystemContent" type="Boolean">
@@ -40,3 +35,7 @@ The above example configures the Reference Field so that:
 
 - display name will be Requires registration
 - the field will be hidden on browse view but it will be visible in edit and new view.
+
+# React field controls
+
+Boolean field's default React field control is the Boolean control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-boolean--new-mode)

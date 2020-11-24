@@ -66,7 +66,9 @@ export default class MDXRuntimeTest extends Component {
     } else if (mdx.fields.slug.includes('tutorials')){
       forcedNavOrder = sideMenuConfig.tutorials.forcedNavOrder
     } else if (mdx.fields.slug.includes('faq')){
-      forcedNavOrder = sideMenuConfig.tutorials.forcedNavOrder
+      forcedNavOrder = sideMenuConfig.faq.forcedNavOrder
+    } else if (mdx.fields.slug.includes('restapi')){
+      forcedNavOrder = sideMenuConfig.restapi.forcedNavOrder
     }
 
     const navItems = allMdx.edges

@@ -15,12 +15,7 @@ The field has two modes depending on how the image is stored in relation to the 
     - the field acts as a [Binary field](/concepts/fields/binary) storing image data
     - image is therefore not visible in content repository
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.ImageField`
-- short name: **Image**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="ImageRef" type="Reference">
@@ -75,3 +70,5 @@ Usage in CTD:
 ```
 
 The above example is an excerpt from the User content type CTD. The *Avatar* field incorporates the hidden *ImageRef* and *ImageData* technical fields.
+
+Image field's like Avatar's default React field control is the Avatar control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-avatar--new-mode)

@@ -6,12 +6,7 @@ metaDescription: "sensenet Hyperlink field"
 
 HyperLink is a field that stores a link to the required content or webpage.
 
-# Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.HyperLinkField`
-- short name: **HyperLink**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="LinkTo" type="Hyperlink">
@@ -36,3 +31,7 @@ The following properties can be set in the field's configuration:
       </Configuration>
  </Field>
 ```
+
+# React field controls
+
+HyperLink field's default React field control is the ShortText control. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-shorttext--new-mode)

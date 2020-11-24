@@ -120,26 +120,6 @@ After registration you may provide the new analyzer settings and reinstall the C
 Changing an analyzer for a Field is only valid in development time, it should not be carried out on live portals! After changing an analyzer the affected Content should be saved and reindexed - a full index repopulation is highly recommended!
 </note>
 
-# IndexHandler
-
-Every content Field has a corresponding `FieldIndexHandler` that generates the indexable value from the field's value. This association is configurable using the *IndexHandler* element in the CTD. The element value is the fully qualified type name of the desired `FieldIndexHandler`. Default depends on the Field's [field Setting](/concepts/fields/01-field-setting). The master default is the *LowerStringIndexHandler* (if a Field Setting does not override the CreateDefaultIndexFieldHandler method). Available built-in Field index handlers and their usages:
-
-- SenseNet.Search.**NotIndexedIndexFieldHandler**: Password, UrlList, Color, Image, Lock, Security, SiteRelativeUrl, WhoAndWhen fields. These fields are not indexed.
-- SenseNet.Search.**LowerStringIndexHandler**: this is the default index field handler.
-- SenseNet.Search.**BooleanIndexHandler**: Boolean fields.
-- SenseNet.Search.**IntegerIndexHandler**: Integer fields (Id, VersionId, Index fields and so on).
-- SenseNet.Search.**NumberIndexHandler**: Number fields.
-- SenseNet.Search.**DateTimeIndexHandler**: DateTime fields.
-- SenseNet.Search.**LongTextIndexHandler**: LongText fields.
-- SenseNet.Search.**BinaryIndexHandler**: Binary fields.
-- SenseNet.Search.**HyperLinkIndexHandler**: HyperLink fields.
-- SenseNet.Search.**ChoiceIndexHandler**: Choice fields.
-- SenseNet.Search.**ReferenceIndexHandler**: Reference fields.
-- SenseNet.Search.**ExclusiveTypeIndexHandler**: Type field.
-- SenseNet.Search.**TypeTreeIndexHandler**: TypeIs field.
-- SenseNet.Search.**InFolderIndexHandler**: InFolder field.
-- SenseNet.Search.**InTreeIndexHandler**: InTree field.
-
 # Indexing of built-in properties
 
 The following is a list of the properties that are indexed regardless of field indexing settings:

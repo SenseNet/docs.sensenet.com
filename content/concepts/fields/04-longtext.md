@@ -6,12 +6,7 @@ metaDescription: "sensenet LongText field"
 
 The LongText [field](/concepts/fields) is used for storing text without length restrictions.
 
-# Field handler
-
-- handler: `Sensenet.ContentRepository.Fields.LongTextField`
-- short name: **LongText**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
 <Field name="LongDescription" type="LongText">
@@ -55,3 +50,7 @@ The above example configures the LongText field so that:
 - at least 3 characters are expected to be inserted
 - field value is editable (not read-only)
 - field control is rendered as simple textarea
+
+# React field controls
+
+LongText field can be rendered with two type of field control based on `TextType` property's value. With `TextType` `LongText` a simple textarea will be displayed, but with value `RichText` it will be displayed as a RichTextEditor. On how to use it, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-textarea--new-mode)

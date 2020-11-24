@@ -10,12 +10,7 @@ Choice field as a dropdown list can be used just the same as a common html selec
 
 The chosen option is indexed in the fulltext index by all its localized values and texts (so you can search by either value or text) and indexed in field index by its value. If you want to sort list items by a choice field, they will be ordered by the selected options value and the items with extravalue will be at the end of the list.
 
-## Field handler
-
-- handler: `SenseNet.ContentRepository.Fields.ChoiceField`
-- short name: **Choice**
-
-Usage in CTD:
+# Usage in CTD:
 
 ```xml
    <Field name="Data1" type="Choice">
@@ -36,7 +31,7 @@ The following properties can be set in the field's configuration:
 
 - **AllowMultiple**: (optional) allows multiple selection.
 - **AllowExtraValue**: (optional) allows to add an extra value to the field.
-- **DisplayChoices**: (optional) specifies the type of the field control which will handle the current field ('DropDown','RadioButtons','CheckBoxes').
+- **DisplayChoice**: (optional) specifies the type of the field control which will handle the current field ('DropDown','RadioButtons','CheckBoxes').
 
 # Fully featured example
 
@@ -55,7 +50,7 @@ The following properties can be set in the field's configuration:
           <Option value="SUV">SUV</Option>
           <Option value="Van">Van</Option>
         </Options>
-        <DisplayChoices>RadioButtons</DisplayChoices>
+        <DisplayChoice>RadioButtons</DisplayChoice>
       </Configuration>
 </Field>
 ```
@@ -66,3 +61,7 @@ The above example configures the Choice field so that:
 - it is allowed to add an extra value
 - there's a list of the options
 - the field will be displayed as list of radiobuttons
+
+# React field controls
+
+Choice field can be rendered in multiple ways based on its configuration. If the field can contain multiple options as a value, it can be rendered as a CheckboxGroup or a DropDownList (default is CheckboxGroup), if it can have only one selected value, you can choose between DropDownList and RadioButtonGroup controls (default is DropDownList). On how to use them, see the [related docs](https://sn-react-component-docs.netlify.app/?path=/story/fieldcontrols-checkboxgroup--new-mode)
