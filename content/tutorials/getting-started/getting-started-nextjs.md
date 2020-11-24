@@ -30,7 +30,7 @@ It asks the name of your project and creates a basic Next.js application in a ne
 
 Now install the sensenet client core package and start your application:
 
-```
+```javascript
 npm install --save @sensenet/client-core
 npm run dev
 # or
@@ -118,7 +118,7 @@ We would like to create a public blog site without authentication, so we have to
 
 Create a new file named as index.js in the pages/api folder in your next.js application with the following code:
 
-### pages/api/index.js
+### API index.js
 
 ```javascript
 import { Repository } from "@sensenet/client-core";
@@ -133,7 +133,7 @@ We created our repository instance, which contains a lot of useful methods to ex
 
 At last, create the routing for our blog and fetch the data from the API. Create a new blog folder inside the pages folder, and create the following two files inside:
 
-### pages/blog/index.js
+### Blog index.js
 
 ```tsx
 import React from "react";
@@ -179,7 +179,7 @@ export default Blog;
 
 The loadCollection function is querying the children of our Blog from the API. You can modify the result set with filtering, sorting and a lot more, you can see more information in the documentation.
 
-### pages/blog/[post].js
+### post.js
 
 ```tsx
 import React from "react";
