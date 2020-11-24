@@ -12,7 +12,7 @@ In this tutorial, you will discover how to start a new project using [Next.js](h
 
 Next.js is a framework for building interactive client applications based on React. It supports server side rendering and static site generation too, feel free to try both techniques with sensenet. You can read more about their advantages [here](https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation). This guide will use server side rendering, but it is easily convertable to a static site.
 
-As you may have already known sensenet is a headless CMS which makes it easy to create applications with your chosen client technologies.
+As you may have already known sensenet is a [headless CMS](/concepts/introduction/02-what-is-headless-cms) which makes it easy to create applications with your chosen client technologies.
 
 Combining these together you can build applications with customized user interfaces without any need of using or even knowing complex backend programming languages and technologies.
 
@@ -44,13 +44,13 @@ You should see your new application with a greeting to the world on localhost:30
 
 There are several built in content types in sensenet, but in this tutorial we will create custom ones for our needs.
 
-Open the Admin UI [here](https://admin.sensenet.com/). Log in to your sensenet repository and navigate to the content types using the drawer on the left. You should add the following 2 CTDs (Content Type Definition) with clicking on the + plus button and selecting Content Type.
+Open the Admin UI [here](https://admin.sensenet.com/). Log in to your sensenet repository and navigate to the content types using the drawer on the left. You should add the following 2 [CTDs](/concepts/content-management/03-content-types) (Content Type Definition) with clicking on the + plus button and selecting Content Type.
 
 ![New CTD on admin-ui](nextjs-images/create-new-ctd.png)
 
 It opens a new page with and editor. Replace the default text inside the editor to the code of our types.
 
-Blog will be the container of our posts and it is descendant of the built in ContentList type. You can define more fields if you would like to add some introduction or description to your blog.
+**Blog** will be the container of our posts and it is descendant of the built in **ContentList** type. You can define more fields if you would like to add some introduction or description to your blog.
 
 ```xml
 <ContentType name="Blog" parentType="ContentList" handler="SenseNet.ContentRepository.ContentList" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
@@ -64,7 +64,7 @@ Blog will be the container of our posts and it is descendant of the built in Con
 </ContentType>
 ```
 
-Post is descendant of Article type which contains basic fields for metadata, e.g. author, lead, keywords or content body. We will extend it with the date of publication.
+**Post** is descendant of **Article** type which contains basic fields for metadata, e.g. author, lead, keywords or content body. We will extend it with the date of publication.
 
 ```xml
 <ContentType name="BlogPost" parentType="Article" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
@@ -90,7 +90,7 @@ In the previous chapter we have added new types, so now we are able to fill our 
 
 - Navigate to the content explorer by clicking on the globe icon on the drawer.
 
-- First we should add our new Blog type to the allowed child types on the explorer to be able to create a new Blog content. Right click on the Content item on the breadcrumb and edit it:
+- First we should add our new Blog type to the [allowed child types](/concepts/content-management/06-allowed-childtypes) on the explorer to be able to create a new Blog content. Right click on the Content item on the breadcrumb and edit it:
 
 ![Edit content](nextjs-images/edit.png)
 
@@ -108,7 +108,7 @@ We would like to create a public blog site without authentication, so we have to
 
 - Right click on the Blog content and choose the Set permissions options.
 
-- The upcoming surface contains the permission settings of the content. It has a 'Make content public' button, click on it.
+- The upcoming surface contains the [permission settings](/guides/roles-and-permissions/permission-editor) of the content. It has a 'Make content public' button, click on it.
 
 ![Make the Blog content public](nextjs-images/make-content-public.png)
 
@@ -177,7 +177,7 @@ export const getServerSideProps = async () => {
 export default Blog;
 ```
 
-The loadCollection function is querying the children of our Blog from the API. You can modify the result set with filtering, sorting and a lot more, you can see more information in the documentation.
+The `loadCollection` function is querying the children of our Blog from the API. You can modify the result set with filtering, sorting and a lot more, you can see more information in the documentation.
 
 ### post.js
 
@@ -219,7 +219,7 @@ export const getServerSideProps = async (context) => {
 export default BlogPost;
 ```
 
-The load function is querying a content's data from the API.
+The `load` function is querying a content's data from the API.
 
 Open your site at [localhost](http://localhost:3000/blog) and you can see your new basic blog. Customize it and display more details as you like.
 
