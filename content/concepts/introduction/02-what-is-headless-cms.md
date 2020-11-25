@@ -24,8 +24,6 @@ The concept of a headless content management system (CMS) is the trend of these 
 |Integration|Easy to integrate due to its API-first approach|All the content and the source code coexist and are bounded tightly, increasing complexity|
 |Flexibility|Optional technology stack (database, framework, programming language)|Site must be written with a specific programming language or with a specific framework|
 |Customizability|Fully customizable|Built-in UI building blocks that you can choose from and customize|
-|Setup and deployment|No installation, easy upgrade|Requires a database + specific server hosting and regular maintenance|
-|Security|Delivered as SNaaS, you do not have to worry about security issues|Security upgrades and database backups required|
 
 # Use cases
 
