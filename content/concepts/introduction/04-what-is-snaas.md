@@ -1,10 +1,10 @@
 ---
-title: "What is sensenet as a service"
-metaTitle: "sensenet - What is sensenet as a service"
-metaDescription: "sensenet - What is sensenet as a service"
+title: "What is sensenet as a service (SNaaS)"
+metaTitle: "sensenet - What is sensenet as a service (SNaaS)"
+metaDescription: "sensenet - What is sensenet as a service (SNaaS)"
 ---
 
-In this model, sensenet content repositories live in our cloud infrastructure.
+sensenet is a content repository with API first approach packed with a full featured permission system, preview and collaboration tools, now available in SaaS model.
 
 For a monthly subscription fee, we store all your content and data, relieving you of all maintenance-related tasks and installation, ensuring easy onboarding, easy updates, and patches.
 
@@ -18,13 +18,20 @@ A basic setup of sensenet has three top-level parts:
 # Advantages
 
 - no installation required (easy onboarding)
-- easy patches and upgrades
+- patches and upgrades are taken care of by us
 - no hosting related tasks
 - central admin surface
-- flexible pricing plans (based on # of contents, requests, and users)
+- [flexible pricing plans](https://www.sensenet.com/pricing) (based on # of contents, requests, and users)
 
-# Sensenet cloud
+# Demo
 
-SNaaS is now hosted on our own cloud infrastructure in Europe. In the future, we plan to support other popular and well-known cloud providers as well and allow our subscribers to choose the one they need or love. We aim to make content delivery even faster by taking advantage of CDN, provided by cloud providers.
+To get a sneak peek into sensenet, check our [demo repository](https://www.sensenet.com/tryit)!
 
-Are you interested in having your own repository in the sensenet cloud? [Contact us](https://sensenet.com/contact-us), be an early adopter, and get a free repository for a try-out.
+# Resources
+
+Check out the links below to get further information:
+
+- Website: https://www.sensenet.com/
+- Documentation: https://docs.sensenet.com
+- Main chat channel: https://gitter.im/SenseNet/sensenet
+- Community support: http://stackoverflow.com/questions/tagged/sensenet
