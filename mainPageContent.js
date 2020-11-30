@@ -38,20 +38,20 @@ const content = [
     description: 'Get a jump start with our tutorials',
     links: [
       {
-        title:'Create and explore your sn repository',
-        link: ''
+        title:'Getting started with sensenet and React',
+        link: '/tutorials/getting-started/getting-started-react'
       },
       {
-        title:'About on premise installation',
-        link: ''
-      },
-      {
-        title:'Getting started with sn and React',
-        link: ''
+        title:'Getting started with sensenet and Next.js',
+        link: '/tutorials/getting-started/getting-started-nextjs'
       },
       {
         title:'Getting started with the .NET client',
-        link: ''
+        link: '/tutorials/getting-started/getting-started-dotnet'
+      },
+      {
+        title:'Create a new content type',
+        link: '/tutorials/content-types'
       },
     ],
     link: '',
@@ -85,7 +85,7 @@ const content = [
   {
     name: 'guides',
     title: 'Admin-ui guides',
-    description: 'Here you find how to work with the admin-ui. You can learn about the dashboards, command palette, etc.',
+    description: 'Here you find how to work with the admin-ui. You can learn about the dashboards, searching, etc.',
     links: [
       {
         title:'Content management',

@@ -27,6 +27,7 @@ const sideMenuConfig = {
       "/concepts/content-management",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
+      "/concepts/fields",
       "/concepts/client-side-forms",
       "/concepts/webhooks",
       "/concepts/logging",
@@ -36,10 +37,12 @@ const sideMenuConfig = {
   tutorials: {
     "forcedNavOrder": [
       "/tutorials/getting-started",
+      "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
     ],
     "collapsedNav": [
+      "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
     ],
@@ -79,6 +82,46 @@ const sideMenuConfig = {
       "/faq/content-types",
       "/faq/versioning",
       "/faq/permissions"
+    ],
+  },
+  restapi: {
+    "forcedNavOrder": [
+      "/restapi/adsync",
+      "/restapi/authentication",
+      "/restapi/binary",
+      "/restapi/collaboration",
+      "/restapi/contentandschema",
+      "/restapi/contentmanagement",
+      "/restapi/contenttypes",
+      "/restapi/ndexing",
+      "/restapi/officeonlineediting",
+      "/restapi/other",
+      "/restapi/permissions",
+      "/restapi/preview",
+      "/restapi/queries",
+      "/restapi/security",
+      "/restapi/sharing",
+      "/restapi/tools",
+      "/restapi/usersandgroups"
+    ],
+    "collapsedNav": [
+      "/restapi/adsync",
+      "/restapi/authentication",
+      "/restapi/binary",
+      "/restapi/collaboration",
+      "/restapi/contentandschema",
+      "/restapi/contentmanagement",
+      "/restapi/contenttypes",
+      "/restapi/ndexing",
+      "/restapi/officeonlineediting",
+      "/restapi/other",
+      "/restapi/permissions",
+      "/restapi/preview",
+      "/restapi/queries",
+      "/restapi/security",
+      "/restapi/sharing",
+      "/restapi/tools",
+      "/restapi/usersandgroups"
     ],
   }
 }

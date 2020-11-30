@@ -1,12 +1,12 @@
 const footer = [
   {
     title: 'Quickstart',
-    link: '/'
+    link: '/tutorials/getting-started/getting-started-react'
   },
-  // {
-  //   title: 'API references',
-  //   link: '/rest-api-references'
-  // },
+  {
+    title: 'API references',
+    link: '/restapi/index'
+  },
   {
     title: 'FAQ',
     link: '/faq/content-types'
@@ -24,8 +24,12 @@ const footer = [
     link: 'https://stackoverflow.com/questions/tagged/sensenet'
   },
   {
-    title: 'Release notes',
+    title: 'Backend updates',
     link: 'https://www.sensenet.com/backend-updates'
+  },
+  {
+    title: 'Frontend updates',
+    link: 'https://www.sensenet.com/frontend-updates'
   },
 ]
 
