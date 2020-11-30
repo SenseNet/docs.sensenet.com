@@ -28,6 +28,6 @@ There are cases when you want to allow certain users to see a content (e.g. a Co
 ![permission_local_only](../img/permission_local_only.gif)
 
 To read more about sensenet permission system:
-> [Document level permissions(concept docs)](/concepts/user-and-permission-management/02-document-level-permissions.md)
-> [Role based permissions(concept docs)](/concepts/user-and-permission-management/03-role-based-permissions.md)
-> [Custom roles and permissions(concept docs)](/concepts/user-and-permission-management/04-custom-roles-and-permissions.md)
+- [Document level permissions(concept docs)](/concepts/user-and-permission-management/02-document-level-permissions.md)
+- [Role based permissions(concept docs)](/concepts/user-and-permission-management/03-role-based-permissions.md)
+- [Custom roles and permissions(concept docs)](/concepts/user-and-permission-management/04-custom-roles-and-permissions.md)
