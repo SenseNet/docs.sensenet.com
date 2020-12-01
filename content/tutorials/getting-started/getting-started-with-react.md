@@ -1,18 +1,16 @@
 ---
-title: "Getting started with React"
-metaTitle: "sensenet Tutorials - Getting started with React"
-metaDescription: "sensenet Tutorials - Getting started with React"
+title: "Getting started with React and sensenet"
+metaTitle: "sensenet Tutorials - Getting started with React and sensenet"
+metaDescription: "sensenet Tutorials - Getting started with React and sensenet"
 ---
 
-# Getting started with React and sensenet
-
-In this tutorial, you will discover how to start a new project using [React framework](https://reactjs.org/) and sensenet.
+In this tutorial, you will discover how to start a new project using [React](https://reactjs.org/) and sensenet.
 
 # Create react app
 
-First of all you need a react environment what you can create easily with [create-react-app](https://github.com/facebook/create-react-app#creating-an-app).
+First of all you need a React environment what you can create easily with [create-react-app](https://github.com/facebook/create-react-app#creating-an-app).
 
-Download and run the following command to create a project with the name *example*:
+Download it and run the following command to create a project with the name *example*:
 
 ```
 yarn create react-app example
@@ -25,7 +23,7 @@ cd example
 yarn start
 ```
 
-If open *localhost:3000* in your browser, you should see your new application's greeting page.
+If you open *localhost:3000* in your browser, you should see your new application's greeting page.
 
 ![create react app](getting-started-with-react/create-react-app.png)
 
@@ -36,8 +34,9 @@ yarn add @sensenet/client-core
 ```
 
 <div>&nbsp;</div>
-<note severity="info">**Important**: In this tutorial we assume that all the content items you are working with are **public** (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the **Set permissions** page hit the Make content public button.
+<note severity="info"><strong>Important</strong>: In this tutorial we assume that all the content items you are working with are <strong>public</strong> (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the <strong>Set permissions</strong> page hit the Make content public button.
 </note>
+&nbsp;
 &nbsp;
 To access private content, please check out [how to add authentication to your application](../authentication/how-to-authenticate-react) in the the related other tutorial.
 
@@ -148,7 +147,8 @@ For example if you would like to build a blog you should add two new content typ
 You can add the following 2 CTDs ([Content Type Definition](/concepts/content-management/03-content-types)) by clicking on the + plus button and selecting *Content Type* in from the dropdown menu. It opens a new page with an editor. Replace the default text inside the editor to the following code (you can define additional fields as you whish, the following code contains the necessary ones).
 &nbsp;
 <note severity="info">Creating new content types requires administration privileges</note>
-&nbsp;
+&nbsp;&nbsp;
+
 ```xml
 <ContentType name="Blog" parentType="ItemList" handler="SenseNet.ContentRepository.ContentList" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>Blog</DisplayName>
