@@ -18,17 +18,15 @@ WebContent
 
 # Special fields
 
-| Name          | Type        | Description |
-| ------------- | ----------- | ----------- |
-| **Subtitle**  | `ShortText` |             |
-| **Author**    | `ShortText` |             |
-| **Lead**      | `LongText`  |             |
-| **Body**      | `LongText`  |             |
-| **Pinned**    | `Boolean`   |             |
-| **Keywords**  | `LongText`  |             |
-| **ImageRef**  | `Reference` |             |
-| **ImageData** | `Binary`    |             |
-| **Image**     | `Image`     |             |
+| Name         | Type        | Description                |
+| ------------ | ----------- | -------------------------- |
+| **Subtitle** | `ShortText` | Subtitle of the article    |
+| **Author**   | `ShortText` | Author of the article      |
+| **Lead**     | `LongText`  | Lead or abstract           |
+| **Body**     | `LongText`  | Main content section       |
+| **Pinned**   | `Boolean`   | Is the article pinned?     |
+| **Keywords** | `LongText`  | Keywords                   |
+| **Image**    | `Image`     | Main image for the article |
 
 # Example
 

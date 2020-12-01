@@ -21,13 +21,13 @@ ItemList
 
 # Special fields
 
-| Name            | Type        | Description    |
-| --------------- | ----------- | -------------- |
-| **RegistrationFolder**        | `Reference` | Registration folder (currently not available) |
+| Name                   | Type        | Description                                   |
+| ---------------------- | ----------- | --------------------------------------------- |
+| **RegistrationFolder** | `Reference` | Registration folder (currently not available) |
 
 # Example
 
-```
+```xml
 <ContentType name="EventList" parentType="ItemList" handler="SenseNet.ContentRepository.ContentList" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-EventList,DisplayName</DisplayName>
   <Description>$Ctd-EventList,Description</Description>

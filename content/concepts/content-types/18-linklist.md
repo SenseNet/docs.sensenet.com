@@ -25,7 +25,7 @@ All the field are inherited from its ancestors, there is no special field for th
 
 # Example
 
-```
+```xml
 <ContentType name="LinkList" parentType="ItemList" handler="SenseNet.ContentRepository.ContentList" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-LinkList,DisplayName</DisplayName>
   <Description>$Ctd-LinkList,Description</Description>

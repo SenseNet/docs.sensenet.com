@@ -22,13 +22,13 @@ A ContentLink is a mirror of another content. It propagates most of the fields o
 
 # Special fields
 
-| Name            | Type        | Description    |
-| --------------- | ----------- | -------------- |
-| **Link**        | `Reference` | Linked content |
+| Name     | Type        | Description    |
+| -------- | ----------- | -------------- |
+| **Link** | `Reference` | Linked content |
 
 # Example
 
-```
+```xml
 <ContentType name="ContentLink" parentType="GenericContent" handler="SenseNet.ContentRepository.ContentLink" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-ContentLink,DisplayName</DisplayName>
   <Description>$Ctd-ContentLink,Description</Description>

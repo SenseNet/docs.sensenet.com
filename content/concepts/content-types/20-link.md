@@ -21,13 +21,13 @@ ListItem
 
 # Special fields
 
-| Name            | Type        | Description    |
-| --------------- | ----------- | -------------- |
-| **Url**        | `ShortText` | Linked url |
+| Name    | Type        | Description |
+| ------- | ----------- | ----------- |
+| **Url** | `ShortText` | Linked url  |
 
 # Example
 
-```
+```xml
 <ContentType name="Link" parentType="ListItem" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-Link,DisplayName</DisplayName>
   <Description>$Ctd-Link,Description</Description>

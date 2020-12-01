@@ -18,11 +18,10 @@ Use smart folders to group information (content) by Repository query.
 
 # Special fields
 
-| Name                     | Type       | Description                                                                                     |
-| ------------------------ | ---------- | ----------------------------------------------------------------------------------------------- |
-| **Query**                | `LongText` | Please give a query here that you want to use for collecting the children of this smart folder. |
-| **EnableAutofilters**    | `Choice`   | If autofilters are enabled, system content will be filtered from the query.                     |
-| **EnableLifespanFilter** | `Choice`   | If lifespan filter is enabled, only valid content will be in the result.                        |
+| Name                  | Type       | Description                                                                                     |
+| --------------------- | ---------- | ----------------------------------------------------------------------------------------------- |
+| **Query**             | `LongText` | Please give a query here that you want to use for collecting the children of this smart folder. |
+| **EnableAutofilters** | `Choice`   | If autofilters are enabled, system content will be filtered from the query.                     |
 
 # Example
 

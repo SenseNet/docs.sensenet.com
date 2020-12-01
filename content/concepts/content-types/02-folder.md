@@ -10,7 +10,11 @@ Folder is the base container type in sensenet and the ancestor of all other cont
 
 # Parent type
 
+[GenericContent](/concepts/content-types/01-generic-content)
+
 # Content handler
+
+`SenseNet.ContentRepository.Folder`
 
 # Special fields
 

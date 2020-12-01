@@ -20,7 +20,7 @@ ListItem
 
 | Name         | Type        | Description                              |
 | ------------ | ----------- | ---------------------------------------- |
-| **Date**     | `DateTime`  | Please set the due date of the memo.     |
+| **Date**     | `DateTime`  | Set the due date of the memo.            |
 | **MemoType** | `Choice`    | Type of the memo.                        |
 | **SeeAlso**  | `Reference` | A list of content this memo pertains to. |
 
