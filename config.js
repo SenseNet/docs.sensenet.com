@@ -14,7 +14,7 @@ const config = {
 		"links": [
       { "text": "API Docs", "link": "/api-docs/basic-concepts", "name": "api-docs"},
       { "text": "Example Apps", "link": "/example-apps", "name": "example-apps"},
-      { "text": "Tutorials", "link": "/tutorials/getting-started/getting-started-with-sensenet-rest-api", "name": "tutorial"},
+      { "text": "Tutorials", "link": "/tutorials/getting-started/getting-started-dotnet", "name": "tutorial"},
       { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
       { "text": "Admin-ui Guides", "link": "/guides/getting-started", "name": "guides"},
       { "text": "Integrations", "link": "/", "name": "integrations"}
