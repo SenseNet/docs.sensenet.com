@@ -3,3 +3,182 @@ title: "Workspace"
 metaTitle: "sensenet - Workspace"
 metaDescription: "sensenet Workspace"
 ---
+
+Collaborative workspace root.
+
+# Features
+
+# Parent type
+
+[Folder](/concepts/content-types/02-folder)
+
+# Content handler
+
+`SenseNet.ContentRepository.Workspaces.Workspace`
+
+# Special fields
+
+| Name                | Type        | Description                                                                                                                                                 |
+| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manager**         | `Reference` | The person responsible for the project.                                                                                                                     |
+| **Deadline**        | `DateTime`  |                                                                                                                                                             |
+| **IsActive**        | `Boolean`   | This workspace is currently active.                                                                                                                         |
+| **WorkspaceSkin**   | `Reference` |                                                                                                                                                             |
+| **IsCritical**      | `Boolean`   | This workspace is currently in a critical status.                                                                                                           |
+| **IsWallContainer** | `Boolean`   | This workspace is configured to contain a wall - this indicates that posts are created under this workspace if Content are shared anywhere below this path. |
+| **IsFollowed**      | `Boolean`   |                                                                                                                                                             |
+
+# Example
+
+```
+<ContentType name="Workspace" parentType="Folder" handler="SenseNet.ContentRepository.Workspaces.Workspace" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>$Ctd-Workspace,DisplayName</DisplayName>
+  <Description>$Ctd-Workspace,Description</Description>
+  <Icon>Workspace</Icon>
+  <AllowedChildTypes>Page,Folder,DocumentLibrary,ImageLibrary,EventList,MemoList,LinkList,TaskList,CustomList,Workspace</AllowedChildTypes>
+  <Fields>
+    <Field name="Name" type="ShortText">
+      <DisplayName>$Ctd-Workspace,Name-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,Name-Description</Description>
+      <Configuration>
+        <FieldIndex>60</FieldIndex>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+        <Compulsory>true</Compulsory>
+        <MaxLength>20</MaxLength>
+        <ControlHint>sn:ShortText</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="DisplayName" type="ShortText">
+      <DisplayName>$Ctd-Workspace,DisplayName-DisplayName</DisplayName>
+      <Configuration>
+        <FieldIndex>40</FieldIndex>
+      </Configuration>
+    </Field>
+    <Field name="Description" type="LongText">
+      <Configuration>
+        <FieldIndex>10</FieldIndex>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Manager" type="Reference">
+      <DisplayName>$Ctd-Workspace,Manager-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,Manager-Description</Description>
+      <Configuration>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowedTypes>
+          <Type>User</Type>
+        </AllowedTypes>
+        <SelectionRoot>
+          <Path>/Root/IMS</Path>
+          <Path>/Root</Path>
+        </SelectionRoot>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Deadline" type="DateTime">
+      <DisplayName>$Ctd-Workspace,Deadline-DisplayName</DisplayName>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsActive" type="Boolean">
+      <DisplayName>$Ctd-Workspace,IsActive-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,IsActive-Description</Description>
+      <Configuration>
+        <Compulsory>true</Compulsory>
+        <DefaultValue>true</DefaultValue>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="WorkspaceSkin" type="Reference">
+      <DisplayName>$Ctd-Workspace,WorkspaceSkin-DisplayName</DisplayName>
+      <Configuration>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowedTypes>
+          <Type>Skin</Type>
+        </AllowedTypes>
+        <SelectionRoot>
+          <Path>/Root/Skins</Path>
+        </SelectionRoot>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsCritical" type="Boolean">
+      <DisplayName>$Ctd-Workspace,IsCritical-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,IsCritical-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsWallContainer" type="Boolean">
+      <DisplayName>$Ctd-Workspace,IsWallContainer-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,IsWallContainer-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsFollowed" type="Boolean">
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="AllowedChildTypes" type="AllowedChildTypes">
+      <Configuration>
+        <FieldIndex>50</FieldIndex>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="InheritableVersioningMode" type="InheritableVersioningMode">
+      <Description>$Ctd-Workspace,WorkspaceInheritableVersioningMode-Description</Description>
+      <Configuration>
+        <FieldIndex>30</FieldIndex>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="InheritableApprovingMode" type="InheritableApprovingMode">
+      <Description>$Ctd-Workspace,WorkspaceInheritableApprovingMode-Description</Description>
+      <Configuration>
+        <FieldIndex>20</FieldIndex>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Path" type="ShortText">
+      <DisplayName>$Ctd-Workspace,Path-DisplayName</DisplayName>
+      <Description>$Ctd-Workspace,Path-Description</Description>
+      <Configuration>
+        <FieldIndex>11</FieldIndex>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <ControlHint>sn:Path</ControlHint>
+      </Configuration>
+    </Field>
+  </Fields>
+</ContentType>
+```
