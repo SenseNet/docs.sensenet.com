@@ -10,11 +10,11 @@ description: This tutorial shows you how to make authenticated calls to sensenet
 # How to authenticate with a sensenet repository from a .Net client
 Unless you are working with publicly available content - like blog posts - it is necessary to make **athenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net application.
 
-> To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/authentication).
+> To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/basics/06-authentication).
 >
 > If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.
 >
-> You will need a **secret** (similar to an API key) to complete this article. To get the necessary secret for your content repository, please visit [www.sensenet.com](https://www.sensenet.com) and log in to your profile.
+> This workflow requires the client application to have an **authority url**, a **client id** and also a **client secret**. To acquire these values, please visit your profile page and select the repository you want to connect to.
 
 ## Create a new console application
 Create a new .Net Core console application either in command line (`dotnet new`), Visual Studio or VS Code.
@@ -38,7 +38,7 @@ using SenseNet.Extensions.DependencyInjection;
 ```
 
 ## Register and load a token store service
-In an Asp.Net Core web application registering services is more straightforward, but in a console application you'll have to do some manual work to achieve the same result:
+In an Asp.Net Core web application registering services is more straightforward, but in a **console application** you'll have to do some manual work to achieve the same result:
 
 ```csharp
 // assemble a service container and register the sensenet token store
@@ -62,7 +62,7 @@ var server = new ServerContext
 };
 
 // request and set the access token
-server.Authentication.AccessToken = await tokenStore.GetTokenAsync(server, "secret");
+server.Authentication.AccessToken = await tokenStore.GetTokenAsync(server, "clientid", "secret");
 
 ClientContext.Current.AddServer(server);
 ```
