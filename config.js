@@ -7,7 +7,7 @@ const config = {
 	"header": {
     "logo": "",
 		"logoLink": "/",
-		"title": `<div style="font-family: 'Roboto Light'"><strong style="font-family: Roboto">sense</strong>net</div><div style="font-family: 'Roboto Light';font-size:16px">docs</div>`,
+		"title": `<div style="font-family: Roboto"><strong style="font-family: Roboto">sense</strong>net</div><div style="font-family: 'Roboto';font-size:16px">docs</div>`,
 		"githubUrl": "https://github.com/SenseNet/sensenet",
 		"helpUrl": "https://gitter.im/SenseNet/sensenet",
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
