@@ -36,8 +36,7 @@ yarn add @sensenet/client-core
 <div>&nbsp;</div>
 <note severity="info"><strong>Important</strong>: In this tutorial we assume that all the content items you are working with are <strong>public</strong> (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the <strong>Set permissions</strong> page hit the Make content public button.
 </note>
-&nbsp;
-&nbsp;
+<div>&nbsp;</div>
 To access private content, please check out [how to add authentication to your application](../authentication/how-to-authenticate-react) in the the related other tutorial.
 
 You should add new dependencies for repository management with:
