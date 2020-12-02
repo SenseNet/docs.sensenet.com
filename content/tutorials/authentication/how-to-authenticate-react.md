@@ -4,10 +4,10 @@ category: Tutorials
 index: 0
 version: v7.0
 tags: [react, getting started, authentication, client]
-description: This tutorial shows you how to authenticatie your a React app to sensenet.
+description: This tutorial shows you how to authenticate your a React app to sensenet.
 ---
 
-This tutorial shows you how to authenticatie your React app to sensenet.
+This tutorial shows you how to authenticate your React app to sensenet.
 
 You should install the sensenet oidc-react lib as a dependency of your project:
 
@@ -15,7 +15,7 @@ You should install the sensenet oidc-react lib as a dependency of your project:
 yarn add @sensenet/authentication-oidc-react
 ```
 
-After that you have to update the *configuration.js* file with the identity server url that is connected to your repository. For further details about the authentication and the identity server see the following documentation for the [tasks on server side](../content/guides/getting-started/how-to-authenticate-dotnet.md).
+After that you have to update the *configuration.js* file with the identity server url that is connected to your repository. For further details about authentication and the identity server see the following [documentation](../content/guides/getting-started/how-to-authenticate-dotnet.md).
 
 ```javascript
 export const repositoryUrl = <your sensenet repository>
