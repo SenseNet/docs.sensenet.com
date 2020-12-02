@@ -45,10 +45,9 @@ static async Task Main(string[] args)
 <div>&nbsp;</div>
 <note severity="info">**Important**: In this tutorial we assume that all the content items you are working with are **public** (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the **Set permissions** page hit the Make content public button.
 </note>
-&nbsp;
-&nbsp;
+<div>&nbsp;</div>
 <note severity="info">
-To access private content, please check out how to add [authentication](../authentication/how-to-authenticate-dotnet) to your client application.
+To access private content, please check out how to add <a href="/tutorials/authentication/how-to-authenticate-dotnet">authentication</a> to your client application.
 </note>
 
 ## Load and iterate through a content collection
