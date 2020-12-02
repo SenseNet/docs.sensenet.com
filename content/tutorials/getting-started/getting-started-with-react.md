@@ -34,7 +34,7 @@ yarn add @sensenet/client-core
 ```
 
 <div>&nbsp;</div>
-<note severity="info"><strong>Important</strong>: In this tutorial we assume that all the content items you are working with are <strong>public</strong> (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the <strong>Set permissions</strong> page hit the Make content public button.
+<note severity="info"><strong>Important</strong>: In this tutorial we assume that all the content items you are working with are <strong>public</strong> (accessible for visitors). You can make content (for example files or whole folders) public on the admin ui: on the <strong>Set permissions</strong> page hit the Make content public button.
 </note>
 &nbsp;
 &nbsp;
@@ -87,17 +87,17 @@ ReactDOM.render(
 
 ```
 
-# Work with sensenet
+# Working with sensenet
 
 Now you can send requests to the API from your project. For help, see the API docs [here](https://docs.sensenet.com/api-docs/basic-concepts/00-getting-started).
 
-Open the Admin UI [here](http://admin.sensenet.com/). Log in to your sensenet repository and navigate to working with contents using the drawer on the left.
+Open the admin ui [here](http://admin.sensenet.com/). Log in to your sensenet repository and open content tab from the left side drawer to browse your contents.
 
 ![admin-ui](getting-started-with-react/admin-ui.png)
 
 In sensenet, everything is content. Documents, tasks, users, projects, even system configuration files – everything – are stored and managed in the content repository. It is the foundation that makes content management easy and powerful at the same time. All content items are organized in a content tree, so you can always operate through subtrees and with inheritance when managing and presenting content.
 
-For example if you would like to list the Sample Workspace's children you can reach them trough the `repository` instance set in the `app-provider`. Just use the `loadCollection` function anywhere your application. In the following example you can see how:
+For example if you would like to list the Sample Workspace's children you can reach them trough the `repository` instance set in the `app-provider`. Just use the `loadCollection` function anywhere in your application. In the following example you can see how:
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -144,7 +144,7 @@ For example if you would like to build a blog you should add two new content typ
 
 ![content-types](getting-started-with-react/content-types.png)
 
-You can add the following 2 CTDs ([Content Type Definition](/concepts/content-management/03-content-types)) by clicking on the + plus button and selecting *Content Type* in from the dropdown menu. It opens a new page with an editor. Replace the default text inside the editor to the following code (you can define additional fields as you whish, the following code contains the necessary ones).
+You can add the following 2 CTDs ([Content Type Definition](/concepts/content-management/03-content-types)) by clicking on the + (plus) button and selecting *Content Type* from the dropdown menu. It opens a new page with an editor. Replace the default text inside the editor to the following code (you can define additional fields as you whish, the following code contains every necessary ones).
 &nbsp;
 <note severity="info">Creating new content types requires administration privileges</note>
 &nbsp;&nbsp;
@@ -161,7 +161,7 @@ You can add the following 2 CTDs ([Content Type Definition](/concepts/content-ma
 </ContentType>
 ```
 
-*Post* is an inherited tyoe of *Article* which contains basic fields for common text content metadata, e.g. author, lead, keywords or content body. With the following code we are extending this with the date of publication.
+*Post* is an inherited type of *Article* which contains basic fields for common text content metadata, e.g. author, lead, keywords or content body. With the following code we are extending this with the date of publication.
 
 ```xml
 <ContentType name="BlogPost" parentType="Article" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
@@ -179,7 +179,7 @@ You can add the following 2 CTDs ([Content Type Definition](/concepts/content-ma
 </ContentType>
 ```
 
-These are the basic content types for the blog. Feel free to try add more fields or modify their configuration, see the [field concept docs](/concepts/fields) for the details.
+These are the basic content types for the blog. Feel free to try adding more fields or modify their configuration, see the [field concept docs](/concepts/fields) for the details.
 
 ## Create a posts
 
@@ -191,13 +191,13 @@ Add our **Blog** type to the allowed child types list, do not forget to click on
 
 ![add-blog](getting-started-with-react/add-blog.png)
 
-After this the dropdown menu at the add (+) button in the drawer should contain a **Blog** as an option as well.
+After this the add new list (+) should contain **Blog** as an option.
 
 Create a new item with the name *"MyBlog"* by filling the form.
 
-After creating the container you could create blog posts as into your newly created blog. Click on the blog item in the tree then on the add (+) button in the drawer, it will contain *BlogPost* as an option.
+After creating the container you can create blog posts in your newly created blog. Click on the blog item in the tree then on the add (+) button in the drawer, it will contain *BlogPost* as an option.
 
-Fill the form as well with giving the name *"MyPost"* to the new post content.
+Fill the form by giving the name *"MyPost"* to the new post content.
 
 ## Visualize your post
 
