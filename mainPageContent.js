@@ -50,8 +50,8 @@ const content = [
         link: '/tutorials/getting-started/getting-started-dotnet'
       },
       {
-        title:'Create a new content type',
-        link: '/tutorials/content-types'
+        title:'Authentication from a React application',
+        link: '/tutorials/authentication/how-to-authenticate-react.md'
       },
     ],
     link: '',
@@ -67,16 +67,16 @@ const content = [
         link: '/concepts/introduction/02-what-is-headless-cms'
       },
       {
-        title:'What is CMS as a service',
-        link: ''
-      },
-      {
         title:'sensenet as a service overview',
         link: '/concepts/introduction/04-what-is-snaas'
       },
       {
-        title:'Content',
+        title:'sensenet basics',
         link: '/concepts/basics'
+      },
+      {
+        title:'Content repository',
+        link: '/concepts/basics/02-content-tree'
       },
     ],
     link: '/concepts/introduction',
