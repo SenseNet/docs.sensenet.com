@@ -7,7 +7,7 @@ tags: [react, getting started, authentication, client]
 description: This tutorial shows you how to authenticatie your a React app to sensenet.
 ---
 
-This tutorial shows you how to authenticatie your a React app to sensenet.
+This tutorial shows you how to authenticatie your React app to sensenet.
 
 You should install the sensenet oidc-react lib as a dependency of your project:
 
