@@ -39,7 +39,7 @@ const content = [
     links: [
       {
         title:'Getting started with sensenet and React',
-        link: '/tutorials/getting-started/getting-started-react'
+        link: '/tutorials/getting-started/getting-started-with-react'
       },
       {
         title:'Getting started with sensenet and Next.js',
