@@ -29,7 +29,7 @@
     "emotion-theming": "^10.0.19",
     "fs": "0.0.1-security",
     "gatsby": "^2.28.0",
-    "gatsby-cli": "^2.14.1",
+    "gatsby-cli": "^2.15.0",
     "gatsby-link": "^2.2.27",
     "gatsby-plugin-algolia": "^0.5.0",
     "gatsby-plugin-anchor-links": "^1.1.1",
