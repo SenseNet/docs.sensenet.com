@@ -22,7 +22,7 @@ Creating a new content type does not automatically mean that it will be availabl
 
 # Why is a field not visible on the edit/new form?
 
-Fields could not only be added and removed from the content type definitions, there's a more convinient solution by switching display the fields on the auto-generated forms like edit and new. So if a field appears to be missing, maybe it is only set to be hidden what you can check in the ctd.
+Fields could not only be added and removed from the content type definitions, there's a more convenient solution by switching display the fields on the auto-generated forms like edit and new. So if a field appears to be missing, maybe it is only set to be hidden what you can check in the ctd.
 
 ```
 <Field name="MyField" type="ShortText">
@@ -33,3 +33,68 @@ Fields could not only be added and removed from the content type definitions, th
   </Configuration>
 </Field>
 ```
+
+# Which field names are reserved
+
+Some of the field names are reserved by the repository for some basic and calculated fields. Because of the restriction that there cannot be two fields in the system with the same name but with a different type, these 'system' fields can only be used in your custom content types to set their visibility. List of the reserved field names are the following:
+
+- "ParentId",
+- "Id",
+- "Name",
+- "Version",
+- "VersionId",
+- "Path",
+- "Depth",
+- "Type",
+- "TypeIs",
+- "InTree",
+- "InFolder",
+- "IsSystemContent",
+- "HandlerName",
+- "ParentTypeName",
+- "CreatedById",
+- "ModifiedById",
+- "AllFieldSettingContents",
+- "OwnerId",
+- "EffectiveAllowedChildTypes",
+- "VersioningMode",
+- "AllRoles",
+- "DirectRoles",
+- "CheckedOutTo",
+- "InheritableVersioningMode",
+- "VersionCreatedBy",
+- "VersionCreationDate",
+- "VersionModifiedBy",
+- "VersionModificationDate",
+- "ApprovingMode",
+- "InheritableApprovingMode",
+- "SavingState",
+- "ExtensionData",
+- "BrowseApplication",
+- "Versions",
+- "CheckInComments",
+- "RejectReason",
+- "Workspace",
+- "BrowseUrl",
+- "Sharing",
+- "SharedWith",
+- "SharedBy",
+- "SharingMode",
+- "SharingLevel",
+- "Actions",
+- "IsFile",
+- "Children",
+- "Publishable",
+- "Locked",
+- "Rate",
+- "RateStr",
+- "Tags",
+- "Approvable",
+- "IsFolder",
+- "Icon",
+- "WorkspaceSkin",
+- "AvailableViews",
+- "FieldSettingContents",
+- "AvailableContentTypeFields",
+- "OwnerWhenVisitor",
+- "Image"

@@ -10,7 +10,9 @@ Fields however not only store data, but also carry metadata and configuration se
 
 ## Field types
 
-There are numerous Field types defined in the base system. Different Field types store different types of data and have different configuration. A *Number* Field for example stores a number and - among others - the *MaxValue* property can be adjusted to limit the maximum value stored, whereas a *ShortText* Field stores text data and has a *MaxLength* configuration property that can be set to limit the maximum allowed number of characters stored in the Field. New Field types can be created by implementing a Field handler (see later) in C#.
+There are numerous Field types defined in the base system. Different Field types store different types of data and have different configuration. A *Number* Field for example stores a number and - among others - the *MaxValue* property can be adjusted to limit the maximum value stored, whereas a *ShortText* Field stores text data and has a *MaxLength* configuration property that can be set to limit the maximum allowed number of characters stored in the Field.
+
+<note severity="error">There cannot be two fields with the same name but different types in the system (e.g. Author cannot be a <b>Shortext</b> field on <i>MyContentType</i> and be a <b>Reference</b> on <i>MyOtherContentType</i>)</note>
 
 ## Field Setting
 
@@ -22,6 +24,8 @@ As Fields build up [content](/concepts/content-management), the set of contained
 
 - For a complete list of common Field Setting configuration properties see [CTD field definition](/concepts/content-management/03-content-types).
 - Different Field types have different Field Settings. Check out the reference documentation of Fields to learn about Field Settings of the different Fields (for example the [reference field](/concepts/fields/reference)).
+
+<note severity="info">There are some field names that are reserved so they cannot be used as names of your custom fields. For reserved names are see <a href="/faq/content-types/#whichfieldnamesarereserved">this list</a></note>
 
 ## Fields and data slots
 
