@@ -15,7 +15,7 @@ Delete operation allows users to transfer content (documents, folders or whole w
 
 Contents can be deleted through API calls, but these actions are also available on the admin ui:
 
-You can access delete action for basically every content in the doclib by clicking context menu (...) or right click on item.
+You can access delete action for basically every content in the document library by clicking context menu (...) or right click on item.
 ![delete action](../img/delete_contextmenu.png)
 
 

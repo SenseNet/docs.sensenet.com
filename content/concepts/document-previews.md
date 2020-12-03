@@ -20,8 +20,8 @@ To generate previews in your on-premise solution, you need to configure the task
 
 ## Licensing
 
-To use the built-in generator to create preview images, an Aspose license is needed. SNaaS partners have no additional task as in this model every sensenet instance will be served by our task management servers (having all the neccessary licenses).
-If you plan to have the on-premise sensenet solution, please visit [Aspose's site](https://www.aspose.com/) for more information about licensing. 
+To use the built-in generator to create preview images, an Aspose license is needed. SNaaS partners have no additional task as in this model every sensenet instance will be served by our task management servers (having all the necessary licenses).
+If you plan to have the on-premise sensenet solution, please visit [Aspose's site](https://www.aspose.com/) for more information about licensing.
 
 # Supported file formats
 The supported document types depend on the implementation of the preview generator. The built-in generator ([Aspose](https://www.aspose.com/)) supports the following types:

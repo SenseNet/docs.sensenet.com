@@ -158,5 +158,5 @@ You can switch ON or OFF notifications or customize the notification emails here
 | ---- | ---- | ----------- |
 | NotificationEnabled | boolean | Switch notifications ON or OFF. |
 | NotificationSender | string | Sender's email address in notification emails. |
-| NotificationMailSubjectKey | string | Subject of the notificaton emails. |
+| NotificationMailSubjectKey | string | Subject of the notification emails. |
 | NotificationMailBodyKey | string | Body of the notification email. |

@@ -17,9 +17,9 @@ Content types are organized into a hierarchy according to inheritance. Any conte
 # Content naming
 
 Every content in the content repository is not only identified by its unique ID but also its path. If you move a content to another folder, thus changing its path, the system keeps track of the changes, making it possible to use the path as a link to the content. For example, the `Path` of the *IT* workspace is /Root/Content/IT, which means it is in the *Content* container: a child of the *Root* folder. This way the workspace is accessible through the /Root/Content/IT URL.
-The content is represented in the Path by its Name, which is a field of every content which means you can freely modifiy it but note that this will also change its path (e.g. /Root/Content/**MyContent** to /Root/Content/**NewName**)
+The content is represented in the Path by its Name, which is a field of every content which means you can freely modify it but note that this will also change its path (e.g. /Root/Content/**MyContent** to /Root/Content/**NewName**)
 Name should not be set every time, in cases when no Name is given the repository automatically generates it from the content's type and creation date. (e.g. User-20200902075644)
-Uploaded files will automatically be named by the file's name (e.g. *lorem-ipsum.docx* Name will be *lorem-ipsum.docx* after it is uploaded to the repository). Another useful feature for naming files is incremental naming, with which you can set that if a user uploads a file to a folder where a file with a same name exists, the older file will not be overriden, but the new one will be uploaded with a slightly changed name (e.g. *lorem-ipsum.docx* and *lorem-ipsum(1).docx*) These feature (allow incremental naming) is by default switchen on and can be switched off for content types in the content type definition.
+Uploaded files will automatically be named by the file's name (e.g. *lorem-ipsum.docx* Name will be *lorem-ipsum.docx* after it is uploaded to the repository). Another useful feature for naming files is incremental naming, with which you can set that if a user uploads a file to a folder where a file with a same name exists, the older file will not be overridden, but the new one will be uploaded with a slightly changed name (e.g. *lorem-ipsum.docx* and *lorem-ipsum(1).docx*) These feature (allow incremental naming) is by default switched on and can be switched off for content types in the content type definition.
 
 ```xml
 <ContentType name="" handler="" parentType="" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
@@ -64,7 +64,7 @@ GenericContent is the ancestor of all types so it represents the base of the con
 |CheckedOutTo|Reference|User who checked out the content|Read-only|
 |Version|Version|Version number of the content|Read-only|
 |Versions|Reference|List of versions of a content|Read-only|
-|CheckInComments|LongText|Checkin comments for a version of a content||
+|CheckInComments|LongText|Check-in comments for a version of a content||
 |Reject reason|LongText|Reject reason for a version of a content||
 |Path|ShortText|Full path of the content|Read-only|
 |Depth|Integer|Content level in the tree|Read-only|
@@ -81,7 +81,7 @@ GenericContent is the ancestor of all types so it represents the base of the con
 |InheritableVersioningMode|VersioningMode|Inheritable versioning mode of the content||
 |ApprovingMode|ApprovingMode|Approving mode of the content||
 |InheritableApprovingMode|ApprovingMode|Inheritable approving mode of the content||
-|TrashDisabled|Boolean|Indicated whether on the content trash feature is disabed or not||
+|TrashDisabled|Boolean|Indicated whether on the content trash feature is disabled or not||
 |Workspace|Reference|Closest workspace where the content is stored|Read-only|
 |Sharing|Sharing|Sharing info of a content||
 |SharedWith|Sharing|User(s) with whom the content is shared|Read-only|

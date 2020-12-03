@@ -8,7 +8,7 @@ description: This tutorial shows you how to make authenticated calls to sensenet
 ---
 
 # How to authenticate with a sensenet repository from a .Net client
-Unless you are working with publicly available content - like blog posts - it is necessary to make **athenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net application.
+Unless you are working with publicly available content - like blog posts - it is necessary to make **authenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net application.
 
 > To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/basics/06-authentication).
 >

@@ -4,7 +4,7 @@ metaTitle: "sensenet Admin UI - Customize the menu"
 description: This article gives a brief overview about the customization of the Drawer (the left side menu) on the Admin UI.
 ---
 
-The Drawer component is the left side navigation menu. It lets you access the [personal settings](./00-personal-settings/), [setup](../setup) and more other menupoints.
+The Drawer component is the left side navigation menu. It lets you access the [personal settings](./00-personal-settings/), [setup](../setup) and more other menu items.
 
 ## Customization
 

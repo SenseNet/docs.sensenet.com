@@ -4,7 +4,7 @@ metaTitle: "admin ui - Versioning"
 metaDescription: "admin ui Versioning"
 ---
 
-Versioning is the management of changes to documents and other informations stored in a file system or respository. With versioning you can keep the published version of a document visible to non-editor users, while you are working on the latest, draft version.
+Versioning is the management of changes to documents and other information stored in a file system or repository. With versioning you can keep the published version of a document visible to non-editor users, while you are working on the latest, draft version.
 > In sensenet versioning is disabled by default.
 
 # How to set versioning on the admin-ui?
@@ -13,7 +13,7 @@ You can enable versioning for folders or content lists by selecting the folder/f
 
 ![versioning](../img/versioning.png)
 
-> Subfolders inherit versioning settings by default.
+> Sub-folders inherit versioning settings by default.
 
 # Versioning modes
 **None**: The default setting of the Root folder, no versioning.
@@ -28,7 +28,7 @@ The following example shows you how to checkout (lock) a document:
 
 ![checkout_file](../img/checkout_file.png)
 
-In the same way you can checkin the file.
+In the same way you can check-in the file.
 
 To know if a file is currently checked out see the lock symbol.
 

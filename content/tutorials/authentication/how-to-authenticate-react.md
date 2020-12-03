@@ -33,7 +33,7 @@ export const configuration = {
 };
 ```
 
-You also have to update the *app-provider.js* which will be now responsibe for managing authentication as well. It should be something like this:
+You also have to update the *app-provider.js* which will be now responsible for managing authentication as well. It should be something like this:
 
 ```javascript
 import {

@@ -10,7 +10,7 @@ The versioning system of sensenet also provides mechanisms for keeping the publi
 
 # Enable versioning
 
-In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, or even for individual contents by setting the value of the `Versioning Mode` field. (Subfolders inherit versioning settings by default.)
+In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, or even for individual contents by setting the value of the `Versioning Mode` field. (Sub-folders inherit versioning settings by default.)
 
 Versioning mode can be set as the followings:
 
@@ -55,9 +55,9 @@ Following example shows you how to checkout (lock) a document:
 
 <tab category="collaboration" article="versioning" example="checkout" />
 
-# Checkin a content
+# Check-in a content
 
-With the next example you will checkin a document adding a checkin comment:
+With the next example you will check-in a document adding a comment:
 
 <tab category="collaboration" article="versioning" example="checkin" />
 

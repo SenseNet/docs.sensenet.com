@@ -66,7 +66,7 @@ The ``FieldSetting`` not only specifies the type of information but it also **va
 
 JavaScript functions can be used to define **dynamic default values**. If the field does not appear on the ui, this element has no effect. Only takes effect in case the user adds a new content, edit forms do not use default values.
 
-In sensenet there's option to set **appearance** of each field defining wheteher the specific field should be visible on automatically generated views (like new, edit or browse).
+In sensenet there's option to set **appearance** of each field defining whether the specific field should be visible on automatically generated views (like new, edit or browse).
 
 **Disabling** a field on a content will make it read-only preventing users to edit field value. It's important that this feature is independent from ``appearance`` setting (defined above).
 
@@ -76,7 +76,7 @@ A content type definition is an xml-format configuration file for defining conte
 - the type name, description
 - properties that control how content of this type look and behave (icon, preview generation, indexing)
 - parent content type
-- set of fields (name, displayname and configuration of fields)
+- set of fields (name, display name and configuration of fields)
 - content handler
 
 Below you can see a fully featured skeleton of a content type definition xml:

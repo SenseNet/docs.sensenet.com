@@ -19,7 +19,7 @@ DateTime is a field that stores a date and a time value.
 The following properties can be set in the field's configuration:
 
 - **DateTimeMode**: (optional) an enumeration which defines the presentation mode of the stored value: *None*, *Date* and *DateAndTime*. This only controls the behavior of the DatePicker. Default is *None*.
-- **Precision**: (optional) an enumeration which defines the precision of the indexed value: *Millisecond*, *Second*, *Minute*, *Hour*, *Day* (Default is *Minute*). This does not affect the stored value, only the value stored in the index, making it possible to use different precision levels depending on the nature of the application. Chosing a finer or coarser precision than the optimal may cause slower query running and larger index files than what would be reasonable.
+- **Precision**: (optional) an enumeration which defines the precision of the indexed value: *Millisecond*, *Second*, *Minute*, *Hour*, *Day* (Default is *Minute*). This does not affect the stored value, only the value stored in the index, making it possible to use different precision levels depending on the nature of the application. Choosing a finer or coarser precision than the optimal may cause slower query running and larger index files than what would be reasonable.
 
 # Fully featured example
 

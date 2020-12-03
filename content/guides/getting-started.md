@@ -23,7 +23,7 @@ Once logged in you can see the admin-ui in its whole beauty with different actio
 
 By default the sidebar has the following items:
 
-![dasboard](./img/dashboard_new.png)
+![dashboard](./img/dashboard_new.png)
 
 **search**: execute custom searches, build and save queries - [more about search in admin ui](/guides/search)
 

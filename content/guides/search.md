@@ -11,9 +11,9 @@ It is possible to search even in uploaded documents.
 
 ![search](../concepts/img/search.gif)
 
-It is possible to extract all relevant terms from a text, filtering stopwords (like "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in") etc. In case your document contains the following text: „Writing Sentences” and your query text is „writing”. The original text can be found even if the query word typed in and the word in the original text do not match exactly char-by-char. You can get relevant search results even if you have a typo in your query or a different verbal tense.
+It is possible to extract all relevant terms from a text, filtering stop-words (like "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in") etc. In case your document contains the following text: „Writing Sentences” and your query text is „writing”. The original text can be found even if the query word typed in and the word in the original text do not match exactly char-by-char. You can get relevant search results even if you have a typo in your query or a different verbal tense.
 _Full Text Search_, _Fuzzy Search_, _Proximity Search_ and _Boosting_ make your query results more complete.
 
-To learn more about the methology behind this feature, check [search article](/concepts/basics/04-search) in the concept docs.
+To learn more about the methodology behind this feature, check [search article](/concepts/basics/04-search) in the concept docs.
 
 By saving your query, the next time you open search all previous query criteria will be included in the current session’s search listing.

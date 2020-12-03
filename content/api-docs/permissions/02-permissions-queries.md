@@ -187,7 +187,7 @@ The following request is designed for getting content that are permitted or deni
 
 <tab category="permissions" article="permission-queries" example="getRelatedItemsOneLevel" />
 
-The result list will be something similiar that the one below:
+The result list will be something similar that the one below:
 
 ```
 {

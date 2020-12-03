@@ -8,7 +8,7 @@ sensenet also introduces a basic approval functionality. Regardless of the versi
 
 # Enable simple approval
 
-In sensenet, approval is disabled by default. It can be enabled for folders or content lists or even for individual contents by setting the value of the `Versioning Mode` and `Approval Mode` fields. (Subfolders inherit approval settings by default.)
+In sensenet, approval is disabled by default. It can be enabled for folders or content lists or even for individual contents by setting the value of the `Versioning Mode` and `Approval Mode` fields. (Sub-folders inherit approval settings by default.)
 
 <tab category="collaboration" article="approval" example="enableApproval" />
 

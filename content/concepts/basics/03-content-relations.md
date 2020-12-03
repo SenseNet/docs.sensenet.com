@@ -18,12 +18,12 @@ Content can inherit multiple data from its ancestors, from fields to permissions
 Set a permission on a container item on a higher level (e.g. a document library or a workspace), and it will be inherited by its children. This way you do not have to set permissions on every subfolder or document, because all content inherits permissions from their parent.
 
 ## Settings inheritance
-In sensenet, settings are stored as content in the content repository, so you can advantage of the tree structure in the case of settings as well. Let's have watermark settings as an example. It is possible to set a watermark globally for each and every preview image. In addition to that, you can define different watermarks for different workspaces (which will then overwrite global settings), or even set watermark to a specific doclib.
+In sensenet, settings are stored as content in the content repository, so you can advantage of the tree structure in the case of settings as well. Let's have watermark settings as an example. It is possible to set a watermark globally for each and every preview image. In addition to that, you can define different watermarks for different workspaces (which will then overwrite global settings), or even set watermark to a specific document library.
 
 > [Learn more about settings](/concepts/basics/07-settings)
 
 ## Content type inheritance
-Content types are defined in a type hierarchy. A content type may be inherited from another type, automatically inheriting its fields and the underlying business logic (handler). 
+Content types are defined in a type hierarchy. A content type may be inherited from another type, automatically inheriting its fields and the underlying business logic (handler).
 
 > [Learn more about content tree and inheritance](/concepts/basics/02-content-tree)
 
@@ -31,7 +31,7 @@ Content types are defined in a type hierarchy. A content type may be inherited f
 
 The reference field is used for defining references to other content(s). When a content holds references pointing to other content (for example a group referencing users), it is done with a reference field.
 
-Reference field holds many options to customize its behaviour. You can define the **number of references** the field can hold, set **default reference** for a certain content type (all newly created content will contain the predefined references), restrict referable content by **type** or **location**, or define a set of referable content with a query.
+Reference field holds many options to customize its behavior. You can define the **number of references** the field can hold, set **default reference** for a certain content type (all newly created content will contain the predefined references), restrict referable content by **type** or **location**, or define a set of referable content with a query.
 
 Reference field works flawlessly with other parts of the system. For example, when a reference is moved to another place or it has been renamed, it does not affect the content it is referenced by (the moved/renamed reference is still visible in the reference field).
 Concerning permission handling, if the current user does not have see permissions to one of the references, that reference is not visible for the user at all.

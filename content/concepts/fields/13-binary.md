@@ -22,7 +22,7 @@ In a Binary field any kind of binary data can be stored without length restricti
 
 The following properties can be set in the field's [field setting](/concepts/fields/01-field-settings) configuration:
 
-- **IsText**: a bool property that defines the way the binary is presented on the admin-ui. If set to true, the field data can be inserted manually as a text, otherwise a file can be uploaded. In the former case a textarea, in the latter case a fileupload control is rendered.
+- **IsText**: a bool property that defines the way the binary is presented on the admin-ui. If set to true, the field data can be inserted manually as a text, otherwise a file can be uploaded. In the former case a textarea, in the latter case a file upload control is rendered.
 
 <note severity="info">The <strong>IsText</strong> configuration property value is only a hint and the ui component displaying the control can override this setting in cases when the content has a special extension or it is a content type.
 </note>

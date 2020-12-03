@@ -18,7 +18,7 @@ We can distinguish two different types of workspaces:
 - limit access to workspace and its content
 - collaborate on multiple level (info sharing, office online editing etc.)
 
-**workspace as a logical unit** - used to formulate a separate area in the final solution (like subsites)
+**workspace as a logical unit** - used to formulate a separate area in the final solution (like sub-sites)
 
 You can have different workspaces completely separated (with workspace level user groups and trash), giving the opportunity to manage multiple company with different users on the same solution as an example.
 
@@ -32,7 +32,7 @@ In sensenet there are three predefined local groups with three different permiss
 - **Members** are the typical users of a workspace: they can create, modify, publish content, but they can not approve them, or modify the top level settings of workspaces.
 - **Visitors** have only open permissions.
 
-![workspace local grups](../img/workspace_groups.png)
+![workspace local groups](../img/workspace_groups.png)
 
 Groups are contents too (like almost everything in sensenet), so you can add additional groups to workspaces as easily as you add folders. Populating a group with users can be done using user management on the admin ui or through OData REST API.
 
@@ -45,7 +45,7 @@ In a system built on sensenet there can be many different types of workspaces. I
 
 For demo purposes, you can use the following built-in workspace types:
 - Document workspace - to collaborate mainly on documents,
-- Project workspace - a demo workspace for typical collaborative projects (with tasklists and so on)
+- Project workspace - a demo workspace for typical collaborative projects (with task lists and so on)
 - Sales workspace - a demo for a sales process with built-in KPIs,
 - Empty workspace - if you want to start from scratch
 
@@ -58,4 +58,4 @@ In every workspace you can:
 - turn on/off approval for any content in the workspace
 
 # Usage
-Workspace is a good solution when you want to create separate units (subsites, teams, companies, user profiles) inside your solution. It is important to define custom workspace type and set permissions properly right at the beginning of the project. This way you can facilitate your work on the long run.
+Workspace is a good solution when you want to create separate units (sub-sites, teams, companies, user profiles) inside your solution. It is important to define custom workspace type and set permissions properly right at the beginning of the project. This way you can facilitate your work on the long run.

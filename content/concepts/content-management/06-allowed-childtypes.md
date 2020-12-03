@@ -1,7 +1,7 @@
 ---
-title: "Allowed Childtypes"
-metaTitle: "sensenet - Allowed Childtypes"
-metaDescription: "sensenet Allowed Childtypes"
+title: "Allowed Child Types"
+metaTitle: "sensenet - Allowed Child Types"
+metaDescription: "sensenet Allowed Child Types"
 ---
 sensenet content repository stores different content types. One of the major differences between a file system and the content repository, is that in a file system you can store any type (file or folder) anywhere, whereas in the sensenet content repository it is possible to define restrictions on what content types the different containers can contain. This allows you to create a much more precisely defined content structure and provides control on the long run.
 
@@ -34,7 +34,7 @@ By default it shows the allowed types according to the CTD settings. You can rem
 
 ## Explicit and effective allowed child types
 
-The AllowedChildTypes field itself does not always store the values you see in the user interface. For example Folders and Pages cannot have their own setting (see below), they always inherit from their parent. Other containers may inherit their allowed child types list from their content type (CTD). 
+The AllowedChildTypes field itself does not always store the values you see in the user interface. For example Folders and Pages cannot have their own setting (see below), they always inherit from their parent. Other containers may inherit their allowed child types list from their content type (CTD).
 
 > If you as a developer need the actual list of types that your users will be able to create in a container, use the ``EffectiveAllowedChildTypes`` read only field based on the read only property with the same name.
 
@@ -46,7 +46,7 @@ The allowed child types definition on a content (whether it comes from CTD or fr
 > A content type in the add new menu will only show up if the user has see permissions on the specific content type node.
 
 # Content allowing all types
-It might happen that a certain content does not impose a restriction on allowed types. In this case any type is allowed to be created under that content. Since this however imposes a security risk as executable types can also be created at these locations, creating a content of any type under such locations is only allowed for users of specified groups. 
+It might happen that a certain content does not impose a restriction on allowed types. In this case any type is allowed to be created under that content. Since this however imposes a security risk as executable types can also be created at these locations, creating a content of any type under such locations is only allowed for users of specified groups.
 
 If the user is not a member of any enlisted group he/she will not be able to create anything under locations where allowed child types list is empty.
 
@@ -54,5 +54,5 @@ If the user is not a member of any enlisted group he/she will not be able to cre
 A **Folder** always inherits these settings from its parent content. You cannot set the allowed child types property of any specific Folder item nor in the CTD (this restriction is valid both for admin ui and API as well). Therefore whatever allowed child types settings you specify for a list containing a Folder, these settings will also apply for the children of the Folder placed in this list. This ensures that if you build structures in a content list using folders, your list settings will never be overridden on a lower level.
 
 # Special (or technical) type
-A **SystemFolder** can be created anywhere in the content repository, regardless of its parent content’s allowed child types settings, if the user is granted to see permissions on the SystemFolder content type. This ensures that developers can create SystemFolders without having to modify the allowed child types of the individual content. Also, a SystemFolder does not specify any allowed types by default, so all types are allowed under a new SystemFolder. Allowed types however can be configured for a SystemFolder instance. 
+A **SystemFolder** can be created anywhere in the content repository, regardless of its parent content’s allowed child types settings, if the user is granted to see permissions on the SystemFolder content type. This ensures that developers can create SystemFolders without having to modify the allowed child types of the individual content. Also, a SystemFolder does not specify any allowed types by default, so all types are allowed under a new SystemFolder. Allowed types however can be configured for a SystemFolder instance.
 SystemFolder is used mainly for storing settings or other technical contents.

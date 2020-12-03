@@ -63,7 +63,7 @@ With the next example you are able to get the list of entries with permission se
 
 # Get full access control list of a content
 
-With the following sample you can get the list of all the entries (users and groups) that have permmissions settings (inherited or direct) on the given content:
+With the following sample you can get the list of all the entries (users and groups) that have permissions settings (inherited or direct) on the given content:
 
 <tab category="permissions" article="permissions" example="getAcl" />
 

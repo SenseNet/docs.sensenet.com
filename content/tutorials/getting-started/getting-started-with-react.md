@@ -52,7 +52,7 @@ After that you have to create a `configuration.js` file in your project's *src* 
 export const repositoryUrl = <your sensenet repository>
 ```
 
-You should also create an `app-provider.js` file in your project's *src* folder. That provider will be responsibe for your repository. It should be something like this:
+You should also create an `app-provider.js` file in your project's *src* folder. That provider will be responsible for your repository. It should be something like this:
 
 ```javascript
 import { Repository } from "@sensenet/client-core";
@@ -138,7 +138,7 @@ The result will be something like the following:
 
 ## Create content types
 
-There are a lot of bult-in content types in sensenet, but you can also create new types according to your business needs.
+There are a lot of built-in content types in sensenet, but you can also create new types according to your business needs.
 
 For example if you would like to build a blog you should add two new content types to your repository: **Blog** and **Post**. Blog will be the container of the posts and it could be an inherited type of the built-in `ItemList`, which is a common container and has all the needed fields.
 

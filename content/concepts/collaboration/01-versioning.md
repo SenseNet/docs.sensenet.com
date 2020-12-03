@@ -6,11 +6,11 @@ metaDescription: "sensenet Versioning"
 
 Versioning is the management of changes to documents and other information stored in a file system or repository.
 The versioning system of sensenet also provides mechanisms for keeping the published version of a document visible to non-editor users, while you continue to work on the latest, draft version.
-In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, by setting the value of the Versioning Mode field. Subfolders inherit versioning settings by default.
+In sensenet, versioning is disabled by default. It can be enabled for folders or content lists, by setting the value of the Versioning Mode field. Sub-folders inherit versioning settings by default.
 When a new Content is created in the Content Repository with versioning enabled, it is assigned the initial version number, depending on the versioning mode. Changes made to the document will result in a bump of the version number, with old versions tracked for possible rollbacks.
 
 # Does sensenet also version content types or users?
-In sensenet everything is content (documents, tasks, users, project, content types etc.). As content types and users are content too, yes, they can be versioned. It can happen, for example, that you need to modify the fields of a content type, versioning is a good solution to keep track of the previous versions. As described above, you can enable versioning by setting the value of the Versioning Mode fiels.
+In sensenet everything is content (documents, tasks, users, project, content types etc.). As content types and users are content too, yes, they can be versioned. It can happen, for example, that you need to modify the fields of a content type, versioning is a good solution to keep track of the previous versions. As described above, you can enable versioning by setting the value of the Versioning Mode files.
 
 # Versioning modes
 In sensenet versioning is disabled by default, you can enable it and set the following Versioning Modes for folders, workspaces or on any type of individual content or even for a subtree:

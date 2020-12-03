@@ -12,7 +12,7 @@ If the requested resource is not found, the server returns a 404 Error status co
 
 # Get a single content by Id
 
-In this case the URL must satisfy a strict rule: the service path followed by `/content` (case insensitive) and content Id wrapped in parentheses without whitespaces.
+In this case the URL must satisfy a strict rule: the service path followed by `/content` (case insensitive) and content Id wrapped in parentheses without white-spaces.
 
 <tab category="basic-concepts" article="entry" example="byId" />
 

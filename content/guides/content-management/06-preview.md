@@ -13,10 +13,10 @@ Once a file is uploaded, the system (depending on the configuration) starts gene
 
 ![preview](../img/preview_n.png)
 
-The preview tool has some basic features like zoom or document rotation accessible by the action buttons in the top toolbar. Here you can also toogle the thumbnail pane or add comments to any part of the document.
+The preview tool has some basic features like zoom or document rotation accessible by the action buttons in the top toolbar. Here you can also toggle the thumbnail pane or add comments to any part of the document.
 
 ## Comment
-To add a comment to a document, open preview and click the "toogle commments" button at the top right corner.
+To add a comment to a document, open preview and click the "toggle comments" button at the top right corner.
 Now place the marker in the document by single clicking the desired place. Write your comment in the text field and click submit. That's it. Existing comments (from all users) will appear in the comment list along with markers in the document (only in preview mode).
 
 ![preview_comment](../img/preview_comment.png)

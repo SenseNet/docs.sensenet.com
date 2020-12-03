@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Query by a field"
 metaDescription: "Query by a field"
 ---
 
-# Define queryable fields
+# Define searchable fields
 
 You can define which fields should be saved to the index by marking them in the related content type at the chosen field's definition.
 

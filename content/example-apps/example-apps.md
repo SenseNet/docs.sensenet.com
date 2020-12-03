@@ -10,9 +10,9 @@ All the following apps are built with the [sn-react-boilerplate](https://github.
 
 - An example React SPA with sensenet repository login, written in Typescript ✨
 - Jest tests with Enzyme 👓
-- Preconfigured Webpack build 🧱
+- Pre-configured Webpack build 🧱
 - prettier and eslint 💅
-- husky lint & prettier precommit hook ⚓
+- husky lint & prettier pre-commit hook ⚓
 
 Each example app requires a login for example into one of our demo repositories (username: businesscat, password: businesscat, respositoryurl: https://dev.demo.sensenet.com)
 
@@ -40,7 +40,7 @@ This single page application shows how to build a document browser app with Rea
 - [Try it out](https://sn-react-browser.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-browser)
 
-## Fileupload demo
+## File upload demo
 Upload images to your repository directly via the browser with the upload API.
 
 - [Try it out](https://sn-react-imageupload.netlify.com/)

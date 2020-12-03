@@ -4,7 +4,7 @@ metaTitle: "sensenet - Field indexing"
 metaDescription: "sensenet Field indexing"
 ---
 
-For every [content](/concepts/baiscs) the [field](/concepts/fields) values can be indexed so that when searching for a value the corresponding content will appear in the results. It is also possible to search in fields by explicitly defining the field to search for in a query. The way a specific field of a content is indexed is defined in the [content type definition](/concepts/content-management/03-content-types).
+For every [content](/concepts/basics) the [field](/concepts/fields) values can be indexed so that when searching for a value the corresponding content will appear in the results. It is also possible to search in fields by explicitly defining the field to search for in a query. The way a specific field of a content is indexed is defined in the [content type definition](/concepts/content-management/03-content-types).
 
 <note severity="info">
 It is possible to switch off indexing for certain fields or content types. In that case, nobody will be able to find the instances of those content types using [content query](/concepts/basics/041-content-query), but the index will be smaller.
@@ -18,7 +18,7 @@ There are two ways to put field data information in the index: by indexing and b
 
 # Analyzers
 
-The goal of an analyzer is to extract all relevant terms from a text, filtering stopwords, etc. It is important that the same analyzer is used in the indexing process and the query building. For example, your document contains the following text: „Writing Sentences” and your query text is „writing”. After analysis the indexed text and search text will be these: „writing, sentences” and „writing”. This method ensures that the original text can be found even if the query word typed in and the word in the original text does not match exactly char-by-char. We use a *PerFieldAnalyzerWrapper* that can support a unique analyzer for every field. Analyzer-Field bindings are defined in the CTD. Field without analyzer-binding will be analyzed with the default analyzer: *KeywordAnalyzer*.
+The goal of an analyzer is to extract all relevant terms from a text, filtering stop-words, etc. It is important that the same analyzer is used in the indexing process and the query building. For example, your document contains the following text: „Writing Sentences” and your query text is „writing”. After analysis the indexed text and search text will be these: „writing, sentences” and „writing”. This method ensures that the original text can be found even if the query word typed in and the word in the original text does not match exactly char-by-char. We use a *PerFieldAnalyzerWrapper* that can support a unique analyzer for every field. Analyzer-Field bindings are defined in the CTD. Field without analyzer-binding will be analyzed with the default analyzer: *KeywordAnalyzer*.
 
 # Stop-word dictionary
 
@@ -88,10 +88,10 @@ This setting is only available to make it easier to configure the indexing subsy
 You can associate any Lucene Analyzer to a field (refer to: [Lucene analyzer documentation](http://lucene.apache.org/java/2_9_4/api/core/org/apache/lucene/analysis/Analyzer.html)). The element value is the fully qualified type name of the desired Lucene analyzer. Available analyzers:
 
 - Lucene.Net.Analysis.Standard.**StandardAnalyzer**: an analyzer created specifically for text sentences/words. It excludes punctuations, splits up input string to words, gets each word in lower case and uses a stop-word dictionary for exclusions to lower false hit rates (for example you cannot query for articles like 'a' or 'the'). Use this whenever written text is stored in a Field that needs to be queried to individual words.
-- Lucene.Net.Analysis.**KeywordAnalyzer**: (default) Trims the input string (removes whitespaces from the beginning and the end) and treats the input as a whole expression, as given - it does not even transform the input to lower case. It is useful for Fields holding processable string data, that needs to be searched as is.
-- Lucene.Net.Analysis.**SimpleAnalyzer**: splits input string along whitespaces and punctuations, and even along numbers.
+- Lucene.Net.Analysis.**KeywordAnalyzer**: (default) Trims the input string (removes white-spaces from the beginning and the end) and treats the input as a whole expression, as given - it does not even transform the input to lower case. It is useful for Fields holding processable string data, that needs to be searched as is.
+- Lucene.Net.Analysis.**SimpleAnalyzer**: splits input string along white-spaces and punctuations, and even along numbers.
 - Lucene.Net.Analysis.**StopAnalyzer**: similar to SimpleAnalyzer but also uses stop-word dictionary to exclude words.
-- Lucene.Net.Analysis.**WhitespaceAnalyzer**: splits input string along whitespaces, but not along punctuations.
+- Lucene.Net.Analysis.**WhitespaceAnalyzer**: splits input string along white-spaces, but not along punctuations.
 
 The built-in standard analyzer is based on english language. Please note that when using the system in different language environments it is reasonable to develop a custom analyzer with stop-word dictionary (and optionally a stemmer) specialized for the given language.
 
@@ -343,14 +343,14 @@ Result count: 1
 Just to make it clearer: enter the following text into the *MyKeywords* Field:
 
 ```txt
-helo12bye
+hello12bye
 ```
 
 The following terms will be present in the index:
 
 | Fields | Text |
 |--------|------|
-| MyKeywords | helo |
+| MyKeywords | hello |
 | MyKeywords | bye |
 
 # Using StopAnalyzer

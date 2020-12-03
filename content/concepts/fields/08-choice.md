@@ -8,7 +8,7 @@ Choice field is a multi-purpose field used to allow the user to choose one or mo
 
 Choice field as a dropdown list can be used just the same as a common html select. The options could have the standard properties like selected, disabled, label and value. Value and label properties and the text of the option could be localized.
 
-The chosen option is indexed in the fulltext index by all its localized values and texts (so you can search by either value or text) and indexed in field index by its value. If you want to sort list items by a choice field, they will be ordered by the selected options value and the items with extravalue will be at the end of the list.
+The chosen option is indexed in the full-text index by all its localized values and texts (so you can search by either value or text) and indexed in field index by its value. If you want to sort list items by a choice field, they will be ordered by the selected options value and the items with extra value will be at the end of the list.
 
 # Usage in CTD:
 
@@ -60,7 +60,7 @@ The above example configures the Choice field so that:
 - it is not allowed to choose more than one option
 - it is allowed to add an extra value
 - there's a list of the options
-- the field will be displayed as list of radiobuttons
+- the field will be displayed as list of radio buttons
 
 # React field controls
 

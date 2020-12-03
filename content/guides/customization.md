@@ -24,7 +24,7 @@ You can change between **light** 🌞 and **dark** 🌜 theme. (It is also possi
 
 ### Drawer
 
-You can enable or disable the [drawer](/guides/customization/01-menu-customization/), change the drawer type and define a list of preconfigured items to display. The drawer types are:
+You can enable or disable the [drawer](/guides/customization/01-menu-customization/), change the drawer type and define a list of pre-configured items to display. The drawer types are:
 
 - *temporary*, useful for mobile devices
 - *permanent* with icons and text

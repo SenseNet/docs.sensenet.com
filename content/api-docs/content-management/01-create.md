@@ -10,7 +10,7 @@ Creating a content is an http `POST` request under the hood. You can call it by 
 Note that every create operation requires the caller to have the ``AddNew`` permission in the target container.
 </note>
 
-Without defining the content type of the new entity, the first allowed content type of the parent entity will be used. The default content type is overridable in the posted JSON object with the `__ContentType` property, as you can see in the example below.
+Without defining the content type of the new entity, the first allowed content type of the parent entity will be used. The default content type can be overridden in the posted JSON object with the `__ContentType` property, as you can see in the example below.
 
 In the following example you can see how you can create a new Folder and set its name:
 
