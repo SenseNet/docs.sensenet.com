@@ -14,7 +14,7 @@ Unless you are working with publicly available content - like blog posts - it is
 >
 > If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.
 >
-> This workflow requires the client application to have an **authority url**, a **client id** and also a **client secret**. To acquire these values, please visit your profile page and select the repository you want to connect to.
+> This workflow requires the client application to have a **sensenet repository url**, a **client id** and also a **client secret**. To acquire these values, please visit your profile page and select the repository you want to connect to.
 
 ## Create a new console application
 Create a new .Net Core console application either in command line (`dotnet new`), Visual Studio or VS Code.
@@ -52,7 +52,7 @@ var tokenStore = provider.GetService<TokenStore>();
 ```
 
 ## Set up the connection to the sensenet service
-Create a server object and provide your sensenet service url and authentication token. The token is received from our auth server (which uses **IdentityServer 4** to manage tokens).
+Create a server object and provide your sensenet service url, client id and secret. The token is requested from our auth server (which uses **IdentityServer 4** to manage tokens) and cached in the background. Our client library will add this auth token to every request you send to the sensenet repository service.
 
 ```csharp
 // define sensenet service url
@@ -67,4 +67,9 @@ server.Authentication.AccessToken = await tokenStore.GetTokenAsync(server, "clie
 ClientContext.Current.AddServer(server);
 ```
 
-From now on you'll be able to send authenticated requests to the server. The permission level of the request is determined by the **secret** you provide here: it represents a user in the content repository.
+From now on you'll be able to send authenticated requests to the server. The permission level of the request is determined by the client id you provide here: it represents a user in the content repository.
+
+To learn more about the client API we offer for .Net developers and example requests you can make from a .Net Core client application, please visit the following articles:
+
+- [Getting started with .Net Client](/tutorials/getting-started/getting-started-dotnet)
+- [Content management](/api-docs/content-management) 

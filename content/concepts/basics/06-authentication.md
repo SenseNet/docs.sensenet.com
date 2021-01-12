@@ -31,7 +31,7 @@ In the first case users need to sign in to the application by themselves (either
 ### Tools and server-side apps
 Tools on the other hand require a **clientid** and a **secret** which acts like a username and password for a dedicated technical user. In this case requests are made in the name of this technical user, regardless of who executes the client application. This workflow is used by synchronization or batch operation tools or in server-to-server communication.
 
-<note severity="info">This workflow requires the client application to have an <strong>authority url</strong>, a <strong>client id</strong> and also a <strong>client secret</strong>. To acquire these values, please visit your profile page and select the repository you want to connect to.</note>
+<note severity="info">This workflow requires the client application to have a <strong>sensenet repository url</strong>, a <strong>client id</strong> and also a <strong>client secret</strong>. To acquire these values, please visit your profile page and select the repository you want to connect to.</note>
 <div>&nbsp;</div>
 <note severity="error">Make sure that nobody gets hold of your clientid and most importantly the client secret. If that happens, please visit your profile immediately, invalidate the secret and generate a new one to make sure nobody unauthorized can access the repository.</note>
 
