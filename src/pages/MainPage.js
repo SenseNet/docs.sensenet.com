@@ -8,15 +8,28 @@ import guidesImg from '../images/guides.png'
 import conceptsImg from '../images/concepts.png'
 import bestPracticeImg from '../images/best-practice.png'
 import tutorialsImg from '../images/tutorials.png'
+import Helmet from "react-helmet";
 
 import jsLogo from "../images/js.png"
 import netLogo from "../images/net.png"
 import reactLogo from "../images/react.jpg"
 import reduxLogo from '../images/redux.png'
 
+const config = require("../../config");
 const MainPage = () => {
+  const metaTitle = config.siteMetadata.title
+  const metaDescription = config.siteMetadata.description
   return(
     <>
+    <Helmet>
+          {metaTitle ? <title>{metaTitle}</title> : null }
+          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
+          {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
+          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
+          {metaTitle ? <meta property="twitter:title" content={metaTitle} /> : null}
+          {metaDescription ? <meta property="twitter:description" content={metaDescription} /> : null}
+        </Helmet>
             <div className="BoxContainer">
               {content.map((c, index) =>
                 <div className="Box" key={`box-${index}`}>

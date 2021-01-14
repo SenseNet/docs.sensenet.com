@@ -51,7 +51,7 @@ const content = [
       },
       {
         title:'Authentication from a React application',
-        link: '/tutorials/authentication/how-to-authenticate-react.md'
+        link: '/tutorials/authentication/how-to-authenticate-react'
       },
     ],
     link: '',

@@ -1,7 +1,7 @@
 const footer = [
   {
     title: 'Quickstart',
-    link: '/tutorials/getting-started/getting-started-react'
+    link: '/tutorials/getting-started/getting-started-with-react'
   },
   {
     title: 'API references',
