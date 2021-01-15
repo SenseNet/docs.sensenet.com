@@ -91,7 +91,7 @@ ReactDOM.render(
 
 Now you can send requests to the API from your project. For help, see the API docs [here](https://docs.sensenet.com/api-docs/basic-concepts/00-getting-started).
 
-Open the admin ui [here](http://admin.sensenet.com/). Log in to your sensenet repository and open content tab from the left side drawer to browse your contents.
+Open the admin ui [here](https://admin.sensenet.com/). Log in to your sensenet repository and open content tab from the left side drawer to browse your contents.
 
 ![admin-ui](getting-started-with-react/admin-ui.png)
 
