@@ -86,7 +86,7 @@ const Header = ({location}) => (
           <nav className={location.pathname.includes('api-docs') ? 'navBarDefault' : 'navBarWithShadow'}>
             <div className={'navBarHeader'}>
               <Link to={finalLogoLink} className={'navBarBrand'}>
-                <img className={'img-responsive displayInline'} src={Logo} alt={'logo'} />
+                <img className={'img-responsive displayInline'} src={Logo} alt={config.siteMetadata.title} />
               </Link>
               <Link to={finalLogoLink}>
               <div className={"headerTitle displayInline"} dangerouslySetInnerHTML={{__html: headerTitle}} />

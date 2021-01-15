@@ -35,8 +35,8 @@ const MainPage = () => {
                 <div className="Box" key={`box-${index}`}>
                 <div className="BoxInner">
                   <h3>
-                    <a href={c.link}>
-                      <img src={getImgFromName(c.name)} className="BoxTitleImg" />
+                    <a href={c.link} title={c.title}>
+                      <img src={getImgFromName(c.name)} className="BoxTitleImg" alt={c.title} />
                     {c.title}
                     </a>
                   </h3>
@@ -49,22 +49,22 @@ const MainPage = () => {
                         <ul className="APIBoxList">
                           <li>
                             <a href="/api-docs/basic-concepts" title="JavaScript client">
-                              <img src={jsLogo} />
+                              <img src={jsLogo} alt="JavaScript client" />
                             </a>
                           </li>
                           <li>
                             <a href="/api-docs/basic-concepts" title=".NET client">
-                              <img src={netLogo} />
+                              <img src={netLogo} alt=".NET client" />
                             </a>
                           </li>
                           <li>
                             <a href="/api-docs/basic-concepts" title="ReactJS">
-                              <img src={reactLogo} />
+                              <img src={reactLogo} alt="ReactJS" />
                             </a>
                           </li>
                           <li>
                             <a href="/api-docs/basic-concepts" title="Redux">
-                              <img src={reduxLogo} />
+                              <img src={reduxLogo} alt="Redux" />
                             </a>
                           </li>
                         </ul>
