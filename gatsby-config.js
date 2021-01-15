@@ -57,6 +57,13 @@ const plugins = [
       anonymize: false,
     },
   },
+  {
+    resolve: 'gatsby-plugin-zopfli',
+    options: {
+      extensions: ['css', 'html', 'js', 'svg'],
+      verbose: true
+    }
+  },
 ];
 // check and add algolia
 if (config.header.search && config.header.search.enabled && config.header.search.algoliaAppId && config.header.search.algoliaAdminKey) {
