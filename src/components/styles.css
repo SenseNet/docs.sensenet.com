@@ -1183,6 +1183,21 @@ img {
   font-style: italic;
 }
 
+.mainTextContainer {
+  margin: 4rem 4rem 0;
+  text-align: center;
+}
+
+.mainTextContainer h1 {
+  font-size: 4rem;
+}
+
+.mainTextContainer p {
+  line-height: 1.5rem;
+  margin: 1rem auto 0;
+  max-width: 70%;
+}
+
 .BoxContainer {
   display: flex;
   flex-direction: row;
