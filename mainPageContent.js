@@ -113,12 +113,12 @@ const content = [
     description: 'Try it yourself!',
     links: [
       {
-        title:'1000 content demo',
-        link: ''
+        title:'Websites',
+        link: '/usecases/websites'
       },
       {
-        title:'25000 content demo',
-        link: ''
+        title:'Mobile apps',
+        link: '/usecases/mobile-apps'
       },
     ],
     link: '',
