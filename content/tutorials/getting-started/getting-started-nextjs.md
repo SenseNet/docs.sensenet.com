@@ -4,8 +4,6 @@ metaTitle: "Getting started with Next.js and sensenet"
 metaDescription: "Tutorial about how to start a new project using Next.js and sensenet."
 ---
 
-# Getting started with Next.js and sensenet
-
 In this tutorial, you will discover how to start a new project using [Next.js](https://nextjs.org/) and sensenet.
 
 ## About the technologies

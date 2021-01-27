@@ -30,6 +30,10 @@ const MainPage = () => {
           {metaTitle ? <meta property="twitter:title" content={metaTitle} /> : null}
           {metaDescription ? <meta property="twitter:description" content={metaDescription} /> : null}
         </Helmet>
+        <div className="mainTextContainer">
+            <h1>sensenet documentation</h1>
+            <p>Welcome to the documentation for sensenet, a flexible development platform and a repository of unlimited content. Here you'll find the concept behind the features, API docs, tutorials, guides and many more. If you have any questions or are stuck somewhere, feel free to contact us on <a href="https://gitter.im/SenseNet/sensenet">gitter</a>.</p>
+        </div>
             <div className="BoxContainer">
               {content.map((c, index) =>
                 <div className="Box" key={`box-${index}`}>
