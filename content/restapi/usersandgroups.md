@@ -7,6 +7,7 @@ metaDescription: "Users and Groups"
 ## GetParentGroups
 - Method: **GET** or optionally POST.
 
+Returns all groups where the given user or group is member directly or indirectly.
 
 ### Request example:
 
@@ -23,7 +24,10 @@ models=[{
 ```
 The `targetContent` can be Group, User
 ### Parameters:
-- **directOnly** (bool): 
+- **directOnly** (bool): Whether only direct membership is requested.
+
+### Return value:
+_Content_ list of the groups. (Type: IEnumerable&lt;Content>).
 
 ### Requirements:
 - **AllowedRoles**: Everyone
@@ -89,7 +93,6 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (HttpContext): 
 - **provider** (string): 
 - **userId** (string): 
 - **claims** (string): 
@@ -115,7 +118,6 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (HttpContext): 
 - **loginName** (string): 
 - **password** (string): 
 - **email** (string): 

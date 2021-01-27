@@ -217,6 +217,8 @@ The `targetContent` can be Folder
 - Icon: **"restore"**.
 
 Restores the Content from the Trash.
+ WARNING: Known issue that you may get errors restoring a ContentListItem whose
+ ContentListField structure has changed since it was deleted.
 
 ### Request example:
 
