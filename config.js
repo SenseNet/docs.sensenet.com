@@ -62,7 +62,11 @@ const config = {
 				},
 			],
 		},
-	}
+  },
+  "segment": {
+    "productionWriteKey": process.env.SEGMENT_PRODUCTION_WRITE_KEY,
+    "devWriteKey": process.env.SEGMENT_DEV_WRITE_KEY,
+  }
 };
 
 module.exports = config;

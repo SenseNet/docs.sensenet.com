@@ -23,7 +23,6 @@ models=[{
 }]
 ```
 ### Parameters:
-- **context** (HttpContext): 
 - **action** (string): 
 
 ### Requirements:

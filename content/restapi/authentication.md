@@ -24,7 +24,6 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (HttpContext): 
 - **clientType** (string): 
 
 ### Requirements:
@@ -47,7 +46,6 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (HttpContext): 
 - **userName** (string): 
 - **password** (string): 
 

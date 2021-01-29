@@ -37,15 +37,15 @@ metaDescription: "Api references"
 | [Content Types](/restapi/contenttypes) | [GetAllContentTypes](/restapi/contenttypes#getallcontenttypes) | GET |
 | [Content Types](/restapi/contenttypes) | [GetAllowedChildTypesFromCTD](/restapi/contenttypes#getallowedchildtypesfromctd) | GET |
 | [Content Types](/restapi/contenttypes) | [RemoveAllowedChildTypes](/restapi/contenttypes#removeallowedchildtypes) | POST |
-| [Indexing](/restapi/indexing) | [BackupIndex](/restapi/indexing#backupindex) | POST |
-| [Indexing](/restapi/indexing) | [CancelIndexBackup](/restapi/indexing#cancelindexbackup) | POST |
-| [Indexing](/restapi/indexing) | [CheckIndexIntegrity](/restapi/indexing#checkindexintegrity) | GET |
-| [Indexing](/restapi/indexing) | [GetRecentIndexingActivities](/restapi/indexing#getrecentindexingactivities) | GET |
-| [Indexing](/restapi/indexing) | [QueryIndexBackup](/restapi/indexing#queryindexbackup) | GET |
-| [Indexing](/restapi/indexing) | [RebuildIndex](/restapi/indexing#rebuildindex) | POST |
-| [Indexing](/restapi/indexing) | [RebuildIndexSubtree](/restapi/indexing#rebuildindexsubtree) | POST |
-| [Indexing](/restapi/indexing) | [RefreshIndexSubtree](/restapi/indexing#refreshindexsubtree) | POST |
-| [Indexing](/restapi/indexing) | [ResetRecentIndexingActivities](/restapi/indexing#resetrecentindexingactivities) | POST |
+| [Indexing](/restapi/ndexing) | [BackupIndex](/restapi/ndexing#backupindex) | POST |
+| [Indexing](/restapi/ndexing) | [CancelIndexBackup](/restapi/ndexing#cancelindexbackup) | POST |
+| [Indexing](/restapi/ndexing) | [CheckIndexIntegrity](/restapi/ndexing#checkindexintegrity) | GET |
+| [Indexing](/restapi/ndexing) | [GetRecentIndexingActivities](/restapi/ndexing#getrecentindexingactivities) | GET |
+| [Indexing](/restapi/ndexing) | [QueryIndexBackup](/restapi/ndexing#queryindexbackup) | GET |
+| [Indexing](/restapi/ndexing) | [RebuildIndex](/restapi/ndexing#rebuildindex) | POST |
+| [Indexing](/restapi/ndexing) | [RebuildIndexSubtree](/restapi/ndexing#rebuildindexsubtree) | POST |
+| [Indexing](/restapi/ndexing) | [RefreshIndexSubtree](/restapi/ndexing#refreshindexsubtree) | POST |
+| [Indexing](/restapi/ndexing) | [ResetRecentIndexingActivities](/restapi/ndexing#resetrecentindexingactivities) | POST |
 | [Office Online Editing](/restapi/officeonlineediting) | [GetWopiData](/restapi/officeonlineediting#getwopidata) | GET |
 | [Office Online Editing](/restapi/officeonlineediting) | [WopiOpenEdit](/restapi/officeonlineediting#wopiopenedit) | GET |
 | [Office Online Editing](/restapi/officeonlineediting) | [WopiOpenView](/restapi/officeonlineediting#wopiopenview) | GET |

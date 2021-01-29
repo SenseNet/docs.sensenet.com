@@ -29,7 +29,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): 
 - **FileLength** (long?) optional: 
 - **ContentType** (string) optional: 
 - **PropertyName** (string) optional: 
@@ -60,7 +59,7 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): 
+There are no parameters.
 
 ### Requirements:
 - **AllowedRoles**: All
@@ -90,7 +89,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): The current HttpContext if available.
 - **name** (string): Name of the new (or existing) content.
 - **contentType** (string): Content type of the new content.
 - **fullSize** (long): Size of the whole binary.
@@ -123,7 +121,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): The current HttpContext if available.
 - **fullSize** (long): Size of the whole binary.
 - **fieldName** (string) optional: Optional custom binary field name, if it is other than 'Binary'.
 
@@ -156,7 +153,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): The current HttpContext if available.
 - **token** (string): Binary token provided by the start operation before.
 - **fullSize** (long): Size of the whole binary.
 - **fieldName** (string) optional: Optional custom binary field name, if it is other than 'Binary'.
@@ -188,7 +184,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (HttpContext): The current HttpContext if available.
 - **fieldName** (string) optional: Optional custom binary field name, if it is other than 'Binary'.
 
 ### Requirements:
