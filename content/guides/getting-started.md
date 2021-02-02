@@ -14,7 +14,7 @@ First, enter **repository URL** then log in using your email address (and passwo
 ![repo url](./img/adminui_repo.png)
 
 
-If you don't have a repo yet, you can get your free repo [here](https://is.sensenet.com/Account/Registration?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dspa%26redirect_uri%3Dhttps%253A%252F%252Fprofile.sensenet.com%252Fauthentication%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520sensenet%26state%3Dde66e02398b748f5b102fe2fc8911be7%26code_challenge%3DOHs2GpcPZ_H9seg0sP-nd-f1J1in9IgGqadms7Jp-jU%26code_challenge_method%3DS256%26response_mode%3Dquery%26snrepo%3Dhttps%253A%252F%252Fsnover.service.sensenet.com) or log in to our demo repository by clicking the big blue button either on repo url or login screen (see below).
+If you don't have a repo yet, you can get one [for free](https://is.sensenet.com/Account/Registration?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dspa%26redirect_uri%3Dhttps%253A%252F%252Fprofile.sensenet.com%252Fauthentication%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520sensenet%26state%3Dde66e02398b748f5b102fe2fc8911be7%26code_challenge%3DOHs2GpcPZ_H9seg0sP-nd-f1J1in9IgGqadms7Jp-jU%26code_challenge_method%3DS256%26response_mode%3Dquery%26snrepo%3Dhttps%253A%252F%252Fsnover.service.sensenet.com) or log in to our demo repository by clicking the big blue button either on repo url or login screen (see below).
 
 > You will be logged in with an **admin user** called Business Cat.
 
