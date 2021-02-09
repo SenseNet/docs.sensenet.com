@@ -30,7 +30,7 @@ Collaborative workspace root.
 
 # Example
 
-```
+```xml
 <ContentType name="Workspace" parentType="Folder" handler="SenseNet.ContentRepository.Workspaces.Workspace" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-Workspace,DisplayName</DisplayName>
   <Description>$Ctd-Workspace,Description</Description>

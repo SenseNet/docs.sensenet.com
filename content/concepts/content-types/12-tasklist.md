@@ -18,7 +18,7 @@ ItemList
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this contetn type.
+All the field are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

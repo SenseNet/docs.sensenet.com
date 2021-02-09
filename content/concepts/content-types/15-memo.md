@@ -26,7 +26,7 @@ ListItem
 
 # Example
 
-```
+```xml
 <ContentType name="Memo" parentType="ListItem" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-Memo,DisplayName</DisplayName>
   <Description>$Ctd-Memo,Description</Description>

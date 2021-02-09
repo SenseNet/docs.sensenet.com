@@ -25,7 +25,7 @@ Use smart folders to group information (content) by Repository query.
 
 # Example
 
-```
+```xml
 <ContentType name="SmartFolder" parentType="Folder" handler="SenseNet.ContentRepository.SmartFolder" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-SmartFolder,DisplayName</DisplayName>
   <Description>$Ctd-SmartFolder,Description</Description>

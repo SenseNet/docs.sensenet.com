@@ -32,7 +32,7 @@ ListItem
 
 # Example
 
-```
+```xml
 <ContentType name="Task" parentType="ListItem" handler="SenseNet.ContentRepository.Task" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-Task,DisplayName</DisplayName>
   <Description>$Ctd-Task,Description</Description>

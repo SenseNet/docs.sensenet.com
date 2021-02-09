@@ -30,7 +30,7 @@ WebContent
 
 # Example
 
-```
+```xml
 <ContentType name="Article" parentType="WebContent" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
   <DisplayName>$Ctd-Article,DisplayName</DisplayName>
   <Description>$Ctd-Article,Description</Description>

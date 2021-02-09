@@ -3,3 +3,845 @@ title: "GenericContent"
 metaTitle: "sensenet - GenericContent"
 metaDescription: "sensenet GenericContent"
 ---
+
+This type is the base content type of the sensenet.
+
+# Features
+
+# Parent type
+
+There is no parent content type for GenericContent. It is the root type.
+
+# Content handler
+
+`SenseNet.ContentRepository.GenericContent`
+
+# Special fields
+
+| Name                           | Type                        | Description                                                                                                                                            |
+| ------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Id**                         | `Integer`                   | Unique Id for the content.                                                                                                                             |
+| **ParentId**                   | `Integer`                   | Id of the parent content.                                                                                                                              |
+| **OwnerId**                    | `Integer`                   | Id of the owner.                                                                                                                                       |
+| **Owner**                      | `Reference`                 | Content owner.                                                                                                                                         |
+| **VersionId**                  | `Integer`                   | Database row Id of current version.                                                                                                                    |
+| **Type**                       | `NodeType`                  |                                                                                                                                                        |
+| **TypeIs**                     | `NodeType`                  |                                                                                                                                                        |
+| **Icon**                       | `ShortText`                 | Icon                                                                                                                                                   |
+| **Name**                       | `ShortText`                 | Specify a name that will appear in the address bar of the browser.                                                                                     |
+| **CreatedById**                | `Integer`                   | Id of creator.                                                                                                                                         |
+| **ModifiedById**               | `Integer`                   | Id of last modifier.                                                                                                                                   |
+| **Version**                    | `Version`                   | Version number.                                                                                                                                        |
+| **Path**                       | `ShortText`                 | Content path in the repository.                                                                                                                        |
+| **Depth**                      | `Integer`                   | Content level in the tree. Root level is 0.                                                                                                            |
+| **InTree**                     | `ShortText`                 |                                                                                                                                                        |
+| **InFolder**                   | `ShortText`                 |                                                                                                                                                        |
+| **IsSystemContent**            | `Boolean`                   | This field is true if content is in a system folder/trash or the content is a system folder/file.                                                      |
+| **IsFile**                     | `Boolean`                   | This field is true if the content is a file.                                                                                                           |
+| **IsFolder**                   | `Boolean`                   | This field is true if content can contain other content.                                                                                               |
+| **DisplayName**                | `ShortText`                 | Content name. You can set any name you prefer without any restrictions.                                                                                |
+| **Description**                | `LongText`                  | Description of the content.                                                                                                                            |
+| **Hidden**                     | `Boolean`                   | If checked, content will not show up in navigation.                                                                                                    |
+| **Index**                      | `Integer`                   | Content order in navigation. Numbers closer to 0 will appear first.                                                                                    |
+| **EnableLifespan**             | `Boolean`                   | Specify whether you want to define starting and end date for the validity of this content.                                                             |
+| **ValidFrom**                  | `DateTime`                  | This content will appear on the date you set if lifespan handling is enabled for this content.                                                         |
+| **ValidTill**                  | `DateTime`                  | This content will disappear on the date you set if lifespan handling is enabled for this content.                                                      |
+| **AllowedChildTypes**          | `AllowedChildTypes`         | You can get and set which content types are explicitly allowed to be created under this content. It is a local setting.                                |
+| **EffectiveAllowedChildTypes** | `AllowedChildTypes`         | You can get which content types are effective allowed to be created under this content. If there is no local setting, the global setting takes effect. |
+| **VersioningMode**             | `VersioningMode`            | It shows the versioning mode of the current content.                                                                                                   |
+| **InheritableVersioningMode**  | `InheritableVersioningMode` | Specify whether the system should create a new version whenever you create or modify a content below this content.                                     |
+| **CreatedBy**                  | `Reference`                 | Content creator.                                                                                                                                       |
+| **VersionCreatedBy**           | `Reference`                 |                                                                                                                                                        |
+| **CreationDate**               | `DateTime`                  | Content creation date.                                                                                                                                 |
+| **VersionCreationDate**        | `DateTime`                  |                                                                                                                                                        |
+| **ModifiedBy**                 | `Reference`                 | Content was last modified by this user.                                                                                                                |
+| **VersionModifiedBy**          | `Reference`                 |                                                                                                                                                        |
+| **ModificationDate**           | `DateTime`                  | Content was last modified on this date.                                                                                                                |
+| **VersionModificationDate**    | `DateTime`                  |                                                                                                                                                        |
+| **ApprovingMode**              | `ApprovingMode`             | It shows the approval mode of the current content.                                                                                                     |
+| **InheritableApprovingMode**   | `InheritableApprovingMode`  | Specify whether new or changed content below the current one should remain in a draft state until they have been approved.                             |
+| **Locked**                     | `Boolean`                   | It shows whether the content is checked out or not.                                                                                                    |
+| **CheckedOutTo**               | `Reference`                 | The user currently locking the content.                                                                                                                |
+| **TrashDisabled**              | `Boolean`                   | You can disable trash for this content and its children. If set, you can not restore deleted content.                                                  |
+| **SavingState**                | `Choice`                    | State of multi-step saving.                                                                                                                            |
+| **ExtensionData**              | `LongText`                  | You can set extra data in this field which is useful when extending a content.                                                                         |
+| **BrowseApplication**          | `Reference`                 | Set this, if you would like to override the default browse application.                                                                                |
+| **Approvable**                 | `Boolean`                   | This fileld is true if the content is in 'pending' state and can be approved by the current user.                                                      |
+| **IsTaggable**                 | `Boolean`                   | Specify whether you would like to enable tagging capability for this content.                                                                          |
+| **Tags**                       | `LongText`                  | List of tags and creators of them separated by commas.                                                                                                 |
+| **IsRateable**                 | `Boolean`                   | Specify whether you would like to enable rating capability for this content.                                                                           |
+| **RateStr**                    | `ShortText`                 |                                                                                                                                                        |
+| **RateAvg**                    | `Number`                    | Average rate of the content.                                                                                                                           |
+| **RateCount**                  | `Integer`                   |                                                                                                                                                        |
+| **Rate**                       | `Rating`                    |                                                                                                                                                        |
+| **Publishable**                | `Boolean`                   | This fileld is true if the content can be published by the current user.                                                                               |
+| **Versions**                   | `Reference`                 | Content version history.                                                                                                                               |
+| **CheckInComments**            | `LongText`                  | Comments for a new version.                                                                                                                            |
+| **RejectReason**               | `LongText`                  | The reason why the content was rejected.                                                                                                               |
+| **Workspace**                  | `Reference`                 | The container workspace of the content.                                                                                                                |
+| **BrowseUrl**                  | `ShortText`                 |                                                                                                                                                        |
+| **Sharing**                    | `Sharing`                   |                                                                                                                                                        |
+| **SharedWith**                 | `Sharing`                   |                                                                                                                                                        |
+| **SharedBy**                   | `Sharing`                   |                                                                                                                                                        |
+| **SharingMode**                | `Sharing`                   |                                                                                                                                                        |
+| **SharingLevel**               | `Sharing`                   |                                                                                                                                                        |
+
+# Example
+
+```xml
+<ContentType name="GenericContent" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>$Ctd-GenericContent,DisplayName</DisplayName>
+  <Description>$Ctd-GenericContent,Description</Description>
+  <Icon>Content</Icon>
+  <Fields>
+    <Field name="Id" type="Integer">
+      <DisplayName>$Ctd-GenericContent,Id-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Id-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="ParentId" type="Integer">
+      <DisplayName>$Ctd-GenericContent,ParentId-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ParentId-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="OwnerId" type="Integer">
+      <DisplayName>$Ctd-GenericContent,OwnerId-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,OwnerId-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Owner" type="Reference">
+      <DisplayName>$Ctd-GenericContent,Owner-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Owner-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="VersionId" type="Integer">
+      <DisplayName>$Ctd-GenericContent,VersionId-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersionId-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Type" type="NodeType">
+      <DisplayName>$Ctd-GenericContent,Type-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Type-Description</Description>
+      <Bind property="NodeType"></Bind>
+      <Indexing>
+        <Store>Yes</Store>
+        <IndexHandler>SenseNet.Search.Indexing.ExclusiveTypeIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="TypeIs" type="NodeType">
+      <DisplayName>$Ctd-GenericContent,TypeIs-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,TypeIs-Description</Description>
+      <Bind property="NodeType"></Bind>
+      <Indexing>
+        <Store>No</Store>
+        <IndexHandler>SenseNet.Search.Indexing.TypeTreeIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Icon" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,Icon-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Icon-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Name" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,Name-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Name-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+        <Analyzer>Keyword</Analyzer>
+      </Indexing>
+      <Configuration>
+        <Compulsory>true</Compulsory>
+        <ControlHint>sn:Name</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="CreatedById" type="Integer">
+      <DisplayName>$Ctd-GenericContent,CreatedById-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,CreatedById-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="ModifiedById" type="Integer">
+      <DisplayName>$Ctd-GenericContent,ModifiedById-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ModifiedById-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Version" type="Version">
+      <DisplayName>$Ctd-GenericContent,Version-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Version-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Advanced</VisibleBrowse>
+        <VisibleEdit>Advanced</VisibleEdit>
+        <VisibleNew>Advanced</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Path" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,Path-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Path-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+        <Analyzer>Keyword</Analyzer>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Depth" type="Integer">
+      <DisplayName>$Ctd-GenericContent,Depth-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Depth-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="InTree" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,InTree-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,InTree-Description</Description>
+      <Bind property="Path"></Bind>
+      <Indexing>
+        <Analyzer>Keyword</Analyzer>
+        <IndexHandler>SenseNet.Search.Indexing.InTreeIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="InFolder" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,InFolder-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,InFolder-Description</Description>
+      <Bind property="Path"></Bind>
+      <Indexing>
+        <Analyzer>Keyword</Analyzer>
+        <IndexHandler>SenseNet.Search.Indexing.InFolderIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="IsSystemContent" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,IsSystemContent-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,IsSystemContent-Description</Description>
+      <Bind property="IsSystem"></Bind>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="IsFolder" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,IsFolder-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,IsFolder-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="DisplayName" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,DisplayName-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,DisplayName-Description</Description>
+      <Configuration>
+        <ControlHint>sn:DisplayName</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="Description" type="LongText">
+      <DisplayName>$Ctd-GenericContent,Description-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Description-Description</Description>
+      <Indexing>
+        <Analyzer>Standard</Analyzer>
+      </Indexing>
+      <Configuration>
+        <ControlHint>sn:RichText</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="Hidden" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,Hidden-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Hidden-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Index" type="Integer">
+      <DisplayName>$Ctd-GenericContent,Index-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Index-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="EnableLifespan" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,EnableLifespan-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,EnableLifespan-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="ValidFrom" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,ValidFrom-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ValidFrom-Description</Description>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+        <DefaultValue>@@currenttime@@</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="ValidTill" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,ValidTill-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ValidTill-Description</Description>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+        <DefaultValue>@@currenttime@@</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="AllowedChildTypes" type="AllowedChildTypes">
+      <DisplayName>$Ctd-GenericContent,AllowedChildTypes-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,AllowedChildTypes-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="EffectiveAllowedChildTypes" type="AllowedChildTypes">
+      <DisplayName>$Ctd-GenericContent,EffectiveAllowedChildTypes-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,EffectiveAllowedChildTypes-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="VersioningMode" type="VersioningMode">
+      <DisplayName>$Ctd-GenericContent,VersioningMode-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersioningMode-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <Options>
+          <Option selected="true" value="0">$Ctd-GenericContent,VersioningMode-0</Option>
+          <Option value="1">$Ctd-GenericContent,VersioningMode-1</Option>
+          <Option value="2">$Ctd-GenericContent,VersioningMode-2</Option>
+          <Option value="3">$Ctd-GenericContent,VersioningMode-3</Option>
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="InheritableVersioningMode" type="InheritableVersioningMode">
+      <DisplayName>$Ctd-GenericContent,InheritableVersioningMode-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,InheritableVersioningMode-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <ControlHint>sn:VersioningModeChoice</ControlHint>
+        <Options>
+          <Option selected="true" value="0">$Ctd-GenericContent,InheritableVersioningMode-0</Option>
+          <Option value="1">$Ctd-GenericContent,InheritableVersioningMode-1</Option>
+          <Option value="2">$Ctd-GenericContent,InheritableVersioningMode-2</Option>
+          <Option value="3">$Ctd-GenericContent,InheritableVersioningMode-3</Option>
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="CreatedBy" type="Reference">
+      <DisplayName>$Ctd-GenericContent,CreatedBy-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,CreatedBy-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="VersionCreatedBy" type="Reference">
+      <DisplayName>$Ctd-GenericContent,VersionCreatedBy-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersionCreatedBy-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="CreationDate" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,CreationDate-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,CreationDate-Description</Description>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="VersionCreationDate" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,VersionCreationDate-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersionCreationDate-Description</Description>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="ModifiedBy" type="Reference">
+      <DisplayName>$Ctd-GenericContent,ModifiedBy-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ModifiedBy-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="VersionModifiedBy" type="Reference">
+      <DisplayName>$Ctd-GenericContent,VersionModifiedBy-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersionModifiedBy-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="ModificationDate" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,ModificationDate-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ModificationDate-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+      </Configuration>
+    </Field>
+    <Field name="VersionModificationDate" type="DateTime">
+      <DisplayName>$Ctd-GenericContent,VersionModificationDate-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,VersionModificationDate-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+      </Configuration>
+    </Field>
+    <Field name="ApprovingMode" type="ApprovingMode">
+      <DisplayName>$Ctd-GenericContent,ApprovingMode-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ApprovingMode-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <Options>
+          <Option selected="true" value="0">$Ctd-GenericContent,ApprovingMode-0</Option>
+          <Option value="1">$Ctd-GenericContent,ApprovingMode-1</Option>
+          <Option value="2">$Ctd-GenericContent,ApprovingMode-2</Option>
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="InheritableApprovingMode" type="InheritableApprovingMode">
+      <DisplayName>$Ctd-GenericContent,InheritableApprovingMode-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,InheritableApprovingMode-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <ControlHint>sn:ApprovingModeChoice</ControlHint>
+        <Options>
+          <Option selected="true" value="0">$Ctd-GenericContent,InheritableApprovingMode-0</Option>
+          <Option value="1">$Ctd-GenericContent,InheritableApprovingMode-1</Option>
+          <Option value="2">$Ctd-GenericContent,InheritableApprovingMode-2</Option>
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="Locked" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,Locked-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Locked-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="CheckedOutTo" type="Reference">
+      <DisplayName>$Ctd-GenericContent,CheckedOutTo-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,CheckedOutTo-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="TrashDisabled" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,TrashDisabled-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,TrashDisabled-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <DefaultValue>false</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="SavingState" type="Choice">
+      <DisplayName>$Ctd-GenericContent,SavingState-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,SavingState-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <Options>
+          <Enum type="SenseNet.ContentRepository.Storage.ContentSavingState" resourceClass="Ctd" />
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="ExtensionData" type="LongText">
+      <DisplayName>$Ctd-GenericContent,ExtensionData-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,ExtensionData-Description</Description>
+      <Indexing>
+        <Analyzer>Standard</Analyzer>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="BrowseApplication" type="Reference">
+      <DisplayName>$Ctd-GenericContent,BrowseApplication-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,BrowseApplication-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+      </Configuration>
+    </Field>
+    <Field name="Approvable" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,Approvable-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Approvable-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="IsTaggable" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,IsTaggable-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,IsTaggable-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <DefaultValue>false</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="Tags" type="LongText">
+      <DisplayName>$Ctd-GenericContent,Tags-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Tags-Description</Description>
+      <Indexing>
+        <IndexHandler>SenseNet.Search.Indexing.TagIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <ReadOnly>false</ReadOnly>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ControlHint>sn:TagList</ControlHint>
+      </Configuration>
+    </Field>
+    <Field name="IsRateable" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,IsRateable-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,IsRateable-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <DefaultValue>false</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="RateStr" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,RateStr-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,RateStr-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="RateAvg" type="Number">
+      <DisplayName>$Ctd-GenericContent,RateAvg-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,RateAvg-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="RateCount" type="Integer">
+      <DisplayName>$Ctd-GenericContent,RateCount-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,RateCount-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Rate" type="Rating">
+      <DisplayName>$Ctd-GenericContent,Rate-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Rate-Description</Description>
+      <Bind property="RateStr" />
+      <Bind property="RateCount" />
+      <Bind property="RateAvg" />
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <Range>5</Range>
+      </Configuration>
+    </Field>
+    <Field name="Publishable" type="Boolean">
+      <DisplayName>$Ctd-GenericContent,Publishable-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Publishable-Description</Description>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Versions" type="Reference">
+      <DisplayName>$Ctd-GenericContent,Versions-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Versions-Description</Description>
+      <Indexing>
+        <Mode>No</Mode>
+        <Store>No</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>true</AllowMultiple>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="CheckInComments" type="LongText">
+      <DisplayName>$Ctd-GenericContent,CheckInComments-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,CheckInComments-Description</Description>
+      <Indexing>
+        <Analyzer>Standard</Analyzer>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="RejectReason" type="LongText">
+      <DisplayName>$Ctd-GenericContent,RejectReason-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,RejectReason-Description</Description>
+      <Indexing>
+        <Analyzer>Standard</Analyzer>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Workspace" type="Reference">
+      <DisplayName>$Ctd-GenericContent,Workspace-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Workspace-Description</Description>
+      <Indexing>
+        <Store>Yes</Store>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <ReadOnly>true</ReadOnly>
+        <AllowedTypes>
+          <Type>Workspace</Type>
+        </AllowedTypes>
+      </Configuration>
+    </Field>
+    <Field name="BrowseUrl" type="ShortText">
+      <DisplayName>$Ctd-GenericContent,BrowseUrl-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,BrowseUrl-Description</Description>
+      <Indexing>
+        <Mode>No</Mode>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="Sharing" type="Sharing">
+      <DisplayName>$Ctd-GenericContent,Sharing-DisplayName</DisplayName>
+      <Description>$Ctd-GenericContent,Sharing-Description</Description>
+      <Indexing>
+        <Analyzer>Keyword</Analyzer>
+        <IndexHandler>SenseNet.Search.Indexing.SharingIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="SharedWith" type="Sharing">
+      <Bind property="Sharing"></Bind>
+      <Indexing>
+        <IndexHandler>SenseNet.Search.Indexing.SharedWithIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="SharedBy" type="Sharing">
+      <Bind property="Sharing"></Bind>
+      <Indexing>
+        <IndexHandler>SenseNet.Search.Indexing.SharedByIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="SharingMode" type="Sharing">
+      <Bind property="Sharing"></Bind>
+      <Indexing>
+        <IndexHandler>SenseNet.Search.Indexing.SharingModeIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+    <Field name="SharingLevel" type="Sharing">
+      <Bind property="Sharing"></Bind>
+      <Indexing>
+        <IndexHandler>SenseNet.Search.Indexing.SharingLevelIndexHandler</IndexHandler>
+      </Indexing>
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+        <ReadOnly>true</ReadOnly>
+      </Configuration>
+    </Field>
+  </Fields>
+</ContentType>
+```
