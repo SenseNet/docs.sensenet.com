@@ -47,17 +47,6 @@ const plugins = [
     }
   },
   {
-    resolve: `gatsby-plugin-gtag`,
-    options: {
-      // your google analytics tracking id
-      trackingId: config.gatsby.gaTrackingId,
-      // Puts tracking script in the head instead of the body
-      head: true,
-      // enable ip anonymization
-      anonymize: false,
-    },
-  },
-  {
     resolve: 'gatsby-plugin-zopfli',
     options: {
       extensions: ['css', 'html', 'js', 'svg'],
@@ -108,7 +97,15 @@ const plugins = [
       // Useful for only loading the tracking script once a user has opted in to being tracked, for example.
       manualLoad: false,
     }
-  }
+  },
+  {
+    resolve: "gatsby-plugin-google-tagmanager",
+    options: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID,
+      includeInDevelopment: false,
+      defaultDataLayer: { platform: "gatsby" },
+    },
+  },
 ];
 // check and add algolia
 if (config.header.search && config.header.search.enabled && config.header.search.algoliaAppId && config.header.search.algoliaAdminKey) {
@@ -137,15 +134,7 @@ if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
 } else {
   plugins.push('gatsby-plugin-remove-serviceworker');
 }
-plugins.push(
-  {
-    resolve: `gatsby-plugin-hotjar-tracking`,
-      options: {
-        includeInDevelopment: true,
-        id: process.env.GATSBY_HOTJAR_TRACKING_ID,
-        sv: process.env.GATSBY_HOTJAR_SNIPPET_VERSION
-      }
-})
+
 module.exports = {
   pathPrefix: config.gatsby.pathPrefix,
   siteMetadata: {
