@@ -1,7 +1,15 @@
 
 import React from 'react'
 
-let params = new URLSearchParams(location.search);
+if (typeof window === 'undefined') {
+  global.window = {
+    location: {
+      href: ''
+    }
+  }
+}
+
+let params = new URLSearchParams(window.location.search);
 
 export const LanguageContext = React.createContext({
   lang: params.get("chosenLanguage") ? params.get("chosenLanguage") : `rest`,
