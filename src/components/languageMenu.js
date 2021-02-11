@@ -72,23 +72,23 @@ const LanguageMenu = (props) => {
                 case 'dotnet':
                   i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faWindows} />
                   break
-                case 'reactjs':
+                case 'react':
                   i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faReact} />
                   break
                 case 'js':
                     i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faJsSquare} />
                     break
-                case 'REST':
+                case 'rest':
                   i = <span className={isActive(lang, l) ? classes.iconActive : classes.icon}>{`{ }`}</span>
                   break
-                case 'react-redux':
+                case 'redux':
                     i = <span className={isActive(lang, l) ? 'snIcon active redux' : "snIcon redux"}></span>
                     break
-                case 'js-snclient':
+                case 'jsclient':
                       i = <span className={isActive(lang, l) ? 'snIcon active sensenet' : "snIcon sensenet"}></span>
                       break
                 default:
-                  i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faJs} />
+                  i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faJsSquare} />
                   break
               }
               return i

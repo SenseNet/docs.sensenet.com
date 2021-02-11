@@ -73,7 +73,7 @@ const Layout = ({ children, location }) => {
   };
 
   const [state, setState] = React.useState({
-    lang: typeof window != 'undefined' && localStorage.getItem('chosenLanguage') ? localStorage.getItem('chosenLanguage') : `REST`,
+    lang: typeof window != 'undefined' && localStorage.getItem('chosenLanguage') ? localStorage.getItem('chosenLanguage') : `rest`,
     toggleLanguage: toggleLanguage,
   });
 
