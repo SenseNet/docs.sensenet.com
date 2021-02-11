@@ -1837,7 +1837,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -8584,18 +8584,6 @@ gatsby-plugin-google-tagmanager@^2.11.0:
   integrity sha512-TElfBrcitk3bYphBpfFv7rI+tYQ/SwKhQMNKj3J31yoVUh/GUu2/FnRwEpvNbfGkTql87DffxR/83mN4vUCWOA==
   dependencies:
     "@babel/runtime" "^7.12.5"
-
-gatsby-plugin-gtag@^1.0.12:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.13.tgz#ffa08a728ba1cfe33090e52764d014a025a5d35a"
-  integrity sha512-Oul6O67klajrEjkkF1diD228SmyUWsAwTq/1tYq41vBwmyNiPk4dhk8K93rrNQ5d5zesSv+awBeGBa503tQqGw==
-
-gatsby-plugin-hotjar-tracking@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-hotjar-tracking/-/gatsby-plugin-hotjar-tracking-1.1.0.tgz#9dd1e1c780a68ceb4d4118a29e36984821d3f0d5"
-  integrity sha512-ec3t8cLz0FABGqnmhccCwam/SCPdDdCAw7mqTGLoq2XPM6zKGZkbArjdXUIX6NS3jmuqk9h9An8Rwr+zyb9Asw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-layout@^1.1.18:
   version "1.2.3"
