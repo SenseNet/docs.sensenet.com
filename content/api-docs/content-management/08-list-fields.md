@@ -60,3 +60,6 @@ You can delete a custom field in two different ways: treating the field as a vir
 <tab category="content-management" article="list-fields" example="removeFieldVirtualChild" />
 &nbsp;
 <tab category="content-management" article="list-fields" example="removeFieldAction" />
+&nbsp;
+&nbsp;
+<note severity="error">Keep in mind that if you copy or move content between content lists, expando fields and their values will be removed from the content. This is because the source and the target lists' field set can be very different.</note>
