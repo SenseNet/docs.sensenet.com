@@ -9,7 +9,9 @@ sensenet offers a sophisticated permission system, giving you the possibility to
 
 Permissions can be set on document level, where you can assign permissions to specific users in the system for that very content or you can also assign users to roles taking advantage of predefined permission settings to that role. In this case permissions are not directly assigned to users, which means management of individual user rights becomes a matter of simply assigning appropriate roles to specific users. This simplifies common operations, such as adding a new user, or changing a user’s department.
 
-> There are a lot of built-in permissions but there are some reserved ones that you are free to use in case you have special needs (custom permissions). You can also group these permissions for the permission editor. The related settings file is available under Setup menu / Permission.settings. On the permission editor dialog you can see the groups and permissions based on these settings.
+<note>
+There are a lot of built-in permissions but there are some reserved ones that you are free to use in case you have special needs (custom permissions). You can also group these permissions for the permission editor. The related settings file is available under Setup menu / Permission.settings. On the permission editor dialog you can see the groups and permissions based on these settings.
+</note>
 
 # How to set permissions?
 Select a content from your repository, right-click on it and select *Set permissions* from the dropdown. On the permission view you can check the permission entries (users or groups) which are inherited or set directly on the current content. Selecting an entry opens the permission editor dialog.
