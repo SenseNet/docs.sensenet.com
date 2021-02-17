@@ -8,9 +8,9 @@ In many cases developers and non-developers have to work together during a proje
 
 # Collaboration features
 
-In sensenet it is possible to make real-time editing together with your collaborators, thanks to Office Online Editing.  Versioning feature is the management of changes to documents and other information stored in a file system or repository.
-Using simple approval, contents needs to be sent for approval and can only be published when the review is finished and modification requests has been adapted.
-Created around the concept “everything is content”, in sensenet it is easy to share not only a single content (like a document) but a whole folder or a workspace with other users.
+In sensenet it is possible to make real-time editing together with your collaborators, thanks to **Office Online Editing**.  **Versioning** feature is the management of changes to documents and other information stored in a file system or repository.
+Using **simple approval**, contents needs to be sent for approval and can only be published when the review is finished and modification requests has been adapted.
+Created around the concept “everything is content”, in sensenet it is easy to **share** not only a single content (like a document) but a whole folder or a workspace with other users.
 
 # What are the advantages?
 
