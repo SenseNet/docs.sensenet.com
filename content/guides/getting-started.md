@@ -19,6 +19,7 @@ If you don't have a repo yet, you can get one [for free](https://is.sensenet.com
 You will be logged in with an **admin user** called Business Cat.
 </note>
 
+
 ![login](./img/admin-ui_logincredentials.png)
 
 # Menu and dashboard
