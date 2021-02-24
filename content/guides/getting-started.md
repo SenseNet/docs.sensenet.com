@@ -29,19 +29,13 @@ Once logged in you can see the admin ui in its whole beauty with different actio
 
 By default the sidebar has the following items:
 
-**search**: execute custom searches, build and save queries - [more about search in admin ui](/guides/search)
-
-**content**: explore and manage your content in the repository - [more about content tree in admin ui](/guides/content-management/content-tree)
-
-**users and groups**: manage users and groups, roles and identities - [more about roles and permission](/guides/roles-and-permissions)
-
-**trash**: a place for all trashed items - [more about trash in admin ui](/guides/content-management/trash)
-
-**content types**: manage content types ([more about content types in admin ui](/guides/content_types)
-
-**localization**: manage string resources - ([more about localization in admin ui](/guides/localization)
-
-**setup**: configure sensenet system ([more about setup](/guides/setup))
+- **search**: execute custom searches, build and save queries - [more about search in admin ui](/guides/search)
+- **content**: explore and manage your content in the repository - [more about content tree in admin ui](/guides/content-management/content-tree)
+- **users and groups**: manage users and groups, roles and identities - [more about roles and permission](/guides/roles-and-permissions)
+- **trash**: a place for all trashed items - [more about trash in admin ui](/guides/content-management/trash)
+- **content types**: manage content types ([more about content types in admin ui](/guides/content_types)
+- **localization**: manage string resources - ([more about localization in admin ui](/guides/localization)
+- **setup**: configure sensenet system ([more about setup](/guides/setup))
 
 <note>
 Sidebar can be expanded/collapsed by clicking the "hamburger" icon at the very top of the bar
