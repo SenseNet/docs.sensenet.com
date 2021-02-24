@@ -8,6 +8,8 @@ Folder is the base container type in sensenet and the ancestor of all other cont
 
 # Features
 
+No special features for this type. 
+
 # Parent type
 
 [GenericContent](/concepts/content-types/01-generic-content)
@@ -18,7 +20,7 @@ Folder is the base container type in sensenet and the ancestor of all other cont
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this content type.
+All the fields are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

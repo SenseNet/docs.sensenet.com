@@ -4,9 +4,13 @@ metaTitle: "sensenet - Contentlist"
 metaDescription: "sensenet Contentlist"
 ---
 
-Generic Content List type
+A Content List is a container that usually holds certain types of content - e.g. a Document Library contains files, an Image Library contains images. You can create lists for your own features and choose the content types you want to store in them freely.
 
 # Features
+
+Content Lists may have their own [local metadata fields](/api-docs/content-management/08-list-fields) that are assigned to the content items stored in that list.
+
+> Please note that is feature is under rethinking and may change in the future.
 
 # Parent type
 

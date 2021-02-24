@@ -8,6 +8,8 @@ A content type for short memos or posts on a subject.
 
 # Features
 
+No special features for this type.
+
 # Parent type
 
 ListItem
@@ -20,7 +22,7 @@ ListItem
 
 | Name         | Type        | Description                              |
 | ------------ | ----------- | ---------------------------------------- |
-| **Date**     | `DateTime`  | Set the due date of the memo.            |
+| **Date**     | `DateTime`  | The due date of the memo.            |
 | **MemoType** | `Choice`    | Type of the memo.                        |
 | **SeeAlso**  | `Reference` | A list of content this memo pertains to. |
 

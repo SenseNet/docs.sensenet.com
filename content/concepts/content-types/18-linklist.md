@@ -8,8 +8,7 @@ LinkList is a container type for storing links.
 
 # Features
 
-- LinkList is a regular conatainer for storing items, this one is created to store Links
-- LinkLists are usually created inside workspaces.
+LinkList is a regular conatainer for storing items, this one is created to store Links. LinkLists are usually created inside workspaces.
 
 # Parent type
 
@@ -21,7 +20,7 @@ ItemList
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this contetn type.
+All the fields are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

@@ -25,7 +25,7 @@ User is the base type for creating user content. Logging into sensenet could be 
 The content handler of the **User** content type handles the following:
 
 - encodes passwords when saving the content
-- sets adequate permissions to user content when new user is created (thus every user has rights to update own properties)
+- sets adequate permissions to user content when a new user is created (thus every user has rights to update their own properties)
 
 # Special fields
 

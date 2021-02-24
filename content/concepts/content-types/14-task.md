@@ -8,6 +8,8 @@ A content type for defining tasks.
 
 # Features
 
+A task is a simple content type holding the usual fields for a TODO item - a description, dates and a completion status. In sensenet tasks are stored in [task lists](/concepts/content-types/12-tasklist).
+
 # Parent type
 
 ListItem

@@ -4,9 +4,13 @@ metaTitle: "sensenet - Group"
 metaDescription: "sensenet Group"
 ---
 
-You can categorize users and groups into groups according to any criteria.
+In sensenet you use groups to organize users by their permission level. You can use groups as roles that you can assign to users. A group may have users or even other groups as members. The main use case for groups is to assign permissions to them so that their members can access certain parts of the sensenet content repository.
 
 # Features
+
+You can assign permissions to groups on content items. Use groups instead of users when defining permissions in sensenet when possible, so that you do not have to change permissions when your users change.
+
+See [User and group permissions](/concepts/user-and-permission-management) for more details.
 
 # Parent type
 
@@ -20,8 +24,8 @@ You can categorize users and groups into groups according to any criteria.
 
 | Name         | Type        | Description                                        |
 | ------------ | ----------- | -------------------------------------------------- |
-| **Members**  | `Reference` | List of users and other groups belong to the group |
-| **SyncGuid** | `ShortText` | GUID of corresponding AD object.                   |
+| **Members**  | `Reference` | List of users and other groups that belong to the group |
+| **SyncGuid** | `ShortText` | GUID of the corresponding AD object.                   |
 | **LastSync** | `DateTime`  | Date of last synchronization.                      |
 
 # Example

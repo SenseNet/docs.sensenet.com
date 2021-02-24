@@ -4,9 +4,11 @@ metaTitle: "sensenet - Article"
 metaDescription: "sensenet Article"
 ---
 
-Articles are generally used for information that is updated more frequently and often cross-referenced and categorized.
+Articles contain formatted text content. They are generally used for storing and displaying information that is updated from time to time and often cross-referenced and categorized.
 
 # Features
+
+No special features for this type. 
 
 # Parent type
 

@@ -4,9 +4,11 @@ metaTitle: "sensenet - Workspace"
 metaDescription: "sensenet Workspace"
 ---
 
-Collaborative workspace root.
+Collaborative workspace for organizing content around a project or company. A workspace usually contains one or more [content lists](/concepts/content-types/08-contentlist) - for example a [document library](/concepts/content-types/09-document-library) or [image gallery](/concepts/content-types/09-image-library) - to store contents. 
 
 # Features
+
+Workspaces can also be organized in a hierarchy and developers can access the containing workspace of any content when loading the content through the OData API.
 
 # Parent type
 

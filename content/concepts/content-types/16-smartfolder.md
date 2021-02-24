@@ -4,9 +4,11 @@ metaTitle: "sensenet - Smartfolder"
 metaDescription: "sensenet Smartfolder"
 ---
 
-Use smart folders to group information (content) by Repository query.
+Use smart folders to group content items by a repository query. You can display items as if they were all stored in the smart folder, even if they reside in different parts of the repository.
 
 # Features
+
+Smart folders do not contain actual child elements by themselves - they show virtual items instead collected on-the-fly by a content query stored in the `Query` field of the smart folder.
 
 # Parent type
 

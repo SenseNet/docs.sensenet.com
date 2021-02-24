@@ -4,9 +4,11 @@ metaTitle: "sensenet - Document Library"
 metaDescription: "sensenet Document Library"
 ---
 
-A special List for storing documents.
+A special [List](/concepts/content-types/08-contentlist) for storing documents.
 
 # Features
+
+No special features for this type. 
 
 # Parent type
 
@@ -18,7 +20,7 @@ Library
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this contetn type.
+All the fields are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

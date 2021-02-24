@@ -4,9 +4,11 @@ metaTitle: "sensenet - GenericContent"
 metaDescription: "sensenet GenericContent"
 ---
 
-This type is the base content type of the sensenet.
+This type is the root content type in sensenet. Every content type inherits their fields from it.
 
 # Features
+
+No special features for this type.
 
 # Parent type
 

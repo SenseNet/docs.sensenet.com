@@ -4,9 +4,11 @@ metaTitle: "sensenet - Image Library"
 metaDescription: "sensenet Image Library"
 ---
 
-A special List for storing images.
+A special [List](/concepts/content-types/08-contentlist) for storing images.
 
 # Features
+
+No special features for this type.
 
 # Parent type
 

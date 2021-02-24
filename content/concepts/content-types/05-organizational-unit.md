@@ -4,9 +4,11 @@ metaTitle: "sensenet - Organizational Unit"
 metaDescription: "sensenet Organizational Unit"
 ---
 
-Organizational Unit (OU) provides a way of classifying objects located in directories.
+Organizational Unit (OU) provides a way for organizing users and groups in containers. An organizational unit usually represents an office or department.
 
 # Features
+
+You can assign permissions for organizational units on content items so that users or groups in that OU can access those contents.
 
 # Parent type
 
@@ -20,7 +22,7 @@ Organizational Unit (OU) provides a way of classifying objects located in direct
 
 | Name         | Type        | Description                      |
 | ------------ | ----------- | -------------------------------- |
-| **SyncGuid** | `ShortText` | GUID of corresponding AD object. |
+| **SyncGuid** | `ShortText` | GUID of the corresponding AD object. |
 | **LastSync** | `DateTime`  | Date of last synchronization.    |
 
 # Example

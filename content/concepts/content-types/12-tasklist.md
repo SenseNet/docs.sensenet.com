@@ -4,9 +4,11 @@ metaTitle: "sensenet - Tasklist"
 metaDescription: "sensenet Tasklist"
 ---
 
-A List type for storing Tasks.
+A [List](/concepts/content-types/08-contentlist) type for storing Tasks.
 
 # Features
+
+No special features for this type.
 
 # Parent type
 
@@ -18,7 +20,7 @@ ItemList
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this content type.
+All the fields are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

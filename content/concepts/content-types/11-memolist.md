@@ -4,9 +4,11 @@ metaTitle: "sensenet - Memolist"
 metaDescription: "sensenet Memolist"
 ---
 
-A List type for storing Memos.
+A [List](/concepts/content-types/08-contentlist) type for storing Memos.
 
 # Features
+
+No special features for this type.
 
 # Parent type
 
@@ -18,7 +20,7 @@ ItemList
 
 # Special fields
 
-All the field are inherited from its ancestors, there is no special field for this contetn type.
+All the fields are inherited from its ancestors, there is no special field for this contetn type.
 
 # Example
 
