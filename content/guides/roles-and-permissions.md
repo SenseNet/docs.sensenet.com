@@ -19,7 +19,7 @@ As mentioned above, the built-in permission set can be extended with custom ones
 # Built-in roles for SNaaS users
 **Administrators**: are considered to be the most powerful users in the system. This may be true for some features but not necessarily for all content. In the default structure, administrators have access to everything, but when you build your project and add your custom content, it is perfectly fine if you hide something from the Administrators group. For example you may remove their permissions from confidential documents completely.
 
-By default only the Admin user is a member of this group, but you can add more members as you like. Please use this group for administrative permissions instead of single users.
+By default only the Admin user is a member of this group, but you can add more members as you like. Please use this group for any administrative permissions instead of adding admin rights to single users.
 
 **Editors**: We do not have any predefined permissions for this group, we consider them as a middle layer between administrators and regular users. For example you can define permissions for the global Editors group for skins and renderers or content types.
 
