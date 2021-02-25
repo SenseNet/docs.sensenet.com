@@ -14,7 +14,7 @@ There is a set of basic built-in permissions, such as See, Open, Save, Delete et
 **Save**: you can make changes in the content metadata
 
 Other permissions for removing or approving a content or managing lists and workspaces.
-as mentioned above, the built-in permission set can be extended with custom ones as well.
+As mentioned above, the built-in permission set can be extended with custom ones as well.
 
 # Built-in roles for SNaaS users
 **Administrators**: Admins are considered to be the most powerful users in the system. This may be true for some features but not necessarily for all content. In the default structure, administrators have access to everything, but when you build your project and add your custom content, it is perfectly fine if you hide something from the Administrators group. For example you may remove their permissions from confidential documents completely.
