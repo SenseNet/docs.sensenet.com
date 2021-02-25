@@ -21,7 +21,7 @@ As mentioned above, the built-in permission set can be extended with custom ones
 
 By default only the Admin user is a member of this group, but you can add more members as you like. Please use this group for administrative permissions instead of single users.
 
-**Editors**: We do not have any predefined permissions for this group by default, we consider them as a middle layer between administrators and regular users. For example you can define permissions for the global Editors group for skins and renderers or content types.
+**Editors**: We do not have any predefined permissions for this group, we consider them as a middle layer between administrators and regular users. For example you can define permissions for the global Editors group for skins and renderers or content types.
 
 **Developers**: We created this group to help developers work in the development phase of a new project. By the default installation the group is the member of the Administrators group.
 
