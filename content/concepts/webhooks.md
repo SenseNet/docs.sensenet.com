@@ -12,3 +12,5 @@ In sensenet, webhooks (available from the next releases) are an easy way to inte
 In the future we plan to extend the list of events with other options like permission changes, login events, and so on.
 
 Please let us know which events would you like to have a webhook for!
+
+[Read](https://www.sensenet.com/blog/2021-02-10-webhooks) our blogpost for additional details.
