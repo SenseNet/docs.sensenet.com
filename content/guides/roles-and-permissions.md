@@ -23,7 +23,7 @@ By default only the Admin user is a member of this group, but you can add more m
 
 **Editors**: We do not have any predefined permissions for this group, we consider them as a middle layer between administrators and regular users. For example you can define permissions for the global Editors group for skins and renderers or content types.
 
-**Developers**: We created this group to help developers work in the development phase of a new project. By the default installation the group is the member of the Administrators group.
+**Developers**: We created this group to help developers work in the development phase of a new project. By the default installation the group is the member of the Developers group.
 
 # Permission inheritance
 One of the advantages of the tree based hierarchical content structure in sensenet, is that it ensures permission inheritance, so it is enough to set a permission rule one time and it comes down in lower levels of the tree. This means, if you set a permission on a document library it will be automatically applied to sub-folders and contents. Inherited permissions cannot be changed without breaking the inheritance. You may decide to change some permissions inherited from above - e.g. an inherited Open permission for a user that you do not want to allow in a subtree. In that case you can break permission inheritance on a content. That means all the inherited permission entries will be copied to the current content then you will be able to change them (usually remove one or more). The new permission set (even if it contains less entries than the inherited) will be the one that is used in that subtree. If possible, break permissions in exceptional cases only, because it makes permission administration more complicated.
