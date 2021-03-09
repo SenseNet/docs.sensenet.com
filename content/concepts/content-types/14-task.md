@@ -40,13 +40,6 @@ ListItem
   <Description>$Ctd-Task,Description</Description>
   <Icon>FormItem</Icon>
   <Fields>
-    <Field name="Name" type="ShortText">
-      <Configuration>
-        <VisibleBrowse>Advanced</VisibleBrowse>
-        <VisibleEdit>Advanced</VisibleEdit>
-        <VisibleNew>Advanced</VisibleNew>
-      </Configuration>
-    </Field>
     <Field name="StartDate" type="DateTime">
       <DisplayName>$Ctd-Task,StartDate-DisplayName</DisplayName>
       <Configuration>

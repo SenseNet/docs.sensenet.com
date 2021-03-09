@@ -38,12 +38,6 @@ Images can also be resized on demand using the `width` or `height` url parameter
   <Icon>Image</Icon>
   <Preview>true</Preview>
   <Fields>
-    <Field name="Name" type="ShortText">
-      <DisplayName>$Ctd-Image,Name-DisplayName</DisplayName>
-      <Configuration>
-        <FieldIndex>0</FieldIndex>
-      </Configuration>
-    </Field>
     <Field name="DateTaken" type="DateTime">
       <DisplayName>$Ctd-Image,DateTaken-DisplayName</DisplayName>
       <Description>$Ctd-Image,DateTaken-Description</Description>
@@ -59,20 +53,6 @@ Images can also be resized on demand using the `width` or `height` url parameter
         <FieldIndex>2</FieldIndex>
       </Configuration>
     </Field>
-    <Field name="Index" type="Integer">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Version" type="Version">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
     <Field name="Width" type="Integer">
       <DisplayName>$Ctd-Image,Width-DisplayName</DisplayName>
       <Configuration>
@@ -86,13 +66,6 @@ Images can also be resized on demand using the `width` or `height` url parameter
       <DisplayName>$Ctd-Image,Height-DisplayName</DisplayName>
       <Configuration>
         <ReadOnly>true</ReadOnly>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
         <VisibleBrowse>Hide</VisibleBrowse>
         <VisibleEdit>Hide</VisibleEdit>
         <VisibleNew>Hide</VisibleNew>

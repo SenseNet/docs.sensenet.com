@@ -22,7 +22,7 @@ ListItem
 
 | Name         | Type        | Description                              |
 | ------------ | ----------- | ---------------------------------------- |
-| **Date**     | `DateTime`  | The due date of the memo.            |
+| **Date**     | `DateTime`  | The due date of the memo.                |
 | **MemoType** | `Choice`    | Type of the memo.                        |
 | **SeeAlso**  | `Reference` | A list of content this memo pertains to. |
 
@@ -35,10 +35,6 @@ ListItem
   <Icon>Document</Icon>
   <AllowIncrementalNaming>true</AllowIncrementalNaming>
   <Fields>
-    <Field name="Description" type="LongText">
-      <DisplayName>$Ctd-Memo,Description-DisplayName</DisplayName>
-      <Description>$Ctd-Memo,Description-Description</Description>
-    </Field>
     <Field name="Date" type="DateTime">
       <DisplayName>$Ctd-Memo,Date-DisplayName</DisplayName>
       <Description>$Ctd-Memo,Date-Description</Description>

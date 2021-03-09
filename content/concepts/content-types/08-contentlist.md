@@ -47,9 +47,6 @@ Content Lists may have their own [local metadata fields](/api-docs/content-manag
   <Description>$Ctd-ContentList,Description</Description>
   <Icon>ContentList</Icon>
   <Fields>
-    <Field name="DisplayName" type="ShortText">
-      <DisplayName>$Ctd-ContentList,DisplayName-DisplayName</DisplayName>
-    </Field>
     <Field name="ContentListDefinition" type="LongText">
       <DisplayName>$Ctd-ContentList,ContentListDefinition-DisplayName</DisplayName>
       <Description>$Ctd-ContentList,ContentListDefinition-Description</Description>
@@ -197,27 +194,6 @@ Content Lists may have their own [local metadata fields](/api-docs/content-manag
       </Configuration>
     </Field>
     <!-- Exchange integration end -->
-    <Field name="AllowedChildTypes" type="AllowedChildTypes">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="InheritableVersioningMode" type="InheritableVersioningMode">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="InheritableApprovingMode" type="InheritableApprovingMode">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
     <Field name="OwnerWhenVisitor" type="Reference">
       <DisplayName>$Ctd-ContentList,OwnerWhenVisitor-DisplayName</DisplayName>
       <Description>$Ctd-ContentList,OwnerWhenVisitor-Description</Description>

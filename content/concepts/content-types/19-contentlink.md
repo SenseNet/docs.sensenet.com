@@ -41,13 +41,6 @@ A ContentLink is a mirror of another content. It propagates most of the fields o
         <AllowMultiple>false</AllowMultiple>
       </Configuration>
     </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
-        <VisibleNew>Hide</VisibleNew>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleBrowse>Hide</VisibleBrowse>
-      </Configuration>
-    </Field>
   </Fields>
 </ContentType>
 ```

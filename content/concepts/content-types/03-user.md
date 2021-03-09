@@ -32,6 +32,10 @@ The content handler of the **User** content type handles the following:
 | Name                   | Type        | Description                                                                                                                          |
 | ---------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **Enabled**            | `Boolean`   | Adjusts whether the user can login to the system or not.                                                                             |
+| **Domain**             | `ShortText` | The domain of the user.                                                                                                              |
+| **SyncGuid**           | `ShortText` | GUID of corresponding AD object.                                                                                                     |
+| **LastSync**           | `DateTime`  | Date of last synchronization.                                                                                                        |
+| **Captcha**            | `Captcha`   | Captcha text entered by the user.                                                                                                    |
 | **LoginName**          | `ShortText` | The name that the user has to type in on login forms (in some cases along with the domain name). It has to be unique under a domain. |
 | **FullName**           | `ShortText` | Full name of the user (e.g. John Smith).                                                                                             |
 | **Email**              | `ShortText` | The e-mail of the user.                                                                                                              |
@@ -54,6 +58,7 @@ The content handler of the **User** content type handles the following:
 | **Education**          | `LongText`  | List of educations - e.g. high school, university.                                                                                   |
 | **ProfilePath**        | `Reference` | Path of the user's personal workspace.                                                                                               |
 | **FollowedWorkspaces** | `Reference` | List of workspaces followed by the user.                                                                                             |
+| **LastLoggedOut**      | `DateTime`  | Date and time of when the user logged out from all devices.                                                                          |
 
 # Example
 
@@ -66,19 +71,6 @@ The content handler of the **User** content type handles the following:
     Image
   </AllowedChildTypes>
   <Fields>
-    <Field name="Name" type="ShortText">
-      <DisplayName>$Ctd-User,Name-DisplayName</DisplayName>
-      <Description>$Ctd-User,Name-Description</Description>
-      <Configuration>
-        <FieldIndex>230</FieldIndex>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-        <Compulsory>true</Compulsory>
-        <MaxLength>100</MaxLength>
-        <ControlHint>sn:ShortText</ControlHint>
-      </Configuration>
-    </Field>
     <Field name="LoginName" type="ShortText">
       <DisplayName>$Ctd-User,LoginName-DisplayName</DisplayName>
       <Description>$Ctd-User,LoginName-Description</Description>
@@ -89,13 +81,6 @@ The content handler of the **User** content type handles the following:
         <VisibleNew>Show</VisibleNew>
         <Compulsory>true</Compulsory>
         <MaxLength>100</MaxLength>
-      </Configuration>
-    </Field>
-    <Field name="DisplayName" type="ShortText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
       </Configuration>
     </Field>
     <Field name="JobTitle" type="ShortText">
@@ -236,13 +221,6 @@ The content handler of the **User** content type handles the following:
         </SelectionRoot>
       </Configuration>
     </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
     <Field name="Department" type="ShortText">
       <DisplayName>$Ctd-User,Department-DisplayName</DisplayName>
       <Description>$Ctd-User,Department-Description</Description>
@@ -275,33 +253,6 @@ The content handler of the **User** content type handles the following:
         <FieldIndex>140</FieldIndex>
         <Regex>(^\d*([-\s\+\(\)]\d*)*$)?</Regex>
         <Visible>true</Visible>
-      </Configuration>
-    </Field>
-    <Field name="TrashDisabled" type="Boolean">
-      <DisplayName>$Ctd-User,TrashDisabled-DisplayName</DisplayName>
-      <Description>$Ctd-User,TrashDisabled-Description</Description>
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-        <DefaultValue>false</DefaultValue>
-      </Configuration>
-    </Field>
-    <Field name="VersioningMode" type="VersioningMode">
-      <DisplayName>$Ctd-User,VersioningMode-DisplayName</DisplayName>
-      <Description>$Ctd-User,VersioningMode-Description</Description>
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-        <AllowMultiple>false</AllowMultiple>
-        <AllowExtraValue>false</AllowExtraValue>
-        <Options>
-          <Option value="0">$Ctd-User,VersioningMode-0</Option>
-          <Option selected="true" value="1">$Ctd-User,VersioningMode-1</Option>
-          <Option value="2">$Ctd-User,VersioningMode-2</Option>
-          <Option value="3">$Ctd-User,VersioningMode-3</Option>
-        </Options>
       </Configuration>
     </Field>
     <Field name="Gender" type="Choice">

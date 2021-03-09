@@ -8,7 +8,7 @@ Articles contain formatted text content. They are generally used for storing and
 
 # Features
 
-No special features for this type. 
+No special features for this type.
 
 # Parent type
 
@@ -20,15 +20,17 @@ WebContent
 
 # Special fields
 
-| Name         | Type        | Description                |
-| ------------ | ----------- | -------------------------- |
-| **Subtitle** | `ShortText` | Subtitle of the article    |
-| **Author**   | `ShortText` | Author of the article      |
-| **Lead**     | `LongText`  | Lead or abstract           |
-| **Body**     | `LongText`  | Main content section       |
-| **Pinned**   | `Boolean`   | Is the article pinned?     |
-| **Keywords** | `LongText`  | Keywords                   |
-| **Image**    | `Image`     | Main image for the article |
+| Name          | Type        | Description                |
+| ------------- | ----------- | -------------------------- |
+| **Subtitle**  | `ShortText` | Subtitle of the article    |
+| **Author**    | `ShortText` | Author of the article      |
+| **Lead**      | `LongText`  | Lead or abstract           |
+| **Body**      | `LongText`  | Main content section       |
+| **Pinned**    | `Boolean`   | Is the article pinned?     |
+| **Keywords**  | `LongText`  | Keywords                   |
+| **ImageRef**  | `Reference` |                            |
+| **ImageData** | `Binary`    |                            |
+| **Image**     | `Image`     | Main image for the article |
 
 # Example
 
@@ -38,20 +40,6 @@ WebContent
   <Description>$Ctd-Article,Description</Description>
   <Icon>WebContent</Icon>
   <Fields>
-    <Field name="DisplayName" type="ShortText">
-      <DisplayName>$Ctd-Article,DisplayName-DisplayName</DisplayName>
-      <Description>$Ctd-Article,DisplayName-Description</Description>
-      <Configuration>
-        <FieldIndex>0</FieldIndex>
-      </Configuration>
-    </Field>
-    <Field name="Name" type="ShortText">
-      <DisplayName>$Ctd-GenericContent,Name-DisplayName</DisplayName>
-      <Description>$Ctd-GenericContent,Name-Description</Description>
-      <Configuration>
-        <FieldIndex>1</FieldIndex>
-      </Configuration>
-    </Field>
     <Field name="Subtitle" type="ShortText">
       <DisplayName>$Ctd-Article,Subtitle-DisplayName</DisplayName>
       <Description>$Ctd-Article,Subtitle-Description</Description>
@@ -133,34 +121,6 @@ WebContent
         <VisibleNew>Show</VisibleNew>
         <ControlHint>sn:Image</ControlHint>
         <FieldIndex>8</FieldIndex>
-      </Configuration>
-    </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Version" type="Version">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="IsTaggable" type="Boolean">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Tags" type="LongText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
       </Configuration>
     </Field>
   </Fields>

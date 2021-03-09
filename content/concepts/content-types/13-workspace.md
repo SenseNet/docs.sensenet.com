@@ -4,7 +4,7 @@ metaTitle: "sensenet - Workspace"
 metaDescription: "sensenet Workspace"
 ---
 
-Collaborative workspace for organizing content around a project or company. A workspace usually contains one or more [content lists](/concepts/content-types/08-contentlist) - for example a [document library](/concepts/content-types/09-document-library) or [image gallery](/concepts/content-types/09-image-library) - to store contents. 
+Collaborative workspace for organizing content around a project or company. A workspace usually contains one or more [content lists](/concepts/content-types/08-contentlist) - for example a [document library](/concepts/content-types/09-document-library) or [image gallery](/concepts/content-types/09-image-library) - to store contents.
 
 # Features
 
@@ -39,33 +39,6 @@ Workspaces can also be organized in a hierarchy and developers can access the co
   <Icon>Workspace</Icon>
   <AllowedChildTypes>Page,Folder,DocumentLibrary,ImageLibrary,EventList,MemoList,LinkList,TaskList,CustomList,Workspace</AllowedChildTypes>
   <Fields>
-    <Field name="Name" type="ShortText">
-      <DisplayName>$Ctd-Workspace,Name-DisplayName</DisplayName>
-      <Description>$Ctd-Workspace,Name-Description</Description>
-      <Configuration>
-        <FieldIndex>60</FieldIndex>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-        <Compulsory>true</Compulsory>
-        <MaxLength>20</MaxLength>
-        <ControlHint>sn:ShortText</ControlHint>
-      </Configuration>
-    </Field>
-    <Field name="DisplayName" type="ShortText">
-      <DisplayName>$Ctd-Workspace,DisplayName-DisplayName</DisplayName>
-      <Configuration>
-        <FieldIndex>40</FieldIndex>
-      </Configuration>
-    </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
-        <FieldIndex>10</FieldIndex>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
     <Field name="Manager" type="Reference">
       <DisplayName>$Ctd-Workspace,Manager-DisplayName</DisplayName>
       <Description>$Ctd-Workspace,Manager-Description</Description>
@@ -141,44 +114,6 @@ Workspaces can also be organized in a hierarchy and developers can access the co
         <VisibleBrowse>Hide</VisibleBrowse>
         <VisibleEdit>Hide</VisibleEdit>
         <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="AllowedChildTypes" type="AllowedChildTypes">
-      <Configuration>
-        <FieldIndex>50</FieldIndex>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="InheritableVersioningMode" type="InheritableVersioningMode">
-      <Description>$Ctd-Workspace,WorkspaceInheritableVersioningMode-Description</Description>
-      <Configuration>
-        <FieldIndex>30</FieldIndex>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="InheritableApprovingMode" type="InheritableApprovingMode">
-      <Description>$Ctd-Workspace,WorkspaceInheritableApprovingMode-Description</Description>
-      <Configuration>
-        <FieldIndex>20</FieldIndex>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Path" type="ShortText">
-      <DisplayName>$Ctd-Workspace,Path-DisplayName</DisplayName>
-      <Description>$Ctd-Workspace,Path-Description</Description>
-      <Configuration>
-        <FieldIndex>11</FieldIndex>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-        <AllowMultiple>false</AllowMultiple>
-        <ControlHint>sn:Path</ControlHint>
       </Configuration>
     </Field>
   </Fields>

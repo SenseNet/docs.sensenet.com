@@ -30,11 +30,6 @@ All the fields are inherited from its ancestors, there is no special field for t
   <Description>$Ctd-LinkList,Description</Description>
   <Icon>ContentList</Icon>
   <AllowedChildTypes>Link</AllowedChildTypes>
-  <Fields>
-    <Field name="DisplayName" type="ShortText">
-      <DisplayName>$Ctd-LinkList,DisplayName-DisplayName</DisplayName>
-      <Description>$Ctd-LinkList,DisplayName-Description</Description>
-    </Field>
-  </Fields>
+  <Fields></Fields>
 </ContentType>
 ```

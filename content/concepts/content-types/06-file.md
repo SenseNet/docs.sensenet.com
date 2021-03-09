@@ -30,12 +30,16 @@ Files can be created by **uploading** them on the admin user interface or import
 
 # Special fields
 
-| Name          | Type        | Description                                                                                       |
-| ------------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| **Binary**    | `Binary`    | Holds the file data itself. Additional Binary fields may be added to your custom CTD if required. |
-| **Size**      | `Number`    | File size.                                                                                        |
-| **PageCount** | `Integer`   | Number of preview pages if available.                                                             |
-| **Watermark** | `ShortText` | Optional watermark text to display in document viewer.                                            |
+| Name               | Type        | Description                                                                                                                                 |
+| ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Binary**         | `Binary`    | Holds the file data itself. Additional Binary fields may be added to your custom CTD if required.                                           |
+| **Size**           | `Number`    | File size.                                                                                                                                  |
+| **FullSize**       | `Number`    | The total amount of space the Document occupies, counting all versions.                                                                     |
+| **MimeType**       | `ShortText` |                                                                                                                                             |
+| **Shapes**         | `LongText`  | Stores data used for document preview (redaction, highlight, annotation shapes). This value can be modified by the document preview plugin. |
+| **PageAttributes** | `LongText`  | Stores data used for document preview (for example page rotation). This value can be modified by the document preview plugin.               |
+| **PageCount**      | `Integer`   | Number of preview pages if available.                                                                                                       |
+| **Watermark**      | `ShortText` | Optional watermark text to display in document viewer.                                                                                      |
 
 # Example
 
@@ -54,42 +58,6 @@ Files can be created by **uploading** them on the admin user interface or import
       </Indexing>
       <Configuration>
         <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Name" type="ShortText">
-      <DisplayName>$Ctd-File,Name-DisplayName</DisplayName>
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Show</VisibleEdit>
-        <VisibleNew>Show</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="DisplayName" type="ShortText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="ModifiedBy" type="Reference">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="ModificationDate" type="DateTime">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Locked" type="Boolean">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
         <VisibleEdit>Hide</VisibleEdit>
         <VisibleNew>Hide</VisibleNew>
       </Configuration>
@@ -131,20 +99,6 @@ Files can be created by **uploading** them on the admin user interface or import
         <VisibleEdit>Hide</VisibleEdit>
         <VisibleNew>Hide</VisibleNew>
         <ReadOnly>true</ReadOnly>
-      </Configuration>
-    </Field>
-    <Field name="Version" type="Version">
-      <Configuration>
-        <VisibleBrowse>Show</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
-      </Configuration>
-    </Field>
-    <Field name="Description" type="LongText">
-      <Configuration>
-        <VisibleBrowse>Hide</VisibleBrowse>
-        <VisibleEdit>Hide</VisibleEdit>
-        <VisibleNew>Hide</VisibleNew>
       </Configuration>
     </Field>
     <Field name="Shapes" type="LongText">
