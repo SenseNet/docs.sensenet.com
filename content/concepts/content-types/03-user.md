@@ -4,12 +4,12 @@ metaTitle: "sensenet - User"
 metaDescription: "sensenet User"
 ---
 
-User is the base type for creating user content. Logging into sensenet could be done with credentials that belong to specific user content.
+User is the base type for creating user content. Logging into sensenet is possible using the credentials that belong to a user content.
 
 # Features
 
 - User is the base content for defining users who can log into the repository
-- password is never persisted to repository, only the hash of the password which exposes no security threats
+- the password is never persisted to the repository, only the hash of the password which is a lot more secure
 - users are created under a specific Domain (/Root/IMS/Public)
 - users may be organized under [OrganizationalUnits](/concepts/content-types/05-organizational-unit) and referenced in [Groups](/concepts/content-types/04-group) to model organizational hierarchy and to define custom permission levels and roles in the repository
 - User profile: if this feature is enabled, when a new user is created a dedicated profile workspace is also created for them to store their documents, tasks and memos.
