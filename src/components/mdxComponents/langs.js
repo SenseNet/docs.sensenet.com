@@ -16,7 +16,7 @@ const langs = [
     title: 'JS client'
   },
   {
-    name: 'react',
+    name: 'reactjs',
     title: 'React'
   },
   {
