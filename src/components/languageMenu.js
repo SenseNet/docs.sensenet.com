@@ -81,10 +81,10 @@ const LanguageMenu = (props) => {
                 case 'rest':
                   i = <span className={isActive(lang, l) ? classes.iconActive : classes.icon}>{`{ }`}</span>
                   break
-                case 'redux':
+                case 'react-redux':
                     i = <span className={isActive(lang, l) ? 'snIcon active redux' : "snIcon redux"}></span>
                     break
-                case 'jsclient':
+                case 'js-snclient':
                       i = <span className={isActive(lang, l) ? 'snIcon active sensenet' : "snIcon sensenet"}></span>
                       break
                 default:
