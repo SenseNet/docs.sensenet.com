@@ -110,9 +110,12 @@ const Layout = ({ children, location }) => {
     </Wrapper>
   </MDXProvider>
   }
-  else if(location.pathname.includes('rest-api-references')) {
+  else if(location.pathname.includes('restapi')) {
     container = <MDXProvider components={mdxComponents}>
     <Wrapper>
+    <LeftSideBarWidth className={'hiddenMobile leftSideBar restapi'}>
+          <Sidebar location={location} />
+        </LeftSideBarWidth>
       <Content>
         <MaxWidth>{children}</MaxWidth>
       </Content>

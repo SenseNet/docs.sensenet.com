@@ -774,6 +774,10 @@ pre {
   box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
 }
 
+.leftSideBar.restapi {
+  width: 420px;
+}
+
 /* tables.css */
 table {
 padding: 0; }
