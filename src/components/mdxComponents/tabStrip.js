@@ -145,7 +145,7 @@ export default TabStrip
 const sortNodes = (nodes) => {
   const a = []
   nodes.map(node => {
-    const index = langs.findIndex(lang => lang.name === node.name)
+    const index = langs.findIndex(lang => lang.name.toLowerCase() === node.name.toLowerCase())
     a[index] = node
   })
   return a

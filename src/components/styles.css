@@ -988,6 +988,22 @@ img {
   text-align: left;
 }
 
+.SearchContainer form {
+width: 90%;
+}
+
+.whatsNew {
+  cursor: pointer;
+}
+
+.whatsNew .divider {
+display: inline-block;
+}
+
+.whatsNew .notificationIcon{
+  cursor: pointer;
+}
+
 .BorderedContainer {
   width: 100%;
   border: none;

@@ -7,6 +7,7 @@ import config from '../../config.js';
 import { faGitter, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from '../components/SearchBar';
+import Notifications from '@material-ui/icons/Notifications';
 
 import Loadable from 'react-loadable';
 import LoadingProvider from './mdxComponents/loading';
@@ -121,6 +122,10 @@ const Header = ({location}) => (
                   }
                 })}
               </ul>
+            </div>
+            <div className={'hiddenMobile whatsNew'} id="olvy-trigger">
+                <div className="divider"></div>
+                <Notifications />
             </div>
           </nav>
         </div>

@@ -12,15 +12,15 @@ const langs = [
     title: 'JavaScript'
   },
   {
-    name: 'jsclient',
+    name: 'js-snclient',
     title: 'JS client'
   },
   {
-    name: 'react',
+    name: 'reactjs',
     title: 'React'
   },
   {
-    name: 'redux',
+    name: 'react-redux',
     title: 'Redux'
   }
 ]
