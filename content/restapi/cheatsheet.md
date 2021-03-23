@@ -1,0 +1,117 @@
+---
+title: Api references
+metaTitle: "sensenet API - Api references"
+metaDescription: "Api references"
+---
+
+## CHEAT SHEET (91 operations)
+
+- 
+  - GET  [CreateTestFiles](/restapi/createtestfiles)(`int` count, `long` size) : `string`
+  - GET  [DeleteTestFolder](/restapi/deletetestfolder)(`string` name) : `string`
+  - GET  [GetDatabaseUsage](/restapi/getdatabaseusage)(`bool` force) : `DatabaseUsage`
+- AdSync
+  - POST [Ad2PortalSyncFinalizer](/restapi/ad2portalsyncfinalizer)(`SnTaskResult` result) : `void`
+- Authentication
+  - GET  [GetClientRequestParameters](/restapi/getclientrequestparameters)(`string` clientType) : `object`
+  - POST [ValidateCredentials](/restapi/validatecredentials)(`string` userName, `string` password) : `object`
+- Binary
+  - POST [FinalizeBlobUpload](/restapi/finalizeblobupload)(`string` token, `long` fullSize, `string` fieldName, `string` fileName) : `string`
+  - POST [FinalizeContent](/restapi/finalizecontent)() : `string`
+  - GET  [GetBinaryToken](/restapi/getbinarytoken)(`string` fieldName) : `string`
+  - POST [StartBlobUpload](/restapi/startblobupload)(`long` fullSize, `string` fieldName) : `string`
+  - POST [StartBlobUploadToParent](/restapi/startblobuploadtoparent)(`string` name, `string` contentType, `long` fullSize, `string` fieldName) : `string`
+  - POST [Upload](/restapi/upload)(`long?` FileLength, `string` ContentType, `string` PropertyName, `string` FileText, `bool?` Overwrite, `int?` ContentId, `string` FileName, `string` ChunkToken, `bool?` UseChunk, `string` create) : `object`
+- Collaboration
+  - POST [Approve](/restapi/approve)() : `Content`
+  - POST [CheckIn](/restapi/checkin)(`string` checkInComments) : `Content`
+  - POST [CheckOut](/restapi/checkout)() : `Content`
+  - POST [ForceUndoCheckOut](/restapi/forceundocheckout)() : `Content`
+  - POST [Publish](/restapi/publish)() : `Content`
+  - POST [Reject](/restapi/reject)(`string` rejectReason) : `Content`
+  - POST [RestoreVersion](/restapi/restoreversion)(`string` version) : `Content`
+  - POST [UndoCheckOut](/restapi/undocheckout)() : `Content`
+- Content and Schema
+  - GET  [GetMetadata](/restapi/getmetadata)() : `string`
+  - GET  [GetNameFromDisplayName](/restapi/getnamefromdisplayname)(`string` displayName) : `string`
+  - GET  [GetSchema](/restapi/getschema)(`string` contentTypeName) : `object`
+- Content Management
+  - POST [CopyBatch](/restapi/copybatch)(`string` targetPath, `object[]` paths) : `BatchActionResponse`
+  - POST [Delete](/restapi/delete)(`bool` permanent) : `object`
+  - POST [DeleteBatch](/restapi/deletebatch)(`bool` permanent, `object[]` paths) : `BatchActionResponse`
+  - POST [MoveBatch](/restapi/movebatch)(`string` targetPath, `object[]` paths) : `BatchActionResponse`
+  - POST [Restore](/restapi/restore)(`string` destination, `bool?` newname) : void
+- Content Types
+  - POST [AddAllowedChildTypes](/restapi/addallowedchildtypes)(`string[]` contentTypes) : `string`
+  - GET  [CheckAllowedChildTypesOfFolders](/restapi/checkallowedchildtypesoffolders)() : `Dictionary<string, List<string>>`
+  - GET  [GetAllContentTypes](/restapi/getallcontenttypes)() : `Content[]`
+  - GET  [GetAllowedChildTypesFromCTD](/restapi/getallowedchildtypesfromctd)() : `Content[]`
+  - POST [RemoveAllowedChildTypes](/restapi/removeallowedchildtypes)(`string[]` contentTypes) : `string`
+- Indexing
+  - POST [BackupIndex](/restapi/backupindex)(`string` target) : `BackupResponse`
+  - POST [CancelIndexBackup](/restapi/cancelindexbackup)() : `BackupResponse`
+  - GET  [CheckIndexIntegrity](/restapi/checkindexintegrity)(`bool` recurse) : `object`
+  - GET  [GetRecentIndexingActivities](/restapi/getrecentindexingactivities)() : `IndexingActivityHistory`
+  - GET  [QueryIndexBackup](/restapi/queryindexbackup)() : `BackupResponse`
+  - POST [RebuildIndex](/restapi/rebuildindex)(`bool` recursive, `IndexRebuildLevel` rebuildLevel) : `void`
+  - POST [RebuildIndexSubtree](/restapi/rebuildindexsubtree)() : `void`
+  - POST [RefreshIndexSubtree](/restapi/refreshindexsubtree)() : `void`
+  - POST [ResetRecentIndexingActivities](/restapi/resetrecentindexingactivities)() : `IndexingActivityHistory`
+- Office Online Editing
+  - GET  [GetWopiData](/restapi/getwopidata)(`string` action) : `object`
+  - GET  [WopiOpenEdit](/restapi/wopiopenedit)() : `object`
+  - GET  [WopiOpenView](/restapi/wopiopenview)() : `object`
+- Other
+  - GET  [GetVersionInfo](/restapi/getversioninfo)() : `RepositoryVersionInfo`
+- Permissions
+  - GET  [GetAcl](/restapi/getacl)() : `object`
+  - GET  [GetAllowedUsers](/restapi/getallowedusers)(`string[]` permissions) : `Content[]`
+  - GET  [GetChildrenPermissionInfo](/restapi/getchildrenpermissioninfo)(`string` identity) : `object`
+  - GET  [GetPermissionInfo](/restapi/getpermissioninfo)(`string` identity) : `object`
+  - GET  [GetPermissionOverview](/restapi/getpermissionoverview)(`string` identity) : `object`
+  - GET  [GetPermissions](/restapi/getpermissions)(`string` identity) : `object`
+  - GET  [GetRelatedIdentities](/restapi/getrelatedidentities)(`string` permissionLevel, `string` identityKind) : `Content[]`
+  - GET  [GetRelatedIdentitiesByPermissions](/restapi/getrelatedidentitiesbypermissions)(`string` permissionLevel, `string` identityKind, `string[]` permissions) : `Content[]`
+  - GET  [GetRelatedItems](/restapi/getrelateditems)(`string` permissionLevel, `bool` explicitOnly, `string` memberPath, `string[]` permissions) : `Content[]`
+  - GET  [GetRelatedItemsOneLevel](/restapi/getrelateditemsonelevel)(`string` permissionLevel, `string` memberPath, `string[]` permissions) : `Content[]`
+  - GET  [GetRelatedPermissions](/restapi/getrelatedpermissions)(`string` permissionLevel, `bool` explicitOnly, `string` memberPath, `string[]` includedTypes) : `IDictionary<PermissionType, int>`
+  - GET  [HasPermission](/restapi/haspermission)(string[] permissions, `string` user) : `bool`
+  - POST [SetPermissions](/restapi/setpermissions)(`string` inheritance) : `Content`
+  - POST [SetPermissions](/restapi/setpermissions2)(`SetPermissionsRequest` r) : `Content`
+  - POST [TakeLockOver](/restapi/takelockover)(`string` user) : `string`
+  - POST [TakeOwnership](/restapi/takeownership)(`string` userOrGroup) : `void`
+- Preview
+  - POST [CheckPreviews](/restapi/checkpreviews)(`bool` generateMissing) : `object`
+  - POST [DocumentPreviewFinalizer](/restapi/documentpreviewfinalizer)(`SnTaskResult` result) : `void`
+  - GET  [GetExistingPreviewImages](/restapi/getexistingpreviewimages)() : `object[]`
+  - POST [GetPageCount](/restapi/getpagecount)() : `int`
+  - GET  [GetPreviewImages](/restapi/getpreviewimages)() : `Content[]`
+  - POST [GetPreviewsFolder](/restapi/getpreviewsfolder)(`bool` empty) : `object`
+  - GET  [PreviewAvailable](/restapi/previewavailable)(`int` page) : `object`
+  - POST [RegeneratePreviews](/restapi/regeneratepreviews)() : `object`
+  - POST [SetInitialPreviewProperties](/restapi/setinitialpreviewproperties)() : `void`
+  - POST [SetPageCount](/restapi/setpagecount)(`int` pageCount) : `void`
+  - POST [SetPreviewStatus](/restapi/setpreviewstatus)(`PreviewStatus` status) : `void`
+- Queries
+  - GET  [GetQueries](/restapi/getqueries)(`bool` onlyPublic) : `Content[]`
+  - POST [SaveQuery](/restapi/savequery)(`string` query, `string` displayName, `string` queryType, `string` uiFilters) : `object`
+- Security
+  - GET  [CheckSecurityConsistency](/restapi/checksecurityconsistency)() : `SecurityConsistencyResult`
+  - POST [CopyExplicitEntriesOfEveryoneToVisitor](/restapi/copyexplicitentriesofeveryonetovisitor)(`string[]` exceptList) : `string`
+  - POST [Decrypt](/restapi/decrypt)(`string` text) : `string`
+  - POST [Encrypt](/restapi/encrypt)(`string` text) : `string`
+  - GET  [GetRecentSecurityActivities](/restapi/getrecentsecurityactivities)() : `SenseNet.Security.Messaging.SecurityActivityHistory`
+  - GET  [MissingExplicitEntriesOfVisitorComparedToEveryone](/restapi/missingexplicitentriesofvisitorcomparedtoeveryone)() : `string[]`
+  - GET  [ProtectedPaths](/restapi/protectedpaths)() : `string[]`
+- Sharing
+  - GET  [GetSharing](/restapi/getsharing)() : `object`
+  - POST [RemoveSharing](/restapi/removesharing)(`string` id) : `object`
+  - POST [Share](/restapi/share)(`string` token, `SharingLevel` level, `SharingMode` mode, `bool` sendNotification) : `object`
+- Tools
+  - GET  [Ancestors](/restapi/ancestors)() : `Content[]`
+- Users and Groups
+  - POST [AddMembers](/restapi/addmembers)(`int[]` contentIds) : `object`
+  - POST [CreateLocalUser](/restapi/createlocaluser)(`string` loginName, `string` password, `string` email) : `Content`
+  - POST [CreateUserByProvider](/restapi/createuserbyprovider)(`string` provider, `string` userId, `string` claims) : `Content`
+  - GET  [GetParentGroups](/restapi/getparentgroups)(`bool` directOnly) : `Content[]`
+  - POST [RemoveMembers](/restapi/removemembers)(`int[]` contentIds) : `object`
