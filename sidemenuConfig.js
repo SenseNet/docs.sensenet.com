@@ -40,6 +40,7 @@ const sideMenuConfig = {
       "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
+      "/tutorials/webhooks"
     ],
     "collapsedNav": [
       "/tutorials/authentication",
