@@ -3,14 +3,44 @@ title: "Webhooks"
 metaTitle: "sensenet - Webhooks"
 metaDescription: "sensenet Webhooks"
 ---
-Handling events is one of the most important things we need when building an enterprise application.
 
-In a service-oriented environment we can do this with webhooks. They are basically HTTP requests made by the service and a corresponding handler method on the other side. Developers can then do what their project requires in case of these events - for example archiving a document, starting a build in the cloud or sending a notification email.
+WebHooks are essential tools in a modern enterprise development scenario, when we work in an environment where many microservices have to connect to each other. WebHooks let developers react to **events** that may happen inside a service - but without having to execute code directly inside that service.
 
-In sensenet, webhooks (available from the next releases) are an easy way to integrate our service with another. They are usually triggered by content changes. You can register a webhook for the usual content operations - for example when somebody uploads a file or changes an article.
+# What is a WebHook?
+A [webhook](https://en.wikipedia.org/wiki/Webhook) is an event and a connected handler that can be anywhere in the world - e.g. a local datacenter, in the cloud or a custom server - as long as it is accessible through an HTTP request.
 
-In the future we plan to extend the list of events with other options like permission changes, login events, and so on.
+When an event happens, the service - in our case sensenet - calls the configured callback using an HTTP request. It is the responsibility of the developer of the target service to handle the request.
 
-Please let us know which events would you like to have a webhook for!
+The possibilities are countless, because developers may write their webhook handler using their preferred technology or integrating 3rd party services like [Netlify](https://www.netlify.com) or [Slack](https://slack.com/intl/en-hu).
 
-[Read](https://www.sensenet.com/blog/2021-02-10-webhooks) our blogpost for additional details.
+# WebHooks in sensenet
+WebHooks are triggered by **content changes**. For example somebody uploads a new document or an editor publishes an article. To handle these events developers have the possibility to **subscribe** to them.
+
+<note severity="info">In the future we may add additional events for non-content scenarios e.g. logging in or changing permissions.</note>
+
+## Subscribing to WebHooks
+Developers can subscribe to WebHooks on the admin UI of sensenet. There is a flexible interface for defining the **events** developers want to react to and the specific **content types** and **containers** they want to monitor.
+
+![WebHook subscription](../concepts/img/webhook-subscription.png)
+
+To learn more about how WebHooks work in sensenet and how can you subscribe to them, please [visit this article](/tutorials/webhooks).
+
+## Handling the WebHook
+When a WebHook is triggered it calls the URL defined in the subscription. The payload (data sent in the request) may look like the following example:
+
+```json
+{
+    "nodeId": 123,
+    "path": "/Root/Content/MyContent",
+    "name": "MyContent",
+    "displayName": "My Content",
+    "eventName": "Modify",
+    "subscriptionId": 456,
+    "sentTime": "2021-02-18 06:55:00"
+}
+```
+
+Using the data above the handler can make additional requests to the sensenet repository service, perform operations like archiving a document, sending notifications or calling another service that triggers a workflow.
+
+## Diagnostics
+In the future we will provide information about the success rates of WebHook requests and the health of the target service.
