@@ -11,11 +11,10 @@ The Command Palette is a flexible tool that allows you to execute operations lik
 You can navigate between the pages by simply typing a name of a page or the page description.
 The available pages are:
 
-- Personal Settings
 - Content
 - Search
-- Event log
-- Help
+- Saved queries
+- Events
 
 You can open a page by simply clicking on it.
 
