@@ -4,94 +4,97 @@ metaTitle: "sensenet API - Api references"
 metaDescription: "Api references"
 ---
 
-## Operations (88)
+## Operations (91)
 | Category | Operation | Method |
 | -------- | --------- | ------ |
-| [AdSync](/restapi/adsync) | [Ad2PortalSyncFinalizer](/restapi/adsync#ad2portalsyncfinalizer) | POST |
-| [Authentication](/restapi/authentication) | [GetClientRequestParameters](/restapi/authentication#getclientrequestparameters) | GET |
-| [Authentication](/restapi/authentication) | [ValidateCredentials](/restapi/authentication#validatecredentials) | POST |
-| [Binary](/restapi/binary) | [FinalizeBlobUpload](/restapi/binary#finalizeblobupload) | POST |
-| [Binary](/restapi/binary) | [FinalizeContent](/restapi/binary#finalizecontent) | POST |
-| [Binary](/restapi/binary) | [GetBinaryToken](/restapi/binary#getbinarytoken) | GET |
-| [Binary](/restapi/binary) | [StartBlobUpload](/restapi/binary#startblobupload) | POST |
-| [Binary](/restapi/binary) | [StartBlobUploadToParent](/restapi/binary#startblobuploadtoparent) | POST |
-| [Binary](/restapi/binary) | [Upload](/restapi/binary#upload) | POST |
-| [Collaboration](/restapi/collaboration) | [Approve](/restapi/collaboration#approve) | POST |
-| [Collaboration](/restapi/collaboration) | [CheckIn](/restapi/collaboration#checkin) | POST |
-| [Collaboration](/restapi/collaboration) | [CheckOut](/restapi/collaboration#checkout) | POST |
-| [Collaboration](/restapi/collaboration) | [ForceUndoCheckOut](/restapi/collaboration#forceundocheckout) | POST |
-| [Collaboration](/restapi/collaboration) | [Publish](/restapi/collaboration#publish) | POST |
-| [Collaboration](/restapi/collaboration) | [Reject](/restapi/collaboration#reject) | POST |
-| [Collaboration](/restapi/collaboration) | [RestoreVersion](/restapi/collaboration#restoreversion) | POST |
-| [Collaboration](/restapi/collaboration) | [UndoCheckOut](/restapi/collaboration#undocheckout) | POST |
-| [Content and Schema](/restapi/contentandschema) | [GetMetadata](/restapi/contentandschema#getmetadata) | GET |
-| [Content and Schema](/restapi/contentandschema) | [GetNameFromDisplayName](/restapi/contentandschema#getnamefromdisplayname) | GET |
-| [Content and Schema](/restapi/contentandschema) | [GetSchema](/restapi/contentandschema#getschema) | GET |
-| [Content Management](/restapi/contentmanagement) | [CopyBatch](/restapi/contentmanagement#copybatch) | POST |
-| [Content Management](/restapi/contentmanagement) | [Delete](/restapi/contentmanagement#delete) | POST |
-| [Content Management](/restapi/contentmanagement) | [DeleteBatch](/restapi/contentmanagement#deletebatch) | POST |
-| [Content Management](/restapi/contentmanagement) | [MoveBatch](/restapi/contentmanagement#movebatch) | POST |
-| [Content Management](/restapi/contentmanagement) | [Restore](/restapi/contentmanagement#restore) | POST |
-| [Content Types](/restapi/contenttypes) | [AddAllowedChildTypes](/restapi/contenttypes#addallowedchildtypes) | POST |
-| [Content Types](/restapi/contenttypes) | [CheckAllowedChildTypesOfFolders](/restapi/contenttypes#checkallowedchildtypesoffolders) | GET |
-| [Content Types](/restapi/contenttypes) | [GetAllContentTypes](/restapi/contenttypes#getallcontenttypes) | GET |
-| [Content Types](/restapi/contenttypes) | [GetAllowedChildTypesFromCTD](/restapi/contenttypes#getallowedchildtypesfromctd) | GET |
-| [Content Types](/restapi/contenttypes) | [RemoveAllowedChildTypes](/restapi/contenttypes#removeallowedchildtypes) | POST |
-| [Indexing](/restapi/ndexing) | [BackupIndex](/restapi/ndexing#backupindex) | POST |
-| [Indexing](/restapi/ndexing) | [CancelIndexBackup](/restapi/ndexing#cancelindexbackup) | POST |
-| [Indexing](/restapi/ndexing) | [CheckIndexIntegrity](/restapi/ndexing#checkindexintegrity) | GET |
-| [Indexing](/restapi/ndexing) | [GetRecentIndexingActivities](/restapi/ndexing#getrecentindexingactivities) | GET |
-| [Indexing](/restapi/ndexing) | [QueryIndexBackup](/restapi/ndexing#queryindexbackup) | GET |
-| [Indexing](/restapi/ndexing) | [RebuildIndex](/restapi/ndexing#rebuildindex) | POST |
-| [Indexing](/restapi/ndexing) | [RebuildIndexSubtree](/restapi/ndexing#rebuildindexsubtree) | POST |
-| [Indexing](/restapi/ndexing) | [RefreshIndexSubtree](/restapi/ndexing#refreshindexsubtree) | POST |
-| [Indexing](/restapi/ndexing) | [ResetRecentIndexingActivities](/restapi/ndexing#resetrecentindexingactivities) | POST |
-| [Office Online Editing](/restapi/officeonlineediting) | [GetWopiData](/restapi/officeonlineediting#getwopidata) | GET |
-| [Office Online Editing](/restapi/officeonlineediting) | [WopiOpenEdit](/restapi/officeonlineediting#wopiopenedit) | GET |
-| [Office Online Editing](/restapi/officeonlineediting) | [WopiOpenView](/restapi/officeonlineediting#wopiopenview) | GET |
-| [Other](/restapi/other) | [GetVersionInfo](/restapi/other#getversioninfo) | GET |
-| [Permissions](/restapi/permissions) | [GetAcl](/restapi/permissions#getacl) | GET |
-| [Permissions](/restapi/permissions) | [GetAllowedUsers](/restapi/permissions#getallowedusers) | GET |
-| [Permissions](/restapi/permissions) | [GetChildrenPermissionInfo](/restapi/permissions#getchildrenpermissioninfo) | GET |
-| [Permissions](/restapi/permissions) | [GetPermissionInfo](/restapi/permissions#getpermissioninfo) | GET |
-| [Permissions](/restapi/permissions) | [GetPermissionOverview](/restapi/permissions#getpermissionoverview) | GET |
-| [Permissions](/restapi/permissions) | [GetPermissions](/restapi/permissions#getpermissions) | GET |
-| [Permissions](/restapi/permissions) | [GetRelatedIdentities](/restapi/permissions#getrelatedidentities) | GET |
-| [Permissions](/restapi/permissions) | [GetRelatedIdentitiesByPermissions](/restapi/permissions#getrelatedidentitiesbypermissions) | GET |
-| [Permissions](/restapi/permissions) | [GetRelatedItems](/restapi/permissions#getrelateditems) | GET |
-| [Permissions](/restapi/permissions) | [GetRelatedItemsOneLevel](/restapi/permissions#getrelateditemsonelevel) | GET |
-| [Permissions](/restapi/permissions) | [GetRelatedPermissions](/restapi/permissions#getrelatedpermissions) | GET |
-| [Permissions](/restapi/permissions) | [HasPermission](/restapi/permissions#haspermission) | GET |
-| [Permissions](/restapi/permissions) | [SetPermissions](/restapi/permissions#setpermissions) | POST |
-| [Permissions](/restapi/permissions) | [SetPermissions](/restapi/permissions#setpermissions) | POST |
-| [Permissions](/restapi/permissions) | [TakeLockOver](/restapi/permissions#takelockover) | POST |
-| [Permissions](/restapi/permissions) | [TakeOwnership](/restapi/permissions#takeownership) | POST |
-| [Preview](/restapi/preview) | [CheckPreviews](/restapi/preview#checkpreviews) | POST |
-| [Preview](/restapi/preview) | [DocumentPreviewFinalizer](/restapi/preview#documentpreviewfinalizer) | POST |
-| [Preview](/restapi/preview) | [GetExistingPreviewImages](/restapi/preview#getexistingpreviewimages) | GET |
-| [Preview](/restapi/preview) | [GetPageCount](/restapi/preview#getpagecount) | POST |
-| [Preview](/restapi/preview) | [GetPreviewImages](/restapi/preview#getpreviewimages) | GET |
-| [Preview](/restapi/preview) | [GetPreviewsFolder](/restapi/preview#getpreviewsfolder) | POST |
-| [Preview](/restapi/preview) | [PreviewAvailable](/restapi/preview#previewavailable) | GET |
-| [Preview](/restapi/preview) | [RegeneratePreviews](/restapi/preview#regeneratepreviews) | POST |
-| [Preview](/restapi/preview) | [SetInitialPreviewProperties](/restapi/preview#setinitialpreviewproperties) | POST |
-| [Preview](/restapi/preview) | [SetPageCount](/restapi/preview#setpagecount) | POST |
-| [Preview](/restapi/preview) | [SetPreviewStatus](/restapi/preview#setpreviewstatus) | POST |
-| [Queries](/restapi/queries) | [GetQueries](/restapi/queries#getqueries) | GET |
-| [Queries](/restapi/queries) | [SaveQuery](/restapi/queries#savequery) | POST |
-| [Security](/restapi/security) | [CheckSecurityConsistency](/restapi/security#checksecurityconsistency) | GET |
-| [Security](/restapi/security) | [CopyExplicitEntriesOfEveryoneToVisitor](/restapi/security#copyexplicitentriesofeveryonetovisitor) | POST |
-| [Security](/restapi/security) | [Decrypt](/restapi/security#decrypt) | POST |
-| [Security](/restapi/security) | [Encrypt](/restapi/security#encrypt) | POST |
-| [Security](/restapi/security) | [GetRecentSecurityActivities](/restapi/security#getrecentsecurityactivities) | GET |
-| [Security](/restapi/security) | [MissingExplicitEntriesOfVisitorComparedToEveryone](/restapi/security#missingexplicitentriesofvisitorcomparedtoeveryone) | GET |
-| [Security](/restapi/security) | [ProtectedPaths](/restapi/security#protectedpaths) | GET |
-| [Sharing](/restapi/sharing) | [GetSharing](/restapi/sharing#getsharing) | GET |
-| [Sharing](/restapi/sharing) | [RemoveSharing](/restapi/sharing#removesharing) | POST |
-| [Sharing](/restapi/sharing) | [Share](/restapi/sharing#share) | POST |
-| [Tools](/restapi/tools) | [Ancestors](/restapi/tools#ancestors) | GET |
-| [Users and Groups](/restapi/usersandgroups) | [AddMembers](/restapi/usersandgroups#addmembers) | POST |
-| [Users and Groups](/restapi/usersandgroups) | [CreateLocalUser](/restapi/usersandgroups#createlocaluser) | POST |
-| [Users and Groups](/restapi/usersandgroups) | [CreateUserByProvider](/restapi/usersandgroups#createuserbyprovider) | POST |
-| [Users and Groups](/restapi/usersandgroups) | [GetParentGroups](/restapi/usersandgroups#getparentgroups) | GET |
-| [Users and Groups](/restapi/usersandgroups) | [RemoveMembers](/restapi/usersandgroups#removemembers) | POST |
+| AdSync | [Ad2PortalSyncFinalizer](/restapi/ad2portalsyncfinalizer) | POST |
+| Authentication | [GetClientRequestParameters](/restapi/getclientrequestparameters) | GET |
+| Authentication | [ValidateCredentials](/restapi/validatecredentials) | POST |
+| Binary | [FinalizeBlobUpload](/restapi/finalizeblobupload) | POST |
+| Binary | [FinalizeContent](/restapi/finalizecontent) | POST |
+| Binary | [GetBinaryToken](/restapi/getbinarytoken) | GET |
+| Binary | [StartBlobUpload](/restapi/startblobupload) | POST |
+| Binary | [StartBlobUploadToParent](/restapi/startblobuploadtoparent) | POST |
+| Binary | [Upload](/restapi/upload) | POST |
+| Collaboration | [Approve](/restapi/approve) | POST |
+| Collaboration | [CheckIn](/restapi/checkin) | POST |
+| Collaboration | [CheckOut](/restapi/checkout) | POST |
+| Collaboration | [ForceUndoCheckOut](/restapi/forceundocheckout) | POST |
+| Collaboration | [Publish](/restapi/publish) | POST |
+| Collaboration | [Reject](/restapi/reject) | POST |
+| Collaboration | [RestoreVersion](/restapi/restoreversion) | POST |
+| Collaboration | [UndoCheckOut](/restapi/undocheckout) | POST |
+| Content and Schema | [GetMetadata](/restapi/getmetadata) | GET |
+| Content and Schema | [GetNameFromDisplayName](/restapi/getnamefromdisplayname) | GET |
+| Content and Schema | [GetSchema](/restapi/getschema) | GET |
+| Content Management | [CopyBatch](/restapi/copybatch) | POST |
+| Content Management | [Delete](/restapi/delete) | POST |
+| Content Management | [DeleteBatch](/restapi/deletebatch) | POST |
+| Content Management | [MoveBatch](/restapi/movebatch) | POST |
+| Content Management | [Restore](/restapi/restore) | POST |
+| Content Types | [AddAllowedChildTypes](/restapi/addallowedchildtypes) | POST |
+| Content Types | [CheckAllowedChildTypesOfFolders](/restapi/checkallowedchildtypesoffolders) | GET |
+| Content Types | [GetAllContentTypes](/restapi/getallcontenttypes) | GET |
+| Content Types | [GetAllowedChildTypesFromCTD](/restapi/getallowedchildtypesfromctd) | GET |
+| Content Types | [RemoveAllowedChildTypes](/restapi/removeallowedchildtypes) | POST |
+| Indexing | [BackupIndex](/restapi/backupindex) | POST |
+| Indexing | [CancelIndexBackup](/restapi/cancelindexbackup) | POST |
+| Indexing | [CheckIndexIntegrity](/restapi/checkindexintegrity) | GET |
+| Indexing | [GetRecentIndexingActivities](/restapi/getrecentindexingactivities) | GET |
+| Indexing | [QueryIndexBackup](/restapi/queryindexbackup) | GET |
+| Indexing | [RebuildIndex](/restapi/rebuildindex) | POST |
+| Indexing | [RebuildIndexSubtree](/restapi/rebuildindexsubtree) | POST |
+| Indexing | [RefreshIndexSubtree](/restapi/refreshindexsubtree) | POST |
+| Indexing | [ResetRecentIndexingActivities](/restapi/resetrecentindexingactivities) | POST |
+| Office Online Editing | [GetWopiData](/restapi/getwopidata) | GET |
+| Office Online Editing | [WopiOpenEdit](/restapi/wopiopenedit) | GET |
+| Office Online Editing | [WopiOpenView](/restapi/wopiopenview) | GET |
+| Other | [GetVersionInfo](/restapi/getversioninfo) | GET |
+| Permissions | [GetAcl](/restapi/getacl) | GET |
+| Permissions | [GetAllowedUsers](/restapi/getallowedusers) | GET |
+| Permissions | [GetChildrenPermissionInfo](/restapi/getchildrenpermissioninfo) | GET |
+| Permissions | [GetPermissionInfo](/restapi/getpermissioninfo) | GET |
+| Permissions | [GetPermissionOverview](/restapi/getpermissionoverview) | GET |
+| Permissions | [GetPermissions](/restapi/getpermissions) | GET |
+| Permissions | [GetRelatedIdentities](/restapi/getrelatedidentities) | GET |
+| Permissions | [GetRelatedIdentitiesByPermissions](/restapi/getrelatedidentitiesbypermissions) | GET |
+| Permissions | [GetRelatedItems](/restapi/getrelateditems) | GET |
+| Permissions | [GetRelatedItemsOneLevel](/restapi/getrelateditemsonelevel) | GET |
+| Permissions | [GetRelatedPermissions](/restapi/getrelatedpermissions) | GET |
+| Permissions | [HasPermission](/restapi/haspermission) | GET |
+| Permissions | [SetPermissions](/restapi/setpermissions) | POST |
+| Permissions | [SetPermissions](/restapi/setpermissions2) | POST |
+| Permissions | [TakeLockOver](/restapi/takelockover) | POST |
+| Permissions | [TakeOwnership](/restapi/takeownership) | POST |
+| Preview | [CheckPreviews](/restapi/checkpreviews) | POST |
+| Preview | [DocumentPreviewFinalizer](/restapi/documentpreviewfinalizer) | POST |
+| Preview | [GetExistingPreviewImages](/restapi/getexistingpreviewimages) | GET |
+| Preview | [GetPageCount](/restapi/getpagecount) | POST |
+| Preview | [GetPreviewImages](/restapi/getpreviewimages) | GET |
+| Preview | [GetPreviewsFolder](/restapi/getpreviewsfolder) | POST |
+| Preview | [PreviewAvailable](/restapi/previewavailable) | GET |
+| Preview | [RegeneratePreviews](/restapi/regeneratepreviews) | POST |
+| Preview | [SetInitialPreviewProperties](/restapi/setinitialpreviewproperties) | POST |
+| Preview | [SetPageCount](/restapi/setpagecount) | POST |
+| Preview | [SetPreviewStatus](/restapi/setpreviewstatus) | POST |
+| Queries | [GetQueries](/restapi/getqueries) | GET |
+| Queries | [SaveQuery](/restapi/savequery) | POST |
+| Security | [CheckSecurityConsistency](/restapi/checksecurityconsistency) | GET |
+| Security | [CopyExplicitEntriesOfEveryoneToVisitor](/restapi/copyexplicitentriesofeveryonetovisitor) | POST |
+| Security | [Decrypt](/restapi/decrypt) | POST |
+| Security | [Encrypt](/restapi/encrypt) | POST |
+| Security | [GetRecentSecurityActivities](/restapi/getrecentsecurityactivities) | GET |
+| Security | [MissingExplicitEntriesOfVisitorComparedToEveryone](/restapi/missingexplicitentriesofvisitorcomparedtoeveryone) | GET |
+| Security | [ProtectedPaths](/restapi/protectedpaths) | GET |
+| Sharing | [GetSharing](/restapi/getsharing) | GET |
+| Sharing | [RemoveSharing](/restapi/removesharing) | POST |
+| Sharing | [Share](/restapi/share) | POST |
+| Tools | [Ancestors](/restapi/ancestors) | GET |
+| Users and Groups | [AddMembers](/restapi/addmembers) | POST |
+| Users and Groups | [CreateLocalUser](/restapi/createlocaluser) | POST |
+| Users and Groups | [CreateUserByProvider](/restapi/createuserbyprovider) | POST |
+| Users and Groups | [GetParentGroups](/restapi/getparentgroups) | GET |
+| Users and Groups | [RemoveMembers](/restapi/removemembers) | POST |
+|  | [CreateTestFiles](/restapi/createtestfiles) | GET |
+|  | [DeleteTestFolder](/restapi/deletetestfolder) | GET |
+|  | [GetDatabaseUsage](/restapi/getdatabaseusage) | GET |
