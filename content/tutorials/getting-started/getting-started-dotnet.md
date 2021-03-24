@@ -40,7 +40,7 @@ static async Task Main(string[] args)
 }
 ```
 <div>&nbsp;</div>
-<note severity="info">**Important**: In this tutorial we assume that all the content items you are working with are **public** (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the **Set permissions** page hit the Make content public button.
+<note severity="info"><b>Important</b>: In this tutorial we assume that all the content items you are working with are <b>public</b> (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the <b>Set permissions</b> page hit the Make content public button.
 </note>
 <div>&nbsp;</div>
 <note severity="info">
