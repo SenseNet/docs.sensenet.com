@@ -9,6 +9,7 @@ User and groups can be managed on the admin-ui in a dedicated section. Here you 
 <note>
 users and groups can be sorted by clicking the column titles
 </note>
+
 ![Users and groups section in admin-ui](./img/usersandgroups_main.png)
 
 # Users

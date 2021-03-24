@@ -99,7 +99,7 @@ You can also customize the list of allowed http headers for CORS requests (for e
 }
 ```
 
-## OAuth.settings
+## OAuth.settings (only with admin role)
 
 When users register or login using one of the configured OAuth providers (like Google or Facebook), these settings control the type and place of the newly created users as content items in the repository.
 
@@ -125,7 +125,7 @@ In this section you can customize the behavior of the Document Preview feature â
 | WatermarkOpacity | number | Opacity of the text |
 | WatermarkPosition | BottomLeftToUpperRight, UpperLeftToBottomRight, Top, Bottom, Center | Watermark text orientation. |
 
-## OfficeOnline.settings
+## OfficeOnline.settings (only with admin role)
 
 To open or edit Office documents in the browser, the system needs to know the address of the Office Online Server that provides the user interface for the feature. In this section you can configure that and other OOS-related settings.
 
@@ -133,7 +133,7 @@ To open or edit Office documents in the browser, the system needs to know the ad
 | ---- | --- | ----------- |
 | OfficeOnlineUrl | string | Url of the Office Online Server |
 
-## Indexing.settings
+## Indexing.settings (only with admin role)
 
 In this section you can customize the indexing behavior (for example the text extractor used in case of different file types) of the system.
 

@@ -4,9 +4,7 @@ metaTitle: "sensenet admin-ui - Customize the admin-ui"
 metaDescription: "sensenet admin-ui - Customize the admin-ui"
 ---
 
-There are several things that you can customize according to your taste on the Admin UI. You can do most of them on the 'personal settings' page. You can open your settings by using the following url:
-
-```https://admin.sensenet.com/personal-settings```
+There are several things that you can customize according to your taste on the Admin UI. You can do most of them on the 'Admin ui customization' page. You can open your settings by navigating to the Settings / Admin ui customization menu:
 
 The settings are stored in a JSON format but you can get some help with the available settings by pressing the **CTRL+SPACE** combo.
 

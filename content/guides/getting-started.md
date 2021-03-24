@@ -34,12 +34,11 @@ By default the sidebar has the following items:
 - **users and groups**: manage users and groups, roles and identities - [more about roles and permission](/guides/roles-and-permissions)
 - **trash**: a place for all trashed items - [more about trash in admin ui](/guides/content-management/trash)
 - **content types**: manage content types ([more about content types in admin ui](/guides/content_types)
-- **localization**: manage string resources - ([more about localization in admin ui](/guides/localization)
-- **setup**: configure sensenet system ([more about setup](/guides/setup))
+- **settings**: configure sensenet system ([more about settings](/guides/settings))
 
 <note>
 Sidebar can be expanded/collapsed by clicking the "hamburger" icon at the very top of the bar
-</note>  
+</note>
 
 # Miscellaneous
 

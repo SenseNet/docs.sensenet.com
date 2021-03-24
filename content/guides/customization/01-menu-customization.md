@@ -4,11 +4,11 @@ metaTitle: "sensenet Admin UI - Customize the menu"
 description: This article gives a brief overview about the customization of the Drawer (the left side menu) on the Admin UI.
 ---
 
-The Drawer component is the left side navigation menu. It lets you access the [personal settings](./00-personal-settings/), [setup](../setup) and more other menu items.
+The Drawer component is the left side navigation menu. It lets you access the content, search, content types and more other menu items.
 
 ## Customization
 
-You can customize the drawer within the [personal settings](./00-personal-settings/). You can set drawer options for multiple devices. For example mobile, tablet, desktop and in general for default. There are 3 main options:
+You can customize the drawer within the Admin ui customization. You can set drawer options for multiple devices. For example mobile, tablet, desktop and in general for default. There are 3 main options:
 
 1. [enabled](#enabled) - boolean value (it can be `true` or `false`)
 2. [type](#type) - string value (`"mini-variant"`, `"permanent"`, `"temporary"`)
@@ -17,7 +17,6 @@ You can customize the drawer within the [personal settings](./00-personal-settin
 ### Enabled
 
 This it the simplest setting that can enable or disable the drawer itself.
-> Don't worry if you disabled the drawer and can't find personal settings. You can access it from the [Command palette](./03-command-palette) with typing in _personal settings_ and pressing enter.
 
 Example setting:
 

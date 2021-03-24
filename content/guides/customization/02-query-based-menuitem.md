@@ -4,7 +4,7 @@ metaTitle: "sensenet Admin UI - Query based menuitem"
 description: This article helps you to add a query based menu item and screen to the drawer on the Admin UI.
 ---
 
-The Drawer can be customized with the [personal settings](./00-personal-settings) editor you can add custom menu items binding them to subtrees or subfolder by your choice. If you want to create a menu item based on query results it is also possible combining [SmartFolder](/concepts/basics/041-content-query#smartfolder) type and custom drawer items.
+The Drawer can be customized with the Admin ui customization menu, you can add custom menu items binding them to subtrees or subfolder by your choice. If you want to create a menu item based on query results it is also possible combining [SmartFolder](/concepts/basics/041-content-query#smartfolder) type and custom drawer items.
 
 # Create a SmartFolder with a custom query
 
@@ -43,7 +43,7 @@ With addig a custom drawer item to the menu binded to the above mentioned SmartF
 
 You should see exactly one menu item that looks like this.
 
-![meeting notes drawer item](../img/meeting_notes.png "meeting notes drawer item")
+![meeting notes drawer item](../img/meeting_notes_drawer.png "meeting notes drawer item")
 
 There are few options that you can use for customization:
   - icon - name of the icon that you want to display in the drawer
