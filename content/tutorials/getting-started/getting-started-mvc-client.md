@@ -4,11 +4,12 @@ metaTitle: "Getting started with sensenet and a server-side Asp.Net MVC client"
 metaDescription: This tutorial shows you how to start using sensenet in a server-side Asp.Net MVC application.
 ---
 
-In this tutorial we will build a basic Asp.Net MVC application. This is a server-side application that sends **server-to-server** requests to the sensenet repository from the backend. It will be capable of loading and displaying content items in a regulat MVC controller and view environment.
+In this tutorial we will build a basic Asp.Net MVC application. This is a server-side application that sends **server-to-server** requests to the sensenet repository from the backend. It will be capable of loading and displaying content items in a regular MVC controller and view environment.
 
-The application uses the sensenet [.Net client library](/getting-started-dotnet) to connect to the repository. You can use all the APIs offered by that library to manage content items.
+The application uses the sensenet [.Net client library](/tutorials/getting-started/getting-started-dotnet) to connect to the repository. You can use all the APIs offered by that library to manage content items.
 
-> This tutorial does not cover authentication in the MVC application, only admin requests towards sensenet. See details in the Authentication section below.
+<note severity="info">This tutorial does not cover authentication in the MVC application, only admin requests towards sensenet. See details in the Authentication section below.</note>
+<div>&nbsp;</div>
 
 ![Content browser](getting-started-mvc-client/content-browser.png)
 
@@ -27,7 +28,7 @@ services.AddSenseNetClientTokenStore();
 ```
 
 ### Authentication
-> **Important**: this example does not deal with authenticating the *user* who visits the MVC application. The MVC application authenticates itself towards sensenet using a [client/secret pair](../authentication/how-to-authenticate-dotnet). This means the requests sent to the repository will be performed *in the name of an administrator*.
+<note severity="info"> <b>Important</b>: this example does not deal with authenticating the <i>user</i> who visits the MVC application. The MVC application authenticates itself towards sensenet using a <a href="/tutorials/authentication/how-to-authenticate-dotnet">client/secret pair</a>. This means the requests sent to the repository will be performed <i>in the name of an administrator</i>.</note>
 
 The token store above is responsible for requesting and caching authentication tokens for a sensenet repository. The token is requested by a client id and a secret. Please see the details in the article above.
 
@@ -99,7 +100,7 @@ public async Task<IActionResult> Index(int id = 0)
     }
 
     var children = await SenseNet.Client.Content.LoadCollectionAsync(content.Path, server);
-    
+
     return View(new SnContent
     {
         Content = content,
