@@ -1,6 +1,6 @@
 ---
 title: "Content Picker"
-metaTitle: "sensenet admin-ui - Content Picker"
+metaTitle: "sensenet Admin-ui - Content Picker"
 metaDescription: "sensenet admin-ui - Content Picker"
 ---
 
