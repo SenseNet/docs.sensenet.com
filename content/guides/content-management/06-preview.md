@@ -1,6 +1,6 @@
 ---
 title: "Preview"
-metaTitle: "sensenet admin-ui - Preview"
+metaTitle: "sensenet Admin-ui - Preview"
 metaDescription: "sensenet admin-ui - Preview"
 ---
 
