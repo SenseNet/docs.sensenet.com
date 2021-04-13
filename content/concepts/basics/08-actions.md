@@ -1,6 +1,6 @@
 ---
 title: "Actions"
-metaTitle: "sensenet - Actions"
+metaTitle: "sensenet Concepts - Actions"
 metaDescription: "sensenet Actions"
 ---
 
