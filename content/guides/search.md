@@ -1,6 +1,6 @@
 ---
 title: "Search"
-metaTitle: "sensenet admin-ui - Search"
+metaTitle: "sensenet Admin-ui - Search"
 metaDescription: "sensenet admin-ui - Search"
 ---
 
