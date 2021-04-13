@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-metaTitle: "sensenet - Settings"
+metaTitle: "sensenet Concepts - Settings"
 metaDescription: "sensenet Settings"
 ---
 
