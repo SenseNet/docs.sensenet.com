@@ -1,6 +1,6 @@
 ---
 title: "Command palette"
-metaTitle: "sensenet admin-ui - Command palette"
+metaTitle: "sensenet Admin-ui - Command palette"
 metaDescription: This article gives a brief overview about the usage of the Command Palette on the Admin UI.
 ---
 
