@@ -1,6 +1,6 @@
 ---
 title: "Setup"
-metaTitle: "sensenet admin-ui - Setup"
+metaTitle: "sensenet Admin-ui - Setup"
 metaDescription: "A quick overview about configuration files and managing them on the admin-ui."
 ---
 
