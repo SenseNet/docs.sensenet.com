@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
-metaTitle: "sensenet - Authentication"
+metaTitle: "sensenet Concepts - Authentication"
 metaDescription: "sensenet Authentication"
 ---
 
