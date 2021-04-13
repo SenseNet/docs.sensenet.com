@@ -1,6 +1,6 @@
 ---
 title: "Content Model"
-metaTitle: "sensenet - Content Model and Schema"
+metaTitle: "sensenet Concepts - Content Model"
 metaDescription: "sensenet Content Model and Schema"
 ---
 
