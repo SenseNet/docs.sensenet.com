@@ -1,6 +1,6 @@
 ---
 title: "Getting started with Next.js and sensenet"
-metaTitle: "Getting started with Next.js and sensenet"
+metaTitle: "sensenet Tutorials - Getting started with Next.js and sensenet"
 metaDescription: "Tutorial about how to start a new project using Next.js and sensenet."
 ---
 
