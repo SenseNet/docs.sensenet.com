@@ -1,6 +1,6 @@
 ---
 title: "Search"
-metaTitle: "sensenet - Search"
+metaTitle: "sensenet Concepts - Search"
 metaDescription: "sensenet Search"
 ---
 
