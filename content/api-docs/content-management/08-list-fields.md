@@ -1,6 +1,6 @@
 ---
 title: List Fields
-metaTitle: "List fields"
+metaTitle: "sensenet API - List fields"
 metaDescription: "Managing list fields through OData"
 ---
 
