@@ -1,6 +1,6 @@
 ---
 title: "Hyperlink field"
-metaTitle: "sensenet - Hyperlink field"
+metaTitle: "sensenet Concepts - Hyperlink field"
 metaDescription: "sensenet Hyperlink field"
 ---
 
