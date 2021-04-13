@@ -1,6 +1,6 @@
 ---
 title: Paging
-metaTitle: "sensenet API - Pagination"
+metaTitle: "sensenet API - Paging"
 metaDescription: "Paging content with sensenet API"
 ---
 
