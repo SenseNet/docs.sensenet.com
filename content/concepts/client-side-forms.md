@@ -1,6 +1,6 @@
 ---
 title: "Client-Side Forms"
-metaTitle: "sensenet - Client-Side Forms"
+metaTitle: "sensenet Concepts - Client-Side Forms"
 metaDescription: "sensenet Client-Side Forms"
 ---
 
