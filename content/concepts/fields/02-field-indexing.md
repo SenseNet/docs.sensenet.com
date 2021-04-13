@@ -1,6 +1,6 @@
 ---
 title: "Field indexing"
-metaTitle: "sensenet - Field indexing"
+metaTitle: "sensenet Concepts - Field indexing"
 metaDescription: "sensenet Field indexing"
 ---
 
