@@ -1,6 +1,6 @@
 ---
 title: "Content Scheduling"
-metaTitle: "sensenet - Content Scheduling"
+metaTitle: "sensenet Concepts - Content Scheduling"
 metaDescription: "sensenet Content Scheduling"
 ---
 
