@@ -1,6 +1,6 @@
 ---
-title: "Content tree"
-metaTitle: "sensenet admin-ui - Content tree"
+title: Content tree
+metaTitle: "sensenet Admin-ui - Content tree"
 metaDescription: "sensenet admin-ui - Content tree"
 ---
 
