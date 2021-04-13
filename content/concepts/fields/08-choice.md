@@ -1,6 +1,6 @@
 ---
 title: "Choice field"
-metaTitle: "sensenet - Choice field"
+metaTitle: "sensenet Concepts - Choice field"
 metaDescription: "sensenet Choice field"
 ---
 
