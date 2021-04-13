@@ -1,6 +1,6 @@
 ---
 title: "Content Query"
-metaTitle: "sensenet - Content Query"
+metaTitle: "sensenet Concepts - Content Query"
 metaDescription: "sensenet Content Query"
 ---
 
