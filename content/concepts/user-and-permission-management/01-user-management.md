@@ -1,6 +1,6 @@
 ---
 title: "User Management"
-metaTitle: "sensenet - User Management"
+metaTitle: "sensenet Concepts - User Management"
 metaDescription: "sensenet User Management"
 ---
 
