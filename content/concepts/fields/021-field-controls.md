@@ -1,6 +1,6 @@
 ---
 title: "Field controls - React"
-metaTitle: "sensenet - Field controls - React"
+metaTitle: "sensenet Concepts - Field controls - React"
 metaDescription: "sensenet Field controls - React"
 ---
 
