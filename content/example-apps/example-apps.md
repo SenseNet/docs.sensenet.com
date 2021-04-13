@@ -17,48 +17,49 @@ All the following apps are built with the [sn-react-boilerplate](https://github.
 Each example app requires a login for example into one of our demo repositories (username: businesscat, password: businesscat, respositoryurl: dev.demo.sensenet.com)
 
 ## Image gallery
+
 This single page application shows how to build a simple photo gallery app with React connected to a sensenet content repository.
 
 - [Try it out](https://sn-react-imagegallery.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-imagegallery)
 
 ## Todo app
+
 This is a single page application for manage todo tasks in sensenet.
 
 - [Try it out](https://sn-react-tasklist.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-tasklist)
 
 ## Memo editor
+
 A single page app for manage memos in sensenet.
 
 - [Try it out](https://sn-react-memoapp.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-memoapp)
 
 ## Document browser
+
 This single page application shows how to build a document browser app with React connected to a sensenet content repository.
 
 - [Try it out](https://sn-react-browser.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-browser)
 
-## File upload demo
-Upload images to your repository directly via the browser with the upload API.
-
-- [Try it out](https://sn-react-imageupload.netlify.com/)
-- [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-imageupload)
-
 ## Event calendar
+
 This single page application shows how to build a google calendar inspired app with React connected to a sensenet content repository.
 
 - [Try it out](https://sn-react-calendar.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-calendar)
 
 ## User search
+
 Example app for user search with sensenet.
 
 - [Try it out](https://sn-react-usersearch.netlify.com/)
 - [View on GitHub](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-usersearch)
 
 ## DMS demo
+
 Example app with react and redux presenting document management capabilities.
 
 - [Try it out](https://sn-react-dms.netlify.com/)
