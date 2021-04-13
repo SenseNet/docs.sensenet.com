@@ -1,7 +1,7 @@
 ---
 title: "Collaboration"
-metaTitle: "sensenet - Versioning"
-metaDescription: "sensenet Versioning"
+metaTitle: "sensenet Concepts - Collaboration"
+metaDescription: "sensenet Collaboration"
 ---
 
 In many cases developers and non-developers have to work together during a project. sensenet enables collaborative content management, keeping all your content on a single hub.
