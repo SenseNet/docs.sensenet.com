@@ -1,7 +1,7 @@
 ---
-title: "Content management"
-metaTitle: "sensenet admin-ui - Content management"
-metaDescription: "sensenet admin-ui - Content management"
+title: Content management
+metaTitle: "sensenet Admin-ui - Content management"
+metaDescription: "sensenet Admin-ui - Content management"
 ---
 
 
