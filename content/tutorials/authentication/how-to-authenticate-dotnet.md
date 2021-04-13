@@ -1,5 +1,6 @@
 ---
 title:  "Authentication from a .Net client"
+metaTitle: "sensenet Tutorials - Authentication from a .Net client"
 category: Tutorials
 index: 0
 version: v7.0
