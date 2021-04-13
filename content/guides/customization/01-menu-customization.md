@@ -1,6 +1,6 @@
 ---
 title: "Customize the menu"
-metaTitle: "sensenet Admin UI - Customize the menu"
+metaTitle: "sensenet Admin-ui - Customize the menu"
 description: This article gives a brief overview about the customization of the Drawer (the left side menu) on the Admin UI.
 ---
 
