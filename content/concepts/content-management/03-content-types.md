@@ -1,6 +1,6 @@
 ---
 title: "Content Types"
-metaTitle: "sensenet - Content Types"
+metaTitle: "sensenet Concepts - Content Types"
 metaDescription: "sensenet Content Types"
 ---
 
