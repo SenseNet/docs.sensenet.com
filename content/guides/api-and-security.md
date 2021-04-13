@@ -1,6 +1,6 @@
 ---
 title: "Api and security"
-metaTitle: "sensenet admin-ui - Api and security"
+metaTitle: "sensenet Admin-ui - Api and security"
 metaDescription: "A quick overview about API andpoints, Client ID and secret"
 ---
 
