@@ -1,6 +1,6 @@
 ---
 title: "Boolean field"
-metaTitle: "sensenet - Boolean field"
+metaTitle: "sensenet Concepts - Boolean field"
 metaDescription: "sensenet Boolean field"
 ---
 
