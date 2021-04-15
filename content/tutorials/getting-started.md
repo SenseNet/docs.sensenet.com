@@ -12,5 +12,6 @@ If you don't find what you're looking for, feel free to [contact us](https://www
 
 To get some inspiration, check our example apps (along with source code) written in React and NextJS.
 
+It also contains every content used by our example apps (link to example apps gyűjtőoldal)(images, tasks, events, etc.). Add new task in the Todo app (link) and check your new content in the admin ui (link to task list folder) and vice-versa.
 
-
+You can follow these tutorial by using the dev.demo repo or register your own for free here.
