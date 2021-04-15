@@ -1,6 +1,6 @@
 ---
 title: "Content"
-metaTitle: "sensenet - Content"
+metaTitle: "sensenet Concepts - Content"
 metaDescription: "sensenet Content"
 ---
 

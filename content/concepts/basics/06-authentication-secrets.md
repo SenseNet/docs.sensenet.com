@@ -1,6 +1,6 @@
 ---
 title: "Client IDs and secrets"
-metaTitle: "sensenet - Client IDs and secrets"
+metaTitle: "sensenet Concepts - Client IDs and secrets"
 metaDescription: "sensenet Client IDs and secrets"
 ---
 

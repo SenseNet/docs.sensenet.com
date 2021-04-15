@@ -1,6 +1,6 @@
 ---
 title: "Create new content"
-metaTitle: "sensenet admin-ui - create new content (upload, file, folder)"
+metaTitle: "sensenet Admin-ui - create new content (upload, file, folder)"
 metaDescription: "sensenet admin-ui - Create new content (upload, file, folder)"
 ---
 

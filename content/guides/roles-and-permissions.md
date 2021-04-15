@@ -1,6 +1,6 @@
 ---
 title: "Roles and permissions"
-metaTitle: "sensenet admin-ui - Roles and permissions"
+metaTitle: "sensenet Admin-ui - Roles and permissions"
 metaDescription: "sensenet admin-ui - Roles and permissions"
 ---
 

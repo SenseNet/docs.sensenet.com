@@ -1,5 +1,6 @@
 ---
 title:  "Authentication from a React application"
+metaTitle: "sensenet Tutorials - Authentication from a React application"
 category: Tutorials
 index: 0
 version: v7.0

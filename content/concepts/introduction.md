@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-metaTitle: "sensenet - What is sensenet"
-metaDescription: "sensenet What is sensenet"
+metaTitle: "sensenet Concepts - What is sensenet"
+metaDescription: "What is sensenet - Introduction"
 ---
 
 **sensenet** is an open-source [headless content management system (CMS)](/concepts/introduction/02-what-is-headless-cms) built mainly for developers and development companies.

@@ -1,7 +1,7 @@
 ---
 title: "What is sensenet as a service (SNaaS)"
-metaTitle: "sensenet - What is sensenet as a service (SNaaS)"
-metaDescription: "sensenet - What is sensenet as a service (SNaaS)"
+metaTitle: "sensenet Concepts - What is sensenet as a service (SNaaS)"
+metaDescription: "What is sensenet as a service (SNaaS)"
 ---
 
 sensenet is a content repository with API first approach packed with a full featured permission system, preview and collaboration tools, now available in SaaS model.

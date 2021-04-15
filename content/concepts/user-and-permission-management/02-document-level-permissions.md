@@ -1,6 +1,6 @@
 ---
 title: "Document level Permissions"
-metaTitle: "sensenet - Document level Permissions"
+metaTitle: "sensenet Concepts - Document level Permissions"
 metaDescription: "sensenet Document level Permissions"
 ---
 

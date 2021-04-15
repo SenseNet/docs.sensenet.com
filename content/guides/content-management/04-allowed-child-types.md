@@ -1,7 +1,7 @@
 ---
 title: "Allowed child types"
-metaTitle: "admin ui - allowed child types"
-metaDescription: "sensenet allowed child types"
+metaTitle: "sensenet Admin ui - allowed child types"
+metaDescription: "sensenet admin-ui - allowed child types"
 ---
 
 In a file system you can store any type (file or folder) anywhere, whereas in the sensenet content repository with the help of allowed child types it is possible to define restrictions on what content types the different containers can contain.

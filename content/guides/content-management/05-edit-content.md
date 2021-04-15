@@ -1,6 +1,6 @@
 ---
 title: "Edit content"
-metaTitle: "sensenet admin-ui - Edit content"
+metaTitle: "sensenet Admin-ui - Edit content"
 metaDescription: "sensenet admin-ui - Edit content"
 ---
 

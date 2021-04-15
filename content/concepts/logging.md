@@ -1,5 +1,5 @@
 ---
 title: "Logging"
-metaTitle: "sensenet - Logging"
+metaTitle: "sensenet Concepts - Logging"
 metaDescription: "sensenet Logging"
 ---

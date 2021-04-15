@@ -1,6 +1,6 @@
 ---
 title: "ShortText field"
-metaTitle: "sensenet - ShortText field"
+metaTitle: "sensenet Concepts - ShortText field"
 metaDescription: "sensenet ShortText field"
 ---
 

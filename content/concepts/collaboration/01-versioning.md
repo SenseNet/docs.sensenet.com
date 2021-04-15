@@ -1,6 +1,6 @@
 ---
 title: "Versioning"
-metaTitle: "sensenet - Versioning"
+metaTitle: "sensenet Concepts - Versioning"
 metaDescription: "sensenet Versioning"
 ---
 

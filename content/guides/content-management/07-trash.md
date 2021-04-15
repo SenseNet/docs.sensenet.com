@@ -1,7 +1,7 @@
 ---
 title: "Trash"
-metaTitle: "sensenet - Trash"
-metaDescription: "sensenet - Trash"
+metaTitle: "sensenet Admin-ui - Trash"
+metaDescription: "sensenet admin-ui- Trash"
 ---
 
 In sensenet deleted content goes to the trash (this is a system default). You can find them by clicking on the trash icon in the left menu.

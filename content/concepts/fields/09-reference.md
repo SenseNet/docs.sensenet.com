@@ -1,6 +1,6 @@
 ---
 title: "Reference field"
-metaTitle: "sensenet - Reference field"
+metaTitle: "sensenet Concepts - Reference field"
 metaDescription: "sensenet Reference field"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Query by related content
-metaTitle: "sensenet API - Query by references"
+metaTitle: "sensenet API - Query by related content"
 metaDescription: "Query by related content"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "REST API"
-metaTitle: "sensenet - REST API"
+metaTitle: "sensenet Concepts - REST API"
 metaDescription: "sensenet REST API"
 ---
 

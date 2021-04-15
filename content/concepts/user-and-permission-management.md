@@ -1,7 +1,7 @@
 ---
 title: "User and Permission Management"
-metaTitle: "sensenet - User Management"
-metaDescription: "sensenet User Management"
+metaTitle: "sensenet Concepts - User and Permission Management"
+metaDescription: "sensenet User and Permission Management"
 ---
 
 sensenet offers a sophisticated user and permission management system, giving you the possibility to apply permission rules according to the logic you prefer.

@@ -1,6 +1,6 @@
 ---
 title: How to add a query based menu item and screen to the drawer
-metaTitle: "sensenet Admin UI - Query based menuitem"
+metaTitle: "sensenet Admin-ui - Query based menuitem"
 description: This article helps you to add a query based menu item and screen to the drawer on the Admin UI.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Image field"
-metaTitle: "sensenet - Image field"
+metaTitle: "sensenet Concepts - Image field"
 metaDescription: "sensenet Image field"
 ---
 

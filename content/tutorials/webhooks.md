@@ -1,6 +1,6 @@
 ---
 title: "Working with WebHooks"
-metaTitle: "sensenet - WebHooks"
+metaTitle: "sensenet Tutorials - WebHooks"
 metaDescription: "sensenet - WebHooks"
 ---
 

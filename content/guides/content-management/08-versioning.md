@@ -1,7 +1,7 @@
 ---
 title: "Versioning"
-metaTitle: "admin ui - Versioning"
-metaDescription: "admin ui Versioning"
+metaTitle: "sensenet Admin ui - Versioning"
+metaDescription: "sensenet admin-ui - Versioning"
 ---
 
 Versioning is the management of changes to documents and other information stored in a file system or repository. With versioning you can keep the published version of a document visible to non-editor users, while you are working on the latest, draft version.

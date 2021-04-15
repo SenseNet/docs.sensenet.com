@@ -1,6 +1,6 @@
 ---
 title: "Permission editor"
-metaTitle: "sensenet admin-ui - Permission editor"
+metaTitle: "sensenet Admin-ui - Permission editor"
 metaDescription: "sensenet admin-ui - Permission editor"
 ---
 # Permission editor
