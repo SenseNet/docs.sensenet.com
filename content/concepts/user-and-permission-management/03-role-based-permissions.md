@@ -1,6 +1,6 @@
 ---
 title: "Role based Permissions"
-metaTitle: "sensenet - Role based Permissions"
+metaTitle: "sensenet Concepts - Role based Permissions"
 metaDescription: "sensenet Role based Permissions"
 ---
 

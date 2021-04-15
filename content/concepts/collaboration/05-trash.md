@@ -1,6 +1,6 @@
 ---
 title: "Trash"
-metaTitle: "sensenet - Trash"
+metaTitle: "sensenet Concepts - Trash"
 metaDescription: "sensenet Trash"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Webhooks"
-metaTitle: "sensenet - Webhooks"
+metaTitle: "sensenet Concepts - Webhooks"
 metaDescription: "sensenet Webhooks"
 ---
 

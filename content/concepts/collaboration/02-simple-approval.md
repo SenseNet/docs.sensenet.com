@@ -1,6 +1,6 @@
 ---
 title: "Simple approval"
-metaTitle: "sensenet - Simple approval"
+metaTitle: "sensenet Concepts - Simple approval"
 metaDescription: "sensenet Simple approval"
 ---
 

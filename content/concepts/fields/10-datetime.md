@@ -1,6 +1,6 @@
 ---
 title: "DateTime field"
-metaTitle: "sensenet - DateTime field"
+metaTitle: "sensenet Concepts - DateTime field"
 metaDescription: "sensenet DateTime field"
 ---
 

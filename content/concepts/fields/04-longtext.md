@@ -1,6 +1,6 @@
 ---
 title: "LongText field"
-metaTitle: "sensenet - LongText field"
+metaTitle: "sensenet Concepts - LongText field"
 metaDescription: "sensenet LongText field"
 ---
 

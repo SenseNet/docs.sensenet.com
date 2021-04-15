@@ -1,6 +1,6 @@
 ---
 title: "Sharing"
-metaTitle: "sensenet - Sharing"
+metaTitle: "sensenet Concepts - Sharing"
 metaDescription: "sensenet Sharing"
 ---
 

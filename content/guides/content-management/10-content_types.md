@@ -1,6 +1,6 @@
 ---
 title: "Content Types"
-metaTitle: "sensenet admin-ui - Content types"
+metaTitle: "sensenet Admin-ui - Content types"
 metaDescription: "sensenet admin-ui - Content types"
 ---
 

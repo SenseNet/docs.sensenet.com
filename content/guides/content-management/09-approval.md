@@ -1,6 +1,6 @@
 ---
 title: "Approval"
-metaTitle: "sensenet admin-ui - Approval"
+metaTitle: "sensenet Admin-ui - Approval"
 metaDescription: "sensenet admin-ui - Approval"
 ---
 

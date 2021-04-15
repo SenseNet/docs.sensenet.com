@@ -1,6 +1,6 @@
 ---
 title: "Fields"
-metaTitle: "sensenet - Fields"
+metaTitle: "sensenet Concepts - Fields"
 metaDescription: "sensenet Fields"
 ---
 

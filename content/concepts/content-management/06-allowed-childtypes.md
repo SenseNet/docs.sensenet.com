@@ -1,6 +1,6 @@
 ---
 title: "Allowed Child Types"
-metaTitle: "sensenet - Allowed Child Types"
+metaTitle: "sensenet Concepts - Allowed Child Types"
 metaDescription: "sensenet Allowed Child Types"
 ---
 sensenet content repository stores different content types. One of the major differences between a file system and the content repository, is that in a file system you can store any type (file or folder) anywhere, whereas in the sensenet content repository it is possible to define restrictions on what content types the different containers can contain. This allows you to create a much more precisely defined content structure and provides control on the long run.

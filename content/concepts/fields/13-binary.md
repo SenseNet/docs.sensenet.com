@@ -1,6 +1,6 @@
 ---
 title: "Binary field"
-metaTitle: "sensenet - Binary field"
+metaTitle: "sensenet Concepts - Binary field"
 metaDescription: "sensenet Binary field"
 ---
 

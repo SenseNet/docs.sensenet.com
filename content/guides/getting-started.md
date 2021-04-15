@@ -1,7 +1,7 @@
 ---
-title: "Getting started"
-metaTitle: "sensenet admin-ui - Getting started"
-metaDescription: "sensenet admin-ui - Getting started"
+title: Getting started
+metaTitle: "sensenet Admin-ui - Getting started"
+metaDescription: "sensenet Admin-ui - Getting started"
 ---
 
 sensenet has an admin ui which enables you to connect to your repos and do basic content management actions. In the following you can learn about the different features of the admin surface.

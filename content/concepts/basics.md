@@ -1,7 +1,7 @@
 ---
 title: "Basics"
-metaTitle: "sensenet - Content"
-metaDescription: "sensenet Content"
+metaTitle: "sensenet Concepts - Basics"
+metaDescription: "sensenet basics"
 ---
 
 # Everything is a content

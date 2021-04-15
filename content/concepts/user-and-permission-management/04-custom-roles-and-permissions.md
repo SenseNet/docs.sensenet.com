@@ -1,6 +1,6 @@
 ---
 title: "Custom Roles and Permissions"
-metaTitle: "sensenet - Custom Roles and Permissions"
+metaTitle: "sensenet Concepts - Custom Roles and Permissions"
 metaDescription: "sensenet Custom Roles and Permissions"
 ---
 

@@ -1,7 +1,7 @@
 ---
-title:  "Getting started with sensenet and a server-side Asp.Net MVC client"
-metaTitle: "Getting started with sensenet and a server-side Asp.Net MVC client"
-metaDescription: This tutorial shows you how to start using sensenet in a server-side Asp.Net MVC application.
+title:  Getting started with sensenet and a server-side Asp.Net MVC client
+metaTitle: "sensenet Tutorials - Getting started with sensenet and a server-side Asp.Net MVC client"
+metaDescription: "This tutorial shows you how to start using sensenet in a server-side Asp.Net MVC application."
 ---
 
 In this tutorial we will build a basic Asp.Net MVC application. This is a server-side application that sends **server-to-server** requests to the sensenet repository from the backend. It will be capable of loading and displaying content items in a regular MVC controller and view environment.

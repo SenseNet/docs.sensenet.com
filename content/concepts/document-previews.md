@@ -1,6 +1,6 @@
 ---
 title: "Document Previews"
-metaTitle: "sensenet - Document Previews"
+metaTitle: "sensenet Concepts - Document Previews"
 metaDescription: "sensenet Document Previews"
 ---
 

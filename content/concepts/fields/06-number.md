@@ -1,6 +1,6 @@
 ---
 title: "Number field"
-metaTitle: "sensenet - Number field"
+metaTitle: "sensenet Concepts - Number field"
 metaDescription: "sensenet Number field"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Localization"
-metaTitle: "sensenet admin-ui - Localization"
+metaTitle: "sensenet Admin-ui - Localization"
 metaDescription: "sensenet admin-ui - Localization"
 ---
 

@@ -1,7 +1,7 @@
 ---
-title|Permissions
-metaTitle|"sensenet API - Permissions"
-metaDescription|"Permissions"
+title: Permissions
+metaTitle: "sensenet API - Permissions"
+metaDescription: "Permissions"
 ---
 
 sensenet has a flexible permission system for controlling the accessibility of content on different levels. You are able to set permissions (allow or deny) for individual users or groups, on individual documents or whole libraries and workspaces. Managing and visualizing the permission settings is of course available and can be done through OData REST API.
