@@ -12,7 +12,7 @@ First login to the admin-ui and go to the Content Types menu. There you can find
 
 Let's see how to create a custom type for contracts. Contracts are in most of the cases files with some specific metadata like multiple unique contract id's, a connected project or lawyer name and related other documents as references. But behind these contract-specific data they are files that should have all the common metadata like the actual binary of the file, date of modification, creator user and so on. These are the cases when sensenet's content type inheritance comes handy. All you have to do is to choose the right parent type and create an inherited one to get all the common fields that a file typed content should have.
 
-Click on the add button at the top of the drawer menu and choose Content Type from the dropdown. A xml editor will appear with some default data to help you at the start. Don't panic working with these xml files seems to be though at the beginning but you cannot spoil anything and if you made one, the others will come easy.
+Click on the add button at the top of the drawer menu and choose Content Type from the dropdown. A xml editor will appear with some default data to help you at the start. Don't panic, working with these xml files seems to be though at the beginning, but you cannot spoil anything and if you made one, the others will come easy.
 
 You can clear the content of the editor and paste the following xml instead:
 ```xml
