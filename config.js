@@ -41,7 +41,7 @@ const config = {
 		"title": "sensenet | Documentation",
 		"description": "sensenet Documentation for developers",
 		"ogImage": null,
-		"docsLocation": "https://github.com/sensenet/docs.sensenet.com/tree/master/content",
+		"docsLocation": "https://github.com/sensenet/docs.sensenet.com/tree/develop/content",
 		"favicon": "https://www.sensenet.com/favicon-32x32.png"
 	},
 	"pwa": {
