@@ -59,6 +59,7 @@ const sideMenuConfig = {
       "/guides/localization",
       "/guides/setup",
       "/guides/api-and-security",
+      "/guides/stats",
       "/guides/customization",
     ],
     "collapsedNav": [
@@ -71,6 +72,7 @@ const sideMenuConfig = {
       "/guides/localization",
       "/guides/setup",
       "/guides/api-and-security",
+      "/guides/stats",
       "/guides/customization",
     ],
   },
