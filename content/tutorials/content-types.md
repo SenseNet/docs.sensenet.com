@@ -8,7 +8,7 @@ A Content Type Definition (CTD) is an XML-format configuration file for content 
 
 # Create a new content type definition
 
-First login to the admin-ui and go to the Content Types menu. There you can find all the available content types, all the built-in and the custom ones. Choosing an existing content type to be your customs parent type is a key step of creating content types in sensenet. It can save you a lot of headaches if you choose a parent type with fields and logic which you will need in your custom type anyway.
+First login to the admin-ui and go to the Content Types menu. There you can find all the available content types, built-in and the custom ones as well. Choosing an existing content type to be your custom's parent type is a key step of creating content types in sensenet. It can save you a lot of headaches if you choose a parent type with fields and logic which you will need in your custom type anyway.
 
 Let's see how to create a custom type for contracts. Contracts are in most of the cases files with some specific metadata like multiple unique contract id's, a connected project or lawyer name and related other documents as references. But behind these contract-specific data they are files that should have all the common metadata like the actual binary of the file, date of modification, creator user and so on. These are the cases when sensenet's content type inheritance comes handy. All you have to do is to choose the right parent type and create an inherited one to get all the common fields that a file typed content should have.
 
