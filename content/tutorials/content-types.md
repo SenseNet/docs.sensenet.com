@@ -60,7 +60,7 @@ See followings to understand what is happening here:
 
 ```<ContentType name="Contract" parentType="File"..>```
 
-You've created a content type names Contract that is inherited from the built-in type File. That means that all the fields and configurations from parent type File are available on Contract type as well (in the next paragraph you can see which are these) and you have to define only those fields that are required on Contract and are not part of File's fieldset.
+You've created a content type named Contract that is inherited from the built-in type File. That means that all the fields and configurations from parent type File are available on Contract type as well (in the next paragraph you can see which are these) and you have to define only those fields that are required on Contract and are not part of File's fieldset.
 
 ```xml
 ...
@@ -82,7 +82,7 @@ In the head part of the CTD we define key descriptive things that will be used o
 
 The other main part of a CTD is the list of unique fields and their configurations. Unique means fields that are not related to common files and are not defined on the built-in File type. Fields are always listed between the `<Fields>` tag.
 
-In the example above you can see that we've created four fields that are will be available on Contracts additionally.
+In the example above you can see that we've created four fields that will be available on Contracts additionally.
 
 ```xml
 ...
@@ -141,24 +141,24 @@ ContractValue is a number field to hold value of the contract. The value's displ
   </Field>
 ```
 
-The last field is a DateTime type one to contain the renewal date of the contract.
+The last one is a DateTime type field to contain the renewal date of the contract.
 
 <note severity="info">Find DateTime field's setting and configuration options in the <a href="/concepts/fields/10-datetime">concepts</a></note>
 
 
 # Create content with the new type
 
-After creating a new content type you need to set where you want to use it. Manage list of allowed child types lets you assemble the group of content types that can be used in a container or a subtree. To do this go to the chosen container and open it for edit and update the content's *Allowed Child Types* field adding your newly created one.
+After creating a new content type you need to set where you want to use it. List of allowed child types lets you assemble the group of content types that can be used in a container or a subtree. To do this, go to the chosen container and open it for edit and update the content's *Allowed Child Types* field adding your newly created one.
 
 ![Allowed Child Types](./img/allowedtypes.gif "Add the newly created Content Type to the Allowed Child Types list")
 
-After that Contract will be available as type of new content in the dropdown list.
+After that, Contract will be available as type of new content in the dropdown list.
 
 ![Adding a new contract](./img/allowedtypes.png "Contract type listed in the add new content dropdown")
 
 # Inherited fields
 
-As it is mentioned above all the fields that are defined on parent types are available on the lower levels. So on your newly created Contract type all the fields from File (parent type) and GenericContent (parent type of file) is there and you can get and set their values true OData or make them visible on the UI along the custom ones defined by you. If you now start to create a new contract you can see that the form contains not only those fields, that you've added to the custom type.
+As it is mentioned above all the fields that are defined on parent types are available on the lower levels. So on your newly created Contract type all the fields from File (parent type) and GenericContent (parent type of file) is there and you can get and set their values through OData or make them visible on the UI along with the custom ones defined by you. If you now start to create a new contract you can see that the form contains not only those fields, but also those that you've added to the custom type.
 
 ![Add new contract form](./img/newcontract1.png "Add new contract form")
 
@@ -168,11 +168,11 @@ You can change content types at any time later, regardless of whether you have a
 
 <note severity="error">Parent type of a content type cannot be changed, because it would mess up inheritance and the type tree!</note>
 <div>&nbsp;</div>
-<note severity="info">If the change the name of the type a new content type is created and the old one with the previously used name also remains</note>
+<note severity="info">If you change the name of the type, a new content type is created and the old one with the previously used name also remains</note>
 
 # Working with field visibility
 
-Sometimes later some of the fields you've added become unnecessary to fill out or it can even occur with inherited fields. In this cases you don't have to remove the field completely (this way you can keep the data), you can hide them instead. All the fields have field visibility configuration options so you can define, you can specify which field to display in which view. There are three main views (Browse, New and Edit) that are used in different scenarios. For example in this case you want to hide the inherited fields (EnableLifeSpan, ValidFrom and ValidTill) from the new field which is shown when a user creates a new contract. Add the following code to the Contract CTD before the closing `</Fields>` tag.
+Sometimes fields you've added become unnecessary to fill out or it can even occur with inherited fields. In this cases you don't have to remove the field completely (this way you can keep the data), you can hide them instead. All the fields have field visibility configuration options so you can specify which field to display in which view. There are three main views (Browse, New and Edit) that are used in different scenarios. For example in this case you want to hide the inherited fields (EnableLifeSpan, ValidFrom and ValidTill) from the new form which is shown when a user creates a new contract. Add the following code to the Contract CTD before the closing `</Fields>` tag.
 
 ```xml
 <Field name="EnableLifespan" type="Boolean">
@@ -192,7 +192,7 @@ Sometimes later some of the fields you've added become unnecessary to fill out o
 </Field>
 ```
 
-As you can see you need only to list the fields and override one visibility config per field. After that update the fields we wanted to hide are not seen anymore on the contract creation form.
+As you can see you only need to list the fields and override one visibility config per field. After that update, the fields we wanted to hide are not seen anymore on the contract creation form.
 
 ![Add new contract form](./img/newcontract2.png "Add new contract form with some hidden fields")
 
@@ -212,13 +212,13 @@ To try out new field creation, add the following field definition before the clo
 </Field>
 ```
 
-As you see the new field is a simple boolean field to store if the contract has already been signed.
+As you see the new field is a simple boolean field to store whether the contract has already been signed.
 
 ![Add new contract form](./img/newcontract3.png "Add new contract form with a new field")
 
 # Modify fields
 
-You may want to change a field and its configuration for many reasons: to change order of the fields, or their visibility and so on. Every aspect of a field could be modified except one, the type. Fields have various configurations and settings per type. To learn more about a specific field type's possible configurations check the [concept docs](https://docs.sensenet.com/concepts/fields).
+You may want to change a field and its configuration for many reasons: to change order of the fields, their visibility and so on. Every aspect of a field could be modified except one, the type. Fields have various configurations and settings per type. To learn more about a specific field type's possible configurations check the [concept docs](https://docs.sensenet.com/concepts/fields).
 
 To try out modification add a default value to the *Contract value*. Update the field definition with the following configuration:
 
@@ -233,13 +233,13 @@ To try out modification add a default value to the *Contract value*. Update the 
   </Field>
 ```
 
-Now when you create a new contract the value field will be automatically filled with the default value.
+Now, when you create a new contract the value field will be automatically filled with the default value.
 
 ![Add new contract form](./img/newcontract4.png "Add new contract form with a new field")
 
 # Delete a field
 
-To actually delete a field, we need to delete it from the CTD where it is basically defined. So for example if we want to delete `EnableLifespan` field system wide, we have to remove it from the `GenericContent` type. It is easier if we are working with custom content types, because the non-inherited custom fields could be easily removed from the custom content types.
+To actually delete a field, we need to delete it from the CTD where it is basically defined. So for example if we want to delete `EnableLifespan` field system-wide, we have to remove it from the `GenericContent` type. It is easier if we are working with custom content types, because the non-inherited custom fields could be easily removed from these.
 
 <note severity="error">When you remove a field from a CTD, we delete all the values for that field immediately from the database, so please be careful about it! On the other hand, content are not reindexed (it would take too much time), which means you will still be able to find content by their previous field value using a content query - even after that field has been removed from the CTD.</note>
 
