@@ -6,9 +6,9 @@ metaDescription: How to start working with sensenet API
 
 # Create a content repository
 
-Register and request a repository.
-
-<button variant="contained" color="primary">Create a new repository</button>
+<div class="registerButton">
+  <a href="https://profile.sensenet.com/?redirectToLogin" target="_blank">Register your free repo</a>
+</div>
 
 Next you'll need to model your content, create your custom types, and publish some documents to your repository.
 
