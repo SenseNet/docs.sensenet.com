@@ -42,7 +42,6 @@ const sideMenuConfig = {
       "/concepts/content-types",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
-      "/concepts/fields",
     ],
   },
   tutorials: {
