@@ -1,7 +1,7 @@
 ---
-title: "Contentlink"
-metaTitle: "sensenet - Contentlink"
-metaDescription: "sensenet Contentlink"
+title: "Content Link"
+metaTitle: "sensenet - Content Link"
+metaDescription: "sensenet Content Link"
 ---
 
 A ContentLink is a mirror of another content. It propagates most of the fields of the referenced content. This content type is useful when you want to display a content somewhere else in the content tree but want to manage changes in a single place, so a copy would not be sufficient.

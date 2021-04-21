@@ -1,7 +1,7 @@
 ---
-title: "Memolist"
-metaTitle: "sensenet - Memolist"
-metaDescription: "sensenet Memolist"
+title: "Memo List"
+metaTitle: "sensenet - Memo List"
+metaDescription: "sensenet Memo List"
 ---
 
 A [List](/concepts/content-types/08-contentlist) type for storing Memos.
@@ -20,7 +20,7 @@ ItemList
 
 # Special fields
 
-All the fields are inherited from its ancestors, there is no special field for this contetn type.
+All the fields are inherited from its ancestors, there is no special field for this content type.
 
 # Example
 

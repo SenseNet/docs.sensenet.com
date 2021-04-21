@@ -1,7 +1,7 @@
 ---
-title: "GenericContent"
-metaTitle: "sensenet - GenericContent"
-metaDescription: "sensenet GenericContent"
+title: "Generic Content"
+metaTitle: "sensenet - Generic Content"
+metaDescription: "sensenet Generic Content"
 ---
 
 This type is the root content type in sensenet. Every content type inherits their fields from it.

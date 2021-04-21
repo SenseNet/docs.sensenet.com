@@ -1,7 +1,7 @@
 ---
-title: "Tasklist"
-metaTitle: "sensenet - Tasklist"
-metaDescription: "sensenet Tasklist"
+title: "Task List"
+metaTitle: "sensenet - Task List"
+metaDescription: "sensenet Task List"
 ---
 
 A [List](/concepts/content-types/08-contentlist) type for storing Tasks.

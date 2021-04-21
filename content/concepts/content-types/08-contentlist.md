@@ -1,7 +1,7 @@
 ---
-title: "Contentlist"
-metaTitle: "sensenet - Contentlist"
-metaDescription: "sensenet Contentlist"
+title: "Content List"
+metaTitle: "sensenet - Content List"
+metaDescription: "sensenet Content List"
 ---
 
 A Content List is a container that usually holds certain types of content - e.g. a Document Library contains files, an Image Library contains images. You can create lists for your own features and choose the content types you want to store in them freely.
@@ -118,7 +118,7 @@ Content Lists may have their own [local metadata fields](/api-docs/content-manag
     </Field>
     <Field name="ExchangeSubscriptionId" type="ShortText">
       <DisplayName>$Ctd-ContentList,ExchangeSubscriptionId-DisplayName</DisplayName>
-      <Description>$Ctd-ContentList,ExchangeSubscriptionId-Descriptione</Description>
+      <Description>$Ctd-ContentList,ExchangeSubscriptionId-Description</Description>
       <Configuration>
         <ReadOnly>true</ReadOnly>
         <VisibleBrowse>Hide</VisibleBrowse>

@@ -1,7 +1,7 @@
 ---
-title: "Event Calendar"
-metaTitle: "sensenet - Event Calendar"
-metaDescription: "sensenet Event Calendar"
+title: "Calendar"
+metaTitle: "sensenet - Calendar"
+metaDescription: "sensenet Calendar"
 ---
 
 A special container type to store calendar events.

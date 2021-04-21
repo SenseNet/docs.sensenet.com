@@ -51,7 +51,7 @@ ListItem
         <Options>
           <Option value="generic" selected="true">$Ctd-Memo,MemoType-generic</Option>
           <Option value="iso">$Ctd-Memo,MemoType-iso</Option>
-          <Option value="iaudit">$Ctd-Memo,MemoType-iaudit</Option>
+          <Option value="audit">$Ctd-Memo,MemoType-audit</Option>
         </Options>
       </Configuration>
     </Field>

@@ -1,14 +1,14 @@
 ---
-title: "Linklist"
-metaTitle: "sensenet - Linklist"
-metaDescription: "sensenet Linklist"
+title: "Link List"
+metaTitle: "sensenet - Link List"
+metaDescription: "sensenet Link List"
 ---
 
 LinkList is a container type for storing links.
 
 # Features
 
-LinkList is a regular conatainer for storing items, this one is created to store Links. LinkLists are usually created inside workspaces.
+LinkList is a regular container for storing items, this one is created to store Links. LinkLists are usually created inside workspaces.
 
 # Parent type
 

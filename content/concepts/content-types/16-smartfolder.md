@@ -1,7 +1,7 @@
 ---
-title: "Smartfolder"
-metaTitle: "sensenet - Smartfolder"
-metaDescription: "sensenet Smartfolder"
+title: "Smart Folder"
+metaTitle: "sensenet - Smart Folder"
+metaDescription: "sensenet Smart Folder"
 ---
 
 Use smart folders to group content items by a repository query. You can display items as if they were all stored in the smart folder, even if they reside in different parts of the repository.
