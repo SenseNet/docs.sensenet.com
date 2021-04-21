@@ -10,7 +10,7 @@ You can configure ``allowed child types`` in the content type definition of the 
 
 # CTD settings
 
-To set the default allowed child types for a specific content type, go to its ([CTD](/concepts/content-management/03-content-types#contenttypedefinitions)) (or content type definition) and define the ``AllowedChildTypes`` element. If it does not exist yet, create it right before the Fields element:
+To set the default allowed child types for a specific content type, go to its ([CTD](/concepts/content-types#contenttypedefinitions)) (or content type definition) and define the ``AllowedChildTypes`` element. If it does not exist yet, create it right before the Fields element:
 
 ```xml
 <AllowedChildTypes>

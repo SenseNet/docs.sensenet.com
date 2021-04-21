@@ -4,7 +4,7 @@ metaTitle: "sensenet Concepts - Client-Side Forms"
 metaDescription: "sensenet Client-Side Forms"
 ---
 
-As you probably heard before, in sensenet everything is a content. This philosophy provides many advantages when working with sensenet because the only difference between contents are the fields they have. This facilitates the way of managing different [type of contents](/concepts/content-management/03-content-types).
+As you probably heard before, in sensenet everything is a content. This philosophy provides many advantages when working with sensenet because the only difference between contents are the fields they have. This facilitates the way of managing different [type of contents](/concepts/content-types).
 
 Based on this logic, defining a new content type with custom fields opens the possibility to create client-side forms easily.
 
