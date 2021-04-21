@@ -6,10 +6,6 @@ metaDescription: "Api references"
 
 ## CHEAT SHEET (91 operations)
 
-- 
-  - GET  [CreateTestFiles](/restapi/createtestfiles)(`int` count, `long` size) : `string`
-  - GET  [DeleteTestFolder](/restapi/deletetestfolder)(`string` name) : `string`
-  - GET  [GetDatabaseUsage](/restapi/getdatabaseusage)(`bool` force) : `DatabaseUsage`
 - AdSync
   - POST [Ad2PortalSyncFinalizer](/restapi/ad2portalsyncfinalizer)(`SnTaskResult` result) : `void`
 - Authentication

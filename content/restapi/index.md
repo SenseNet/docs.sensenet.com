@@ -95,6 +95,3 @@ metaDescription: "Api references"
 | Users and Groups | [CreateUserByProvider](/restapi/createuserbyprovider) | POST |
 | Users and Groups | [GetParentGroups](/restapi/getparentgroups) | GET |
 | Users and Groups | [RemoveMembers](/restapi/removemembers) | POST |
-|  | [CreateTestFiles](/restapi/createtestfiles) | GET |
-|  | [DeleteTestFolder](/restapi/deletetestfolder) | GET |
-|  | [GetDatabaseUsage](/restapi/getdatabaseusage) | GET |
