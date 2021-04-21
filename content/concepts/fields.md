@@ -6,7 +6,7 @@ metaDescription: "sensenet Fields"
 
 Fields are single data storing units that build up [content types](/concepts/content-management/02-content-model) - in other words: Fields are attributes of Content. A single Field represents a single chunk of information, such as a name or a date. Fields are mapped to [content repository](/concepts/basics/02-content-repository) data slots in the storage layer, and can be displayed and accessed through controls on the UI.
 
-Fields however not only store data, but also carry metadata and configuration settings. Metadata includes attributes like *Title* and *Description*; configuration includes attributes like Compulsory and ReadOnly. For a complete list of available metadata and configuration attributes see [CTD field definition](/concepts/content-management/03-content-types).
+Fields however not only store data, but also carry metadata and configuration settings. Metadata includes attributes like *Title* and *Description*; configuration includes attributes like Compulsory and ReadOnly. For a complete list of available metadata and configuration attributes see [CTD field definition](/concepts/content-types).
 
 ## Field types
 
@@ -20,9 +20,9 @@ The behavior of Fields can be controlled by their configuration - or as we call 
 
 ## Field definition
 
-As Fields build up [content](/concepts/content-management), the set of contained Fields are defined when Content Types are defined. The [content type definition](/concepts/content-management/03-content-types) (CTD) holds the Field definition information (besides a couple of Content Type-related configuration settings). When defining a Content Type the contained Fields can be defined in the CTD using *XML fragments* describing the type of the Field, metadata and Field configuration (see [Field Setting](/concepts/fields/01-field-setting) for details):
+As Fields build up [content](/concepts/content-management), the set of contained Fields are defined when Content Types are defined. The [content type definition](/concepts/content-types) (CTD) holds the Field definition information (besides a couple of Content Type-related configuration settings). When defining a Content Type the contained Fields can be defined in the CTD using *XML fragments* describing the type of the Field, metadata and Field configuration (see [Field Setting](/concepts/fields/01-field-setting) for details):
 
-- For a complete list of common Field Setting configuration properties see [CTD field definition](/concepts/content-management/03-content-types).
+- For a complete list of common Field Setting configuration properties see [CTD field definition](/concepts/content-types).
 - Different Field types have different Field Settings. Check out the reference documentation of Fields to learn about Field Settings of the different Fields (for example the [reference field](/concepts/fields/reference)).
 
 <note severity="info">There are some field names that are reserved so they cannot be used as names of your custom fields. For reserved names are see <a href="/faq/content-types/#whichfieldnamesarereserved">this list</a></note>
@@ -37,13 +37,13 @@ When the Content is saved the input Field data falls under validation according 
 
 ## Inheritance
 
-[Content types](/concepts/content-management/03-content-types) can be inherited from other Content Types meaning that the child Content Type inherits all Fields that are defined on the *parent* Content Type. Field metadata and configuration **can be overridden** in child types - for example when a parent type defines a ShortText Field displayed as *my shorttext* and allowing a maximum number of 10 characters to be entered, a child Content Type may redefine the exact same Field as having *my redefined shorttext* text displayed and allowing a maximum number of 5 characters entered. Thus when creating Content of the child Content Type the inherited Field will behave different than as if a Content of the parent type were created. Inheritance and override - just like Field definition - can be adjusted in the Content Type Definition of the Content Types:
+[Content types](/concepts/content-types) can be inherited from other Content Types meaning that the child Content Type inherits all Fields that are defined on the *parent* Content Type. Field metadata and configuration **can be overridden** in child types - for example when a parent type defines a ShortText Field displayed as *my shorttext* and allowing a maximum number of 10 characters to be entered, a child Content Type may redefine the exact same Field as having *my redefined shorttext* text displayed and allowing a maximum number of 5 characters entered. Thus when creating Content of the child Content Type the inherited Field will behave different than as if a Content of the parent type were created. Inheritance and override - just like Field definition - can be adjusted in the Content Type Definition of the Content Types:
 
-- For more info on Field inheritance see [CTD field inheritance](/concepts/content-management/03-content-types).
+- For more info on Field inheritance see [CTD field inheritance](/concepts/content-types).
 
 ## Field handlers
 
-Field handlers define the underlying logic of the Field including validation against configuration settings and data providing built upon storage properties. Whenever a Field is defined in a CTD its handler has to be referenced either by using the type or the handler attributes (more info at [CTD field definition](/concepts/content-management/03-content-types)).
+Field handlers define the underlying logic of the Field including validation against configuration settings and data providing built upon storage properties. Whenever a Field is defined in a CTD its handler has to be referenced either by using the type or the handler attributes (more info at [CTD field definition](/concepts/content-types)).
 
 ## Indexing
 

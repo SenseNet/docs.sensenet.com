@@ -24,7 +24,10 @@ const sideMenuConfig = {
     "forcedNavOrder": [
       "/concepts/introduction",
       "/concepts/basics",
+      "/concepts/authentication",
       "/concepts/content-management",
+      "/concepts/fields",
+      "/concepts/content-types",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
       "/concepts/fields",
