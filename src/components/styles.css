@@ -195,11 +195,21 @@ a:hover {
 
 .registerButton a {
   color: #fff;
+  text-decoration: none;
 }
 
 
 .mainTextContainer .registerButton {
   margin-top: 30px
+}
+
+.FooterMenu .registerButton {
+  padding: 5px 20px;
+}
+
+.FooterMenu .registerButton a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .formElement
