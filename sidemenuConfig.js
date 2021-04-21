@@ -196,7 +196,6 @@ const sideMenuConfig = {
       "/restapi/ancestors",
       "/restapi/addmembers",
       "/restapi/createlocaluser",
-      "/restapi/createtestfiles",
       "/restapi/createuserbyprovider",
       "/restapi/getparentgroups",
       "/restapi/removemembers"
@@ -289,7 +288,6 @@ const sideMenuConfig = {
       "/restapi/ancestors",
       "/restapi/addmembers",
       "/restapi/createlocaluser",
-      "/restapi/createtestfiles",
       "/restapi/createuserbyprovider",
       "/restapi/getparentgroups",
       "/restapi/removemembers"
