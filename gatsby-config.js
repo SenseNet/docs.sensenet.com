@@ -151,8 +151,5 @@ module.exports = {
     headerLinks: config.header.links,
     siteUrl: config.gatsby.siteUrl,
   },
-  plugins: plugins,
-  flags: {
-    PRESERVE_WEBPACK_CACHE: true
-  }
+  plugins: plugins
 };
