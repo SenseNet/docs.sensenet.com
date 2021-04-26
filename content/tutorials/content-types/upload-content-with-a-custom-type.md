@@ -8,7 +8,7 @@ In this tutorial you will learn how you can upload content to a container with a
 
 ## Upload basics
 
-By default if you upload a file into a container in sensenet it will be created as a `File`. `File` is the built-in type for storing files in the content repository. This types key field is a binary field, which contains the actual binary of the file. Learn more about the `File` content type in the [concepts](content/concepts/content-types/06-file).
+By default if you upload a file into a container in sensenet it will be created as a `File`. `File` is the built-in type for storing files in the content repository. This type's key field is a binary field, which contains the actual binary of the file. Learn more about the `File` content type in the [concepts](content/concepts/content-types/06-file).
 
 First lets check the default behavior of upload. Create your own document library for playing with the types. If you open your newly created library and start to add content to it, the add new dropdown list by default contains two types (*File* and *Folder*) and *Upload*.
 
@@ -30,7 +30,7 @@ If you now upload an image it will be a simple *File* content in the sensenet re
 
 ## Upload images
 
-How could we solve for the images to be uploaded with the content type Image? Nothing is simpler, let's add the **Image** type to the allowed child types list next to File and Folder.
+How an image can be uploaded with the content type Image? Nothing is simpler, let's add the **Image** type to the allowed child types list next to File and Folder.
 
 ![Image as allowed childtype](./img/image_as_allowed_type.png "Image as allowed child type")
 
@@ -85,7 +85,7 @@ Let's create a custom type inherited from File with some additional fields for C
 
 This content type definition will include fields inherited from the File type (*Binary*, *DisplayName*, etc) and custom ones related to contracts as mentioned in the example above (*RelatedProject*, *RenewalDate*, etc).
 
-Open the settings menu and go to Configurations. There you can find a configurations file names Portal.settings. Open it for edit. This json file contains system-wide settings related to extensions and file types. Search for the list of `UploadFileExtensions`, which is actually an array that contains extension and content type pairs. You can define here how the system should handle the different file extensions when you upload a file with a specific one. As you can see, the common image file extensions are listed and connected to the *Image* type and *File* is the default. Add a new key value pair to connect Word documents and your newly created type, *Contract*. This setting means that if you upload a Word document it will be created as Contract and will have the custom fields as well.
+Open the settings menu and go to Configurations. There you can find a configurations file named Portal.settings. Open it for edit. This json file contains system-wide settings related to extensions and file types. Search for the list of `UploadFileExtensions`, which is actually an array that contains extension and content type pairs. You can define here how the system should handle the different file extensions when you upload a file with a specific one. As you can see, the common image file extensions are listed and connected to the *Image* type and *File* is the default. Add a new key value pair to connect Word documents and your newly created type, *Contract*. This setting means that if you upload a Word document it will be created as Contract and will have the custom fields as well.
 
 ```json
 ...
