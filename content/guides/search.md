@@ -6,7 +6,7 @@ metaDescription: "sensenet admin-ui - Search"
 
 In sensenet one of the most important and sophisticated feature is **Search**.
 
-As everything is a content in sensenet your query results cannot contain only files, but also users, tasks, workspaces ect.
+As everything is a content in sensenet your query results cannot contain only files, but also users, tasks, workspaces etc.
 It is possible to search even in uploaded documents.
 
 It is possible to extract all relevant terms from a text, filtering stop-words (like "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in") etc. In case your document contains the following text: „Writing Sentences” and your query text is „writing”. The original text can be found even if the query word typed in and the word in the original text do not match exactly char-by-char. You can get relevant search results even if you have a typo in your query or a different verbal tense.
@@ -28,7 +28,7 @@ Type filters are shown by default. The others are only visible if the _More filt
 
 ### Type
 
-You can narrow the results to one content type. It also uses the derived types, to handle your custom types also. Below the search box click one of the buttons or select from the more list.
+You can narrow the results to one content type. It also gives back the derived types to handle your custom ones. Below the search box click one of the buttons or select from the more list to set this filter.
 
 ### Path
 
