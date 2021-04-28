@@ -31,6 +31,10 @@ const footer = [
     title: 'Frontend updates',
     link: 'https://www.sensenet.com/frontend-updates'
   },
+  {
+    title: 'System status',
+    link: 'https://status.sensenet.cloud'
+  },
 ]
 
 module.exports = footer;
