@@ -193,6 +193,6 @@ export const pageQuery = graphql`
 `;
 
 const isExample = (path) => {
-  const fileName = path.replace(/^.*[\\\/]/, '')
+  const fileName = path.replace(/^.*[\\\/]/, '').toLowerCase()
   return langs.findIndex(l => l.name === fileName) > -1
 }
