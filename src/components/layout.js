@@ -7,6 +7,7 @@ import Sidebar from "./sidebar";
 import RightSidebar from "./rightSidebar";
 import LanguageMenu from './languageMenu';
 import {LanguageContext} from '../context/LanguageContext'
+import langs from './mdxComponents/langs';
 
 if (typeof window === 'undefined') {
   global.window = {
@@ -62,6 +63,7 @@ const RightSideBarWidth = styled('div')`
 const Layout = ({ children, location }) => {
 
   const toggleLanguage = (lang) => {
+
     if (typeof window != 'undefined') {
       localStorage.setItem('chosenLanguage', lang)
      }
@@ -72,8 +74,28 @@ const Layout = ({ children, location }) => {
     }));
   };
 
+  const language = () => {
+    let params = new URLSearchParams(window.location.search);
+    let l
+    if(typeof window != 'undefined'){
+      if(params.get("chosenLanguage") && langs.findIndex(l => l.name === params.get("chosenLanguage")) > -1){
+        l = params.get("chosenLanguage")
+        localStorage.setItem('chosenLanguage', l)
+      } else {
+        if(localStorage.getItem('chosenLanguage')){
+          l = localStorage.getItem('chosenLanguage')
+        } else {
+          l =`rest`
+        }
+      }
+    } else {
+      l =`rest`
+    }
+    return l
+  }
+
   const [state, setState] = React.useState({
-    lang: typeof window != 'undefined' && localStorage.getItem('chosenLanguage') ? localStorage.getItem('chosenLanguage') : `rest`,
+    lang: language(),
     toggleLanguage: toggleLanguage,
   });
 
