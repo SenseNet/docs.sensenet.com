@@ -4,15 +4,20 @@ metaTitle: "sensenet - Example apps"
 metaDescription: "sensenet - ReactJS example apps"
 ---
 
-## Following ReactJS example apps are a great way to start building a SPA with sensenet. They show how to start a project based on a sensenet repository.
+## The following example apps are made to demonstrate how you can build a single-page application based on sensenet.
 
-All the following apps are built with the [sn-react-boilerplate](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-typescript-boilerplate) which means they contain the following:
+You can check how they work from both sides, since content used by these apps are stored in our public demo repository (dev.demo.sensenet.com).
 
-- An example React SPA with sensenet repository login, written in Typescript ✨
+Modify something, add or delete content from the apps and check the changes in the content repository. In each app, you can find a link to the specific content (images, tasks, events etc.) used by the application. Feel free to play around!
+
+These apps are built with the [sn-react-boilerplate](https://github.com/SenseNet/sn-client/tree/master/examples/sn-react-typescript-boilerplate) which means they contain the following:
+
+- An example React SPA with sensenet repository login, written in Typescript ✨ (disabled for easy access)
 - Jest tests with Enzyme 👓
 - Pre-configured Webpack build 🧱
 - prettier and eslint 💅
 - husky lint & prettier pre-commit hook ⚓
+
 
 <ul class="exampleCards">
   <li class="exampleCard">
