@@ -137,7 +137,6 @@ let classname = mdx.fields.slug.split('/')[1]
             </Link>
           </Edit> : null }
         </div>
-        {mdx.frontmatter.onPremOnly ? <span className={'onpremBtn'}>on-premise only</span> : null}
         <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' || classname === 'faq' || classname === 'usecases' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
@@ -176,7 +175,6 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
-        onPremOnly
       }
     }
     allMdx {
@@ -193,6 +191,6 @@ export const pageQuery = graphql`
 `;
 
 const isExample = (path) => {
-  const fileName = path.replace(/^.*[\\\/]/, '')
+  const fileName = path.replace(/^.*[\\\/]/, '').toLowerCase()
   return langs.findIndex(l => l.name === fileName) > -1
 }
