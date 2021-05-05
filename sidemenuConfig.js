@@ -31,7 +31,6 @@ const sideMenuConfig = {
       "/concepts/user-and-permission-management",
       "/concepts/client-side-forms",
       "/concepts/webhooks",
-      "/concepts/logging",
       "/concepts/document-previews",
     ],
     "collapsedNav": [
