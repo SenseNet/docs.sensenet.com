@@ -71,6 +71,19 @@ export default class MDXRuntimeTest extends Component {
       forcedNavOrder = sideMenuConfig.restapi.forcedNavOrder
     } else if (mdx.fields.slug.includes('usecases')){
       forcedNavOrder = sideMenuConfig.usecases.forcedNavOrder
+    } else if (mdx.fields.slug.includes('integrations')){
+      forcedNavOrder = sideMenuConfig.integrations.forcedNavOrder
+    }
+
+    const getIntegrationsLogo = (title) => {
+      // const netlify = require('../images/netlify.png');
+      // const travisci = require('../images/travisci.png');
+      // const vercel = require('../images/vercel.png');
+      // const gastbycloud = require('../images/gatsby.png');
+      // const heroku = require('../images/heroku.png');
+      // const circleci = require('../images/circleci.png');
+      const icon = require(`../images/${title.replace(/ /g,'').toLowerCase()}.png`);
+      return icon
     }
 
     const navItems = allMdx.edges
@@ -129,6 +142,7 @@ let classname = mdx.fields.slug.split('/')[1]
         </Helmet>
         <div className={'titleWrapper'}>
           <h1 className={'title'}>
+            {classname === 'integrations' && mdx.fields.title !== 'Integrations' && mdx.fields.title !== 'Webhook templates' ? <img className="integrationsLogo" src={getIntegrationsLogo(mdx.fields.title)} alt={mdx.fields.title} /> : null}
             {mdx.fields.title}
           </h1>
           {mdx.parent.relativePath && !mdx.parent.relativePath.includes('rest-api-references') ? <Edit className={'mobileView'}>
@@ -137,7 +151,7 @@ let classname = mdx.fields.slug.split('/')[1]
             </Link>
           </Edit> : null }
         </div>
-        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' || classname === 'faq' || classname === 'usecases' ? `mainWrapper` : `fullWrapper`}>
+        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' || classname === 'faq' || classname === 'usecases' || classname === 'integrations' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
         {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') && !mdx.parent.relativePath.includes('rest-api-references') && !mdx.parent.relativePath.includes('usecases') ?

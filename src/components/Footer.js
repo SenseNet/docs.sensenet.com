@@ -19,7 +19,7 @@ const Footer = () => {
           <a href={item.link}>{item.title}</a>
         </li>
         )}
-        <li class="registerButton">
+        <li className="registerButton">
           <a href="https://profile.sensenet.com/?redirectToLogin" target="_blank">Get your repo</a>
         </li>
       </ul>

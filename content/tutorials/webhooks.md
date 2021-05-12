@@ -1,7 +1,7 @@
 ---
-title: "Working with WebHooks"
-metaTitle: "sensenet Tutorials - WebHooks"
-metaDescription: "sensenet - WebHooks"
+title: "Webhooks"
+metaTitle: "sensenet Tutorials - Webhooks"
+metaDescription: "sensenet - Webhooks"
 ---
 
 To learn the basic concepts of WebHooks in sensenet, please [visit this article](/concepts/webhooks). In this article you'll learn how can you subscribe to webhooks and how can you handle the requests sensenet makes.
