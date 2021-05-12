@@ -17,7 +17,7 @@ const config = {
       { "text": "Tutorials", "link": "/tutorials/getting-started/getting-started-dotnet", "name": "tutorial"},
       { "text": "Concepts", "link": "/concepts/introduction", "name": "concepts"},
       { "text": "Admin-ui Guides", "link": "/guides/getting-started", "name": "guides"},
-      { "text": "Integrations", "link": "/", "name": "integrations"}
+      { "text": "Integrations", "link": "/integrations/webhook", "name": "integrations"}
 		],
 		"search": {
 			"enabled": true,

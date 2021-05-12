@@ -1295,14 +1295,14 @@ display: inline-block;
 
 
 
-.exampleCards {
+.exampleCards, .integrationCards {
   display: flex;
   flex-wrap: wrap;
   margin: 0 imp !important;
   padding: 0 !important;
 }
 
-.exampleCard {
+.exampleCard, .integrationCard  {
   list-style-type: none;
   flex: 1 0 45%;
   box-sizing: border-box;
@@ -1314,6 +1314,11 @@ display: inline-block;
   margin: 20px;
   box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
   position: relative;
+}
+
+.integrationCard {
+  flex: 1 0 35%;
+  padding-bottom: 20px;
 }
 
 .exampleCard:hover {
@@ -1375,6 +1380,15 @@ display: inline-block;
   margin-right: 15px;
 }
 
+.integrationCard .iconContainer {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.integrationCard .iconContainer img {
+  width: 50px;
+}
 
 @media (max-width: 767px) {
   .responsive {
@@ -1539,6 +1553,10 @@ display: inline-block;
 
 .cardButtons .right a {
   margin-right: 20px;
+}
+.integrationCard {
+  flex: 1 0 50%;
+  padding-bottom: 20px;
 }
 }
 
