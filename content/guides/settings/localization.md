@@ -10,12 +10,12 @@ In sensenet you have the possibility to localize your texts to multiple language
 
 On the admin ui there is a dedicated section for all your xml string resource files.
 
-![localization main view](./img/localization_main.png)
+![localization main view](../img/localization_main.png)
 
 
 By double clicking on any of these xml files here, a basic editor surface reveals. You can modify a string resource then submit it so save your changes. If you edited something and changed your mind, you can use the reset button (top right corner) to revert your changes (to the last saved state). If no changes has been made, the button stays inactive.
 
-![string resource editor](./img/stringresource_editor.png)
+![string resource editor](../img/stringresource_editor.png)
 
 # Other actions
 
