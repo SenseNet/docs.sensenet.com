@@ -9,7 +9,7 @@ sensenet offers you a rich API allowing you to manage, integrate and deliver con
 
 You can view API and security related information on the Admin ui under the **Settings / API and security** section.
 
-![API and security](./img/api-and-security.png "API and security")
+![API and security](../img/api-and-security.png "API and security")
 
 The box at the top contains the basic info about the API: what is the endpoint of your sensenet content repository and what is your identity server url that is connected to your repository. The Identity server url is needed for [authentication](https://docs.sensenet.com/tutorials/authentication).
 
@@ -21,4 +21,4 @@ What if you are developing a tool or another server-side application that needs 
 
 *Note: This information is sensitive, make sure you protect these values.*
 
-![API clientID and secret](./img/api-and-security-secret.png "API clientID and secret")
+![API clientID and secret](../img/api-and-security-secret.png "API clientID and secret")
