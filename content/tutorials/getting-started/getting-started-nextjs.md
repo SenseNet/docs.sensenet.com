@@ -32,7 +32,7 @@ Now install the sensenet client core package and start your application:
 npm install --save @sensenet/client-core
 npm run dev
 # or
-yarn add @sensenet/client core
+yarn add @sensenet/client-core
 yarn dev
 ```
 
