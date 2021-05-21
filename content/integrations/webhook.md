@@ -47,7 +47,7 @@ metaDescription: "sensenet Integrations - Webhook templates"
   </li>
   <li class="integrationCard">
       <div class="iconContainer">
-        <img src="https://www.netlify.com/img/press/logos/logomark.png" />
+        <img src="https://www.iconbolt.com/iconsets/radix-icons/vercel-logo.svg" />
       </div>
       <h2>
         Vercel
