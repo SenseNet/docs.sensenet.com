@@ -22,7 +22,7 @@ After that you have to update the *configuration.js* file with the identity serv
 export const repositoryUrl = <your sensenet repository>
 
 export const configuration = {
-  client_id: "spa",
+  client_id: "", // clientID of your repository
   automaticSilentRenew: true,
   redirect_uri: `${window.location.origin}/authentication/callback`,
   response_type: "code",
