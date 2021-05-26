@@ -32,16 +32,16 @@ Query options are query string parameters a client may specify to control the am
 
 | option |     |
 | ------ | --- |
-| [$select](/basic-concepts/03-select-expand#select?target="_self") | specifies that a response from the service should return a subset of properties |
-| [$expand](/basic-concepts/03-select-expand#expand)| allows you to identify related entries with a single URI such that a graph of entries could be retrieved with a single HTTP request (e.g. creator user or any other related content) |
-| [$orderby](/basic-concepts/04-ordering-paging#ordering)  | allows you to sort results by one or more properties, forward or reverse direction |
-| [$top](/basic-concepts/04-ordering-paging#top) | identifies a subset selecting only the first N items of the set |
-| [$skip](/basic-concepts/04-ordering-paging#skip)  | identifies a subset that is defined by seeking N entries into the collection and selecting only the remaining ones |
-| [$filter](/basic-concepts/05-search-filter#filter)  | identifies a subset determined by selecting only the entries that satisfy the predicate expression specified by the query option |
+| [$select](/api-docs/basic-concepts/03-select-expand#select) | specifies that a response from the service should return a subset of properties |
+| [$expand](/api-docs/basic-concepts/03-select-expand#expand)| allows you to identify related entries with a single URI such that a graph of entries could be retrieved with a single HTTP request (e.g. creator user or any other related content) |
+| [$orderby](/api-docs/basic-concepts/04-ordering-paging#ordering)  | allows you to sort results by one or more properties, forward or reverse direction |
+| [$top](/api-docs/basic-concepts/04-ordering-paging#top) | identifies a subset selecting only the first N items of the set |
+| [$skip](/api-docs/basic-concepts/04-ordering-paging#skip)  | identifies a subset that is defined by seeking N entries into the collection and selecting only the remaining ones |
+| [$filter](/api-docs/basic-concepts/05-search-filter#filtering)  | identifies a subset determined by selecting only the entries that satisfy the predicate expression specified by the query option |
 | $format | specifies that a response to the request MUST use the media type specified by the query option (Atom and xml formats are not implemented yet in sensenet)  |
-| [$inlinecount](/basic-concepts/02-collection#$inlinecountqueryoption) | controls the `__count` property that can be found in every collection response |
-| [query](/basic-concepts/05-search-filter#query)  | filter the result collection using sensenet Content Query |
-| [metadata](/basic-concepts/06-metadata) | controls the metadata content in output entities |
+| [$inlinecount](/api-docs/basic-concepts/02-collection#inlinecountqueryoption) | controls the `__count` property that can be found in every collection response |
+| [query](/api-docs/basic-concepts/05-search-filter#queryoption)  | filter the result collection using sensenet Content Query |
+| [metadata](/api-docs/basic-concepts/06-metadata) | controls the metadata content in output entities |
 
 # Accessibility
 

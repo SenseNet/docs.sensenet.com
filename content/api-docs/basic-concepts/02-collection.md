@@ -24,9 +24,9 @@ Returns the count of items in the requested collection. The value depends on oth
 
 This returns a raw integer value.
 
-# $inlinecount query option
+# inlinecount query option
 
-This option controls the `__count` property's value that can be found in every collection response. Its valid values are: `allpages` and `none` (other value causes an error, default value is `none`).
+The $inlinecount option controls the `__count` property's value that can be found in every collection response. Its valid values are: `allpages` and `none` (other value causes an error, default value is `none`).
 
 **allpages**: count of the whole set (filter, top, skip options are ignored)
 **none**: result shows the actual count of items (`__count` property is not hidden)
