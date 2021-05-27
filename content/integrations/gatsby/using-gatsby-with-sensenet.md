@@ -28,7 +28,7 @@ sensenet is an api-first headless content management platform that makes deliver
 
 As a cloud based solution sensenet is hosted and maintained for you in our own cloud environment in fully isolated container infrastructure, which means that with a sensenet repository you get your own secure environment with a custom url, a separate database and a separate API endpoint.
 
-Cloud-based approach lets you forget about installation and operation tasks, all the subscriber repositories are on the same version and this allows us to deploy new features and patches for free, quickly and efficiently to all of the customer repositories on a regular basis.
+Cloud-based approach lets you forget about installation and operation tasks, all the subscriber repositories are on the same version and this allows us to deploy new features and patches for quickly and efficiently to all of the customer repositories (for free) on a regular basis.
 
 Hooking up sensenet to Gatsby takes just a few minutes:
 
