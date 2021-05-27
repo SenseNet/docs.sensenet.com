@@ -4,7 +4,7 @@ metaTitle: "sensenet Integrations - Using Gatsby with sensenet"
 metaDescription: "sensenet Integrations - Using Gatsby with sensenet"
 ---
 
-sensenet is the single hub for all your content packed with enterprise grade features. In sensenet everything is a content (blog posts, files, users, roles, comments, etc.) delivered the same way through the API, making it super easy to work with any type of data. With sensenet's and Gatsby's flexibility and power you can build any kind of app or website you need.
+sensenet is the single hub for all your content, packed with enterprise grade features. In sensenet everything is a content (blog posts, files, users, roles, comments, etc.) delivered the same way through the API, making it super easy to work with any type of data. With the flexibility and power of sensenet and Gatsby you can build any kind of app or website you need.
 
 ## When Is sensenet a Good Idea?
 
