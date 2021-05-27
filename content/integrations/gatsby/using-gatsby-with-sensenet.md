@@ -32,7 +32,7 @@ Cloud-based approach lets you forget about installation and operation tasks, all
 
 Hooking up sensenet to Gatsby takes just a few minutes:
 
-1. Create a sensenet account to get a repository
+1. [Create a sensenet account](https://profile.sensenet.com/?redirectToLogin) to get a repository
 2. Add our sensenet plugin to your Gatsby site
 3. Configure the plugin with your API keys
 4. Access all your sensenet content using GraphQL queries
