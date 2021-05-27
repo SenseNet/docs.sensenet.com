@@ -14,7 +14,7 @@ sensenet is the single hub for all your content, packed with enterprise grade fe
 - Teams and projects with complex permission setting requirements
 - Storing and delivering data for multiple projects/apps from one repository
 - Projects that involve multiple stages of content creation, versioning and approval
-- Storing massive amounts of data
+- Storing massive amounts of data securely
 
 **sensenet is not-so-great for:**
 
