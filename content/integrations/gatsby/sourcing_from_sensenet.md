@@ -88,4 +88,4 @@ module.exports = {
 
 # Examples of Gatsby + sensenet websites
 
-An example site for using this plugin is at [sn-blog-gatsby](https://github.com/SenseNet/sn-client/tree/develop/examples/sn-blog-gatsby)
+An example site for using this plugin is at [sn-blog-gatsby](https://github.com/SenseNet/gatsby-starter-sensenet-blog)

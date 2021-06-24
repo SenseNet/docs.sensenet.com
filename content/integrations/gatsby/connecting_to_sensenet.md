@@ -10,7 +10,7 @@ metaDescription: "Gatsby - Connecting to sensenet"
 
 # Setting up sensenet and Gatsby site
 
-First, you’ll need a Gatsby site with a _gatsby-source-sensenet_ (soon) source plugin pulling data from sensenet. It should be stored in a GitHub repository. If you haven’t set that up yet, you can quickly create a new project by using the _sensenet-gatsby-starter_ (soon) and signing up for an account at sensenet.com.
+First, you’ll need a Gatsby site with a [gatsby-source-sensenet](https://www.gatsbyjs.com/plugins/gatsby-source-sensenet/) source plugin pulling data from sensenet. It should be stored in a GitHub repository. If you haven’t set that up yet, you can quickly create a new project by using the [sensenet-gatsby-starter](https://github.com/SenseNet/gatsby-starter-sensenet-blog) and signing up for an account at sensenet.com.
 
 # Signing in to Gatsby Cloud
 
@@ -20,7 +20,7 @@ Once signed in, configuring Gatsby Cloud with sensenet requires several steps th
 
 # Setting up Environment Variables
 
-In Gatsby Cloud, start creating a site using the [Import from a Repository flow](https://support.gatsbyjs.com/hc/en-us/articles/360059253654). Once you reach step 5, "Configure Environment Variables," you'll see that Gatsby Cloud has automatically detected some of your project's environment variables. These are read from your _gatsby-config.js_ file. If you have used environment variables anywhere else, you may need to add them manually.
+In Gatsby Cloud, start creating a site using the [Import from a Repository flow](https://support.gatsbyjs.com/hc/en-us/articles/360059253654). Once you reach step 5, "Configure Environment Variables," you can add your build environmental variables. GATSBY_REACT_APP_CLIENT_ID and GATSBY_REACT_APP_CLIENT_SECRET are recommend to use as environmental variables and if you have used others anywhere else you may need to add them as well.
 
 # Webhooks
 
@@ -32,7 +32,7 @@ On sensenet admin ui choose Gatsby Cloud template when you add a new webhook:
 
 ![Gatsby webhook template](../img/gatsby-webhook-template.png)
 
-There are two required fields on the form to fill out: *Name* and *Gatsby build webhook URL / Gatsby preview webhook URL* (the urls mentioned above at Gatsby Cloud site settings). You can leave all other fields at default (you can change them at any time later) and thats it.
+There are two required fields on the form to fill out: _Name_ and _Gatsby build webhook URL / Gatsby preview webhook URL_ (the urls mentioned above at Gatsby Cloud site settings). You can leave all other fields at default (you can change them at any time later) and thats it.
 
 By default, this webhook will:
 
@@ -42,10 +42,6 @@ By default, this webhook will:
 
 ![Gatsby Cloud build webhook](../img/new-gatsby-webhook.png)
 
-<note severity="info">For additional setting options check <a href="/guides/webhooks">webhook guide docs</a>.</note>
+<note severity="info">For additional setting options check <a href="../../guides/webhooks">webhook guide docs</a>.</note>
 
-It is possible to trigger webhooks manually to try out if all the settings fit your needs. Select the webhook in the webhooks list and open command palette search with CTRL+SHIFT+P. Search for the *FireWebHook* and choose an action from the list based on what parameters you want to test with (path or id). Add the required parameters and execute the action.
-
-# Gatsby Preview
-
-Soon
+It is possible to trigger webhooks manually to try out if all the settings fit your needs. Select the webhook in the webhooks list and open command palette search with CTRL+SHIFT+P. Search for the _FireWebHook_ and choose an action from the list based on what parameters you want to test with (path or id). Add the required parameters and execute the action.
