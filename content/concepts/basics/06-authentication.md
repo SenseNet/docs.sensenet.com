@@ -6,7 +6,9 @@ metaDescription: "sensenet Authentication"
 
 The **sensenet as a Service** offer is all about making your development work easier and simpler - while still maintaining the security standards expected in an enterprise environment.
 
-For securing repositories hosted in our environment we use [IdentityServer4](https://identityserver4.readthedocs.io/en/latest) - the Open Source **OpenID Connect** and **OAuth 2.0** framework for .NET.
+For securing repositories hosted in our environment we use [IdentityServer4](https://identityserver4.readthedocs.io/en/latest) - the Open Source **OpenID Connect** and **OAuth 2.0** framework for .NET. This is what we recommend when hosting sensenet in your own environment too.
+
+<note severity="info">There is another method for authenticating with sensenet: using [API keys](/tutorials/authentication/how-to-authenticate-apikey). It lets 3rd party applications or services make authenticated requests to the repository without user interaction or custom code.</note>
 
 This means that developers who are familiar with OAuth 2.0 and OpenID Connect will be able to start working with our APIs in no time, because our service supports the usual protocols and APIs provided by IdentityServer4.
 
