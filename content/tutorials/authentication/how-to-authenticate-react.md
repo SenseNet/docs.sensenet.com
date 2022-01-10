@@ -45,7 +45,7 @@ import { Repository } from "@sensenet/client-core";
 import { RepositoryContext } from "@sensenet/hooks-react";
 import { configuration, repositoryUrl } from "./configuration";
 import React from "react";
-import { BrowserRouter, useHistory } from "react-router-dom";
+import { BrowserRouter, useNavigation } from "react-router-dom";
 
 export function AppProviders({ children }) {
   return (
@@ -58,7 +58,7 @@ export function AppProviders({ children }) {
 }
 
 export const AuthProvider = ({ children }) => {
-  const history = useHistory();
+  const history = useNavigation();
 
   return (
     <AuthenticationProvider configuration={configuration} history={history}>
