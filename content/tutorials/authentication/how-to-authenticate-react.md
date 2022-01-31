@@ -59,7 +59,7 @@ export function AppProviders({ children }) {
 
 export const AuthProvider = ({ children }) => {
   const location = useLocation();
-  const navigate = useNavigation();
+  const navigate = useNavigate();
   
   const history = {
     location,
