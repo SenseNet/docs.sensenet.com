@@ -120,7 +120,7 @@ Below you can see a fully featured skeleton of a content type definition xml:
 </ContentType>
 ```
 
-The content type definition xml of a content type can be edited on the admin ui or through OData REST API ([see How to create a Content Type for details](/tutorials/content-types/how-to-create-a-content-type/)).
+The content type definition xml of a content type can be edited on the admin ui or through OData REST API ([see How to create a Content Type for details](/tutorials/content-types/)).
 
 # Usage (advantages)
 
