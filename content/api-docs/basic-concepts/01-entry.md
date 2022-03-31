@@ -83,7 +83,7 @@ https://dev.demo.sensenet.com/OData.svc/Root/Content('Folder(1)')           // c
 https://dev.demo.sensenet.com/OData.svc/Root/Content('mydocument(2).docx')  // content name: mydocument(2).docx
 https://dev.demo.sensenet.com/OData.svc/Root/Content('42')                  // content name: 42
 https://dev.demo.sensenet.com/OData.svc/Root/Content('(42)')                // content name: (42)
-https://dev.demo.sensenet.com/OData.svc/content(1234)
+https://dev.demo.sensenet.com/OData.svc/content(1234)                       // content id: 1234
 ```
 
 Note the lack of single quotes in the last example? That request refers to the content **by Id**. You can use this format if you do not know anything else about the content, only the id. In this case ``content`` is just a keyword constant, the same way as ``odata.svc`` before it.
