@@ -23,17 +23,23 @@ Content changes will trigger a WebHook event. First you need to specify the **co
 You may also choose one or more specific **content types** and **event** triggers. Specific content type means that the event is relevant only if the content in question has the same type as the chosen one, so *content type inheritance* is not taken into account: if you are interested in content of a special file type (e.g. Contract), you have to choose Contract from the list, choosing File is not enough.
 
 ## Webhook payload
-This is the data we send when an event is triggered. Currently this is a JSON object in the following form:
+This is the data we send when an event is triggered. This is a JSON object that contains the following properties by default:
 
 ```json
 {
     "nodeId": 123,
+    "versionId": 123,
+    "version": "1.0A",
+    "previousVersion": null,
+    "versionModificationDate": "2021-02-18 06:55:00",
+    "modifiedBy": 456,
     "path": "/Root/Content/MyContent",
     "name": "MyContent",
     "displayName": "My Content",
     "eventName": "Modify",
     "subscriptionId": 456,
-    "sentTime": "2021-02-18 06:55:00"
+    "sentTime": "2021-02-18 06:55:00",
+    "repository": "myrepository.sensenet.cloud"
 }
 ```
 
