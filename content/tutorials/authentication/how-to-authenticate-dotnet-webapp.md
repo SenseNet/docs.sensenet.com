@@ -1,15 +1,17 @@
 ---
-title:  "Authentication from a .Net client"
-metaTitle: "sensenet Tutorials - Authentication from a .Net client"
+title:  "Authentication from a .Net web application"
+metaTitle: "sensenet Tutorials - Authentication from a .Net web application"
 category: Tutorials
 index: 0
 version: v7.0
-tags: [dotnet, getting started, client]
-description: This tutorial shows you how to make authenticated calls to sensenet using the .Net client API.
+tags: [dotnet, getting started, web]
+description: This tutorial shows you how to make authenticated calls to sensenet from a .net core web application using the .Net client API.
 ---
 
-# How to authenticate with a sensenet repository from a .Net client
-Unless you are working with publicly available content - like blog posts - it is necessary to make **authenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net application.
+# How to authenticate with a sensenet repository from an Asp.Net Core web application
+Unless you are working with publicly available content - like blog posts - it is necessary to make **authenticated** calls to the sensenet repository to access content items. In this article you'll see how to achieve that in a .Net web application.
+
+This process is almost the same as authenticating from a [console application](/tutorials/authentication/how-to-authenticate-dotnet), only the service registration is different.
 
 > To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/basics/06-authentication).
 >
@@ -17,8 +19,8 @@ Unless you are working with publicly available content - like blog posts - it is
 >
 > This workflow requires the client application to have a **sensenet repository url**, a **client id** and also a **client secret**. To acquire these values, please visit your profile page and select the repository you want to connect to.
 
-## Create a new console application
-Create a new .Net Core console application either in command line (`dotnet new`), Visual Studio or VS Code.
+## Create a new Asp.Net Core web application
+Create a new Asp.Net Core web application either in command line (`dotnet new`), Visual Studio or VS Code.
 
 Install the following NuGet packages:
 
@@ -38,14 +40,16 @@ using SenseNet.Extensions.DependencyInjection;
 ```
 
 ## Add the repository feature
-In an Asp.Net Core web application registering services is more straightforward, but in a **console application** you'll have to do some manual work to achieve the same result:
+In the `ConfigureServices` method of the `Startup` class register the feature.
 
 ```csharp
-// assemble a service container and register the sensenet repository service
-var provider = new ServiceCollection()
-    .AddSenseNetRepository(options => { config.Bind("sensenet", options); })
-    .AddLogging(logging => logging.AddConsole())
-    .BuildServiceProvider();
+public void ConfigureServices(IServiceCollection services)
+{
+    // register the repository feature
+   services.AddSenseNetRepository(options => { Configuration.Bind("sensenet", options); });
+   
+   // add other services...
+}
 ```
 
 The `AddSenseNetRepository` method above registers the necessary client services and loads the configuration from the `sensenet` segment. The structure of the configuration must be the following:
@@ -66,9 +70,19 @@ The `AddSenseNetRepository` method above registers the necessary client services
 You can get an authenticated server context from a factory service. The first time you get the object the api will do the authentication steps in the background and cache the server context. All subsequent requests will be fast, so you do not have to pin the server object - in fact, it is advisable to **only pin the factory service** and get the server context from it every time you need to access the repository.
 
 ```csharp
-// load the factory service manually or through the constructor in another service or controller
-var serverFactory = provider.GetRequiredService<IServerContextFactory>();
-var server = await serverFactory.GetServerAsync();
+// load the factory service through the constructor in another service or controller
+public ContentController(IServerContextFactory serverFactory)
+{
+   _serverFactory = serverFactory;
+}
+
+// use it in an action method
+public void MyMethod()
+{
+    // get the server every time
+   var server = await _serverFactory.GetServerAsync();
+   var content = await Content.LoadAsync(path, server);
+}
 ```
 
 > Please note that it is also possible to register and get server objects by name. This way you can connect to multiple sensenet repositories at the same time.
