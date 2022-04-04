@@ -18,7 +18,7 @@ In this case the URL must satisfy a strict rule: the service path followed by `/
 
 # Get a single content by Path
 
-In this case the URL is the service path followed by the path of the parent and an entity name wrapped by apostrophes and parentheses.
+In this case the URL is the service path followed by the path of the parent and an entity name wrapped by single quotes and parentheses.
 
 <tab category="basic-concepts" article="entry" example="byPath" />
 
@@ -69,4 +69,35 @@ Binary data (value of a binary field) is represented by an [OData Named Resource
       }
     },
     ...
+```
+
+# Valid entity urls
+There is an important distinction between an entity path (that adresses a single entity and gets a response containing the _fields of that entity_) and a collection path that gets the _child entities_ of that collection. In this section we list the valid entity requests. For collection requests please see the [next page](/api-docs/basic-concepts/02-collection).
+
+
+The important thing to note is that the content name is enclosed in **parentheses AND single quotes**. This allows you to have content in the repository with a name containing parentheses:
+
+```
+https://dev.demo.sensenet.com/OData.svc/Root/Content('MyWorkspace')         // content name: MyWorkspace
+https://dev.demo.sensenet.com/OData.svc/Root/Content('Folder(1)')           // content name: Folder(1)
+https://dev.demo.sensenet.com/OData.svc/Root/Content('mydocument(2).docx')  // content name: mydocument(2).docx
+https://dev.demo.sensenet.com/OData.svc/Root/Content('42')                  // content name: 42
+https://dev.demo.sensenet.com/OData.svc/Root/Content('(42)')                // content name: (42)
+https://dev.demo.sensenet.com/OData.svc/content(1234)                       // content id: 1234
+```
+
+Note the lack of single quotes in the last example? That request refers to the content **by Id**. You can use this format if you do not know anything else about the content, only the id. In this case ``content`` is just a keyword constant, the same way as ``odata.svc`` before it.
+
+# Invalid entity urls
+All other formats are invalid. For example when using the ``content`` keyword you can only address the entity by id and quotes are not allowed:
+
+```
+https://dev.demo.sensenet.com/OData.svc/content('1234')         // INVALID url
+https://dev.demo.sensenet.com/OData.svc/content('MyWorkspace')  // INVALID url
+```
+
+The following url is _not an entity request_ but a collection request for a container that happens to contain parentheses in its name:
+
+```
+https://dev.demo.sensenet.com/OData.svc/Root/Content/Folder(1)
 ```
