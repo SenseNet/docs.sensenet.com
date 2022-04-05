@@ -23,23 +23,68 @@ Content changes will trigger a WebHook event. First you need to specify the **co
 You may also choose one or more specific **content types** and **event** triggers. Specific content type means that the event is relevant only if the content in question has the same type as the chosen one, so *content type inheritance* is not taken into account: if you are interested in content of a special file type (e.g. Contract), you have to choose Contract from the list, choosing File is not enough.
 
 ## Webhook payload
-This is the data we send when an event is triggered. Currently this is a JSON object in the following form:
+This is the data we send when an event is triggered. This is a JSON object that contains the following properties by default:
 
 ```json
 {
     "nodeId": 123,
+    "versionId": 123,
+    "version": "1.0A",
+    "previousVersion": null,
+    "versionModificationDate": "2021-02-18 06:55:00",
+    "modifiedBy": 456,
     "path": "/Root/Content/MyContent",
     "name": "MyContent",
     "displayName": "My Content",
     "eventName": "Modify",
     "subscriptionId": 456,
-    "sentTime": "2021-02-18 06:55:00"
+    "sentTime": "2021-02-18 06:55:00",
+    "repository": "myrepository.sensenet.cloud"
 }
 ```
 
 The content type of the request is `application/json`.
 
 When the target service processes these values, it can make callbacks to the sensenet repository service for additional information about the content or call 3rd party services for initiating a custom workflow or sending a notification to users.
+
+### Custom webhook payload
+It is possible to define additional properties to send with the payload. If you provide a custom JSON object when defining a webhook, the receiver will get a request containing those properties alongside the default ones. For example:
+
+```json
+{
+    "projectId": "myproject",
+    "department": "DEP123"
+}
+```
+
+You can also use parameters to make the webhook payload dynamic.
+
+```json
+{ 
+    "mydateproperty": "@@today@@",
+    "currentuser": @@currentuser@@,
+    "filepath": "@@content.Path@@",
+	"complexprop": {
+		"message": "@@content.DisplayName@@ was modified.",
+		"index": @@content.Index@@
+	}
+}
+```
+
+The parameters above will be replaced by the appropriate runtime value (e.g. the current time or user id). You can use the following parameters - enclosed within double `@@` signs.
+
+```text
+currentuser
+currentdate
+currentday
+today
+currenttime
+content
+eventname
+repository
+```
+
+The `content` parameter is very powerful: you can extend it with any field of the current content, even chaining properties is possible. For example `@@content.Manager.DisplayName@@` will insert the name of the manager of the current content - if it is relevant and available.
 
 ## Request headers
 You have the option to add custom HTTP headers to the request. This may be useful in scenarios when the target service expects a certain header or you want an **authenticated** request. In that case you can simply add a header here containing an auth token in a format accepted by the target service.
