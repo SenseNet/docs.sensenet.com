@@ -47,6 +47,45 @@ The content type of the request is `application/json`.
 
 When the target service processes these values, it can make callbacks to the sensenet repository service for additional information about the content or call 3rd party services for initiating a custom workflow or sending a notification to users.
 
+### Custom webhook payload
+It is possible to define additional properties to send with the payload. If you provide a custom JSON object when defining a webhook, the receiver will get a request containing those properties alongside the default ones. For example:
+
+```json
+{
+    "projectId": "myproject",
+    "department": "DEP123"
+}
+```
+
+You can also use parameters to make the webhook payload dynamic.
+
+```json
+{ 
+    "mydateproperty": "@@today@@",
+    "currentuser": @@currentuser@@,
+    "filepath": "@@content.Path@@",
+	"complexprop": {
+		"message": "@@content.DisplayName@@ was modified.",
+		"index": @@content.Index@@
+	}
+}
+```
+
+The parameters above will be replaced by the appropriate runtime value (e.g. the current time or user id). You can use the following parameters - enclosed within double `@@` signs.
+
+```text
+currentuser
+currentdate
+currentday
+today
+currenttime
+content
+eventname
+repository
+```
+
+The `content` parameter is very powerful: you can extend it with any field of the current content, even chaining properties is possible. For example `@@content.Manager.DisplayName@@` will insert the name of the manager of the current content - if it is relevant and available.
+
 ## Request headers
 You have the option to add custom HTTP headers to the request. This may be useful in scenarios when the target service expects a certain header or you want an **authenticated** request. In that case you can simply add a header here containing an auth token in a format accepted by the target service.
 
