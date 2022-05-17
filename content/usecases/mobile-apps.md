@@ -4,7 +4,7 @@ metaTitle: "sensenet Use cases - Mobile apps"
 metaDescription: "sensenet Use cases - Mobile apps"
 ---
 
-Being a [headless cms](https://docs.sensenet.com/concepts/introduction/02-what-is-headless-cms) sensenet can serve any content-based solution from a simple website to mobile app.
+Being a [Content Services Platform](https://docs.sensenet.com/concepts/introduction/02-what-is-csp) sensenet can serve any content-based solution from a simple website to mobile app.
 
 As you can see on the figure below, the basic setup of sensenet contains three top-level parts:
 

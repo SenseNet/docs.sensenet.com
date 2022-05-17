@@ -63,8 +63,8 @@ const content = [
     description: 'This is the place, where you can learn about sensenet basics.',
     links: [
       {
-        title:'What is headless CMS',
-        link: '/concepts/introduction/02-what-is-headless-cms'
+        title:'What is a Content Services Platform',
+        link: '/concepts/introduction/02-what-is-csp'
       },
       {
         title:'sensenet as a service overview',

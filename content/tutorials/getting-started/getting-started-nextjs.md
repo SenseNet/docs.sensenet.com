@@ -10,7 +10,7 @@ In this tutorial, you will discover how to start a new project using [Next.js](h
 
 Next.js is a framework for building interactive client applications based on React. It supports server side rendering and static site generation too, feel free to try both techniques with sensenet. You can read more about their advantages [here](https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation). This guide will use server side rendering, but it is easily convertible to a static site.
 
-As you may have already known sensenet is a [headless CMS](/concepts/introduction/02-what-is-headless-cms) which makes it easy to create applications with your chosen client technologies.
+As you may have already known sensenet is a [Content Services Platform](/concepts/introduction/02-what-is-csp) which makes it easy to create applications with your chosen client technologies.
 
 Combining these together you can build applications with customized user interfaces without any need of using or even knowing complex backend programming languages and technologies.
 
