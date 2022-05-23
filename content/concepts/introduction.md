@@ -4,7 +4,7 @@ metaTitle: "sensenet Concepts - What is sensenet"
 metaDescription: "What is sensenet - Introduction"
 ---
 
-**sensenet** is an open-source [headless content management system (CMS)](/concepts/introduction/02-what-is-headless-cms) built mainly for developers and development companies.
+**sensenet** is an open-source [Enterprise Content Services Platform (CSP)](/concepts/introduction/02-what-is-csp) built mainly for developers and development companies.
 
 It is a content repository where you can store all your content and reach it through APIs.
 It is a solid base for your custom solutions, offering an enterprise-grade security and permission system, versioning, dynamic content types and even more.
