@@ -79,14 +79,6 @@ const sideMenuConfig = {
       "/guides/customization",
     ],
   },
-  integrations: {
-    "forcedNavOrder": [
-      "/integrations/webhook"
-    ],
-    "collapsedNav": [
-      "/integrations/webhook"
-    ],
-  },
   faq: {
     "forcedNavOrder": [
       "/faq/content-types",
