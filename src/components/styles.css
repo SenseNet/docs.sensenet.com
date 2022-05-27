@@ -498,7 +498,19 @@ pre {
   list-style-type: none;
   width: auto;
 }
-
+.sideBarUL li.separator {
+  color: white;
+  background: #099dcb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 7px 24px 7px 16px;
+  padding-left: 15px;
+  padding-right: 35px;
+  border-style: solid none solid solid;
+  border-width: 1px 0px 1px 1px;
+  border-color: transparent currentcolor transparent transparent;
+}
 .sideBarUL li a {
   color: rgb(19, 165, 173);
   font-size: 14px;
