@@ -95,8 +95,23 @@ const Tree = ({ edges, location }) => {
 
 const TreeInner = ({edges, location}) => {
   const [treeData] = useState(() => {
+<<<<<<< HEAD
     if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'usecases', 'integrations'].some(element => location.includes(element))){
       return calculateTreeData(edges, location);
+=======
+    if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'integrations'].some(element => location.includes(element))){
+      const menuItemList = config.header.links;
+      let calculateTreeDataArray = calculateTreeData(edges, menuItemList[0].link);
+      calculateTreeDataArray.items = [{ "label": menuItemList[0].text, "title": menuItemList[0].text, "separator": "true", "url": "", "items": []}, ...calculateTreeDataArray.items]
+      for (var i = 1; i < menuItemList.length; i++) {
+        let calculateTreeDataHelper = calculateTreeData(edges, menuItemList[i].link);
+        calculateTreeDataHelper.items = calculateTreeDataHelper.items.filter(el => el !== undefined && (el.url || el.separator));
+        calculateTreeDataArray.items = [...calculateTreeDataArray.items, { "label": menuItemList[i].text, "title": menuItemList[i].text, "separator": "true", "url": "", "items": [] }, ...calculateTreeDataHelper.items];
+      }
+      console.log(calculateTreeDataArray);
+      return calculateTreeDataArray;
+      //return calculateTreeData(edges, location);
+>>>>>>> a9628a0d47d68e6180eb444558694b4927165f38
     } else {
       return { items: []};
     }
@@ -169,8 +184,6 @@ const getConfigNameByLocation = (location) => {
       c = 'tutorials'
     } else if(location.split('/')[1]  === 'faq') {
       c = 'faq'
-    } else if(location.split('/')[1]  === 'usecases') {
-      c = 'usecases'
     } else if(location.split('/')[1]  === 'integrations') {
       c = 'integrations'
     } else if(location.split('/')[1]  === 'restapi') {
