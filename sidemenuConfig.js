@@ -91,16 +91,6 @@ const sideMenuConfig = {
       "/faq/permissions"
     ],
   },
-  usecases: {
-    "forcedNavOrder": [
-      "/usecases/websites",
-      "/usecases/mobile-apps",
-    ],
-    "collapsedNav": [
-      "/usecases/websites",
-      "/usecases/mobile-apps",
-    ],
-  },
   restapi: {
     "forcedNavOrder": [
       "/restapi/index",

@@ -107,9 +107,6 @@ const getImgFromName = (name) => {
       case 'example-apps':
         img = exampleAppsImg
       break;
-      case 'usecases':
-        img = bestPracticeImg
-      break;
       case 'tutorials':
         img = tutorialsImg
       break;

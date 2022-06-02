@@ -1,5 +1,5 @@
 ---
-title: "FAQ: Content types"
+title: "Content types"
 metaTitle: "sensenet FAQ - Content types"
 metaDescription: "sensenet FAQ - Content types"
 ---
