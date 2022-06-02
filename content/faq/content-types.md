@@ -1,8 +1,10 @@
 ---
-title: "Content types"
+title: "FAQ: Content types"
 metaTitle: "sensenet FAQ - Content types"
 metaDescription: "sensenet FAQ - Content types"
 ---
+
+> If you are looking for a more structured information please visit the [Content types](/concepts/content-types) article.
 
 # Can I delete a content type?
 
