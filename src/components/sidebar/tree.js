@@ -87,7 +87,7 @@ const calculateTreeData = (edges, l) => {
 const Tree = ({edges, location}) => {
 
   const [treeData] = useState(() => {
-    if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'usecases', 'integrations'].some(element => location.includes(element))){
+    if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'integrations'].some(element => location.includes(element))){
       const menuItemList = config.header.links;
       let calculateTreeDataArray = calculateTreeData(edges, menuItemList[0].link);
       calculateTreeDataArray.items = [{ "label": menuItemList[0].text, "title": menuItemList[0].text, "separator": "true", "url": "", "items": []}, ...calculateTreeDataArray.items]
@@ -170,8 +170,6 @@ const getConfigNameByLocation = (location) => {
       c = 'tutorials'
     } else if(location.split('/')[1]  === 'faq') {
       c = 'faq'
-    } else if(location.split('/')[1]  === 'usecases') {
-      c = 'usecases'
     } else if(location.split('/')[1]  === 'integrations') {
       c = 'integrations'
     } else if(location.split('/')[1]  === 'restapi') {

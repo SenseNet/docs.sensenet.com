@@ -6,6 +6,8 @@ metaDescription: "sensenet - Webhooks"
 
 To learn the basic concepts of WebHooks in sensenet, please [visit this article](/concepts/webhooks). In this article you'll learn how can you subscribe to webhooks and how can you handle the requests sensenet makes.
 
+<note severity="info">sensenet offers built-in integration with several well-known platforms. These are customized webhooks that contain predefined platform-specific settings. Using them lets you trigger certain events on these platforms when something happens in the repository. Check out the <a href="/tutorials/webhooks/automate-site-builds-with-webhooks">automating site builds article</a> for details.</note>
+
 # Subscribing to WebHooks
 To define a webhook subscription, go to the *Settings* section in admin UI. Creating a new subscription is as easy as providing the target service to call and defining the range of content changes and types that interests you.
 
