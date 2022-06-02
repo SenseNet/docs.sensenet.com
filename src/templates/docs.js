@@ -69,8 +69,6 @@ export default class MDXRuntimeTest extends Component {
       forcedNavOrder = sideMenuConfig.faq.forcedNavOrder
     } else if (mdx.fields.slug.includes('restapi')){
       forcedNavOrder = sideMenuConfig.restapi.forcedNavOrder
-    } else if (mdx.fields.slug.includes('usecases')){
-      forcedNavOrder = sideMenuConfig.usecases.forcedNavOrder
     } else if (mdx.fields.slug.includes('integrations')){
       forcedNavOrder = sideMenuConfig.integrations.forcedNavOrder
     }
@@ -151,10 +149,10 @@ let classname = mdx.fields.slug.split('/')[1]
             </Link>
           </Edit> : null }
         </div>
-        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' || classname === 'faq' || classname === 'usecases' || classname === 'integrations' ? `mainWrapper` : `fullWrapper`}>
+        <div className={classname === 'api-docs' || classname === 'concepts' || classname === 'guides' || classname === 'tutorials' || classname === 'faq' || classname === 'integrations' ? `mainWrapper` : `fullWrapper`}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
-        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') && !mdx.parent.relativePath.includes('rest-api-references') && !mdx.parent.relativePath.includes('usecases') ?
+        {mdx.parent.relativePath && !mdx.parent.relativePath.includes('example-apps') && !mdx.parent.relativePath.includes('tutorials') && !mdx.parent.relativePath.includes('rest-api-references') ?
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div> :

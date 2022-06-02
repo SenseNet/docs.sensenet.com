@@ -79,14 +79,6 @@ const sideMenuConfig = {
       "/guides/customization",
     ],
   },
-  integrations: {
-    "forcedNavOrder": [
-      "/integrations/webhook"
-    ],
-    "collapsedNav": [
-      "/integrations/webhook"
-    ],
-  },
   faq: {
     "forcedNavOrder": [
       "/faq/content-types",
@@ -97,16 +89,6 @@ const sideMenuConfig = {
       "/faq/content-types",
       "/faq/versioning",
       "/faq/permissions"
-    ],
-  },
-  usecases: {
-    "forcedNavOrder": [
-      "/usecases/websites",
-      "/usecases/mobile-apps",
-    ],
-    "collapsedNav": [
-      "/usecases/websites",
-      "/usecases/mobile-apps",
     ],
   },
   restapi: {

@@ -4,6 +4,8 @@ metaTitle: "sensenet FAQ - Content types"
 metaDescription: "sensenet FAQ - Content types"
 ---
 
+> If you are looking for a more structured information please visit the [Content types](/concepts/content-types) article.
+
 # Can I delete a content type?
 
 If there's no content instance with the chosen type, then you can simply delete the content type as other contents in the repository. If you've created some content with the type already, delete the affected contents first, then you can remove the content type definition as well.

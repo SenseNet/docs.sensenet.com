@@ -107,23 +107,6 @@ const content = [
     link: '/guides/getting-started',
     img: '../images/guides.png'
   },
-  {
-    name: 'usecases',
-    title: 'Use cases and best practices',
-    description: 'Try it yourself!',
-    links: [
-      {
-        title:'Websites',
-        link: '/usecases/websites'
-      },
-      {
-        title:'Mobile apps',
-        link: '/usecases/mobile-apps'
-      },
-    ],
-    link: '',
-    img: '../images/best-practice.png'
-  },
 ]
 
 module.exports = content;
