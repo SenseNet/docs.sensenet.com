@@ -3,7 +3,6 @@ import config from '../../../config';
 import sideMenuConfig from '../../../sidemenuConfig';
 import TreeNode from './treeNode';
 
-
 if (typeof window === 'undefined') {
   global.window = {
     location: {
@@ -15,9 +14,6 @@ if (typeof window === 'undefined') {
 const calculateTreeData = (edges, l) => {
   const originalData = config.sidebar.ignoreIndex ?
   edges.filter(({node: {fields: {slug}}}) => slug !== '/' && !slug.split('/').length < 3 && slug.includes(l.split('/')[1]) && !slug.includes(`-${l.split('/')[1]}`)) : edges;
-
-  //edges.filter(({node: {fields: {slug}}}) => slug !== l.split('/')[1])
-  console.log(originalData);
 
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
@@ -83,22 +79,24 @@ const calculateTreeData = (edges, l) => {
   }, tree);
 }
 
+const Tree = ({ edges, location }) => {
+  const menuItemList = config.header.links;
+  const locationArray = menuItemList.map((n) =>
+    <TreeInner
+      key={n.link}
+      location={n.link}
+      edges={edges}
+    />
+  );
+  return (
+      locationArray
+  );
+}
 
-const Tree = ({edges, location}) => {
-
+const TreeInner = ({edges, location}) => {
   const [treeData] = useState(() => {
     if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'usecases', 'integrations'].some(element => location.includes(element))){
-      const menuItemList = config.header.links;
-      let calculateTreeDataArray = calculateTreeData(edges, menuItemList[0].link);
-      calculateTreeDataArray.items = [{ "label": menuItemList[0].text, "title": menuItemList[0].text, "separator": "true", "url": "", "items": []}, ...calculateTreeDataArray.items]
-      for (var i = 1; i < menuItemList.length; i++) {
-        let calculateTreeDataHelper = calculateTreeData(edges, menuItemList[i].link);
-        calculateTreeDataHelper.items = calculateTreeDataHelper.items.filter(el => el !== undefined && (el.url || el.separator));
-        calculateTreeDataArray.items = [...calculateTreeDataArray.items, { "label": menuItemList[i].text, "title": menuItemList[i].text, "separator": "true", "url": "", "items": [] }, ...calculateTreeDataHelper.items];
-      }
-      console.log(calculateTreeDataArray);
-      return calculateTreeDataArray;
-      //return calculateTreeData(edges, location);
+      return calculateTreeData(edges, location);
     } else {
       return { items: []};
     }
@@ -143,15 +141,16 @@ const Tree = ({edges, location}) => {
     });
   }
   return (
-    <TreeNode
-      key={treeData.title}
-      className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
-      setCollapsed={toggle}
-      collapsed={collapsed}
-      path={location}
-      {...treeData}
-
-    />
+    <ul className={'sideBarUL'}>
+      <TreeNode
+        key={treeData.title}
+        className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
+        setCollapsed={toggle}
+        collapsed={collapsed}
+        path={location}
+        {...treeData}
+      />
+    </ul>
   );
 }
 

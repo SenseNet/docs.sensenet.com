@@ -125,13 +125,13 @@ const SidebarLayout = ({location}) => (
     `}
     render={({allMdx}) => {
       return (
-        <Sidebar>
+        <Sidebar className={'sideBarBox'}>
+          <Tree
+            location={location.pathname}
+            edges={allMdx.edges}
+          />
+          <Divider />
           <ul className={'sideBarUL'}>
-            <Tree
-              location={location.pathname}
-              edges={allMdx.edges}
-            />
-            <Divider />
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {
                 return (

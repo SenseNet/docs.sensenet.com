@@ -490,7 +490,7 @@ pre {
   width: 40px;
 }
 
-.sideBarUL {
+.sideBarBox {
   margin-top: 32px;
 }
 
@@ -616,16 +616,15 @@ pre {
   background-color: rgb(19, 165, 173);
 } */
 
-.sideBarUL  .item .item{
+.sideBarUL .item .item{
   margin-left: 16px;
   text-transform: none;
 }
 
-.sideBarUL  .item .item .item a {
+.sideBarUL .item .item .item a {
   text-transform: none;
   font-weight: 500;
 }
-
 .firstLevel>ul>.item{
   margin-left: 0 !important;
 }
