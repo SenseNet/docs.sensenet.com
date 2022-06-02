@@ -95,7 +95,7 @@ const Tree = ({ edges, location }) => {
 
 const TreeInner = ({edges, location}) => {
   const [treeData] = useState(() => {
-    if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'usecases', 'integrations'].some(element => location.includes(element))){
+    if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'integrations'].some(element => location.includes(element))){
       return calculateTreeData(edges, location);
     } else {
       return { items: []};
@@ -169,8 +169,6 @@ const getConfigNameByLocation = (location) => {
       c = 'tutorials'
     } else if(location.split('/')[1]  === 'faq') {
       c = 'faq'
-    } else if(location.split('/')[1]  === 'usecases') {
-      c = 'usecases'
     } else if(location.split('/')[1]  === 'integrations') {
       c = 'integrations'
     } else if(location.split('/')[1]  === 'restapi') {
