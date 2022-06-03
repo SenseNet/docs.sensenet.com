@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import config from '../../../config';
 import sideMenuConfig from '../../../sidemenuConfig';
 import TreeNode from './treeNode';
+import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel,} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
+import Launch from '@material-ui/icons/Launch';
 
 if (typeof window === 'undefined') {
   global.window = {
@@ -81,15 +84,28 @@ const calculateTreeData = (edges, l) => {
 
 const Tree = ({ edges, location }) => {
   const menuItemList = config.header.links;
-  const locationArray = menuItemList.map((n) =>
-    <TreeInner
-      key={n.link}
-      location={n.link}
-      edges={edges}
-    />
+  const locationFirstItem = location.split('/')[1];   //expanded={locationFirstItem.includes(n.link.split('/')[1]) ? true : false}
+  const locationArray = menuItemList.map((n, index) =>
+    <AccordionItem key={index + n.link} uuid={`${locationFirstItem.includes(n.link.split('/')[1]) ? ('expanded-' + n.link.split('/')[1]) : ('collapsed-' + n.link.split('/')[1])}`} >
+      <AccordionItemHeading className={`${locationFirstItem.includes(n.link.split('/')[1]) ? 'active' : ''}`}>
+        <AccordionItemButton className={`${n.link.includes('example-apps') ? 'hideButton' : ''} accordion__button`}>
+          <span>{n.text}</span>
+          <a href={n.link} className="pageLink" onClick={(e) => { e.stopPropagation(); }}><Launch/></a>
+        </AccordionItemButton>
+      </AccordionItemHeading>
+      <AccordionItemPanel>
+        <TreeInner
+          key={n.link}
+          location={n.link}
+          edges={edges}
+        />
+      </AccordionItemPanel>
+    </AccordionItem>
   );
   return (
-      locationArray
+    <Accordion allowMultipleExpanded={true} preExpanded={['expanded-' + locationFirstItem]}>
+      {locationArray}
+    </Accordion>
   );
 }
 

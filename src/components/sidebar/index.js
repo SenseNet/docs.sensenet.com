@@ -130,7 +130,6 @@ const SidebarLayout = ({location}) => (
             location={location.pathname}
             edges={allMdx.edges}
           />
-          <Divider />
           <ul className={'sideBarUL'}>
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {
