@@ -86,11 +86,10 @@ const Tree = ({ edges, location }) => {
   const menuItemList = config.header.links;
   const locationFirstItem = location.split('/')[1];   //expanded={locationFirstItem.includes(n.link.split('/')[1]) ? true : false}
   const locationArray = menuItemList.map((n, index) =>
-    <AccordionItem key={index + n.link} uuid={`${locationFirstItem.includes(n.link.split('/')[1]) ? ('expanded-' + n.link.split('/')[1]) : ('collapsed-' + n.link.split('/')[1])}`} >
+    <AccordionItem key={index + n.link} uuid={`${locationFirstItem.includes(n.link.split('/')[1]) ? ('expanded-' + n.link.split('/')[1]) : ('collapsed-' + n.link.split('/')[1])}`}>
       <AccordionItemHeading className={`${locationFirstItem.includes(n.link.split('/')[1]) ? 'active' : ''}`}>
         <AccordionItemButton className={`${n.link.includes('example-apps') ? 'hideButton' : ''} accordion__button`}>
-          <span>{n.text}</span>
-          <a href={n.link} className="pageLink" onClick={(e) => { e.stopPropagation(); }}><Launch/></a>
+          <a href={n.link} className="pageLink" onClick={(e) => { e.stopPropagation(); }}>{n.text}</a>
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel>
@@ -103,7 +102,7 @@ const Tree = ({ edges, location }) => {
     </AccordionItem>
   );
   return (
-    <Accordion allowMultipleExpanded={true} preExpanded={['expanded-' + locationFirstItem]}>
+    <Accordion allowMultipleExpanded={true} allowZeroExpanded={true} preExpanded={['expanded-' + locationFirstItem]}>
       {locationArray}
     </Accordion>
   );

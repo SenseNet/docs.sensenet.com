@@ -499,7 +499,7 @@ pre {
 .sideBarBox .accordion__button,
 .sideBarBox .accordion__button:hover {
     color: white;
-    padding: 10px 45px 8px 15px;
+    padding: 0 45px 0 0;
     background: #099dcb;
     text-shadow: rgb(47 79 79) 1px 1px 2px;
 }
@@ -507,27 +507,28 @@ pre {
     float: right;
     position: relative;
     left: 37px;
-    margin-top: 2px;
+    margin-top: 12px;
     box-shadow: rgb(47 79 79) 1px 1px 2px;
 }
 .sideBarBox .accordion__button.hideButton:before{
     display: none;
 }
+.sideBarBox .accordion__button.hideButton,
+.sideBarBox .accordion__button.hideButton:hover{
+    padding-right: 0;
+}
 .sideBarBox .active .accordion__button {
     background: #34bd6b;
     /* background:#38cc73;*/
 }
-.sideBarBox .active .accordion__button a {
-    display: none;
-}
 .sideBarBox .accordion__button[aria-expanded='true']::before {
-    margin-top: 0px;
+    margin-top: 8px;
 }
 .sideBarBox .accordion__button a.pageLink {
-    color: black;
-    margin: -4px 0 0px 8px;
-    position: absolute;
-    /*transform: rotate(-45deg);*/
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 10px 10px 8px 15px;
 }
 .sideBarUL li {
   list-style-type: none;
