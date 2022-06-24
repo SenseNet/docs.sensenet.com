@@ -56,9 +56,11 @@ const MaxWidth = styled('div')`
 
 const LeftSideBarWidth = styled('div')`
   width: 298px;
+  min-width: 298px;
 `;
 const RightSideBarWidth = styled('div')`
   width: 224px;
+  min-width: 224px;
 `;
 const Layout = ({ children, location }) => {
 
@@ -119,15 +121,6 @@ const Layout = ({ children, location }) => {
       </LanguageContext.Provider>
 
     </MDXProvider>
-  }
-  else if(location.pathname.includes('example-apps')) {
-    container = <MDXProvider components={mdxComponents}>
-    <Wrapper>
-      <Content>
-        <MaxWidth>{children}</MaxWidth>
-      </Content>
-    </Wrapper>
-  </MDXProvider>
   }
   else if(location.pathname.includes('restapi')) {
     container = <MDXProvider components={mdxComponents}>

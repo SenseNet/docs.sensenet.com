@@ -490,15 +490,63 @@ pre {
   width: 40px;
 }
 
-.sideBarUL {
-  margin-top: 32px;
+.sideBarBox {
+  margin-top: 0px;
 }
-
+.sideBarBox .accordion__panel {
+    padding: 0;
+}
+.sideBarBox .accordion__button,
+.sideBarBox .accordion__button:hover {
+    color: white;
+    padding: 0 45px 0 0;
+    background: #099dcb;
+    text-shadow: rgb(47 79 79) 1px 1px 2px;
+}
+.sideBarBox .accordion__button:before {
+    float: right;
+    position: relative;
+    left: 37px;
+    margin-top: 12px;
+    box-shadow: rgb(47 79 79) 1px 1px 2px;
+}
+.sideBarBox .accordion__button.hideButton:before{
+    display: none;
+}
+.sideBarBox .accordion__button.hideButton,
+.sideBarBox .accordion__button.hideButton:hover{
+    padding-right: 0;
+}
+.sideBarBox .active .accordion__button {
+    background: #34bd6b;
+    /* background:#38cc73;*/
+}
+.sideBarBox .accordion__button[aria-expanded='true']::before {
+    margin-top: 8px;
+}
+.sideBarBox .accordion__button a.pageLink {
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 10px 10px 8px 15px;
+}
 .sideBarUL li {
   list-style-type: none;
   width: auto;
 }
-
+.sideBarUL li.separator {
+  color: white;
+  background: #099dcb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 7px 24px 7px 16px;
+  padding-left: 15px;
+  padding-right: 35px;
+  border-style: solid none solid solid;
+  border-width: 1px 0px 1px 1px;
+  border-color: transparent currentcolor transparent transparent;
+}
 .sideBarUL li a {
   color: rgb(19, 165, 173);
   font-size: 14px;
@@ -604,16 +652,15 @@ pre {
   background-color: rgb(19, 165, 173);
 } */
 
-.sideBarUL  .item .item{
+.sideBarUL .item .item{
   margin-left: 16px;
   text-transform: none;
 }
 
-.sideBarUL  .item .item .item a {
+.sideBarUL .item .item .item a {
   text-transform: none;
   font-weight: 500;
 }
-
 .firstLevel>ul>.item{
   margin-left: 0 !important;
 }
@@ -807,6 +854,7 @@ pre {
   -webkit-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
   -moz-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
   box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
+  z-index: 200;
 }
 
 .leftSideBar.restapi {

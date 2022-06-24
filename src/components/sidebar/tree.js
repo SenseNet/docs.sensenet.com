@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import config from '../../../config';
 import sideMenuConfig from '../../../sidemenuConfig';
 import TreeNode from './treeNode';
-
+import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel,} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
+import Launch from '@material-ui/icons/Launch';
 
 if (typeof window === 'undefined') {
   global.window = {
@@ -15,8 +17,6 @@ if (typeof window === 'undefined') {
 const calculateTreeData = (edges, l) => {
   const originalData = config.sidebar.ignoreIndex ?
   edges.filter(({node: {fields: {slug}}}) => slug !== '/' && !slug.split('/').length < 3 && slug.includes(l.split('/')[1]) && !slug.includes(`-${l.split('/')[1]}`)) : edges;
-
-  edges.filter(({node: {fields: {slug}}}) => slug !== l.split('/')[1])
 
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
@@ -82,9 +82,33 @@ const calculateTreeData = (edges, l) => {
   }, tree);
 }
 
+const Tree = ({ edges, location }) => {
+  const menuItemList = config.header.links;
+  const locationFirstItem = location.split('/')[1];   //expanded={locationFirstItem.includes(n.link.split('/')[1]) ? true : false}
+  const locationArray = menuItemList.map((n, index) =>
+    <AccordionItem key={index + n.link} uuid={`${locationFirstItem.includes(n.link.split('/')[1]) ? ('expanded-' + n.link.split('/')[1]) : ('collapsed-' + n.link.split('/')[1])}`}>
+      <AccordionItemHeading className={`${locationFirstItem.includes(n.link.split('/')[1]) ? 'active' : ''}`}>
+        <AccordionItemButton className={`${n.link.includes('example-apps') ? 'hideButton' : ''} accordion__button`}>
+          <a href={n.link} className="pageLink" onClick={(e) => { e.stopPropagation(); }}>{n.text}</a>
+        </AccordionItemButton>
+      </AccordionItemHeading>
+      <AccordionItemPanel>
+        <TreeInner
+          key={n.link}
+          location={n.link}
+          edges={edges}
+        />
+      </AccordionItemPanel>
+    </AccordionItem>
+  );
+  return (
+    <Accordion allowMultipleExpanded={true} allowZeroExpanded={true} preExpanded={['expanded-' + locationFirstItem]}>
+      {locationArray}
+    </Accordion>
+  );
+}
 
-const Tree = ({edges, location}) => {
-
+const TreeInner = ({edges, location}) => {
   const [treeData] = useState(() => {
     if(['api-docs', 'concepts', 'guides', 'tutorials', 'faq', 'restapi', 'integrations'].some(element => location.includes(element))){
       return calculateTreeData(edges, location);
@@ -132,15 +156,16 @@ const Tree = ({edges, location}) => {
     });
   }
   return (
-    <TreeNode
-      key={treeData.title}
-      className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
-      setCollapsed={toggle}
-      collapsed={collapsed}
-      path={location}
-      {...treeData}
-
-    />
+    <ul className={'sideBarUL'}>
+      <TreeNode
+        key={treeData.title}
+        className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
+        setCollapsed={toggle}
+        collapsed={collapsed}
+        path={location}
+        {...treeData}
+      />
+    </ul>
   );
 }
 
