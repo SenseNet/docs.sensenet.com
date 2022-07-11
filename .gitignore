@@ -9,3 +9,4 @@ node_modules
 
 .vs/
 yarn-error.log
+package-lock.json
