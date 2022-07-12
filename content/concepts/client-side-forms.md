@@ -23,10 +23,8 @@ The content is there in the repository. How it will be visible to users is up to
 Generating forms by content types dynamically is also possible with sensenet javascript client library that contains a  mapper (which binds fields to controls) and the required controls written in ReactJs.
 
 # Fields
-[illustration of a custom content type with questions as fields]
-
-Every content is built up by fields. For example, a user as content has numerous special fields for storing data: their username and password, among others. It is no different with forms, but instead of username and password, it consists of questions.
-Fields of a content can be defined on the content type definition.
+Every content is built up by fields. For example, a user as content has numerous special fields for storing data: their username and full name, among others. It is no different with forms, but instead of username and password, it consists of questions.
+Fields of a content can be defined on the [content type definition](/concepts/content-types).
 
 # Forms and permissions
 One of the most powerful features of the sensenet permission system is permission inheritance. However, there are cases when you do not want children items to inherit a permission entry. For example, you want to allow certain users to see a content (e.g. a Content List) but do not want them to see the child contents that were added to that list as list items. A typical use case for this is when you allow Visitors (not logged-in users!) to add content (e.g. a completed survey as Form Item) to a Form but do not want them to see or open any items added to the form by others. In this case, you would set a local only (not inherited) permission entry on the Form for Visitors to add new contents. The advantage of this method is that you do not have to break inheritance on the content, which means any permission allowed or denied on the tree above will still be inherited by the child content.
