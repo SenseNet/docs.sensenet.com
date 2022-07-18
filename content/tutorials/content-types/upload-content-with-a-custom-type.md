@@ -8,7 +8,7 @@ In this tutorial you will learn how you can upload content to a container with a
 
 ## Upload basics
 
-By default if you upload a file into a container in sensenet it will be created as a `File`. `File` is the built-in type for storing files in the content repository. This type's key field is a binary field, which contains the actual binary of the file. Learn more about the `File` content type in the [concepts](content/concepts/content-types/06-file).
+By default if you upload a file into a container in sensenet it will be created as a `File`. `File` is the built-in type for storing files in the content repository. This type's key field is a binary field, which contains the actual binary of the file. Learn more about the `File` content type in the [concepts](/concepts/content-types/06-file).
 
 First lets check the default behavior of upload. Create your own document library for playing with the types. If you open your newly created library and start to add content to it, the add new dropdown list by default contains two types (*File* and *Folder*) and *Upload*.
 

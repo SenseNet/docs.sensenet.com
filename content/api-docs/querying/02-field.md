@@ -10,7 +10,7 @@ You can define which fields should be saved to the index by marking them in the 
 
 It is also possible to switch off indexing for certain content types. In that case nobody will be able to find the instances made with those content types using queries, and the index will be smaller.
 
-About the possible indexing configurations and field definition see the [schema](/concepts/content-models) and the [content type concepts](/concepts/content-types).
+About the possible indexing configurations and field definition see the [schema](/concepts/content-management/02-content-model) and the [content type concepts](/concepts/content-types).
 
 Basically query by a field works by adding the chosen field name to the query with a value that you are looking for:
 
@@ -30,7 +30,7 @@ The following query returns the content that's Name is BusinessPlan.docx
 
 <tab category="querying" article="query-by-field" example="byShortText" />
 
-Following query returns the content that's Description field contains the word 'company' (notice that it is actually a [wildcard search](/querying#wildcardsearch))
+Following query returns the content that's Description field contains the word 'company' (notice that it is actually a [wildcard search](/api-docs/querying#wildcardsearch))
 
 <tab category="querying" article="query-by-field" example="byLongText" />
 

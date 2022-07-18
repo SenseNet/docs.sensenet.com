@@ -78,7 +78,7 @@ In the head part of the CTD we define key descriptive things that will be used o
 
 ![Adding a new contract](./img/allowedtypes.png "Contract type listed in the add new content dropdown")
 
-<note severity="info">For more information about the content types and content type definitions check the <a href="/concepts/content-management/03-content-types">concepts</a></note>
+<note severity="info">For more information about the content types and content type definitions check the <a href="/concepts/content-types">concepts</a></note>
 
 The other main part of a CTD is the list of unique fields and their configurations. Unique means fields that are not related to common files and are not defined on the built-in File type. Fields are always listed between the `<Fields>` tag.
 

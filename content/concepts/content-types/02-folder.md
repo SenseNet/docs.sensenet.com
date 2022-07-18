@@ -12,7 +12,7 @@ No special features for this type.
 
 # Parent type
 
-[GenericContent](/concepts/content-types/01-generic-content)
+[GenericContent](/concepts/content-types/01-genericcontent)
 
 # Content handler
 

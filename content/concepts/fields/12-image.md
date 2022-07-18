@@ -10,9 +10,9 @@ The field has two modes depending on how the image is stored in relation to the 
 
 - **reference mode**
     - image data is stored as a node in content repository (under the content)
-    - the field acts as a [Reference field](/concepts/fields/reference) referencing the image node
+    - the field acts as a [Reference field](/concepts/fields/09-reference) referencing the image node
 - **binarydata mode**
-    - the field acts as a [Binary field](/concepts/fields/binary) storing image data
+    - the field acts as a [Binary field](/concepts/fields/13-binary) storing image data
     - image is therefore not visible in content repository
 
 # Usage in CTD:
@@ -36,7 +36,7 @@ The field has two modes depending on how the image is stored in relation to the 
 
 # Configuration
 
-- The field does not have any special configuration settings in the [content type definition](/concepts/content-management/03-content-types).
+- The field does not have any special configuration settings in the [content type definition](/concepts/content-types).
 
 # Fully featured example
 

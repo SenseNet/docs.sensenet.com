@@ -4,11 +4,11 @@ metaTitle: "sensenet Concepts - ShortText field"
 metaDescription: "sensenet ShortText field"
 ---
 
-*ShortText* field is used for storing short strings. Maximum length of the stored data is 450 characters (this value however can be limited to a lower value in the [field setting](/concepts/fields/01-field-setting) of the field). If you want to store text strings longer than this consider using the [LongText field](/concepts/fields/04-longtext).
+*ShortText* field is used for storing short strings. Maximum length of the stored data is 450 characters (this value however can be limited to a lower value in the [field setting](/concepts/fields/01-field-settings) of the field). If you want to store text strings longer than this consider using the [LongText field](/concepts/fields/04-longtext).
 
 The following apply to the behavior of the field:
 
-- **Regular expression**: data input can be validated against a regular expression defined in the [field setting](/concepts/fields/01-field-setting).
+- **Regular expression**: data input can be validated against a regular expression defined in the [field setting](/concepts/fields/01-field-settings).
 
 # Usage in CTD:
 
@@ -20,7 +20,7 @@ The following apply to the behavior of the field:
 
 # Configuration
 
-The following properties can be set in the field's [field setting](/concepts/fields/01-field-setting) configuration:
+The following properties can be set in the field's [field setting](/concepts/fields/01-field-settings) configuration:
 
 - **ReadOnly**: a boolean property defining whether the field data can be edited.
 - **Compulsory**: a boolean property defining whether the field has to contain data. If it is set to true, but field doesn't contain any data the portal displays an error message on saving this content.
@@ -30,7 +30,7 @@ The following properties can be set in the field's [field setting](/concepts/fie
 - **Regex**: contains common regular expression against which the field is validated. E.g. [a-zA-Z0-9]*$
 
 <note severity="info">
-For a complete list of common Field Setting configuration properties see <a href="/concepts/content-management/03-content-types">CTD field definition</a>.
+For a complete list of common Field Setting configuration properties see <a href="/concepts/content-types">CTD field definition</a>.
 </note>
 
 # Fully featured example

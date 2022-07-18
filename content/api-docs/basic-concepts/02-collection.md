@@ -18,7 +18,7 @@ Service path followed by the path of the container returns child content of the 
 
 # Count of a collection
 
-Returns the count of items in the requested collection. The value depends on other optional query string parameters ($top, $skip, $filter, query, etc.) and does not depend on the [$inlinecount]() parameter.
+Returns the count of items in the requested collection. The value depends on other optional query string parameters ($top, $skip, $filter, query, etc.) and does not depend on the [$inlinecount](#inlinecountqueryoption) parameter.
 
 <tab category="basic-concepts" article="collection" example="count" />
 

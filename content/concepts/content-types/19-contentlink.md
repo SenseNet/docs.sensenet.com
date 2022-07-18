@@ -14,7 +14,7 @@ A ContentLink is a mirror of another content. It propagates most of the fields o
 
 # Parent type
 
-[GenericContent](/concepts/content-types/01-generic-content)
+[GenericContent](/concepts/content-types/01-genericcontent)
 
 # Content handler
 

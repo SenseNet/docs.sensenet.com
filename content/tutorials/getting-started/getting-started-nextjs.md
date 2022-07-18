@@ -42,7 +42,7 @@ You should see your new application with a greeting to the world on localhost:30
 
 There are several built in content types in sensenet, but in this tutorial we will create custom ones for our needs.
 
-Open the Admin UI [here](https://admin.sensenet.com/). Log in to your sensenet repository and navigate to the content types using the drawer on the left. You should add the following 2 [CTDs](/concepts/content-management/03-content-types) (Content Type Definition) with clicking on the + plus button and selecting Content Type.
+Open the Admin UI [here](https://admin.sensenet.com/). Log in to your sensenet repository and navigate to the content types using the drawer on the left. You should add the following 2 [CTDs](/concepts/content-types) (Content Type Definition) with clicking on the + plus button and selecting Content Type.
 
 ![New CTD on admin-ui](nextjs-images/create-new-ctd.png)
 

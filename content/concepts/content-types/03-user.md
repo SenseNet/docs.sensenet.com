@@ -16,7 +16,7 @@ User is the base type for creating user content. Logging into sensenet is possib
 
 # Parent type
 
-[GenericContent](/concepts/content-types/01-generic-content)
+[GenericContent](/concepts/content-types/01-genericcontent)
 
 # Content handler
 

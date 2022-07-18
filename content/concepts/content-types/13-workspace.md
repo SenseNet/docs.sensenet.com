@@ -4,7 +4,7 @@ metaTitle: "sensenet - Workspace"
 metaDescription: "sensenet Workspace"
 ---
 
-Collaborative workspace for organizing content around a project or company. A workspace usually contains one or more [content lists](/concepts/content-types/08-contentlist) - for example a [document library](/concepts/content-types/09-document-library) or [image gallery](/concepts/content-types/09-image-library) - to store contents.
+Collaborative workspace for organizing content around a project or company. A workspace usually contains one or more [content lists](/concepts/content-types/08-contentlist) - for example a [document library](/concepts/content-types/09-document-library) or [image gallery](/concepts/content-types/10-image-library) - to store contents.
 
 # Features
 
