@@ -7,7 +7,7 @@ metaDescription: "sensenet Field indexing"
 For every [content](/concepts/basics) the [field](/concepts/fields) values can be indexed so that when searching for a value the corresponding content will appear in the results. It is also possible to search in fields by explicitly defining the field to search for in a query. The way a specific field of a content is indexed is defined in the [content type definition](/concepts/content-management/03-content-types).
 
 <note severity="info">
-It is possible to switch off indexing for certain fields or content types. In that case, nobody will be able to find the instances of those content types using [content query](/concepts/basics/041-content-query), but the index will be smaller.
+It is possible to switch off indexing for certain fields or content types. In that case, nobody will be able to find the instances of those content types using <a href="/concepts/basics/041-content-query" target="_blank">content query</a>, but the index will be smaller.
 </note>
 
 sensenet uses [Lucene search engine](http://lucenenet.apache.org/) by default for indexing the [content repository](/concepts/basics/02-content-tree) and to provide a fast mechanism for returning query results. Apart from the indexing of some basic built-in properties, every field can be configured to be indexed separately.
@@ -59,7 +59,7 @@ Indexing mode settings (refer to [Lucene indexing documentation](http://lucene.a
 - **NotAnalyzedNoNorms**
 
 <note severity="info">
-This setting is only available to make it easier to configure the indexing subsystem, default install only uses *Analyzed* and *No* settings.
+This setting is only available to make it easier to configure the indexing subsystem, default install only uses <em>Analyzed</em> and <em>No</em> settings.
 </note>
 
 # Store
