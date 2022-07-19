@@ -11,8 +11,8 @@ description: This tutorial shows you how to make authenticated calls to sensenet
 # How to authenticate with a sensenet repository using API keys
 Unless you are working with publicly available content - like blog posts - it is necessary to make **authenticated** calls to the sensenet repository to access content items. In this article you'll see how you can configure 3rd party applications and services to make authenticated requests to the repository without having to modify their code.
 
-<note severity="info">To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/basics/06-authentication).
-If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.</note>
+<note severity="info">To learn more about the sensenet authentication flow and components, please visit <a href="/concepts/basics/06-authentication" target="_blank">this article</a>.<br/>
+If you do not have a repository yet, please head over to <a href="https://www.sensenet.com" target="_blank">www.sensenet.com</a> to get one.</note>
 
 ## How it works
 An API key is a string token that represents a user in the repository. If you authenticate with an api key, all your requests will be made in the name of that user. You can simply provide the token in the url or in the header of an HTTP request.

@@ -16,7 +16,7 @@ First, enter **repository URL** then log in using your email address (and passwo
 If you don't have a repo yet, you can get one [for free](https://profile.sensenet.com/?redirectToLogin) or log in to our demo repository by clicking the big blue button either on repo url or login screen (see below).
 
 <note>
-You will be logged in with an **admin user** called Business Cat.
+You will be logged in with an <strong>admin user</strong> called Business Cat.
 </note>
 
 
