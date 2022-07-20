@@ -19,7 +19,7 @@ In practice, this means that sensenet gives you everything you need to build con
 
 # How can you do it?
 
-Once you understand that ["everything is a content"](/concepts/basics), you can implement your own business logic by creating custom [content types](/concepts/content-management/02-content-models) or using predefined ones.
+Once you understand that ["everything is a content"](/concepts/basics), you can implement your own business logic by creating custom [content types](/concepts/content-management/02-content-model) or using predefined ones.
 
 In sensenet, the delivery of content happens through APIs. Your solution requests the content as and when it is needed.
 

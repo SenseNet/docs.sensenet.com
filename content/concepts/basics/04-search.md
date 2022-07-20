@@ -10,7 +10,7 @@ In sensenet, one of the most important technical aspects is how we index content
 ![search](../img/search.gif)
 
 # Metadata indexing, searching by fields
-For every [content](/content/concepts/content-management), the field values can be indexed, so when you search for a term, the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value we want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
+For every [content](/concepts/content-management), the field values can be indexed, so when you search for a term, the corresponding content with the related field value will appear in the result set. It is also possible to search by explicitly defining the field whose value we want to search for. The way a specific field of a content is indexed is defined in the CTD Field Definition.
 
 **sensenet** uses the Lucene search engine for indexing and to provide a fast mechanism for returning query results. Apart from the indexing of some basic built-in properties, each field can be configured separately according to the way you want to index it.
 
@@ -40,4 +40,4 @@ Content Query has always been one of the most important features in sensenet. It
 
 # Usage
 The sensenet content repository is a query-based system, which means every content or image you see on the portal is collected by a sophisticated and fast query engine. As an end-user, developer, or administrator you get the solution to find, filter and sort content even in a huge and constantly expanding repository.
-You can find several examples for its use within our [API docs](/content/api-docs/querying).
+You can find several examples for its use within our [API docs](/api-docs/querying).

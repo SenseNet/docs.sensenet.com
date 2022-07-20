@@ -8,7 +8,7 @@ A content type for defining calendar events.
 
 # Features
 
-- Calendar Events are created under [Event Calendars](/concepts/content-types/20-event-calendar), usually inside workspaces.
+- Calendar Events are created under [Event Calendars](/concepts/content-types/21-event-calendar), usually inside workspaces.
 
 # Parent type
 

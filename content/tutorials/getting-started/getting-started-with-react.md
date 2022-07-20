@@ -144,7 +144,7 @@ For example if you would like to build a blog you should add two new content typ
 
 ![content-types](getting-started-with-react/content-types.png)
 
-You can add the following 2 CTDs ([Content Type Definition](/concepts/content-management/03-content-types)) by clicking on the + (plus) button and selecting *Content Type* from the dropdown menu. It opens a new page with an editor. Replace the default text inside the editor to the following code (you can define additional fields as you whish, the following code contains every necessary ones).
+You can add the following 2 CTDs ([Content Type Definition](/concepts/content-types)) by clicking on the + (plus) button and selecting *Content Type* from the dropdown menu. It opens a new page with an editor. Replace the default text inside the editor to the following code (you can define additional fields as you whish, the following code contains every necessary ones).
 &nbsp;
 <note severity="info">Creating new content types requires administration privileges</note>
 &nbsp;&nbsp;

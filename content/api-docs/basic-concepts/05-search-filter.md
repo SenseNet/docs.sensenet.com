@@ -66,4 +66,4 @@ There is a reserved custom query option: `query` (without "$" prefix) that helps
 
 <note title="Performance considerations">Do not forget that querying on huge collections may impact server performance. Always use limiters when using the queries in such cases. If you use the custom `query` option use the CQL limiters and sorting in the `query` option (.TOP .SKIP) instead of using the OData ones ($top, $skip, $orderby).</note>
 
-Check the next big section of docs about querying in details [HERE](/querying).
+Check the next big section of docs about querying in details [HERE](/api-docs/querying).

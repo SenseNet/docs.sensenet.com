@@ -6,7 +6,7 @@ metaDescription: "Sharing"
 
 Sharing in sensenet (like many other features of the Content Repository) is built around the concept of content. As sensenet content items are stored in a huge tree, it is easy to share not only a single content (like a document) but a whole folder or a workspace with other users.
 
-Content in sensenet could be shared in various different modes and levels both with registered or external users. For the sharing concepts please refer the [concept docs](/concepts/sharing).
+Content in sensenet could be shared in various different modes and levels both with registered or external users. For the sharing concepts please refer the [concept docs](/concepts/collaboration/06-sharing).
 
 # Share with a user
 
@@ -20,7 +20,7 @@ In the next example you will see how to share a content in a sensenet content re
 
 <tab category="sharing" article="share" example="byEmail" />
 &nbsp;
-<note title="Sharing mode">Notice that we used here sharing mode 'Public' which is required when you want to share with external users. For further information about sharing modes see to the <a href="/concepts/sharing">sharing concept docs</a></note>
+<note title="Sharing mode">Notice that we used here sharing mode 'Public' which is required when you want to share with external users. For further information about sharing modes see to the <a href="/concepts/collaboration/06-sharing">sharing concept docs</a></note>
 
 # Sharing levels
 

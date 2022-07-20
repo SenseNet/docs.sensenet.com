@@ -28,7 +28,7 @@ Since content is stored in a huge tree with a single root, when you set a permis
 
 Inherited permissions cannot be changed without breaking the inheritance, but you can set additional permissions for the same identity (e.g. grant `Open` permission to someone who already has inherited `See` permissions).
 
-Setting local only permissions that are not propagated to children is also possible within sensenet. Check the [document level permission article](/concepts/document-level-permissions) for more information.
+Setting local only permissions that are not propagated to children is also possible within sensenet. Check the [document level permission article](/concepts/user-and-permission-management/02-document-level-permissions) for more information.
 
 # Settings inheritance
 

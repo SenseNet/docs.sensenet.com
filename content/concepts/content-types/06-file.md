@@ -22,7 +22,7 @@ Files can be created by **uploading** them on the admin user interface or import
 
 # Parent type
 
-[GenericContent](/concepts/content-types/01-generic-content)
+[GenericContent](/concepts/content-types/01-genericcontent)
 
 # Content handler
 

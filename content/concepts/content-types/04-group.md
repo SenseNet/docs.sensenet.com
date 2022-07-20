@@ -14,7 +14,7 @@ See [User and group permissions](/concepts/user-and-permission-management) for m
 
 # Parent type
 
-[GenericContent](/concepts/content-types/01-generic-content)
+[GenericContent](/concepts/content-types/01-genericcontent)
 
 # Content handler
 
