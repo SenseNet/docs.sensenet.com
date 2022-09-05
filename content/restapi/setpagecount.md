@@ -7,6 +7,8 @@ metaDescription: "SetPageCount"
 ## SetPageCount
 - Method: **POST**.
 
+Sets the page count of the document.
+ This action does not generate preview images.
 
 ### Request example:
 
@@ -19,7 +21,7 @@ models=[{
 ```
 The `targetContent` can be File
 ### Parameters:
-- **pageCount** (`int`): 
+- **pageCount** (`int`): Page count value
 
 ### Requirements:
 - **AllowedRoles**: Everyone

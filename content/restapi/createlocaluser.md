@@ -7,6 +7,7 @@ metaDescription: "CreateLocalUser"
 ## CreateLocalUser
 - Method: **POST**.
 
+Creates a local user who registered using a username and password.
 
 ### Request example:
 
@@ -14,7 +15,6 @@ metaDescription: "CreateLocalUser"
 POST /odata.svc/('Root')/CreateLocalUser
 DATA:
 models=[{
-  "context": _value_, 
   "loginName": _value_, 
   "password": _value_, 
   "email": _value_
@@ -22,10 +22,12 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (`HttpContext`): 
-- **loginName** (`string`): 
-- **password** (`string`): 
-- **email** (`string`): 
+- **loginName** (`string`): Login name.
+- **password** (`string`): Password.
+- **email** (`string`): Email address.
+
+### Return value:
+The newly created user content. (Type: `Content`).
 
 ### Requirements:
 - **AllowedRoles**: Administrators

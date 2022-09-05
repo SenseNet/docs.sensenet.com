@@ -7,6 +7,7 @@ metaDescription: "Encrypt"
 ## Encrypt
 - Method: **POST**.
 
+Encrypts a short text using the current crypto service provider.
 
 ### Request example:
 
@@ -19,7 +20,10 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **text** (`string`): 
+- **text** (`string`): The text to encrypt.
+
+### Return value:
+The encrypted text. (Type: `string`).
 
 ### Requirements:
 - **AllowedRoles**: Administrators, Developers

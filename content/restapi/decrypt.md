@@ -7,6 +7,7 @@ metaDescription: "Decrypt"
 ## Decrypt
 - Method: **POST**.
 
+Decrypts a short encrypted text using the current crypto service provider.
 
 ### Request example:
 
@@ -19,7 +20,10 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **text** (`string`): 
+- **text** (`string`): The text to decrypt.
+
+### Return value:
+A clear text original value. (Type: `string`).
 
 ### Requirements:
 - **AllowedRoles**: Administrators, Developers

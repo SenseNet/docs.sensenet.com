@@ -4,13 +4,25 @@ metaTitle: "sensenet API - Api references"
 metaDescription: "Api references"
 ---
 
-## CHEAT SHEET (91 operations)
+## CHEAT SHEET (126 operations)
 
 - AdSync
   - POST [Ad2PortalSyncFinalizer](/restapi/ad2portalsyncfinalizer)(`SnTaskResult` result) : `void`
 - Authentication
+  - POST [CreateApiKey](/restapi/createapikey)() : `ApiKey`
+  - POST [CreateClient](/restapi/createclient)(`string` name, `string` type, `string` userName) : `Client`
+  - POST [CreateSecret](/restapi/createsecret)(`string` clientId, `DateTime?` validTill) : `ClientSecret`
+  - POST [DeleteApiKey](/restapi/deleteapikey)(`string` apiKey) : `void`
+  - POST [DeleteApiKeys](/restapi/deleteapikeys)() : `void`
+  - POST [DeleteApiKeys](/restapi/deleteapikeys2)() : `void`
+  - POST [DeleteClient](/restapi/deleteclient)(`string` clientId) : `void`
+  - POST [DeleteSecret](/restapi/deletesecret)(`string` clientId, `string` secretId) : `void`
+  - GET  [GetApiKeys](/restapi/getapikeys)() : `object`
   - GET  [GetClientRequestParameters](/restapi/getclientrequestparameters)(`string` clientType) : `object`
-  - POST [ValidateCredentials](/restapi/validatecredentials)(`string` userName, `string` password) : `object`
+  - GET  [GetClients](/restapi/getclients)() : `object`
+  - GET  [GetClientsForRepository](/restapi/getclientsforrepository)() : `object`
+  - POST [RegenerateSecretForRepository](/restapi/regeneratesecretforrepository)(`string` clientId, `string` secretId, `DateTime?` validTill) : `ClientSecret`
+  - POST [ValidateCredentials](/restapi/validatecredentials)(`string` userName, `string` password) : `CredentialValidationResult`
 - Binary
   - POST [FinalizeBlobUpload](/restapi/finalizeblobupload)(`string` token, `long` fullSize, `string` fieldName, `string` fileName) : `string`
   - POST [FinalizeContent](/restapi/finalizecontent)() : `string`
@@ -30,27 +42,37 @@ metaDescription: "Api references"
 - Content and Schema
   - GET  [GetMetadata](/restapi/getmetadata)() : `string`
   - GET  [GetNameFromDisplayName](/restapi/getnamefromdisplayname)(`string` displayName) : `string`
+  - GET  [GetOpenApiDocument](/restapi/getopenapidocument)() : `string`
   - GET  [GetSchema](/restapi/getschema)(`string` contentTypeName) : `object`
 - Content Management
   - POST [CopyBatch](/restapi/copybatch)(`string` targetPath, `object[]` paths) : `BatchActionResponse`
   - POST [Delete](/restapi/delete)(`bool` permanent) : `object`
   - POST [DeleteBatch](/restapi/deletebatch)(`bool` permanent, `object[]` paths) : `BatchActionResponse`
+  - GET  [Import](/restapi/import)(`string` path, `object` data) : `object`
   - POST [MoveBatch](/restapi/movebatch)(`string` targetPath, `object[]` paths) : `BatchActionResponse`
-  - POST [Restore](/restapi/restore)(`string` destination, `bool?` newname) : void
+  - GET  [OpenTree](/restapi/opentree)(`string` rootPath, `bool` withLeaves, `bool` withSystem) : `object`
+  - POST [Restore](/restapi/restore)(`string` destination, `bool?` newname) : `void`
 - Content Types
   - POST [AddAllowedChildTypes](/restapi/addallowedchildtypes)(`string[]` contentTypes) : `string`
   - GET  [CheckAllowedChildTypesOfFolders](/restapi/checkallowedchildtypesoffolders)() : `Dictionary<string, List<string>>`
   - GET  [GetAllContentTypes](/restapi/getallcontenttypes)() : `Content[]`
   - GET  [GetAllowedChildTypesFromCTD](/restapi/getallowedchildtypesfromctd)() : `Content[]`
   - POST [RemoveAllowedChildTypes](/restapi/removeallowedchildtypes)(`string[]` contentTypes) : `string`
+- Deprecated
+  - GET  [CheckIndexIntegrity](/restapi/checkindexintegrity)(`bool` recurse) : `object`
 - Indexing
   - POST [BackupIndex](/restapi/backupindex)(`string` target) : `BackupResponse`
   - POST [CancelIndexBackup](/restapi/cancelindexbackup)() : `BackupResponse`
-  - GET  [CheckIndexIntegrity](/restapi/checkindexintegrity)(`bool` recurse) : `object`
+  - GET  [GetIndexDocument](/restapi/getindexdocument)(`int` versionId) : `IDictionary<string, object>`
+  - GET  [GetIndexDocumentByDocumentId](/restapi/getindexdocumentbydocumentid)(`int` documentId) : `IDictionary<string, object>`
+  - GET  [GetIndexProperties](/restapi/getindexproperties)() : `IndexProperties`
+  - GET  [GetInvertedIndex](/restapi/getinvertedindex)(`string` fieldName) : `IDictionary<string, object`
   - GET  [GetRecentIndexingActivities](/restapi/getrecentindexingactivities)() : `IndexingActivityHistory`
+  - GET  [GetWholeInvertedIndex](/restapi/getwholeinvertedindex)() : `void`
   - GET  [QueryIndexBackup](/restapi/queryindexbackup)() : `BackupResponse`
   - POST [RebuildIndex](/restapi/rebuildindex)(`bool` recursive, `IndexRebuildLevel` rebuildLevel) : `void`
   - POST [RebuildIndexSubtree](/restapi/rebuildindexsubtree)() : `void`
+  - POST [RefreshIndexAndCleanActivities](/restapi/refreshindexandcleanactivities)() : `void`
   - POST [RefreshIndexSubtree](/restapi/refreshindexsubtree)() : `void`
   - POST [ResetRecentIndexingActivities](/restapi/resetrecentindexingactivities)() : `IndexingActivityHistory`
 - Office Online Editing
@@ -58,12 +80,14 @@ metaDescription: "Api references"
   - GET  [WopiOpenEdit](/restapi/wopiopenedit)() : `object`
   - GET  [WopiOpenView](/restapi/wopiopenview)() : `object`
 - Other
-  - GET  [GetVersionInfo](/restapi/getversioninfo)() : `RepositoryVersionInfo`
+  - GET  [GetDashboardData](/restapi/getdashboarddata)() : `object`
+  - GET  [GetRepositoryType](/restapi/getrepositorytype)() : `object`
+  - GET  [GetVersionInfo](/restapi/getversioninfo)() : `RepositoryVersionView`
 - Permissions
   - GET  [GetAcl](/restapi/getacl)() : `object`
   - GET  [GetAllowedUsers](/restapi/getallowedusers)(`string[]` permissions) : `Content[]`
-  - GET  [GetChildrenPermissionInfo](/restapi/getchildrenpermissioninfo)(`string` identity) : `object`
-  - GET  [GetPermissionInfo](/restapi/getpermissioninfo)(`string` identity) : `object`
+  - GET  [GetChildrenPermissionInfo](/restapi/getchildrenpermissioninfo)(`string` identity) : `GetChildrenPermissionInfoResponse`
+  - GET  [GetPermissionInfo](/restapi/getpermissioninfo)(`string` identity) : `GetSinglePermissionInfoResponse`
   - GET  [GetPermissionOverview](/restapi/getpermissionoverview)(`string` identity) : `object`
   - GET  [GetPermissions](/restapi/getpermissions)(`string` identity) : `object`
   - GET  [GetRelatedIdentities](/restapi/getrelatedidentities)(`string` permissionLevel, `string` identityKind) : `Content[]`
@@ -77,14 +101,14 @@ metaDescription: "Api references"
   - POST [TakeLockOver](/restapi/takelockover)(`string` user) : `string`
   - POST [TakeOwnership](/restapi/takeownership)(`string` userOrGroup) : `void`
 - Preview
-  - POST [CheckPreviews](/restapi/checkpreviews)(`bool` generateMissing) : `object`
-  - POST [DocumentPreviewFinalizer](/restapi/documentpreviewfinalizer)(`SnTaskResult` result) : `void`
-  - GET  [GetExistingPreviewImages](/restapi/getexistingpreviewimages)() : `object[]`
+  - POST [CheckPreviews](/restapi/checkpreviews)(`bool` generateMissing) : `CheckPreviewsResponse`
+  - POST [DocumentPreviewFinalizer](/restapi/documentpreviewfinalizer)(`SnTaskResult` result) : `Task`
+  - GET  [GetExistingPreviewImages](/restapi/getexistingpreviewimages)() : `GetExistingPreviewImagesResponse[]`
   - POST [GetPageCount](/restapi/getpagecount)() : `int`
   - GET  [GetPreviewImages](/restapi/getpreviewimages)() : `Content[]`
-  - POST [GetPreviewsFolder](/restapi/getpreviewsfolder)(`bool` empty) : `object`
-  - GET  [PreviewAvailable](/restapi/previewavailable)(`int` page) : `object`
-  - POST [RegeneratePreviews](/restapi/regeneratepreviews)() : `object`
+  - POST [GetPreviewsFolder](/restapi/getpreviewsfolder)(`bool` empty) : `GetPreviewsFolderResponse`
+  - GET  [PreviewAvailable](/restapi/previewavailable)(`int` page) : `PreviewAvailableResponse`
+  - POST [RegeneratePreviews](/restapi/regeneratepreviews)() : `RegeneratePreviewsResponse`
   - POST [SetInitialPreviewProperties](/restapi/setinitialpreviewproperties)() : `void`
   - POST [SetPageCount](/restapi/setpagecount)(`int` pageCount) : `void`
   - POST [SetPreviewStatus](/restapi/setpreviewstatus)(`PreviewStatus` status) : `void`
@@ -105,9 +129,25 @@ metaDescription: "Api references"
   - POST [Share](/restapi/share)(`string` token, `SharingLevel` level, `SharingMode` mode, `bool` sendNotification) : `object`
 - Tools
   - GET  [Ancestors](/restapi/ancestors)() : `Content[]`
+  - GET  [GeDatabaseUsagePeriod](/restapi/gedatabaseusageperiod)(`TimeWindow?` timeWindow, `DateTime?` time) : `object`
+  - GET  [GetApiUsageList](/restapi/getapiusagelist)(`DateTime?` maxTime, `int` count) : `ApiUsageListItemViewModel[]`
+  - GET  [GetApiUsagePeriod](/restapi/getapiusageperiod)(`TimeWindow?` timeWindow, `DateTime?` time) : `object`
+  - GET  [GetApiUsagePeriods](/restapi/getapiusageperiods)(`TimeWindow?` timeWindow) : `object`
+  - GET  [GetContentCountInTree](/restapi/getcontentcountintree)() : `int`
+  - GET  [GetDatabaseUsage](/restapi/getdatabaseusage)(`bool` force) : `DatabaseUsage`
 - Users and Groups
   - POST [AddMembers](/restapi/addmembers)(`int[]` contentIds) : `object`
+  - POST [ChangePassword](/restapi/changepassword)(`string` password) : `void`
   - POST [CreateLocalUser](/restapi/createlocaluser)(`string` loginName, `string` password, `string` email) : `Content`
   - POST [CreateUserByProvider](/restapi/createuserbyprovider)(`string` provider, `string` userId, `string` claims) : `Content`
   - GET  [GetParentGroups](/restapi/getparentgroups)(`bool` directOnly) : `Content[]`
   - POST [RemoveMembers](/restapi/removemembers)(`int[]` contentIds) : `object`
+  - POST [SendChangePasswordMail](/restapi/sendchangepasswordmail)(`string` email, `string` returnUrl) : `Task`
+  - POST [SendChangePasswordMail](/restapi/sendchangepasswordmail2)(`string` returnUrl) : `Task`
+- WebHooks
+  - POST [FireWebHook](/restapi/firewebhook)(`string` path, `WebHookEventType` eventType) : `Content`
+  - POST [FireWebHook](/restapi/firewebhook2)(`int` nodeId, `WebHookEventType` eventType) : `Content`
+  - GET  [GetWebHookUsageList](/restapi/getwebhookusagelist)(`DateTime?` maxTime, `int` count) : `WebHookUsageListItemViewModel[]`
+  - GET  [GetWebHookUsageList](/restapi/getwebhookusagelist2)(`DateTime?` maxTime, `int` count) : `WebHookUsageListItemViewModel[]`
+  - GET  [GetWebHookUsagePeriod](/restapi/getwebhookusageperiod)(`TimeWindow?` timeWindow, `DateTime?` time) : `object`
+  - GET  [GetWebHookUsagePeriods](/restapi/getwebhookusageperiods)(`TimeWindow?` timeWindow) : `object`

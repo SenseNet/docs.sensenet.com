@@ -63,6 +63,9 @@ The `targetContent` can be Folder
 - **paths** (`object[]`): 
  Array of the id or full path of source items.
 
+### Return value:
+Type: `BatchActionResponse`.
+
 ### Requirements:
 - **AllowedRoles**: Everyone
 - **Scenarios**: GridToolbar, BatchActions

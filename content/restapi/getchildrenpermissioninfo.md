@@ -28,7 +28,7 @@ The `targetContent` can be any content type
 - **identity** (`string`): Path of the related user.
 
 ### Return value:
-A PermissionInfo object. (Type: `object`).
+A PermissionInfo object. (Type: `GetChildrenPermissionInfoResponse`).
 
 ### Requirements:
 - **AllowedRoles**: Everyone

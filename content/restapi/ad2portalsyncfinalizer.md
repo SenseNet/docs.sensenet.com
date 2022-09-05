@@ -7,6 +7,8 @@ metaDescription: "Ad2PortalSyncFinalizer"
 ## Ad2PortalSyncFinalizer
 - Method: **POST**.
 
+Finalizes an AD sync task for a user, group or organizational unit.
+ This action is intended for internal use by the Task Management module.
 
 ### Request example:
 
@@ -18,6 +20,6 @@ models=[{
 }]
 ```
 ### Parameters:
-- **result** (`SnTaskResult`): 
+- **result** (`SnTaskResult`): Result of the AD sync task.
 
 

@@ -17,7 +17,6 @@ A content in a multistep saving state.
 POST /odata.svc/Root/...('targetContent')/FinalizeBlobUpload
 DATA:
 models=[{
-  "context": _value_, 
   "token": _value_, 
   "fullSize": _value_, 
   "fieldName": _value_, 
@@ -26,11 +25,13 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (`HttpContext`): The current HttpContext if available.
 - **token** (`string`): Binary token provided by the start operation before.
 - **fullSize** (`long`): Size of the whole binary.
 - **fieldName** (`string`) optional: Optional custom binary field name, if it is other than 'Binary'.
 - **fileName** (`string`) optional: Binary file name to save into the binary metadata.
+
+### Return value:
+Type: `string`.
 
 ### Requirements:
 - **AllowedRoles**: All

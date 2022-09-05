@@ -8,6 +8,10 @@ metaDescription: "CheckIndexIntegrity"
 - Method: **GET** or optionally POST.
 
 DEPRECATED. Checking index integrity online is not supported anymore. Use an offline solution instead.
+ 
+
+### Exception
+- SnNotSupportedException:
 
 ### Request example:
 
@@ -23,6 +27,9 @@ models=[{
 }]
 ```
 ### Parameters:
-- **recurse** (`bool`): 
+- **recurse** (`bool`): Irrelevant because throws SnNotSupportedException.
+
+### Return value:
+Throws SnNotSupportedException. (Type: `object`).
 
 
