@@ -30,6 +30,9 @@ The `targetContent` can be any content type
 - **user** (`string`) optional: Path of an existing user. If not specified,
  the current user's permission value will be returned.
 
+### Return value:
+Type: `bool`.
+
 ### Requirements:
 - **AllowedRoles**: Everyone
 - **RequiredPermissions**: SeePermissions

@@ -7,6 +7,8 @@ metaDescription: "CreateUserByProvider"
 ## CreateUserByProvider
 - Method: **POST**.
 
+Creates an external user who registered using one of the available
+ external providers.
 
 ### Request example:
 
@@ -14,7 +16,6 @@ metaDescription: "CreateUserByProvider"
 POST /odata.svc/('Root')/CreateUserByProvider
 DATA:
 models=[{
-  "context": _value_, 
   "provider": _value_, 
   "userId": _value_, 
   "claims": _value_
@@ -22,10 +23,12 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **context** (`HttpContext`): 
-- **provider** (`string`): 
-- **userId** (`string`): 
-- **claims** (`string`): 
+- **provider** (`string`): Name of the provider (e.g. Google, GitHub).
+- **userId** (`string`): External user id given by the provider.
+- **claims** (`string`): List of claims given by the provider.
+
+### Return value:
+The newly created user content. (Type: `Content`).
 
 ### Requirements:
 - **AllowedRoles**: Administrators

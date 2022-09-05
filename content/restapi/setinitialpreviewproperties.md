@@ -7,6 +7,8 @@ metaDescription: "SetInitialPreviewProperties"
 ## SetInitialPreviewProperties
 - Method: **POST**.
 
+Sets the initial security-related properties (Owner, CreatedBy, etc.)
+ of a preview image automatically. The values come from the original document.
 
 ### Request example:
 

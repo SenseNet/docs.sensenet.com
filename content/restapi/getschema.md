@@ -7,6 +7,7 @@ metaDescription: "GetSchema"
 ## GetSchema
 - Method: **GET** or optionally POST.
 
+Gets type and field information for a single content type or all of them.
 
 ### Request example:
 
@@ -23,7 +24,11 @@ models=[{
 ```
 Can only be called on the root content.
 ### Parameters:
-- **contentTypeName** (`string`) optional: 
+- **contentTypeName** (`string`) optional: Optional content type name.
+
+### Return value:
+A list of type objects containing content type head information
+ (name, parent, etc.) and field settings. (Type: `object`).
 
 ### Requirements:
 - **AllowedRoles**: All

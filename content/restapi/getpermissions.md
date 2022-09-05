@@ -85,6 +85,9 @@ The `targetContent` can be any content type
 - **identity** (`string`) optional: Full path of an identity (group or user).
  
 
+### Return value:
+Type: `object`.
+
 ### Requirements:
 - **AllowedRoles**: Everyone
 

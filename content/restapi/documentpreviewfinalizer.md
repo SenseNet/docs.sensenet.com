@@ -7,6 +7,9 @@ metaDescription: "DocumentPreviewFinalizer"
 ## DocumentPreviewFinalizer
 - Method: **POST**.
 
+Finalizes a preview generation task for a document.
+ This action is intended for internal use by the Task Management
+ module.
 
 ### Request example:
 
@@ -18,7 +21,10 @@ models=[{
 }]
 ```
 ### Parameters:
-- **result** (`SnTaskResult`): 
+- **result** (`SnTaskResult`): Result of the preview generation task.
+
+### Return value:
+Type: `Task`.
 
 ### Requirements:
 - **AllowedRoles**: Everyone

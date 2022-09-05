@@ -22,6 +22,9 @@ The `targetContent` can be Group
 ### Parameters:
 - **contentIds** (`int[]`): An array of contentIds that represents the members to remove.
 
+### Return value:
+Type: `object`.
+
 ### Requirements:
 - **AllowedRoles**: Everyone
 

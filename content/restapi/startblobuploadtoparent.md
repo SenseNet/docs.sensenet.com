@@ -19,7 +19,6 @@ Parent content to upload the new file to.
 POST /odata.svc/Root/...('targetContent')/StartBlobUploadToParent
 DATA:
 models=[{
-  "context": _value_, 
   "name": _value_, 
   "contentType": _value_, 
   "fullSize": _value_, 
@@ -28,7 +27,6 @@ models=[{
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (`HttpContext`): The current HttpContext if available.
 - **name** (`string`): Name of the new (or existing) content.
 - **contentType** (`string`): Content type of the new content.
 - **fullSize** (`long`): Size of the whole binary.

@@ -17,14 +17,12 @@ Existing content with a binary field to upload to. In most cases this is a file 
 POST /odata.svc/Root/...('targetContent')/StartBlobUpload
 DATA:
 models=[{
-  "context": _value_, 
   "fullSize": _value_, 
   "fieldName": _value_
 }]
 ```
 The `targetContent` can be any content type
 ### Parameters:
-- **context** (`HttpContext`): The current HttpContext if available.
 - **fullSize** (`long`): Size of the whole binary.
 - **fieldName** (`string`) optional: Optional custom binary field name, if it is other than 'Binary'.
 
