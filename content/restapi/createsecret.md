@@ -30,7 +30,7 @@ Can only be called on the root content.
 - **validTill** (`DateTime?`) optional: Expiration date. Default: maximum date value.
 
 ### Return value:
-The newly created client. (Type: `ClientSecret`).
+The newly created secret. (Type: `ClientSecret`).
 
 ### Requirements:
 - **AllowedRoles**: Administrators
