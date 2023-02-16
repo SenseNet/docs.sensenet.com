@@ -15,7 +15,9 @@ The **sensenet IO tool and library** solves these problems. You can use it as a 
 You can get the **SnIO** tool in the following ways:
 - integrate the [SenseNet.IO](https://www.nuget.org/packages/SenseNet.IO) NuGet package into your application and use our API to manage content in your repository
 - compile the source code in this repository and use the tool from the `SenseNet.IO.CLI` folder
-- **BETA**: install the tool as a [dotnet tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools) from [NuGet](https://www.nuget.org/packages/SenseNet.IO.CLI) and use it anywhere from command line.
+- **BETA**: install the tool as a [dotnet tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools) from [NuGet](https://www.nuget.org/packages/SenseNet.IO.CLI) and use it anywhere from command line. The following command will install the sensenet IO tool as a global dotnet tool:
+
+`dotnet tool install -g sensenet.io.cli`
 
 ## Scenarios
 There are four scenarios offered by the built-in tool.
