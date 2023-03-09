@@ -1,171 +1,142 @@
 ---
-title: Getting started with sensenet and the .Net Core client
-metaTitle: "sensenet Tutorials - Getting started with sensenet and the .Net Core client"
+title: Getting started with sensenet and the .Net client
+metaTitle: "sensenet Tutorials - Getting started with sensenet and the .Net client"
 metaDescription: "This tutorial shows you how to start using sensenet with the .Net client API."
 ---
 
-In this tutorial we will export a folder structure containing subfolders and files to the file system, using the .Net Client library for sensenet.
+In this tutorial we will connect to a sensenet service and load a collection of content items in a folder, using the .Net Client library for sensenet.
 
-You'll find the full source code at the end of this article.
-
-## Create a new console application
-Create a new .Net Core console application either in command line (`dotnet new`), Visual Studio or VS Code.
-
-Install the following NuGet package:
-
-```
-SenseNet.Client
-```
-
-Add the following namespace registration to the beginning of your `Program.cs` file:
-
-```csharp
-using SenseNet.Client;
-```
-
-## Set up the connection to the sensenet service
-A sensenet repository service is represented by a **server object**. The simplest way to achieve this (without [authentication](/tutorials/authentication/how-to-authenticate-dotnet)) is to construct it manually, providing the URL of the service. If you need authentication, it is a lot more convenient if you use our service registration API (see later in this article).
+> You'll find a similar sample application on [GitHub](https://github.com/SenseNet/sn-client-dotnet/src/SenseNet.Client.DemoConsole).
 
 <note severity="info">If you do not have a repository yet, please head over to <a href="https://www.sensenet.com">www.sensenet.com</a> to get one.</note>
 <div>&nbsp;</div>
 
+If you already have an application set up with the client API, you can learn more about how to work with content items using this client API if you visit the [following article]("/tutorials/content/manage-content-dotnet").
+
+## Create a new console application
+Create a new .Net console application either in command line (`dotnet new`), Visual Studio or VS Code.
+
+Install the following NuGet packages:
+
+```
+SenseNet.Client
+Microsoft.Extensions.Configuration.Json
+Microsoft.Extensions.DependencyInjection
+Microsoft.Extensions.Hosting
+Microsoft.Extensions.Logging.Console
+```
+
+Add the following namespace registrations to the beginning of your `Program.cs` file:
+
 ```csharp
-static async Task Main(string[] args)
-{
-    // define sensenet service url
-    var server = new ServerContext
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SenseNet.Client;
+using SenseNet.Extensions.DependencyInjection;
+```
+
+## Register services
+Although this is a command line tool, we recommend using the same dependency injection technique as in a web application. This makes working with our features a lot easier.
+
+```csharp
+// The default host builder adds all the necessary features
+// for logging and configuration.
+var host = Host.CreateDefaultBuilder()
+    .ConfigureServices((context, services) =>
     {
-        Url = "https://example.sensenet.cloud"
-    };
-}
-```
-<div>&nbsp;</div>
-<note severity="info"><b>Important</b>: In this tutorial we assume that all the content items you are working with are <b>public</b> (accessible for visitors). You can make content (for example files or whole folders) public on the admin UI: on the <b>Set permissions</b> page hit the Make content public button.
-</note>
-<div>&nbsp;</div>
-<note severity="info">
-To access private content, please check out how to add <a href="/tutorials/authentication/how-to-authenticate-dotnet">authentication</a> to your client application.
-</note>
-
-## Load and iterate through a content collection
-First we want to load all child items in an existing folder.
-
-```csharp
-// note the server parameter: that is what defines the repository service to load contents from
-var children = await Content.LoadCollectionAsync(repositoryPath, server);
-```
-
-Iterate through the collection. Please note that here we treat child items as `dynamic` objects. This makes accessing properties easier and simpler.
-
-```csharp
-foreach (dynamic child in children)
-{
-    var contentType = (string) child.Type;
-
-    // If child is a file: save it to the file system.
-    // If it is a folder, iterate through its children recursively.
-}
-```
-
-## Save files to the file system
-The following code fragment shows the easiest way to save binary streams from the repository to the file system.
-
-```csharp
-using var fs = File.OpenWrite(localPath);
-await RESTCaller.GetStreamResponseAsync((int) child.Id, string.Empty, string.Empty, server, message =>
-{
-    // save file (currently this has to be synchronous)
-    message.Content.CopyToAsync(fs).GetAwaiter().GetResult();
-}, CancellationToken.None);
-```
-
-## Put it all together
-We assembled all the fragments above to a separate method that can be called recursively on subfolders. This is how the whole source code looks like.
-
-If you execute it, it will export folders and files from the `/Root/Content/Folder` container from the repository to the `C:\temp\export` folder in the file system.
-
-```csharp
-class Program
-{
-    static async Task Main(string[] args)
-    {            
-        // define sensenet service url
-        var server = new ServerContext
-        {
-            Url = "https://example.sensenet.cloud"
-        };
-
-        await ExportFolderAsync("/Root/Content/Folder", "C:\\temp\\export", server);
-    }
-
-    private static async Task ExportFolderAsync(string repositoryPath, string targetPath, ServerContext server)
-    {
-        var children = await Content.LoadCollectionAsync(repositoryPath, server);
-
-        foreach (dynamic child in children)
-        {
-            var contentType = (string) child.Type;
-            var localPath = Path.Combine(targetPath, child.Name);
-
-            switch (contentType)
+        // add the sensenet client feature and configure the repository
+        services
+            .AddLogging(logging => logging.AddConsole())
+            .AddSenseNetClient()
+            .ConfigureSenseNetRepository(repositoryOptions =>
             {
-                case "Folder":
-                {
-                    // create folder in file system
-                    Directory.CreateDirectory(localPath);
+                // Load configuration from a path of your choice.
+                // This configuration should contain at least the repository url
+                // and optionally authentication values.
+                context.Configuration.GetSection("sensenet:repository").Bind(repositoryOptions);
+            });
+    }).Build();
+```
 
-                    // export subfolders recursively
-                    await ExportFolderAsync((string) child.Path, localPath, server);
-                    break;
-                }
-                case "File":
-                {
-                    // export file
-                    using var fs = File.OpenWrite(localPath);
-                    await RESTCaller.GetStreamResponseAsync((int) child.Id, string.Empty, string.Empty, server, message =>
-                    {
-                        // save file (currently this has to be synchronous)
-                        message.Content.CopyToAsync(fs).GetAwaiter().GetResult();
-                    }, CancellationToken.None);
-                    break;
-                }
+### Configuration
+The registration code above loads connection values from configuration. It is also possible to simply set them here in source code, but making these things configurable is always a good idea.
+
+A sample `appsettings.json` file. 
+
+```json
+{
+    "sensenet": {
+        "repository": {
+            "url": "https://example.sensenet.cloud",
+            "authentication": {
+                "ClientId": "",
+                "ClientSecret": "",
+                "ApiKey": ""
             }
         }
     }
 }
 ```
 
-## Define and use services through Dependency Injection
-.Net DI is a powerful service registration mechanism that makes defining and using services a lot easier. To use it, you will need to add the following nuget packages to your project:
+> When you add a configuration file (like the default one above), please do not forget to set its `Copy to output directory` property so that .Net copies the file automatically when building the app.
 
-```
-Microsoft.Extensions.DependencyInjection
-Microsoft.Extensions.Logging.Console
-```
-
-Please also add the following using declarations to your cs file:
+## Access the repository
+A sensenet repository service is represented by an **IRepository** object. This is an instance that contains methods for creating or loading content items. You can get the repository through the **IRepositoryCollection** service the following way:
 
 ```csharp
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using SenseNet.Client;
-using SenseNet.Extensions.DependencyInjection;
+// Get the main entry point for the client API. In a web app you would
+// get this service through the constructor of you controllers or other
+// services.
+var repositoryCollection = host.Services.GetRequiredService<IRepositoryCollection>();
+
+// Get the repository instance. This instance is already set up with
+// authentication, can be pinned or you can get it using this API 
+// any number of times (as it is cached in the background).
+var repository = await repositoryCollection.GetRepositoryAsync(CancellationToken.None);
 ```
 
-Now you can register the repository feature in the service collection using the `AddSenseNetRepository` method. Note that you can also provide the repository url and authentication data in **configuration**. Please visit the [authentication](/tutorials/authentication/how-to-authenticate-dotnet) article for an example on how to do that.
+## Load and iterate through a content collection
+First we want to load all child items in an existing folder.
 
 ```csharp
-var provider = new ServiceCollection()
-    .AddSenseNetRepository(options => { options.Url = "https://example.sensenet.cloud"; })
-    .AddLogging(logging => logging.AddConsole())
-    .BuildServiceProvider();
+var children = await repository.LoadCollectionAsync(repositoryPath, CancellationToken.None);
 ```
 
-The code sample above works in a console application, but you can also use the same API in an **Asp.Net** app to register the service!
-
-To get a server object, please use the following API. You can either get the `IServerContextFactory` object manually like this, or through the usual ways (e.g. in a constructor of another service).
+Iterate through the collection. 
 
 ```csharp
-var serverFactory = provider.GetRequiredService<IServerContextFactory>();
-var server = await serverFactory.GetServerAsync();
+foreach (Content child in children)
+{
+    // process content items
+    Console.WriteLine(child.Path);
+}
 ```
+
+To learn more about how to work with content items using this client API, please visit the [following article]("/tutorials/content/manage-content-dotnet").
+
+## Connect to multiple repositories
+It is possible to register and access multiple repositories using this client API. In that case you have to configure the repositories by name:
+
+```csharp
+services
+    .AddSenseNetClient() // call this only once
+    .ConfigureSenseNetRepository("repo1", repositoryOptions =>
+    {
+        context.Configuration.GetSection("sensenet:repo1").Bind(repositoryOptions);
+    })
+    .ConfigureSenseNetRepository("repo2", repositoryOptions =>
+    {
+        context.Configuration.GetSection("sensenet:repo2").Bind(repositoryOptions);
+    });
+```
+
+Note that you have to configure urls and authentication separately for the two repositories.
+To work with these repositories you access the repository objects by name:
+
+```csharp
+var repository1 = await repositoryCollection.GetRepositoryAsync("repo1", CancellationToken.None);
+var repository2 = await repositoryCollection.GetRepositoryAsync("repo2", CancellationToken.None);
+```
+
+Connecting to multiple repositories is usually required in a migration or import/export scenario. In that case please consider using the [Import-export tool]("/tutorials/content/import-export") or library that adds more features specifically for this use case.

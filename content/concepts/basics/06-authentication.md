@@ -8,6 +8,8 @@ The **sensenet as a Service** offer is all about making your development work ea
 
 For securing repositories hosted in our environment we use [IdentityServer4](https://identityserver4.readthedocs.io/en/latest) - the Open Source **OpenID Connect** and **OAuth 2.0** framework for .NET. This is what we recommend when hosting sensenet in your own environment too.
 
+To support this scenario, we have an open source web application built on IdentityServer that you can install locally if you choose to. Please visit this [GitHub repository]("https://github.com/SenseNet/sn-identityserver") for the source code.
+
 <note severity="info">There is another method for authenticating with sensenet: using <a href="/tutorials/authentication/how-to-authenticate-apikey" target="_blank">API keys</a>. It lets 3rd party applications or services make authenticated requests to the repository without user interaction or custom code.</note>
 
 This means that developers who are familiar with OAuth 2.0 and OpenID Connect will be able to start working with our APIs in no time, because our service supports the usual protocols and APIs provided by IdentityServer4.
@@ -36,6 +38,10 @@ Tools on the other hand require a **clientid** and a **secret** which acts like 
 <note severity="info">This workflow requires the client application to have a <strong>sensenet repository url</strong>, a <strong>client id</strong> and also a <strong>client secret</strong>. To acquire these values, please visit your profile page and select the repository you want to connect to.</note>
 <div>&nbsp;</div>
 <note severity="error">Make sure that nobody gets hold of your clientid and most importantly the client secret. If that happens, please visit your profile immediately, invalidate the secret and generate a new one to make sure nobody unauthorized can access the repository.</note>
+<div>&nbsp;</div>
+
+### API keys for 3rd party services
+Another way to make authenticated requests to a sensenet service is using [API keys](/tutorials/authentication/how-to-authenticate-apikey). This method was designed to let 3rd party services (for example workflow engines or developer tools) connect ot sensenet without having to go through the authentication process above, simply use a token. Check out the article above to learn more about this subject.
 
 ## Client technologies
 ### JavaScript
