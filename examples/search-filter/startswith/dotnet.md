@@ -1,9 +1,7 @@
 ```csharp
-var result = await Content.LoadCollectionAsync(new ODataRequest
+await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/IT/Document_Library",
-    Parameters = { { "$filter", "startswith(Name, 'Document') eq true" } },
-});
-//foreach (var content in result)
-//    Console.WriteLine(content.Name);
+    ChildrenFilter = "startswith(Name, 'Document') eq true"
+}, cancel)
 ```

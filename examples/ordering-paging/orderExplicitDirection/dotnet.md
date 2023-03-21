@@ -1,9 +1,7 @@
 ```csharp
-var result = await Content.LoadCollectionAsync(new ODataRequest
+await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/IT/Document_Library",
-    Parameters = {{"$orderby", "Id asc"}}
-});
-//foreach (var content in result)
-//    Console.WriteLine(content.Id);
+    OrderBy = new[] { "Id asc" }
+}, cancel)
 ```

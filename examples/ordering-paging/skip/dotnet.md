@@ -1,9 +1,7 @@
 ```csharp
-var result = await Content.LoadCollectionAsync(new ODataRequest
+await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/IT/Document_Library",
     Skip = 5,
-});
-//foreach (var content in result)
-//    Console.WriteLine(content.Name);
+}, cancel)
 ```

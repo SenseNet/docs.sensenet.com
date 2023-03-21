@@ -1,9 +1,7 @@
 ```csharp
-var result = await Content.LoadCollectionAsync(new ODataRequest
+await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/IT/Document_Library",
-    Parameters = { { "$filter", "ContentType eq 'Folder'" } },
-});
-//foreach (dynamic content in result)
-//    Console.WriteLine(content.Type);
+    ChildrenFilter = "ContentType eq 'Folder'"
+}, cancel)
 ```

@@ -1,7 +1,7 @@
 ```csharp
-await Content.LoadAsync(new ODataRequest
+await repository.LoadContentAsync(new LoadContentRequest
 {
     Path = "/Root/Content/IT",
-    Metadata = MetadataFormat.None,
-});
+    Metadata = MetadataFormat.None
+}, cancel)
 ```

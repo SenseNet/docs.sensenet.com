@@ -1,8 +1,7 @@
 ```csharp
-dynamic content = await RESTCaller.GetContentAsync(new ODataRequest
+await repository.LoadContentAsync(new LoadContentRequest
 {
     Path = "/Root/Content/IT",
     Expand = new[] { "AllowedChildTypes" }
-});
-//Console.WriteLine(content.AllowedChildTypes.Count);
+}, cancel)
 ```
