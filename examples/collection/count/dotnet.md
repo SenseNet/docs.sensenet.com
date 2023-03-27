@@ -1,3 +1,3 @@
 ```csharp
-await Content.GetCountAsync("/Root/Content", null);
+await repository.GetContentCountAsync(new LoadCollectionRequest {Path = "/Root/Content"}, cancel)
 ```

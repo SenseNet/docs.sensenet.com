@@ -14,83 +14,59 @@ Unless you are working with publicly available content - like blog posts - it is
 <note severity="info">If you do not have a repository yet, please head over to <a href="https://www.sensenet.com">www.sensenet.com</a> to get one.<br/>
 To learn more about the sensenet authentication flow and components, please visit <a href="/concepts/basics/06-authentication">this article</a>.
 <br/>
-This workflow requires the client application to have a <strong>sensenet repository url</strong>, a <strong>client id</strong> and also a <strong>client secret</strong>. To acquire these values, please visit your profile page and select the repository you want to connect to.
+This workflow requires the client application to have a <strong>sensenet repository url</strong> and either a <strong>client id</strong> and also a <strong>client secret</strong>, or alternatively an <a href="/tutorials/authentication/how-to-authenticate-apikey">API key</a>. To acquire these values, please visit your profile page and select the repository you want to connect to, or directly log in to the admin UI of your repository. There you can get the security values on the <a href="/guides/settings/api-and-security">Api and security</a> page.
 </note>
 <div>&nbsp;</div>
 
 ## Create a new console application
-Create a new .Net Core console application either in command line (`dotnet new`), Visual Studio or VS Code.
-
-Install the following NuGet packages:
-
-```
-SenseNet.Client
-Microsoft.Extensions.Configuration.Json
-Microsoft.Extensions.DependencyInjection
-Microsoft.Extensions.Logging.Console
-```
-
-Add the following namespace registrations to the beginning of your `Program.cs` file:
-
-```csharp
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using SenseNet.Client;
-using SenseNet.Extensions.DependencyInjection;
-```
+As a prerequisite, please visit the [.Net console application]("/tutorials/getting-started/getting-started-dotnet") tutorial to see how to create a console app that connects to a sensenet repository.
 
 ## Add config file and load configuration
-Add a new json file to your project called `appSettings.json` and set the *Copy to output directory* property to **Copy if newer** in its properties window. This will ensure that the config file will be present when you start the app.
+Add a new json file to your project called `appsettings.json` and set the *Copy to output directory* property to **Copy if newer** in its properties window. This will ensure that the config file will be present when you start the app.
 
-```csharp
-IConfiguration config = new ConfigurationBuilder()
-    .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true)
-    .Build();
-```
-
-## Add the repository feature
-In an Asp.Net Core web application registering services is more straightforward, but in a **console application** you'll have to do some manual work to achieve the same result:
-
-```csharp
-// assemble a service container and register the sensenet repository service
-var provider = new ServiceCollection()
-    .AddSenseNetRepository(options => { config.Bind("sensenet", options); })
-    .AddLogging(logging => logging.AddConsole())
-    .BuildServiceProvider();
-```
-
-The `AddSenseNetRepository` method above registers the necessary client services and loads the configuration from the `sensenet` segment. The structure of the configuration must be the following:
+If you followed the tutorial above, all your services are already registered. Your application will load
+ the necessary services and the configuration from the `sensenet:repository` segment. The structure of the configuration should be the following:
 
 ```json
 {
   "sensenet": {
-    "Url": "https://example.sensenet.cloud",
-    "Authentication": {
-      "ClientId": "",
-      "ClientSecret": ""
+    "repository": {
+      "Url": "https://example.sensenet.cloud",
+      "Authentication": {
+        "ClientId": "abc",
+        "ClientSecret": "abcdefghijkl",
+      }
+    }
+  }
+}
+```
+Or using an API key:
+
+```json
+{
+  "sensenet": {
+    "repository": {
+      "Url": "https://example.sensenet.cloud",
+      "Authentication": {
+        "ApiKey": "abcdefghijk"
+      }
     }
   }
 }
 ```
 
-## Get the server connection
-You can get an authenticated server context from a factory service. The first time you get the object the api will do the authentication steps in the background and cache the server context. All subsequent requests will be fast, so you do not have to pin the server object - in fact, it is advisable to **only pin the factory service** and get the server context from it every time you need to access the repository.
+To be able to connect to a sensenet service, you will either have to fill the **clientid/secret** pair, or use an **API key**. See the links at the beginning of this article to see how can you acquire them.
+
+## Get the repository instance
+If you configured the values above correctly, you will get an authenticated repository instance when using the API described in the console app getting started article:
 
 ```csharp
-// load the factory service manually or through the constructor in another service or controller
-var serverFactory = provider.GetRequiredService<IServerContextFactory>();
-var server = await serverFactory.GetServerAsync();
+var repositoryCollection = host.Services.GetRequiredService<IRepositoryCollection>();
+var repository = await repositoryCollection.GetRepositoryAsync(CancellationToken.None);
 ```
+You do not have to do anything else, the instance is already filled with the necessary tokens, you can start working with content items.
 
-<note severity="info">Please note that it is also possible to register and get server objects by name. This way you can connect to multiple sensenet repositories at the same time.</note>
-
-## Make a request to the server
-From now on you'll be able to send authenticated requests to the server. The permission level of the request is determined by the client id you provide here: it represents a user in the content repository.
-
-```csharp
-var children = await Content.LoadCollectionAsync("/Root/Content", server);
-```
+<note severity="info">Please note that it is also possible to register and get repository objects by name. This way you can connect to <strong>multiple sensenet repositories</strong> at the same time.</note>
 
 To learn more about the client API we offer for .Net developers and example requests you can make from a .Net Core client application, please visit the following articles:
 

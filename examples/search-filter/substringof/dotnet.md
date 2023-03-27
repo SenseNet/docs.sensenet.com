@@ -1,9 +1,7 @@
 ```csharp
-var result = await Content.LoadCollectionAsync(new ODataRequest
+await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/IT/Document_Library",
-    Parameters = { { "$filter", "substringof('Lorem', Description) eq true" } },
-});
-//foreach (var content in result)
-//    Console.WriteLine(content.Description);
+    ChildrenFilter = "substringof('Lorem', Description) eq true"
+}, cancel)
 ```

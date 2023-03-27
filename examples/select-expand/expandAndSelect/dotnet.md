@@ -1,9 +1,8 @@
 ```csharp
-dynamic content = await RESTCaller.GetContentAsync(new ODataRequest
+await repository.LoadContentAsync(new LoadContentRequest
 {
     Path = "/Root/Content/IT",
     Expand = new[] { "CreatedBy" },
     Select = new[] { "Name", "CreatedBy/Name" }
-});
-//Console.WriteLine(content.CreatedBy.Name);
+}, cancel)
 ```

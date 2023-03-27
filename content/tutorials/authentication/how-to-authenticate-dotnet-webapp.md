@@ -13,11 +13,12 @@ Unless you are working with publicly available content - like blog posts - it is
 
 This process is almost the same as authenticating from a [console application](/tutorials/authentication/how-to-authenticate-dotnet), only the service registration is different.
 
-> To learn more about the sensenet authentication flow and components, please visit [this article](/concepts/basics/06-authentication).
->
-> If you do not have a repository yet, please head over to [www.sensenet.com](https://www.sensenet.com) to get one.
->
-> This workflow requires the client application to have a **sensenet repository url**, a **client id** and also a **client secret**. To acquire these values, please visit your profile page and select the repository you want to connect to.
+<note severity="info">If you do not have a repository yet, please head over to <a href="https://www.sensenet.com">www.sensenet.com</a> to get one.<br/>
+To learn more about the sensenet authentication flow and components, please visit <a href="/concepts/basics/06-authentication">this article</a>.
+<br/>
+This workflow requires the client application to have a <strong>sensenet repository url</strong> and either a <strong>client id</strong> and also a <strong>client secret</strong>, or alternatively an <a href="/tutorials/authentication/how-to-authenticate-apikey">API key</a>. To acquire these values, please visit your profile page and select the repository you want to connect to, or directly log in to the admin UI of your repository. There you can get the security values on the <a href="/guides/settings/api-and-security">Api and security</a> page.
+</note>
+<div>&nbsp;</div>
 
 ## Create a new Asp.Net Core web application
 Create a new Asp.Net Core web application either in command line (`dotnet new`), Visual Studio or VS Code.
@@ -46,48 +47,57 @@ In the `ConfigureServices` method of the `Startup` class register the feature.
 public void ConfigureServices(IServiceCollection services)
 {
     // register the repository feature
-   services.AddSenseNetRepository(options => { Configuration.Bind("sensenet", options); });
+   services.AddSenseNetClient()
+            .ConfigureSenseNetRepository(repositoryOptions =>
+            {
+                // Load configuration from a path of your choice.
+                // This configuration should contain at least the repository url
+                // and optionally authentication values.
+                context.Configuration.GetSection("sensenet:repository").Bind(repositoryOptions);
+            })
    
    // add other services...
 }
 ```
 
-The `AddSenseNetRepository` method above registers the necessary client services and loads the configuration from the `sensenet` segment. The structure of the configuration must be the following:
+The `AddSenseNetClient` method above registers the necessary client services. `ConfigureSenseNetRepository` lets you configure connection values for a particular repository. The example above loads the configuration from the `sensenet:repository` segment. The structure of the configuration must be the following:
 
 ```json
 {
   "sensenet": {
-    "Url": "https://example.sensenet.cloud",
-    "Authentication": {
-      "ClientId": "",
-      "ClientSecret": ""
+    "repository": {
+      "Url": "https://example.sensenet.cloud",
+      "Authentication": {
+        "ClientId": "",
+        "ClientSecret": ""
+      }
     }
   }
 }
 ```
 
-## Get the server connection
-You can get an authenticated server context from a factory service. The first time you get the object the api will do the authentication steps in the background and cache the server context. All subsequent requests will be fast, so you do not have to pin the server object - in fact, it is advisable to **only pin the factory service** and get the server context from it every time you need to access the repository.
+## Get the repository service
+You can get an authenticated repository instance from the `IRepositoryCollection` service. The first time you get the object the api will do the authentication steps in the background and cache the instance. All subsequent requests will be fast, so you do not have to pin the repository object - but you can do so if you want to.
 
 ```csharp
 // load the factory service through the constructor in another service or controller
-public ContentController(IServerContextFactory serverFactory)
+public ContentController(IRepositoryCollection repositoryCollection)
 {
-   _serverFactory = serverFactory;
+   _repositoryCollection = repositoryCollection;
 }
 
 // use it in an action method
 public void MyMethod()
 {
-    // get the server every time
-   var server = await _serverFactory.GetServerAsync();
-   var content = await Content.LoadAsync(path, server);
+    // get the repository
+   var repository = await _repositoryCollection.GetRepositoryAsync(cancellationToken);
+   var content = await repository.LoadContentAsync(path, cancellationToken);
 }
 ```
 
-> Please note that it is also possible to register and get server objects by name. This way you can connect to multiple sensenet repositories at the same time.
+> Please note that it is also possible to register and get repositories by name. This way you can connect to **multiple sensenet repositories** at the same time.
 
-From now on you'll be able to send authenticated requests to the server. The permission level of the request is determined by the client id you provide here: it represents a user in the content repository.
+From now on you'll be able to send authenticated requests to the sensenet service. The permission level of the request is determined by the client id (or API key) you provide in your configuration: it represents a user in the content repository.
 
 To learn more about the client API we offer for .Net developers and example requests you can make from a .Net Core client application, please visit the following articles:
 

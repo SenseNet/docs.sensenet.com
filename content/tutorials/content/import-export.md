@@ -1,7 +1,12 @@
 ---
 title: "Import and export"
 metaTitle: "sensenet Tutorials - Import and export content"
-metaDescription: "sensenet Tutorials - How to import or export content items"
+metaDescription: "sensenet Tutorials - How to import and export content items"
+category: Tutorials
+index: 0
+version: v7.0
+tags: [import, export, client, api]
+description: This tutorial shows you how to import and export content items.
 ---
 
 # Import and export
