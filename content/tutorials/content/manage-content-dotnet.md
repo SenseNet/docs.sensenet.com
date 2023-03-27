@@ -4,34 +4,42 @@ metaTitle: "sensenet Tutorials - Manage content using the .Net client"
 metaDescription: "This tutorial shows you how to manage content in the sensenet repository using the .Net client API."
 ---
 
-In this tutorial we will show you examples of managing content items using the .Net client API. As a prerequisite we assume you already have a [console application]("/tutorials/getting-started/getting-started-dotnet") or a [web application]("/tutorials/getting-started/getting-started-mvc-client") set up with the necessary services and authentication.
+In this tutorial we will show you examples of managing content items using the .Net client API. As a prerequisite we assume you already have a [console application](/tutorials/getting-started/getting-started-dotnet) or a [web application](/tutorials/getting-started/getting-started-mvc-client) set up with the necessary services and authentication.
 
--- coming soon
+## Using the built-in Content types
+In many cases it is sufficient to use the basic `Content` type for managing content in the repository. If you simply want to collect data or manipulate basic fields, you can use the default methods in the repository API that work with the `Content` type.
 
--- under construction
+This means you **do not have to create models** for your content types if you do not want to. It just makes complex business scenarios easier and cleaner when working with strongly typed properties.
 
-### Writing a strongly typed model
-#### Strongly typed model definition
-- Class inherited from Content or a Content descendant.
-- Required one ctor with minimal parameters: IRestCaller, ILogger<T> when T is the model's type.
-- Public, non-static, read/write properties for data binding (the data binding works with name equality)
+> We also plan to offer built-in content types for well-known business types in the future (like `User` or `Group`). Please check out our built-in types first before creating your custom model.
 
-This is the model used in the examples below
+## Creating a strongly typed model
+In this article we will mainly use the strongly typed (generic) methods of the repository API. To see examples for the most common basic Content API, check out the [API docs documentation](/api-docs/basic-concepts). 
+
+To create a client model, please create it in the following form:
+
+- A class that inherits from `Content` (or one of its descendants).
+- Has a single constructor with at least the parameters required by the base type (currently `IRestCaller` and `ILogger<T>`). All other parameters must be dependency injection-compatible, because we register these models in DI.
+- Public read/write properties for field data binding (the data binding works with name equality).
+
+This is the model used in the examples below:
+
 ```csharp
-internal class Memo : Content
+public class Memo : Content
 {
-    public Memo(IRestCaller restCaller, ILogger<Content> logger) : base(restCaller, logger) { }
+    public Memo(IRestCaller restCaller, ILogger<Memo> logger) : base(restCaller, logger) { }
 
     public string Description { get; set; }
     public DateTime Date { get; set; }
     public string[] MemoType { get; set; }
     public List<Content> SeeAlso { get; set; }
 }
-
 ```
 
-### Registering a strongly typed model
-Register a global strongly typed model:
+## Registering the model
+#### Registering a global model
+This is the most common way of registering models. This method registers a model that is able to handle sensenet repository content types with the same name.
+
 ```csharp
 services
     .AddSenseNetClient()
@@ -39,7 +47,15 @@ services
     //...
 ```
 
-Register a model locally:
+Registering a global model for a different content type name:
+
+```csharp
+    .RegisterGlobalContentType<MyMemo>("Memo")
+```
+
+#### Registering a local model
+In case you are working with **multiple repositories** (e.g. when writing a synchronizer tool) and the types in those repositories are not compatible, you may need to register different models for different repositories. You can do so using the following API:
+
 ```csharp
 services
     .AddSenseNetClient()
@@ -52,40 +68,44 @@ services
     });
 ```
 
-Register a **global** model with different content type name
-```csharp
-    .RegisterGlobalContentType<MyMemo>("Memo")
-```
+Registering a local model for a different content type name:
 
-Register a **local** model with different content type name
 ```csharp
     types.Add<MyMemo>("Memo")
 ```
 
-## Using models
-### Creation
-Create a strongly typed model on the server in 2 step. The content type should be registered globally or locally in the currently used repository.
+## Managing content
+### Creating a content
+Create a content using a strongly typed model in 2 steps. The content type should be registered as seen above.
+
 1. Call the creation method on the desired repository with these parameters:
-    - parent path of the existing server content.
-    - content type name or null if it equals with the type name of the model.
-    - content name.
+    - parent path (this container must already exist on the server)
+    - content type name or null if it is the same as the type name of the model
+    - content name (optional)
 2. Save the content
+
 ```csharp
-var newMemo = repository.CreateContent<Memo>("/Root/Content/MyMemos", null "Memo-0001");
+var newMemo = repository.CreateContent<Memo>("/Root/Content/MyMemos", null, "Memo-0001");
 await newMemo.SaveAsync(cancel).ConfigureAwait(false);
 ```
-### Loading entry
-Load an entry...
+### Loading a content
+#### Load by path
 
-...by path
 ```csharp
 var memo = await repository.LoadContentAsync<Memo>("/Root/Content/MyMemos/Memo-0001", cancel);
 ```
-...by Id
+
+#### Load by Id
+
 ```csharp
 var memo = await repository.LoadContentAsync<Memo>(1689, cancel);
 ```
-...with total control
+
+#### Load with customizing the response
+It is recommended that you load only the necessary fields from the server - e.g. the ones you want to work with - instead of downloading everything. This will save you bandwidth and memory too.
+
+To achieve this, you can make use of the `select` and `expand` features of the API as in the following example:
+
 ```csharp
 var memo = await repository.LoadContentAsync<Memo>(new LoadContentRequest
 {
@@ -94,13 +114,20 @@ var memo = await repository.LoadContentAsync<Memo>(new LoadContentRequest
     Select = new[] {"Id", "Path", "Type", "Description", "SeeAlso/Id", "SeeAlso/Type"},
 }, cancel).ConfigureAwait(false);
 ```
-### Loading or querying entries
-The starting point of these operations a single content defined in the request object.
-But loading a collection and querying contents have different scopes: the collection loading applies only to the children (InFolder) the querying applies to the whole subtree (InTree). 
 
-Note: LoadCollectionAsync always applies only to the children even if ContentQuery is used in the request.
+### Loading or querying multiple items
 
-Load a collection:
+The starting point of these operations is a single content defined in the request object which serves as the root of the query. But loading a collection and querying contents have different scopes:
+
+- **collection loading**: applies only to direct children 
+- **querying** applies to the whole subtree 
+
+This means `LoadCollectionAsync` always applies only to children even if `ContentQuery` is used in the request.
+
+> Note: the following methods may throw an `InvalidCastException` if the result list contains types that are different from the one provided as the `<T>` parameter. It is the responsibility of the developer to construct a query (e.g. by filtering for type) that loads only the appropriate contents.
+
+#### Loading a collection
+
 ```csharp
 var lastMemos = await repository.LoadCollectionAsync<Memo>(new LoadCollectionRequest
 {
@@ -111,15 +138,19 @@ var lastMemos = await repository.LoadCollectionAsync<Memo>(new LoadCollectionReq
     Top = 10
 }, cancel).ConfigureAwait(false);
 ```
-Get collection count (no type parameter).
-There are many irrelevant property in the request e.g. OrderBy, Select, Expand etc.
+#### Getting the count of a collection
+
+> Note: in this case most of the request parameters (e.g. OrderBy, Select, Expand etc.) are ignored.
+
 ```csharp
-var x = await repository.GetContentCountAsync(new LoadCollectionRequest
+var memoCount = await repository.GetContentCountAsync(new LoadCollectionRequest
 {
     Path = "/Root/Content/MyMemos",
 }, cancel).ConfigureAwait(false);
 ```
-Query contents. Can throw InvalidCastException.
+
+#### Querying contents
+ 
 ```csharp
 var memos = await repository.QueryAsync<Memo>(new QueryContentRequest
 {
@@ -131,24 +162,25 @@ var memos = await repository.QueryAsync<Memo>(new QueryContentRequest
     Select = new[] {"Id", "Path", "Type", "Description", "SeeAlso/Id", "SeeAlso/Type"},
 }, cancel).ConfigureAwait(false);
 ```
+
 ## Advanced data binding in Models
-Use integral types for simple fields.
+If you create a model class for your type, most of the properties will be simple types (e.g. an integer or a string). There are cases however when a content field is more complex. In this section you will see examples for those cases and how can developers make field data conversions.
 
-Use Content or descendants for single references.
+### Reference fields
+In case of **single reference** fields (e.g. `Manager` or `CreatedBy`) use the Content type or one of its descendants for the property type.
 
-Use the followings for multireferences (T is Content or descendants)
-- T[]
-- IEnumerable<T>
-- List<T>
+In case of **multi reference** fields use one of the following types (`T` is Content or one of its descendants):
 
-A property with any other type needs a conversion mechanism.
+- `T[]`
+- `IEnumerable<T>`
+- `List<T>`
 
-#### Custom object that has configurable serialization.
-There is no necessary additional conversion if the JSON response and the target object can be matched with simple serialization modifications.
-In this case, the conversion is done implicitly.
+### Custom object
 
-JSON response
-```text
+#### Automatic conversion
+If the JSON response and the target object can be matched with simple serialization, the conversion is done implicitly. Let's take the following response as an example:
+
+```json
 {
   "d": {
     "CustomField": {
@@ -158,7 +190,10 @@ JSON response
   }
 }
 ```
-The type used in the strongly typed model's property. Note that the property name are modified declaratively.
+The type used in the strongly typed model's property could be the following. 
+
+> Note that the property names are modified declaratively.
+ 
 ```csharp
 private class CustomPropertyType
 {
@@ -168,39 +203,44 @@ private class CustomPropertyType
     public int Property2 { get; set; }
 }
 ```
-The model
+The model:
+
 ```csharp
 private class TestContent_CustomProperties : Content
 {
-    public TestContent_CustomProperties(IRestCaller restCaller, ILogger<Content> logger) : base(restCaller, logger) { }
+    /*...constructor and other properties...*/
 
     public CustomPropertyType CustomField { get; set; }
 }
 ```
-#### Explicit conversions.
-If the field in the JSON response and the property in the model do not match, need to write explicit conversion.
+#### Explicit conversion
+If the field in the JSON response and the property in the model do not match, you need to write an explicit conversion. That means you need to implement the `TryConvertToProperty` and `TryConvertFromProperty` methods in the model class.
 
-JSON response (string representation of an integer and a string/int dictionary).
-```text
+JSON response (string representation of an integer and a string/int dictionary):
+
+```json
 {
   "d": {
-    "BoolField: "0",
+    "BoolField": "0",
     "DictionaryField": "Name1:111,Name2:222,Name3:333"
   }
 }
 ```
-Part of the model
+
+Model properties:
+
 ```csharp
 public bool BoolField { get; set; }
 public Dictionary<string, int> DictionaryField { get; set; }
 ```
-The conversion methods in the model (the Content overrides)
 
-Typical Chain of Responsibility pattern: return true if this overload can convert, otherwise return the result of the base.
+The **conversion methods** in the model class: return true if this overload can convert the value, otherwise return the result of the base method.
+
 ```csharp
+// Convert from JSON response to model property
 protected override bool TryConvertToProperty(string propertyName, JToken jsonValue, out object propertyValue)
 {
-    if (jsonValue == null)
+    if (jsonValue != null)
     {
         if (propertyName == nameof(Field_StringToBool))
         {
@@ -208,6 +248,7 @@ protected override bool TryConvertToProperty(string propertyName, JToken jsonVal
             propertyValue = !string.IsNullOrEmpty(stringValue) && "0" != stringValue;
             return true;
         }
+
         if (propertyName == nameof(Field_StringToDictionary))
         {
             var stringValue = jsonValue.Value<string>();
@@ -224,14 +265,16 @@ protected override bool TryConvertToProperty(string propertyName, JToken jsonVal
             }
         }
     }
+
     return base.TryConvertToProperty(propertyName, jsonValue, out propertyValue);
 }
 
+// Converts the property value to a string representation that can be sent to the server
 protected override bool TryConvertFromProperty(string propertyName, out object convertedValue)
 {
     if (propertyName == nameof(Field_StringToBool))
     {
-        convertedValue = Field_StringToBool ? 1 : 0;
+        convertedValue = Field_StringToBool ? "1" : "0";
         return true;
     }
     if (propertyName == nameof(Field_StringToDictionary))
