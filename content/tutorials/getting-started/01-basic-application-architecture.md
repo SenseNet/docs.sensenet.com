@@ -63,7 +63,7 @@ The authentication solution depends on how do you plan to send backend requests 
 - in the name of the current user of your application
 
 #### In the name of a technical user
-The advantage of this approach is that you don't need to authenticate users on the client (for example because your content is public anyway, e.g. a blog). You can send requests from your Asp.Net app to the sensenet service in the name of a technical user that has the necessary permissions to access the content you need. Or if all your content is public, you do not event have to configure that.
+The advantage of this approach is that you don't need to authenticate users on the client (for example because your content is public anyway, e.g. a blog). You can send requests from your Asp.Net app to the sensenet service in the name of a technical user that has the necessary permissions to access the content you need. Or if all your content is public, you do not even have to configure that.
 
 The downside is that you loose the ability of using the sensenet _per-user permission system_, because all backend requests are made in the name of the same technical user.
 
