@@ -18,6 +18,8 @@ The recommended app components are the following:
 - **3rd party services**: optional services (ERP, CRM) that can be used to extend the functionality of the application.
 - **sensenet components**
 
+![Advanced application architecture](architecture-images/architecture-advanced.png)
+
 ## What the user sees - rendering the HTML
 A single-page application is the most common application type nowadays. The business logic is written in _JavaScript_ or _TypeScript_ and the user interface is rendered in the browser.
 

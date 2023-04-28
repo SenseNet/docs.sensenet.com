@@ -16,6 +16,8 @@ In both cases we will treat sensenet as a 'black box': you do not need to know t
 ## A single-page application
 This is the most common application type nowadays. The business logic is written in _JavaScript_ or _TypeScript_ and the user interface is rendered in the browser. This is the recommended architecture for simple applications built with sensenet.
 
+![Simple application architecture with an SPA](architecture-images/architecture-simple-spa.png)
+
 > In our examples and documentation we use [React](https://react.dev) to create client-side applications, but you can choose any of the well-known frameworks. We recommend React though because we offer a client-side SDK for this platform.
 > 
 > To learn more about how to work with sensenet and React, read the [Getting started with React](/tutorials/getting-started/getting-started-with-react) tutorial.
@@ -38,6 +40,8 @@ Your users will have to log in using their own credentials stored in the sensene
 
 ## A server-side Asp.Net application
 In this section we will show you the necessary components of a simple Asp.Net application that uses sensenet as a content repository. This is a common scenario for web applications that need to render HTML pages on the server side.
+
+![Simple application architecture with ASP.NET](architecture-images/architecture-simple-aspnet.png)
 
 > We are providing an example for a .Net application because we offer a [client SDK for .Net](/tutorials/getting-started/getting-started-dotnet), but technically you can use any other server-side technology (e.g. _Node.js_) to connect to sensenet. The only requirement is that you need to be able to send _HTTP requests_ to the sensenet backend service.
 
