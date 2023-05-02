@@ -1,5 +1,13 @@
 ```csharp
 // Both requests are performed in the background
-using (var fileStream = new FileStream(@"D:\Examples\MyFile.txt", FileMode.Open))
-    await Content.UploadAsync("/Root/Content/IT/Document_Library", "MyFile.txt", fileStream, "File");
+await using var fileStream = new FileStream(@"D:\Examples\MyFile.txt", FileMode.Open);
+await repository.UploadAsync(
+    request: new UploadRequest
+    {
+        ParentPath = "/Root/Content/IT/Document_Library",
+        ContentName = "MyFile.txt",
+        ContentType = "File"
+    },
+    fileStream,
+    cancel);
 ```
