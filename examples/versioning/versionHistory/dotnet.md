@@ -1,5 +1,9 @@
 ```csharp
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx", "Versions", HttpMethod.Get);
+var request = new ODataRequest(repository.Server)
+{
+    Path = "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
+    ActionName = "Versions"
+};
+var result = await repository.GetResponseStringAsync(request, HttpMethod.Get, cancel);
 Console.WriteLine(result);
 ```

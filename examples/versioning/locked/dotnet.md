@@ -1,11 +1,10 @@
 ```csharp
-dynamic content = await Content.LoadAsync(new ODataRequest
+dynamic content = await repository.LoadContentAsync(new LoadContentRequest
 {
-    IsCollectionRequest = false,
     Path = "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
     Expand = new List<string> { "CheckedOutTo" },
     Select = new List<string> { "Locked", "CheckedOutTo/Name" },
-});
+}, cancel);
 var locked = content.Locked;
 var lockedBy = content.CheckedOutTo.Name;
 Console.WriteLine($"Locked: {locked}, LockedBy: {lockedBy}");

@@ -1,6 +1,10 @@
 ```csharp
-var body = @"models=[{""version"": ""V1.0.A""}]";
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx", "RestoreVersion", HttpMethod.Post, body);
+var request = new ODataRequest(repository.Server)
+{
+    Path = "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
+    ActionName = "RestoreVersion",
+    PostData = new { version = "V1.0.A" }
+};
+var result = await repository.GetResponseStringAsync(request, HttpMethod.Post, cancel);
 Console.WriteLine(result);
 ```
