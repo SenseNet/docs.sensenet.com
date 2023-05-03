@@ -1,10 +1,10 @@
 ```csharp
-var result = await RESTCaller.GetResponseJsonAsync(new ODataRequest
+var result = await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
-    IsCollectionRequest = true,
     Path = "/Root/Content/IT",
     Top = 3,
     Skip = 4,
-    Parameters = { { "$inlinecount", "allpages" } }
-});
+    InlineCount = InlineCountOptions.AllPages
+}, cancel);
+Console.WriteLine($"TotalCount: {result.TotalCount}, Count: {result.Count}");
 ```
