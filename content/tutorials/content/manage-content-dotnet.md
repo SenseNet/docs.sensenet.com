@@ -163,6 +163,35 @@ var memos = await repository.QueryAsync<Memo>(new QueryContentRequest
 }, cancel).ConfigureAwait(false);
 ```
 
+#### Custom requests
+If there is no dedicated API for a certain request, you can use one of the following all-purpose methods to send a custom request to the server.
+
+Calling an operation with a custom strongly-typed result:
+
+```csharp
+var request = new ODataRequest { ContentId = 42, ActionName = "CustomAction" };
+var customObject = await repository.GetResponseAsync<CustomObject>(request, HttpMethod.Get, default);
+```
+
+A JSON response:
+
+```csharp
+var request = new ODataRequest {ContentId = 42, ActionName = "CustomAction" };
+var jsonResult = await repository.GetResponseJsonAsync(request, HttpMethod.Get, default);
+```
+
+Or a string response:
+
+```csharp
+var request = new ODataRequest(repository.Server)
+{
+    Select = new []{ "Version" },
+    Path = "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
+    ActionName = "Versions",
+};
+var result = await repository.GetResponseStringAsync(request, HttpMethod.Get, cancel);
+```
+
 ## Advanced data binding in Models
 If you create a model class for your type, most of the properties will be simple types (e.g. an integer or a string). There are cases however when a content field is more complex. In this section you will see examples for those cases and how can developers make field data conversions.
 

@@ -1,4 +1,11 @@
 ```csharp
-await Content.UploadTextAsync("/Root/System/Settings", "MyCustom.settings",
-    "{Key:'Value'}", CancellationToken.None, "Settings");
+await repository.UploadAsync(
+    request: new UploadRequest
+    {
+        ParentPath = "/Root/System/Settings",
+        ContentName = "MyCustom.settings",
+        ContentType = "Settings"
+    },
+    fileText: "{Key:'Value'}",
+    cancel);
 ```

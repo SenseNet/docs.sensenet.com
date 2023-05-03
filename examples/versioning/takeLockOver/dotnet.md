@@ -1,6 +1,10 @@
 ```csharp
-var body = @"models=[{""user"": ""12345""}]";
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx", "TakeLockOver", HttpMethod.Post, body);
+var request = new ODataRequest(repository.Server)
+{
+    Path = "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
+    ActionName = "TakeLockOver",
+    PostData = new {user = "12345"}
+};
+var result = await repository.GetResponseStringAsync(request, HttpMethod.Post, cancel);
 Console.WriteLine(result);
 ```
