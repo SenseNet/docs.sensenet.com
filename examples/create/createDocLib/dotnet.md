@@ -1,4 +1,4 @@
 ```csharp
-var content = Content.CreateNew("/Root/Content/IT", "DocumentLibrary", "My Doclib");
-await content.SaveAsync();
+var content = repository.CreateContent("/Root/Content/IT", "DocumentLibrary", "My Doclib");
+await content.SaveAsync(cancel);
 ```
