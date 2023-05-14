@@ -1,6 +1,6 @@
 ```csharp
-var content = Content.CreateNew("/Root/IMS/Public", "User", "alba");
+var content = repository.CreateContent("/Root/IMS/Public", "User", "alba");
 content["LoginName"] = "alba";
 content["Enable"] = true;
-await content.SaveAsync();
+await content.SaveAsync(cancel);
 ```

@@ -1,5 +1,5 @@
 ```csharp
-var content = await Content.LoadAsync("/Root/Content/IT");
+var content = await repository.LoadContentAsync("/Root/Content/IT", cancel);
 content["Manager"] = 12345;
-await content.SaveAsync();
+await content.SaveAsync(cancel);
 ```
