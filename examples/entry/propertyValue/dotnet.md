@@ -1,5 +1,9 @@
 ```csharp
-await RESTCaller.GetResponseStringAsync(
-  new Uri("https://dev.demo.sensenet.com/OData.svc/Root/Content/('IT')/DisplayName/$value")
+await repository.GetResponseStringAsync(
+    new Uri(repository.Server.Url + "/OData.svc/Root/Content/('IT')/DisplayName/$value"),
+    HttpMethod.Get,
+    postData: null,
+    additionalHeaders: null,
+    cancel);
 );
 ```
