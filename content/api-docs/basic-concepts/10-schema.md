@@ -22,7 +22,7 @@ Following example returns the content types and all its properties and fields in
 
 Content types are stored as contents (.xml files) in the content repository as well. If you want to change the schema (modify a content type) you have to update one of these .xml files. As these files are stored as contents with a binary field containing the actual text content of the file, updating these fields' value can be made by getting the text and upload the file again with the updated text as the binary fields value.
 
-Following example returns the binary value of a file content, where 1064 is the `Id` of the Workspace type content:
+The following example returns the binary value of the Workspace content type definition:
 
 <tab category="basic-concepts" article="schema" example="getBinary" />
 
