@@ -1,5 +1,6 @@
 ```csharp
-var result = await Content.QueryAsync("query=app*");
+var result = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "app*" }, cancel);
 
 // foreach (dynamic content in result)
 //    Console.WriteLine($"{content.Id} {content.Name}");

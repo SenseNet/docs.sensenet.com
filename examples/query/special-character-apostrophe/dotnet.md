@@ -1,6 +1,7 @@
 ```csharp
-var result = await Content.QueryAsync("InFolder:\"/Root/Content/IT/(1+1):2\"");
-
-// foreach (dynamic content in result)
-//    Console.WriteLine($"{content.Id} {content.Name}");
+var result1 = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "DisplayName:'(1+1):2'" }, cancel);
+// or
+var result2 = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "DisplayName:\"(1+1):2\"" }, cancel);
 ```
