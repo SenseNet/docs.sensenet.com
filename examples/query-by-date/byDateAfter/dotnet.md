@@ -1,6 +1,7 @@
 ```csharp
-var result = await Content.QueryAsync("ModificationDate:>'2019-01-10'");
+var result = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "ModificationDate:>'2019-01-10'" }, cancel);
 
 // foreach (dynamic content in result)
-//     Console.WriteLine($"{content.Id} {content.Name}");
+//    Console.WriteLine($"{content.Id} {content.Name}");
 ```
