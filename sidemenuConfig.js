@@ -8,7 +8,8 @@ const sideMenuConfig = {
       "/api-docs/users-and-groups",
       "/api-docs/permissions",
       "/api-docs/sharing",
-      "/api-docs/preview"
+      "/api-docs/preview",
+      "/api-docs/settings"
     ],
     "collapsedNav": [
       "/api-docs/querying",
@@ -17,7 +18,8 @@ const sideMenuConfig = {
       "/api-docs/users-and-groups",
       "/api-docs/permissions",
       "/api-docs/sharing",
-      "/api-docs/preview"
+      "/api-docs/preview",
+      "/api-docs/settings"
     ],
   },
   concepts: {
@@ -32,6 +34,7 @@ const sideMenuConfig = {
       "/concepts/client-side-forms",
       "/concepts/webhooks",
       "/concepts/document-previews",
+      "/concepts/logging"
     ],
     "collapsedNav": [
       "/concepts/introduction",
@@ -41,6 +44,7 @@ const sideMenuConfig = {
       "/concepts/content-types",
       "/concepts/collaboration",
       "/concepts/user-and-permission-management",
+      "/concepts/logging"
     ],
   },
   tutorials: {
