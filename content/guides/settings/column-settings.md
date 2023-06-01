@@ -41,7 +41,7 @@ Once you set the JSON File, the Global setting is ready to use.
 
 If you need a special fields to be visible in specific content, simply click on the screwdriver icon and edit the JSON file. For example, if you want to set the visible columns for your calendar so you can see when it has been created and modified, you can edit the JSON file to include those columns.
 
-![Setup Local Column Settings](../img/global_column_settings.png "Open the JSON editor for local Column Settings")
+![Setup Local Column Settings](../img/local_column_settings_button.png "Open the JSON editor for local Column Settings")
 
 example:
 
