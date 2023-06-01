@@ -4,7 +4,7 @@ metaTitle: "sensenet Admin-ui - Column Settings"
 metaDescription: "Column Settings is a feature that allows you to configure the displayed columns in Content Explorers"
 ---
 
-Column Settings is a feature that allows you to configure the displayed columns in Content Explorer. You can set the columns to be displayed in the Content Explorer for a specific content type. You can also set the order of the columns and the title of columns. You can set any field of the Content to be displayed as a column.
+Column Settings is a feature that allows you to configure the displayed columns in Content Explorer. You can also set the order and the title of the columns. You can show any field of the Content to be displayed as a column.
 
 Link to settings: https://admin.sensenet.com/settings/configuration/
 
