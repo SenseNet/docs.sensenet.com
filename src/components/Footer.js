@@ -1,6 +1,6 @@
 import React from 'react';
 import footer from '../../footerLinks'
-import Logo from '../images/sensenet-footerlogo.png'
+import Logo from '../images/sensenet-logo-horizontal-whiteblue.svg'
 import './styles.css';
 import config from '../../config.js';
 
