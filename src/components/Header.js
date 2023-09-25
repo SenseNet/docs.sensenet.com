@@ -12,7 +12,7 @@ import Notifications from '@material-ui/icons/Notifications';
 import Loadable from 'react-loadable';
 import LoadingProvider from './mdxComponents/loading';
 
-import Logo from '../images/sensenet-logo.png'
+import Logo from '../images/sensenet-logo-horizontal-whiteblue.svg'
 
 const help = require('../images/question.png');
 const isSearchEnabled = config.header.search && config.header.search.enabled ? true : false;
@@ -88,9 +88,6 @@ const Header = ({location}) => (
             <div className={'navBarHeader'}>
               <Link to={finalLogoLink} className={'navBarBrand'}>
                 <img className={'img-responsive displayInline'} src={Logo} alt={config.siteMetadata.title} />
-              </Link>
-              <Link to={finalLogoLink}>
-              <div className={"headerTitle displayInline"} dangerouslySetInnerHTML={{__html: headerTitle}} />
               </Link>
               <ul className={'navBarUL navBarNav navBarULRight hiddenMobile'}>
                 <li className="divider"></li>
