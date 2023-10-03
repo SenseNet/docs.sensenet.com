@@ -142,17 +142,18 @@ POST https://example.sensenet.cloud/odata.svc/Root/Content/Replication/Source/Ev
 ```
 ```json
 {
-    "CountMax": 10000,
-    "MaxItemsPerFolder": 10,
-    "MaxFoldersPerFolder": 10,
-    "FirstFolderIndex": 1,
-    "Fields": {
-        "Name": "Event-*, 1 TO 100",
-        "DisplayName": "Meeting Event *, SEQUENCE: 1 TO 100",
-        "Description": "Meeting Event Description, RANDOM: 1000 TO 9000",
-        "Index": "10 TO 1000 STEP 10",
-        "MaxParticipants": "RANDOM: 10 TO 1000 STEP 10",
-        "StartDate": "RANDOM: 2020-01-01 12:24:45 TO 2020-06-15 STEP 0.00:10:00"
+    "target": "/Root/Content/Replication/Target",
+    "options": {
+        "CountMax": 10000,
+        "MaxItemsPerFolder": 10,
+        "MaxFoldersPerFolder": 10,
+        "FirstFolderIndex": 1,
+        "Fields": {
+            "Name": "Event-*, 1 to 999999",
+            "Index": "Random: 100 TO 999",
+            "CreationDate": "RANDOM: 2023-01-01 TO 2023-10-01",
+            "MaxParticipants": "20 TO 100"
+        }
     }
 }
 ```
