@@ -85,7 +85,7 @@ You have to format the field customization patterns based on the following synta
 - Each syntax element is separated by a **space** or **tab** character.
 - A syntax element can be a keyword, constant or a special name.
 - Keywords and names are case insensitive.
-- Available data types: **string**, **integer**, **datetime**.
+- Available data types: **string**, **integer**, **datetime** and **reference** (limited).
 
 #### Range definition
 The range defines a minimum and maximum values separated by the ```TO``` keyword and optionally prefixed by a range-type keyword and optionally followed by the step definition with the ```STEP``` keyword. The range-type keyword defines the generation algorithm. Currently there are two algorithms:
@@ -139,6 +139,10 @@ The datetime definition can be a constant or a range with date or datetime bound
   - **Mixed**: `"2020-01-01 12:24:45 TO 2020-06-15"`
   - **STEP**: Defined as a timespan with the following form: `"<days>.<hours>.<minutes>.<seconds>"`. For example the definition of ten minutes is: `"0.00:10:00"`. The step definition's default value is 1 second.
 
+#### Reference definition
+Only single reference properties can be generated in one way: select random values from a predefined array. The array contains IDs of the existing contents.The array definition can contain any number of (but at least one) elements. The list of elements is preceded by the keyword "RandomReference". Here is an example of a three-element array definition:
+`"RandomReference: [1, 1130, 6]"`
+
 #### A full example of a request with all the possible options:
 <note severity="info">Please note that you will have to send an authenticated request (using an api key or bearer token) for a member of the <strong>Administrators</strong> or <strong>Developers</strong> group.</note>
 
@@ -157,12 +161,42 @@ POST https://example.sensenet.cloud/odata.svc/Root/Content/Replication/Source/Ev
             "Name": "Event-*, 1 to 999999",
             "Index": "Random: 100 TO 999",
             "CreationDate": "RANDOM: 2023-01-01 TO 2023-10-01",
-            "MaxParticipants": "20 TO 100"
+            "MaxParticipants": "20 TO 100",
+            "Organizer": "RandomReference: [1, 1130, 6]"
         }
     }
 }
 ```
 
+#### Replication Template
+There is an OData function to help write the right replication setting. You can call the parameterless "`GetReplicationTemplate`" function on the desired source content. The response is a JSON object that contains all available modifiable fields and their data types. The string values are annotations and not valid values. Before using the template you need to delete the unnecessary lines and modify "target", counts and field definitions. A request example:
+```
+https://example.com/odata.svc/Root/Content/Replication('Task-1')/GetReplicationTemplate
+```
+The response (partial):
+```
+{
+  "target": "__Id_or_Path_of_the_existing_empty_container_content__",
+  "options": {
+    "MaxCount": 10,
+    "MaxItemsPerFolder": 100,
+    "MaxFoldersPerFolder": 100,
+    "FirstFolderIndex": 0,
+    "Fields": {
+      "Name": "____DataType.String____",
+      "DisplayName": "____DataType.String____",
+      "Index": "____DataType.Int____",
+      "CreationDate": "____DataType.DateTime____",
+      ...
+      "DueDate": "____DataType.DateTime____",
+      "AssignedTo": "____DataType.Reference____",
+      "Priority": "____DataType.String____",
+      "Status": "____DataType.String____",
+      "TaskCompletion": "____DataType.Int____"
+    }
+  }
+}
+```
 ## Start the process
 To start replicating a content, you call the ```Replicate``` OData action from the platform of your preference - for example **Postman**, a script or a tool, using our .Net client API.
 
