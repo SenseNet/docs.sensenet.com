@@ -38,6 +38,9 @@ The replicator will create copies of the source item in a pre-existing folder. P
 Replication configuration allows you to define the **number of subfolders** on one level and the number of allowed replicated content items, which are created as _leaves_.
 
 ## Configuration
+<note severity="info" title="Feature switch">The replicator feature is switched off by defult. Please make sure you start the repository application with the following app configuration or environment variable switched on so that clients can use the feature: <strong>sensenet:replication:enabled = true</strong>.<br>
+If you are using a cloud version of sensenet and want to replicate content items, please ask the administrator to switch this on for you.<br>
+</note>
 Replicating content items and especially filling their fields with meaningful data can be complex. We simplified the possible options to a level that still provides the necessary flexibility.
 
 The configuration is a ```JSON``` object you can POST to the ```Replicate``` action in the repository as you can see in the following sections.
@@ -85,7 +88,7 @@ You have to format the field customization patterns based on the following synta
 - Each syntax element is separated by a **space** or **tab** character.
 - A syntax element can be a keyword, constant or a special name.
 - Keywords and names are case insensitive.
-- Available data types: **string**, **integer**, **datetime**.
+- Available data types: **string**, **integer**, **datetime** and **reference** (limited).
 
 #### Range definition
 The range defines a minimum and maximum values separated by the ```TO``` keyword and optionally prefixed by a range-type keyword and optionally followed by the step definition with the ```STEP``` keyword. The range-type keyword defines the generation algorithm. Currently there are two algorithms:
@@ -139,6 +142,10 @@ The datetime definition can be a constant or a range with date or datetime bound
   - **Mixed**: `"2020-01-01 12:24:45 TO 2020-06-15"`
   - **STEP**: Defined as a timespan with the following form: `"<days>.<hours>.<minutes>.<seconds>"`. For example the definition of ten minutes is: `"0.00:10:00"`. The step definition's default value is 1 second.
 
+#### Reference definition
+Only single reference properties can be generated in one way: select random values from a predefined array. The array contains IDs of existing contents. The array definition can contain any number of elements (at least one). The list of elements is preceded by the keyword "RandomReference". Here is an example of a three-element array definition:
+`"RandomReference: [1, 1130, 6]"`
+
 #### A full example of a request with all the possible options:
 <note severity="info">Please note that you will have to send an authenticated request (using an api key or bearer token) for a member of the <strong>Administrators</strong> or <strong>Developers</strong> group.</note>
 
@@ -157,9 +164,43 @@ POST https://example.sensenet.cloud/odata.svc/Root/Content/Replication/Source/Ev
             "Name": "Event-*, 1 to 999999",
             "Index": "Random: 100 TO 999",
             "CreationDate": "RANDOM: 2023-01-01 TO 2023-10-01",
-            "MaxParticipants": "20 TO 100"
+            "MaxParticipants": "20 TO 100",
+            "Organizer": "RandomReference: [1, 1130, 6]"
         }
     }
+}
+```
+
+#### Replication Template
+There is an OData function to help write the correct replication setting. You can call the parameterless "`GetReplicationTemplate`" function on the desired source content. The response is a JSON object that contains all available modifiable fields and their data types. The string values are annotations and not valid values. Before using the template you need to delete the unnecessary lines and modify "target", counts and field definitions. A request example:
+
+```
+https://example.com/odata.svc/Root/Content/Replication('Task-1')/GetReplicationTemplate
+```
+
+The response (partial):
+
+```
+{
+  "target": "__Id_or_Path_of_the_existing_empty_container_content__",
+  "options": {
+    "MaxCount": 10,
+    "MaxItemsPerFolder": 100,
+    "MaxFoldersPerFolder": 100,
+    "FirstFolderIndex": 0,
+    "Fields": {
+      "Name": "____DataType.String____",
+      "DisplayName": "____DataType.String____",
+      "Index": "____DataType.Int____",
+      "CreationDate": "____DataType.DateTime____",
+      ...
+      "DueDate": "____DataType.DateTime____",
+      "AssignedTo": "____DataType.Reference____",
+      "Priority": "____DataType.String____",
+      "Status": "____DataType.String____",
+      "TaskCompletion": "____DataType.Int____"
+    }
+  }
 }
 ```
 
