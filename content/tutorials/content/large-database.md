@@ -38,6 +38,9 @@ The replicator will create copies of the source item in a pre-existing folder. P
 Replication configuration allows you to define the **number of subfolders** on one level and the number of allowed replicated content items, which are created as _leaves_.
 
 ## Configuration
+<note severity="info" title="Feature switch">The replicator feature is switched off by defult. Please make sure you start the repository application with the following app configuration or environment variable switched on so that clients can use the feature: <strong>sensenet:replication:enabled = true</strong>.<br>
+If you are using a cloud version of sensenet and want to replicate content items, please ask the administrator to switch this on for you.<br>
+</note>
 Replicating content items and especially filling their fields with meaningful data can be complex. We simplified the possible options to a level that still provides the necessary flexibility.
 
 The configuration is a ```JSON``` object you can POST to the ```Replicate``` action in the repository as you can see in the following sections.
@@ -140,7 +143,7 @@ The datetime definition can be a constant or a range with date or datetime bound
   - **STEP**: Defined as a timespan with the following form: `"<days>.<hours>.<minutes>.<seconds>"`. For example the definition of ten minutes is: `"0.00:10:00"`. The step definition's default value is 1 second.
 
 #### Reference definition
-Only single reference properties can be generated in one way: select random values from a predefined array. The array contains IDs of the existing contents.The array definition can contain any number of (but at least one) elements. The list of elements is preceded by the keyword "RandomReference". Here is an example of a three-element array definition:
+Only single reference properties can be generated in one way: select random values from a predefined array. The array contains IDs of existing contents. The array definition can contain any number of elements (at least one). The list of elements is preceded by the keyword "RandomReference". Here is an example of a three-element array definition:
 `"RandomReference: [1, 1130, 6]"`
 
 #### A full example of a request with all the possible options:
@@ -169,11 +172,14 @@ POST https://example.sensenet.cloud/odata.svc/Root/Content/Replication/Source/Ev
 ```
 
 #### Replication Template
-There is an OData function to help write the right replication setting. You can call the parameterless "`GetReplicationTemplate`" function on the desired source content. The response is a JSON object that contains all available modifiable fields and their data types. The string values are annotations and not valid values. Before using the template you need to delete the unnecessary lines and modify "target", counts and field definitions. A request example:
+There is an OData function to help write the correct replication setting. You can call the parameterless "`GetReplicationTemplate`" function on the desired source content. The response is a JSON object that contains all available modifiable fields and their data types. The string values are annotations and not valid values. Before using the template you need to delete the unnecessary lines and modify "target", counts and field definitions. A request example:
+
 ```
 https://example.com/odata.svc/Root/Content/Replication('Task-1')/GetReplicationTemplate
 ```
+
 The response (partial):
+
 ```
 {
   "target": "__Id_or_Path_of_the_existing_empty_container_content__",
@@ -197,6 +203,7 @@ The response (partial):
   }
 }
 ```
+
 ## Start the process
 To start replicating a content, you call the ```Replicate``` OData action from the platform of your preference - for example **Postman**, a script or a tool, using our .Net client API.
 
