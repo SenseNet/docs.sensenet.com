@@ -38,9 +38,11 @@ The replicator will create copies of the source item in a pre-existing folder. P
 Replication configuration allows you to define the **number of subfolders** on one level and the number of allowed replicated content items, which are created as _leaves_.
 
 ## Configuration
-<note severity="info" title="Feature switch">The replicator feature is switched off by defult. Please make sure you start the repository application with the following app configuration or environment variable switched on so that clients can use the feature: <strong>sensenet:replication:enabled = true</strong>.<br>
-If you are using a cloud version of sensenet and want to replicate content items, please ask the administrator to switch this on for you.<br>
+<note severity="info" title="Feature switch">The replicator feature is switched off by defult. Please make sure you start the repository application with the following app configuration or environment variable switched on so that clients can use the feature: <strong>sensenet:replication:enabled = true</strong>.
+
+If you are using a cloud version of sensenet and want to replicate content items, please ask the administrator to switch this on for you.
 </note>
+
 Replicating content items and especially filling their fields with meaningful data can be complex. We simplified the possible options to a level that still provides the necessary flexibility.
 
 The configuration is a ```JSON``` object you can POST to the ```Replicate``` action in the repository as you can see in the following sections.
