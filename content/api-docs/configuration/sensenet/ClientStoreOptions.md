@@ -30,8 +30,8 @@ sensenet__Authentication__DefaultClientUserInternal="_string_value_"
 sensenet__Authentication__DefaultClientUserExternal="_string_value_"
 ```
 ### Properties:
-- **Authority** (string): Url of the authentication authority - for example IdentityServer.
-- **RepositoryUrl** (string): Repository url.
-- **DefaultClientUserInternal** (string): 
-- **DefaultClientUserExternal** (string): 
+- **Authority** (`string`): Url of the authentication authority - for example IdentityServer.
+- **RepositoryUrl** (`string`): Repository url.
+- **DefaultClientUserInternal** (`string`): 
+- **DefaultClientUserExternal** (`string`): 
 
