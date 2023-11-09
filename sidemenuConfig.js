@@ -9,7 +9,8 @@ const sideMenuConfig = {
       "/api-docs/permissions",
       "/api-docs/sharing",
       "/api-docs/preview",
-      "/api-docs/settings"
+      "/api-docs/settings",
+      "/api-docs/configuration"
     ],
     "collapsedNav": [
       "/api-docs/querying",
@@ -19,7 +20,8 @@ const sideMenuConfig = {
       "/api-docs/permissions",
       "/api-docs/sharing",
       "/api-docs/preview",
-      "/api-docs/settings"
+      "/api-docs/settings",
+      "/api-docs/configuration"
     ],
   },
   concepts: {
