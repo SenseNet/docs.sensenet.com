@@ -28,10 +28,8 @@ const config = {
 	},
 	"sidebar": {
 		"links": [
-      { "text": "Register your free repo", "link": "https://profile.sensenet.com/?redirectToLogin"},
-      { "text": "Contact", "link": "https://sensenet.com/contact-us"},
-      { "text": "Blog", "link": "https://blog.sensenet.com"},
-      { "text": "Community", "link": "https://community.sensenet.com"},
+      { "text": "Contact", "link": "https://sensenet.com/en/contact"},
+      { "text": "Blog", "link": "https://www.sensenet.com/en/blog"},
       { "text": "Careers", "link": "https://jobs.sensenet.com"},
 		],
 		"frontline": false,
