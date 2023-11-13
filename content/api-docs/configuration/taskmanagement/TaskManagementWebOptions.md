@@ -12,7 +12,9 @@ metaDescription: "TaskManagementWebOptions"
 {
   "TaskManagement": {
     "TaskExecutionTimeoutInSeconds": 0,
-    "Applications": [{ }, { }]
+    "Applications": [
+      {}
+    ]
   }
 }
 ```

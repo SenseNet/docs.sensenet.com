@@ -15,7 +15,11 @@ metaDescription: "RepositoryReaderArgs"
     "Path": "_value_",
     "BlockSize": 0,
     "Filter": "_value_",
-    "Authentication": { }
+    "Authentication": {
+      "ClientId": "_value_",
+      "ClientSecret": "_value_",
+      "ApiKey": "_value_"
+    }
   }
 }
 ```

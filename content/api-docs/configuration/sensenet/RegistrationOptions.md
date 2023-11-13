@@ -12,7 +12,9 @@ metaDescription: "RegistrationOptions"
 {
   "sensenet": {
     "Registration": {
-      "Groups": ["_value1_", "_value2_"],
+      "Groups": [
+        "_value_"
+      ],
       "UserType": "_value_",
       "ParentPath": "_value_"
     }

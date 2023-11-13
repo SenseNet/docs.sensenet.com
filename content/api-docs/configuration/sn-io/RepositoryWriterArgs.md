@@ -14,7 +14,11 @@ metaDescription: "RepositoryWriterArgs"
     "Url": "_value_",
     "Path": "_value_",
     "Name": "_value_",
-    "Authentication": { },
+    "Authentication": {
+      "ClientId": "_value_",
+      "ClientSecret": "_value_",
+      "ApiKey": "_value_"
+    },
     "UploadChunkSize": 0
   }
 }

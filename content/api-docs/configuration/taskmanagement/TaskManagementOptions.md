@@ -16,7 +16,7 @@ metaDescription: "TaskManagementOptions"
       "ApplicationUrl": "_value_",
       "ApplicationId": "_value_",
       "ApiKeyExpirationHours": 0,
-      "Authentication": { }
+      "Authentication": {}
     }
   }
 }

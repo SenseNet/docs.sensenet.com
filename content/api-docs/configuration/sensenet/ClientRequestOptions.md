@@ -12,7 +12,12 @@ metaDescription: "ClientRequestOptions"
 {
   "sensenet": {
     "ClientRequest": {
-      "Clients": [{ }, { }]
+      "Clients": [
+        {
+          "ClientType": "_value_",
+          "ClientId": "_value_"
+        }
+      ]
     }
   }
 }

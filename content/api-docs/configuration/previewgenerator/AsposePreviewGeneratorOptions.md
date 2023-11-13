@@ -13,10 +13,19 @@ metaDescription: "AsposePreviewGeneratorOptions"
 {
   "sensenet": {
     "AsposePreviewGenerator": {
-      "Upload": { },
-      "ImageGeneration": { },
-      "Environment": { },
-      "Applications": [{ }, { }]
+      "Upload": {
+        "ChunkSize": 0
+      },
+      "ImageGeneration": {
+        "PreviewResolution": 0,
+        "CheckLicense": true
+      },
+      "Environment": {
+        "IsDevelopment": true
+      },
+      "Applications": [
+        {}
+      ]
     }
   }
 }

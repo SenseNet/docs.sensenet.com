@@ -13,7 +13,36 @@ metaDescription: "StatisticsOptions"
   "sensenet": {
     "statistics": {
       "Enabled": true,
-      "Retention": { }
+      "Retention": {
+        "ApiCalls": {
+          "Momentary": 0,
+          "Minutely": 0,
+          "Hourly": 0,
+          "Daily": 0,
+          "Monthly": 0
+        },
+        "WebHooks": {
+          "Momentary": 0,
+          "Minutely": 0,
+          "Hourly": 0,
+          "Daily": 0,
+          "Monthly": 0
+        },
+        "DatabaseUsage": {
+          "Momentary": 0,
+          "Minutely": 0,
+          "Hourly": 0,
+          "Daily": 0,
+          "Monthly": 0
+        },
+        "General": {
+          "Momentary": 0,
+          "Minutely": 0,
+          "Hourly": 0,
+          "Daily": 0,
+          "Monthly": 0
+        }
+      }
     }
   }
 }

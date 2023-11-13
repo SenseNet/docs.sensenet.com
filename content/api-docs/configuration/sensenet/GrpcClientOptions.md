@@ -15,7 +15,7 @@ metaDescription: "GrpcClientOptions"
       "service": {
         "ServiceAddress": "_value_",
         "ValidateServerCertificate": true,
-        "ChannelOptions": { }
+        "ChannelOptions": {}
       }
     }
   }

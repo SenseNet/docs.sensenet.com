@@ -12,7 +12,7 @@ metaDescription: "DisplaySettings"
 {
   "display": {
     "Level": "_value_",
-    "DisplayLevel": "_enum_value_of_SenseNet.IO.CLI.DisplayLevel_"
+    "DisplayLevel": "None | Progress | Errors | Verbose"
   }
 }
 ```

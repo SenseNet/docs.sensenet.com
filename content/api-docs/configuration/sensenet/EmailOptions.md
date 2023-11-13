@@ -19,7 +19,7 @@ Email options for sending emails.
       "SenderName": "_value_",
       "Username": "_value_",
       "Password": "_value_",
-      "ServerCertificateValidationCallback": { }
+      "ServerCertificateValidationCallback": {}
     }
   }
 }

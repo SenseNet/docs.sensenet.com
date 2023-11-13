@@ -16,6 +16,7 @@ metaDescription: "AuthenticationOptions"
       "MetadataHost": "_value_",
       "ClientApplicationUrl": "_value_",
       "AddJwtCookie": true,
+      "FindUserAsync": {}
     }
   }
 }
@@ -42,4 +43,6 @@ sensenet__Authentication__FindUserAsync="_Func<ClaimsPrincipal, Task<User>>_valu
  Use this setting only if you need to authenticate requests (e.g file
  download) where it is not possible to send the JWT token in the header.
  Default is false.
+- **FindUserAsync** (`Func<ClaimsPrincipal, Task<User>>`): Optional custom method for loading the appropriate user from the repository
+ at the beginning of a request based on the claims received.
 

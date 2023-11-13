@@ -19,7 +19,7 @@ Provides configuration values needed by the blob storage.
       "BinaryCacheSize": 0,
       "MinimumSizeForBlobProviderInBytes": 0,
       "MinimumSizeForBlobProviderKb": 0,
-      "BlobDeletionPolicy": "_enum_value_of_SenseNet.Configuration.BlobDeletionPolicy_"
+      "BlobDeletionPolicy": "BackgroundDelayed | BackgroundImmediately | Immediately"
     }
   }
 }
