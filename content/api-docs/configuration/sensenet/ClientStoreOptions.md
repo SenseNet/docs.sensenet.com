@@ -6,8 +6,6 @@ metaDescription: "ClientStoreOptions"
 
 ## ClientStoreOptions
 
-// This class is a mirror of some parts of the AuthenticationOptions class in the services layer
-// so that we can have the same property values here without having to configure them twice.
 
 ### Configuration example:
 ``` json
