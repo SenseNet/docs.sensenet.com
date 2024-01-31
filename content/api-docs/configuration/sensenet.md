@@ -87,6 +87,20 @@ This section contains configuration for the main sensenet service.
         "ChannelOptions": {}
       }
     },
+    "security": {
+      "messaging": {
+        "DistributableSecurityActivityMaxSize": 0,
+        "CommunicationMonitorRunningPeriodInSeconds": 0,
+        "SecurityActivityLifetimeInMinutes": 0,
+        "SecurityActivityTimeoutInSeconds": 0,
+        "MessageProcessorThreadCount": 0,
+        "MessageProcessorThreadMaxMessages": 0
+      },
+      "rabbitmq": {
+        "ServiceUrl": "_stringValue_",
+        "MessageExchange": "_stringValue_"
+      }
+    },
     "Email": {
       "Server": "_stringValue_",
       "Port": 0,

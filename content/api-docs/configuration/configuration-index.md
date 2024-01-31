@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Option class references"
 metaDescription: "Option class references"
 ---
 
-## Option classes (27 sections)
+## Option classes (29 sections)
 | ClassName | Application | Section |
 | --------- | ----------- | ------- |
 | [AsposeOptions](/configuration/sensenet/AsposeOptions) | SenseNet | sensenet:AsposePreviewProvider |
@@ -18,6 +18,7 @@ metaDescription: "Option class references"
 | [ExclusiveLockOptions](/configuration/sensenet/ExclusiveLockOptions) | SenseNet | sensenet:ExclusiveLock |
 | [GrpcClientOptions](/configuration/sensenet/GrpcClientOptions) | SenseNet | sensenet:search:service |
 | [HttpRequestOptions](/configuration/sensenet/HttpRequestOptions) | SenseNet | sensenet:HttpRequest |
+| [MessagingOptions](/configuration/sensenet/MessagingOptions) | SenseNet | sensenet:security:messaging |
 | [MsSqlDatabaseInstallationOptions](/configuration/sensenet/MsSqlDatabaseInstallationOptions) | SenseNet | sensenet:install:mssql |
 | [MultiFactorOptions](/configuration/sensenet/MultiFactorOptions) | SenseNet | sensenet:Authentication:MultiFactor |
 | [RabbitMqOptions](/configuration/sensenet/RabbitMqOptions) | SenseNet | sensenet:rabbitmq |
@@ -35,3 +36,6 @@ metaDescription: "Option class references"
 | [RepositoryWriterArgs](/configuration/sn-io/RepositoryWriterArgs) | SnIO | repositoryWriter |
 | [TaskManagementOptions](/configuration/taskmanagement/TaskManagementOptions) | TaskManagement | sensenet:TaskManagement |
 | [TaskManagementWebOptions](/configuration/taskmanagement/TaskManagementWebOptions) | TaskManagement | TaskManagement |
+| [GrpcClientOptions](/configuration/searchservice/GrpcClientOptions) | SearchService | sensenet:search:service |
+| [MessagingOptions](/configuration/searchservice/MessagingOptions) | SearchService | sensenet:security:messaging |
+| [RabbitMqOptions](/configuration/searchservice/RabbitMqOptions) | SearchService | sensenet:rabbitmq |
