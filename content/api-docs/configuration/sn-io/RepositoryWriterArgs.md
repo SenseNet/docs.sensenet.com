@@ -19,7 +19,8 @@ metaDescription: "RepositoryWriterArgs"
       "ClientSecret": "_value_",
       "ApiKey": "_value_"
     },
-    "UploadChunkSize": 0
+    "UploadChunkSize": 0,
+    "CreateOnly": true
   }
 }
 ```
@@ -30,6 +31,7 @@ repositoryWriter__Path="_string_value_"
 repositoryWriter__Name="_string_value_"
 repositoryWriter__Authentication="_RepositoryAuthenticationOptions_value_"
 repositoryWriter__UploadChunkSize="_int_value_"
+repositoryWriter__CreateOnly="_bool_value_"
 ```
 ### Properties:
 - **Url** (`string`): Repository url.
@@ -37,4 +39,5 @@ repositoryWriter__UploadChunkSize="_int_value_"
 - **Name** (`string`): Target name under the container. Default: name of the reader's root.
 - **Authentication** (`RepositoryAuthenticationOptions`): 
 - **UploadChunkSize** (`int`): Number of bytes sent to the server in one chunk during upload operations. Default: 10 MB
+- **CreateOnly** (`bool`): True if only the creation is allowed and updates are omitted.
 

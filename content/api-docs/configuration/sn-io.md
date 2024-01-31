@@ -12,7 +12,11 @@ This section contains configuration for the import/export tool.
 ``` json
 {
   "fsReader": {
-    "Path": "_stringValue_"
+    "Path": "_stringValue_",
+    "Skip": [
+      "_value1_",
+      "_value2_"
+    ]
   },
   "fsWriter": {
     "Path": "_stringValue_",
@@ -31,7 +35,8 @@ This section contains configuration for the import/export tool.
     "Path": "_stringValue_",
     "Name": "_stringValue_",
     "Authentication": {},
-    "UploadChunkSize": 0
+    "UploadChunkSize": 0,
+    "CreateOnly": true
   },
   "display": {
     "Level": "_stringValue_",
