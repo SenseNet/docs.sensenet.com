@@ -12,7 +12,7 @@ Backing up the repository means creating a copy of the following things:
 1. index
 2. database
 
-Technically the database would be enough as it contains all the information to build a completely new index. However, it is much faster to restore the index from a backup than to rebuild it from the database - especially in case of a large repository.
+> Technically the database would be enough as it contains all the information to build a completely new index - but this is **not recommended**. It is much faster to restore the index from a backup than to rebuild it from the database: in case of a huge repository this can take hours and recommended only in case an index backup is not available or corrupt.
 
 The order is important: **first you need to backup the index, then the database**. If you do it the other way around, the content operations that happen between the two backups will not be included in the db backup and may lead to a corrupt index.
 
@@ -37,11 +37,15 @@ In this more advanced architecture there is a central search service that mainta
 sensenet does not have a dedicated API or tool for creating a database backup. You can use any tool that is capable of creating a backup of a SQL Server database.
 
 ## Restore
-When you have a backup of the index and the database, you can restore the repository to the state it was in when you created the backup. In contrast to the backup process, the repository should be fully stopped during the restore process.
+When you have a backup of the index and the database, you can restore the repository to the state it was in when you created the backup. In contrast to the backup process, **the repository should be stopped** (all web apps) during the restore process.
 
-Restoring the database works the same way as in any other SQL Server database. You can use any tool that is capable of restoring a SQL Server database. Restoring the index means copying the index folder back to the App_Data folder of the site.
+Restoring the database works the same way as in any other SQL Server database. You can use any tool that is capable of restoring a SQL Server database.
+
+Restoring the index means copying the index folder back to the App_Data folder where it was backed up from. In case of a local index this means all web app instances, not just the backup source. In case of a search service index, you need to copy the index folder to the App_Data folder of the search service.
 
 After restoring these components you can restart the site. If there was a huge time gap between the index and database backups, the index will need some time to catch up with the database.
 
 ### Restoring without an index
 If you only have a database backup, you can still restore the repository. In this case the index will be rebuilt from the database. This is a much slower process than restoring the index from a backup, but it is still possible. Just start the site with an empty index folder and the index will be rebuilt automatically.
+
+> This is **not recommended** for huge repositories as it can take hours to rebuild the index from the database.
