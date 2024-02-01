@@ -68,6 +68,15 @@ This section contains configuration for the main sensenet service.
     "cryptography": {
       "CertificateThumbprint": "_stringValue_"
     },
+    "indexing": {
+      "IndexDirectoryPath": "_stringValue_",
+      "IndexHealthMonitorRunningPeriod": 0,
+      "IndexingActivityTimeoutInSeconds": 0,
+      "IndexingActivityQueueMaxLength": 0,
+      "TextExtractTimeout": 0,
+      "IndexingActivityDeletionPeriodInMinutes": 0,
+      "IndexingActivityMaxAgeInMinutes": 0
+    },
     "ExclusiveLock": {
       "LockTimeoutInSeconds": 0,
       "PollingTimeInSeconds": 0,

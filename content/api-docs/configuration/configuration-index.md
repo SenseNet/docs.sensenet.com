@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Option class references"
 metaDescription: "Option class references"
 ---
 
-## Option classes (29 sections)
+## Option classes (30 sections)
 | ClassName | Application | Section |
 | --------- | ----------- | ------- |
 | [AsposeOptions](/configuration/sensenet/AsposeOptions) | SenseNet | sensenet:AsposePreviewProvider |
@@ -18,6 +18,7 @@ metaDescription: "Option class references"
 | [ExclusiveLockOptions](/configuration/sensenet/ExclusiveLockOptions) | SenseNet | sensenet:ExclusiveLock |
 | [GrpcClientOptions](/configuration/sensenet/GrpcClientOptions) | SenseNet | sensenet:search:service |
 | [HttpRequestOptions](/configuration/sensenet/HttpRequestOptions) | SenseNet | sensenet:HttpRequest |
+| [IndexingOptions](/configuration/sensenet/IndexingOptions) | SenseNet | sensenet:indexing |
 | [MessagingOptions](/configuration/sensenet/MessagingOptions) | SenseNet | sensenet:security:messaging |
 | [MsSqlDatabaseInstallationOptions](/configuration/sensenet/MsSqlDatabaseInstallationOptions) | SenseNet | sensenet:install:mssql |
 | [MultiFactorOptions](/configuration/sensenet/MultiFactorOptions) | SenseNet | sensenet:Authentication:MultiFactor |
