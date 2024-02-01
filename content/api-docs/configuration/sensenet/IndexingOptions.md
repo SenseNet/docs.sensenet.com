@@ -39,6 +39,6 @@ sensenet__indexing__IndexingActivityMaxAgeInMinutes="_int_value_"
 - **IndexingActivityTimeoutInSeconds** (`int`): 
 - **IndexingActivityQueueMaxLength** (`int`): 
 - **TextExtractTimeout** (`int`): 
-- **IndexingActivityDeletionPeriodInMinutes** (`int`): Gets or sets the periodicity of deletion the old IndexingActivities. Default: 10 minutes.
-- **IndexingActivityMaxAgeInMinutes** (`int`): Gets or sets the age of the IndexingActivities that will be deleted periodically. Default: 480 (8 hours).
+- **IndexingActivityDeletionPeriodInMinutes** (`int`): Gets or sets the periodicity of deleting old IndexingActivities. Default: 10 minutes.
+- **IndexingActivityMaxAgeInMinutes** (`int`): Gets or sets the age threshold for IndexingActivities that are periodically deleted. The default age threshold is set to 480 (8 hours).
 
