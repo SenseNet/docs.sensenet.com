@@ -423,10 +423,10 @@ a:hover {
 }
 .mainWrapper {
   color: rgb(59, 69, 78);
-  max-width: 750px;
+  max-width: inherit;
 }
 .mainWrapper img {
-  max-width: 750px;
+  max-width: inherit;
 }
 .fullWrapper {
   color: rgb(59, 69, 78);
