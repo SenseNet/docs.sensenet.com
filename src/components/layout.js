@@ -78,7 +78,6 @@ const Layout = ({ children, location }) => {
 
   const language = () => {
     const params = new URLSearchParams(window.location.search);
-    console.log(params);
     let l = 'rest';
     if(typeof window != 'undefined'){
       if(params.get("chosenLanguage") && langs.findIndex(lang => lang.name === params.get("chosenLanguage")) > -1){
