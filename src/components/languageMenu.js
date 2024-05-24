@@ -64,11 +64,10 @@ const LanguageMenu = (props) => {
       <AppBar  className={'hiddenMobile'} position="static" style={{ background: '#eee', color: 'rgba(0, 0, 0, 0.87)'}}>
         <Toolbar>
           {langs.map(l =>{
-            const name = l.name
-            const isActive = (lang, name) => lang === name;
+            const isActive = (lang, name) => lang === l.name;
             const icon = (lang, l) => {
               let i = `{ }`
-              switch (l){
+              switch (l.name){
                 case 'dotnet':
                   i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faWindows} />
                   break

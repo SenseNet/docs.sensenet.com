@@ -77,21 +77,18 @@ const Layout = ({ children, location }) => {
   };
 
   const language = () => {
-    let params = new URLSearchParams(window.location.search);
-    let l
+    const params = new URLSearchParams(window.location.search);
+    console.log(params);
+    let l = 'rest';
     if(typeof window != 'undefined'){
-      if(params.get("chosenLanguage") && langs.findIndex(l => l.name === params.get("chosenLanguage")) > -1){
+      if(params.get("chosenLanguage") && langs.findIndex(lang => lang.name === params.get("chosenLanguage")) > -1){
         l = params.get("chosenLanguage")
         localStorage.setItem('chosenLanguage', l)
       } else {
         if(localStorage.getItem('chosenLanguage')){
           l = localStorage.getItem('chosenLanguage')
-        } else {
-          l =`rest`
         }
       }
-    } else {
-      l =`rest`
     }
     return l
   }
