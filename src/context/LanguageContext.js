@@ -1,17 +1,19 @@
-
-import React from 'react'
+import React from 'react';
 
 if (typeof window === 'undefined') {
   global.window = {
-    location: {
-      href: ''
+    localStorage: {
+      getItem: () => null
     }
-  }
+  };
 }
 
-let params = new URLSearchParams(window.location.search);
+let chosenLanguage = "rest";
+if (typeof window !== 'undefined') {
+  chosenLanguage = window.localStorage.getItem("chosenLanguage") || "rest";
+}
 
 export const LanguageContext = React.createContext({
-  lang: params.get("chosenLanguage") ? params.get("chosenLanguage") : `rest`,
+  lang: chosenLanguage,
   toggleLanguage: () => {},
 });
