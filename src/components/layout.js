@@ -77,19 +77,23 @@ const Layout = ({ children, location }) => {
   };
 
   const language = () => {
-    const params = new URLSearchParams(window.location.search);
-    let l = 'rest';
-    if (typeof window != 'undefined') {
-      if (params.get("chosenLanguage") && langs.findIndex(lang => lang.name === params.get("chosenLanguage")) > -1) {
+    let params = new URLSearchParams(window.location.search);
+    let l
+    if(typeof window != 'undefined'){
+      if(params.get("chosenLanguage") && langs.findIndex(l => l.name === params.get("chosenLanguage")) > -1){
         l = params.get("chosenLanguage")
         localStorage.setItem('chosenLanguage', l)
       } else {
-        if (localStorage.getItem('chosenLanguage')) {
+        if(localStorage.getItem('chosenLanguage')){
           l = localStorage.getItem('chosenLanguage')
+        } else {
+          l =`rest`
         }
       }
+    } else {
+      l =`rest`
     }
-    return l;
+    return l
   }
 
   const [state, setState] = React.useState({
