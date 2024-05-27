@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react'
-=======
-import React from 'react';
->>>>>>> develop
 
 if (typeof window === 'undefined') {
   global.window = {
