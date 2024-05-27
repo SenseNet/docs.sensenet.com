@@ -90,10 +90,10 @@ const Layout = ({ children, location }) => {
     //     }
     //   }
     // }
-    const chosenLanguage = window.localStorage.getItem("chosenLanguage");
+    let chosenLanguage = window.localStorage.getItem("chosenLanguage");
     if (!chosenLanguage) {
       chosenLanguage = "rest";
-      window.localStorage.setItem('chosenLanguage', chosenLanguage)
+      localStorage.setItem('chosenLanguage', chosenLanguage)
     }
     return chosenLanguage;
   }
