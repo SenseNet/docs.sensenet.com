@@ -77,25 +77,19 @@ const Layout = ({ children, location }) => {
   };
 
   const language = () => {
-    // const chosenLanguage = ;
-    // const params = new URLSearchParams(window.location.search);
-    // let l = 'rest';
-    // if(typeof window != 'undefined'){
-    //   if(params.get("chosenLanguage") && langs.findIndex(lang => lang.name === params.get("chosenLanguage")) > -1){
-    //     l = params.get("chosenLanguage")
-    //     localStorage.setItem('chosenLanguage', l)
-    //   } else {
-    //     if(localStorage.getItem('chosenLanguage')){
-    //       l = localStorage.getItem('chosenLanguage')
-    //     }
-    //   }
-    // }
-    let chosenLanguage = window.localStorage.getItem("chosenLanguage");
-    if (!chosenLanguage) {
-      chosenLanguage = "rest";
-      localStorage.setItem('chosenLanguage', chosenLanguage)
+    const params = new URLSearchParams(window.location.search);
+    let l = 'rest';
+    if (typeof window != 'undefined') {
+      if (params.get("chosenLanguage") && langs.findIndex(lang => lang.name === params.get("chosenLanguage")) > -1) {
+        l = params.get("chosenLanguage")
+        localStorage.setItem('chosenLanguage', l)
+      } else {
+        if (localStorage.getItem('chosenLanguage')) {
+          l = localStorage.getItem('chosenLanguage')
+        }
+      }
     }
-    return chosenLanguage;
+    return l;
   }
 
   const [state, setState] = React.useState({
