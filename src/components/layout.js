@@ -68,13 +68,21 @@ const Layout = ({ children, location }) => {
 
     if (typeof window != 'undefined') {
       localStorage.setItem('chosenLanguage', lang)
-     }
+    }
+    changeUrl(lang);
 
     setState(state => ({
       lang: lang,
       toggleLanguage
     }));
   };
+
+  const changeUrl = (lang) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('chosenLanguage', lang);
+    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({ path: newUrl }, '', newUrl);
+  }
 
   const language = () => {
     let params = new URLSearchParams(window.location.search);
