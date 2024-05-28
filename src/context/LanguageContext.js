@@ -13,7 +13,7 @@ let params = new URLSearchParams(window.location.search);
 export const LanguageContext = React.createContext({
   lang: params.get("chosenLanguage")
     ? params.get("chosenLanguage")
-    : localStorage && localStorage.getItem('chosenLanguage')
+    : typeof window != 'undefined' && localStorage.getItem('chosenLanguage')
       ? localStorage.getItem('chosenLanguage')
       : 'rest',
   toggleLanguage: () => {},
