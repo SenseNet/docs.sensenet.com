@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   panel: {
     marginTop: '20px',
     paddingLeft: '10px',
-    width: '80%',
+    width: '100%',
     overflow: 'auto',
   }
 }));
@@ -130,7 +130,7 @@ const TabStrip = (props) => {
           if(i === text){
            setCopyText(node.internal.content)
           }
-          return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction}>{node.internal.content}</TabPanel>)
+          return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction} style={{ overflow: 'auto' }}>{node.internal.content}</TabPanel>)
           }
         )
       }
