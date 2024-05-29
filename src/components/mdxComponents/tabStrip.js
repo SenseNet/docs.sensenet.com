@@ -42,7 +42,7 @@ const TabPanel = (props) => {
   const classes = useStyles();
   return (
     <Typography
-          component="div"
+      component="div"
       role="tabpanel"
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
