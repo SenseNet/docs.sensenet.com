@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import ThemeProvider from "./themeProvider";
@@ -105,9 +105,18 @@ const Layout = ({ children, location }) => {
   }
 
   const [state, setState] = React.useState({
-    lang: language(),
+    lang: 'rest',
     toggleLanguage: toggleLanguage,
   });
+
+  useEffect(() => {
+    setState((state) => {
+      return {
+        ...state,
+        lang: language()
+      }
+    })
+  }, [])
 
   let container
 
