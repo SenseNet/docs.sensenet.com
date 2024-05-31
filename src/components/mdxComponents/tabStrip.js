@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import langs from './langs'
 import { StaticQuery, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
@@ -12,34 +12,9 @@ import CodeBlock from "./cBlock";
 import CopyToClipBoard from "./CopyToClipBoard"
 import {LanguageContext} from '../../context/LanguageContext'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    height: 224,
-    backgroundColor: 'rgb(245, 242, 240)',
-    position: 'relative'
-  },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
-  tab: {
-    minWidth: '120px',
-    fontSize: '0.775rem',
-    minHeight: '40px'
-  },
-  panel: {
-    marginTop: '20px',
-    paddingLeft: '10px',
-    width: '100%',
-    overflow: 'auto',
-  }
-}));
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
-  const classes = useStyles();
   return (
     <Typography
       component="div"
@@ -48,7 +23,12 @@ const TabPanel = (props) => {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
-      className={classes.panel}
+      style={{
+        marginTop: '20px',
+        paddingLeft: '10px',
+        width: '100%',
+        overflow: 'auto',
+      }}
     >
       {value === index && <Box>
         <ReactMarkdown
@@ -86,7 +66,6 @@ const TabStrip = (props) => {
 
   const path = `${props.category}/${props.article}/`
 
-  const classes = useStyles();
   return(
     <StaticQuery
     query={graphql`
@@ -105,7 +84,14 @@ const TabStrip = (props) => {
     render={(data) =>
     <LanguageContext.Consumer>
       {({lang, toggleLanguage}) => (
-    <div className={classes.root}>
+        <div style={{
+          backgroundColor: theme.palette.background.paper,
+          flexGrow: 1,
+          display: 'flex',
+          height: 229,
+          backgroundColor: 'rgb(245, 242, 240)',
+          position: 'relative'
+        }}>
         <CopyToClipBoard content={copyText}  />
         <Tabs
           value={langs.findIndex(l => l.name === lang)}
