@@ -1341,6 +1341,21 @@ display: inline-block;
   min-height: 4px !important;
 }
 
+.langMenuIcon {
+  margin-right: '.5em';
+  opacity: .8;
+  color: rgba(0, 0, 0, 0.87);
+  max-height: '1em';
+  line-height: '1em';
+}
+
+.langMenuIconActive {
+  margin-right: '.5em';
+  color: #13a5ad;
+  opacity: .8;
+  max-height: '1em';
+  line-height: '1em';
+}
 
 
 .exampleCards, .integrationCards {
