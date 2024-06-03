@@ -39,7 +39,19 @@ const Content = styled('main')`
   margin: 0px 88px;
   margin-top: 3rem;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1200px) {
+    padding-left: 0;
+    margin: 0 40px;
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+    margin: 0 10px;
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 767px) {
     padding-left: 0;
     margin: 0 10px;
     margin-top: 3rem;
@@ -49,6 +61,21 @@ const Content = styled('main')`
 const MaxWidth = styled('div')`
 
   max-width: calc(100vw - 715px);
+
+  @media only screen and (max-width: 1200px) {
+    max-width: calc(100vw - 619px);
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+    margin: 0 10px;
+    max-width: calc(100vw - 345px);
+  }
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100vw;
+  }
+
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
@@ -62,6 +89,13 @@ const LeftSideBarWidth = styled('div')`
 const RightSideBarWidth = styled('div')`
   width: 224px;
   min-width: 224px;
+
+  @media only screen and (max-width: 992px) {
+    position: absolute:
+    top: 100px;
+    left: 100px;
+  }
+
 `;
 const Layout = ({ children, location }) => {
 
