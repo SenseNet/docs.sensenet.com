@@ -1,3 +1,0 @@
-```
-No additional configurations needed
-```
