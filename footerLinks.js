@@ -15,14 +15,6 @@ const footer = [
     title: 'Contact us',
     link: 'https://www.sensenet.com/en/contact'
   },
-  {
-    title: 'Stackoverflow',
-    link: 'https://stackoverflow.com/questions/tagged/sensenet'
-  },
-  {
-    title: 'System status',
-    link: 'https://status.sensenet.cloud'
-  },
 ]
 
 module.exports = footer;

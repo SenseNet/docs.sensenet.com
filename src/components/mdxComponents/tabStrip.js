@@ -25,7 +25,6 @@ const TabPanel = (props) => {
       {...other}
       style={{
         marginTop: '20px',
-        paddingLeft: '10px',
         width: '100%',
         overflow: 'auto',
       }}
@@ -100,12 +99,23 @@ const TabStrip = (props) => {
           textColor="primary"
           orientation="vertical"
           variant="scrollable"
-          style={{borderRight: `1px solid ${theme.palette.divider}`}}
+            style={{
+              left: 0,
+              width: 198,
+                borderRight: `1px solid ${theme.palette.divider}`,
+                display: 'flex',
+                flexWrap: 'wrap',
+                flexDirection: 'row',
+                alignContent: 'center',
+              }}
         >
             { langs.map((lang, index) =>{
-               return <Tab style={{minWidth: '120px',
-               fontSize: '0.775rem',
-               minHeight: '40px'}} disableRipple label={lang.title} {...a11yProps(lang.name)} key={`${lang.name}-tab`} />
+              return <Tab style={{
+              }}
+                disableRipple
+                label={lang.title}
+                {...a11yProps(lang.name)}
+                key={`${lang.name}-tab`} />
               }
                )
           }

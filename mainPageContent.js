@@ -7,31 +7,31 @@ const content = [
     link: '/api-docs/index',
     img: '../images/api-docs.png'
   },
-  {
-    name: 'example-apps',
-    title: 'Example apps',
-    description: 'Discover example apps',
-    links: [
-      {
-        title:'Image gallery',
-        link: '/example-apps#imagegallery'
-      },
-      {
-        title:'Todo app',
-        link: '/example-apps#todoapp'
-      },
-      {
-        title:'DMS demo',
-        link: '/example-apps#dmsdemo'
-      },
-      {
-        title:'Memo app',
-        link: '/example-apps#memoeditor'
-      },
-    ],
-    link: '/example-apps',
-    img: '../images/example-apps.png'
-  },
+  // {
+  //   name: 'example-apps',
+  //   title: 'Example apps',
+  //   description: 'Discover example apps',
+  //   links: [
+  //     {
+  //       title:'Image gallery',
+  //       link: '/example-apps#imagegallery'
+  //     },
+  //     {
+  //       title:'Todo app',
+  //       link: '/example-apps#todoapp'
+  //     },
+  //     {
+  //       title:'DMS demo',
+  //       link: '/example-apps#dmsdemo'
+  //     },
+  //     {
+  //       title:'Memo app',
+  //       link: '/example-apps#memoeditor'
+  //     },
+  //   ],
+  //   link: '/example-apps',
+  //   img: '../images/example-apps.png'
+  // },
   {
     name: 'tutorials',
     title: 'Tutorials',
@@ -65,10 +65,6 @@ const content = [
       {
         title:'What is a Content Services Platform',
         link: '/concepts/introduction/02-what-is-csp'
-      },
-      {
-        title:'sensenet as a service overview',
-        link: '/concepts/introduction/04-what-is-snaas'
       },
       {
         title:'sensenet basics',

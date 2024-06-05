@@ -1,4 +1,4 @@
-```javascript
+```
 https://dev.demo.sensenet.com/OData.svc/Root/Content?query=ModificationDate%3A@Yesterday@
 
 // the special characters should be url encoded

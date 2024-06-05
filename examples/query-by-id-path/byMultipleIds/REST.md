@@ -1,4 +1,4 @@
-```javascript
+```
 https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Id%3A%281607%201640%201645%29
 
 // the special characters should be url encoded
