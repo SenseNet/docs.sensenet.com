@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/content(1284)
+GET https://example.com/OData.svc/content(1368)
 ```

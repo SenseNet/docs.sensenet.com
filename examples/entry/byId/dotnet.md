@@ -1,5 +1,5 @@
 ```csharp
-await repository.LoadContentAsync(1284, cancel)
+await repository.LoadContentAsync(1368, cancel);
 // or
-await repository.LoadContentAsync<MyContent>(1284, cancel)
+await repository.LoadContentAsync<Folder>(1368, cancel);
 ```
