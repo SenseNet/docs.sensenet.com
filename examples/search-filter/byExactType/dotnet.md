@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
-    Path = "/Root/Content/IT/Document_Library",
-    ChildrenFilter = "ContentType eq 'Folder'"
+    Path = "/Root/Content/Cars",
+    ChildrenFilter = "ContentType eq 'Car'"
 }, cancel)
 ```

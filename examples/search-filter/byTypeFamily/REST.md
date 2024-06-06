@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$filter=isof('Folder')
+GET https://localhost:44362/OData.svc/Root/Content/Cars?$filter=isof('Folder')
 ```

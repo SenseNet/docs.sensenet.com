@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$filter=Index gt 11
+GET https://example.com/OData.svc/Root/Content/Cars?$filter=Price gt 1000000
 ```
