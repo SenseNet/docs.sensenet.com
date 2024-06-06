@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')?$select=DisplayName,Description
+GET https://example.com/OData.svc/Root/Content/Cars('AAKE452')?$select=Make,Model,Color
 ```
