@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$orderby=DisplayName
+GET https://example.com/OData.svc/Root/Content/Cars?$orderby=DisplayName
 ```
