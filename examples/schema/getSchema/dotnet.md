@@ -1,3 +1,4 @@
 ```csharp
-string schema = await RESTCaller.GetResponseStringAsync("/Root", "GetSchema");
+string schema = await repository.GetResponseStringAsync(
+    new ODataRequest {Path = "/Root", ActionName = "GetSchema"}, HttpMethod.Get, cancel);
 ```
