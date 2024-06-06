@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')?$select=Actions&$expand=Actions
+GET https://example.com/OData.svc/Root/Content('Cars')?$expand=Actions&$select=Actions
 ```
