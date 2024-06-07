@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.load({
-  idOrPath: "/Root/Content/IT",
+  idOrPath: "/Root/Content/Cars",
   oDataOptions: {
-    select: ["DisplayName"]
+    select: ["DisplayName"],
   }
-});
+})
 ```
