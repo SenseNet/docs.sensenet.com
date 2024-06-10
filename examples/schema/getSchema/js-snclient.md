@@ -4,9 +4,9 @@ await repository.reloadSchema()
 
 // to get the schema result call executeAction on the repository
 const schemas = await repository.executeAction({
-      idOrPath: 'Root',
-      name: 'GetSchema',
-      method: 'GET',
-      body: undefined,
-    })
+  idOrPath: 'Root',
+  name: 'GetSchema',
+  method: 'GET',
+  body: undefined,
+})
 ```
