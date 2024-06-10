@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-    path: '/Root/Content/IT/Document_Library',
+    path: '/Root/Content/Cars',
     oDataOptions: {
-      filter: "substringof('Lorem', Description) eq true"
+      filter: "substringof('Supra', DisplayName) eq true"
     }
   })
 ```
