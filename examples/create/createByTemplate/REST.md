@@ -7,5 +7,5 @@ models=[{
   "__ContentTemplate":"/Root/ContentTemplates/DemoWorkspace/Demo_Workspace/Calendar",
   "DisplayName":"Calendar",
   "Index":2
-}] 
+}]
 ```

@@ -1,6 +1,6 @@
 ```javascript
 const result = await repository.post({
-  parentPath: `/Root/Content/IT`,
+  parentPath: `/Root/Content`,
   contentType: 'EventList',
   contentTemplate: 'Calendar',
   content: {

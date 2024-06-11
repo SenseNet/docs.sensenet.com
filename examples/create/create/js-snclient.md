@@ -1,9 +1,9 @@
 ```javascript
 const result = await repository.post({
-  parentPath: `/Root/Content/IT`,
+  parentPath: `/Root/Content/Cars`,
   contentType: 'Folder',
   content: {
-    Name: 'My new folder',
+    Name: 'New Cars',
   },
 })
 ```

@@ -1,9 +1,9 @@
 ```javascript
 const result = await repository.post({
-  parentPath: `/Root/Content/IT`,
+  parentPath: `/Root/Content`,
   contentType: 'DocumentLibrary',
   content: {
-    Name: 'My Doclib',
+    Name: 'My Documents',
   },
 })
 ```
