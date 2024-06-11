@@ -1,5 +1,7 @@
 ```csharp
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root/Content/IT", "CheckAllowedChildTypesOfFolders");
-Console.WriteLine(result);
+await repository.InvokeFunctionAsync<string>(new OperationRequest
+{
+    Path = "/Root/Content",
+    OperationName = "CheckAllowedChildTypesOfFolders"
+}, cancel);
 ```

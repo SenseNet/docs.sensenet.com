@@ -1,10 +1,11 @@
 ```
-url: "/OData.svc/Root/Content('IT')",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    '__ContentType':'EventList',
-    '__ContentTemplate':'Calendar',
-    'DisplayName': 'Calendar',
-    'Index': 2
-  }) + "]",
+POST https://localhost:44362/OData.svc/Root('Content')
+
+models=[{
+  "Name":"My Calendar",
+  "__ContentType":"EventList",
+  "__ContentTemplate":"/Root/ContentTemplates/DemoWorkspace/Demo_Workspace/Calendar",
+  "DisplayName":"Calendar",
+  "Index":2
+}] 
 ```

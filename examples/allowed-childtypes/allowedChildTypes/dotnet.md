@@ -1,5 +1,7 @@
 ```csharp
-var result = await RESTCaller.GetResponseStringAsync(
-    "Root/Content/IT", "AllowedChildTypes");
-Console.WriteLine(result);
+var result = await repository.InvokeFunctionAsync<string>(new OperationRequest
+{
+    Path = "Root/Content",
+    OperationName = "AllowedChildTypes"
+}, cancel);
 ```

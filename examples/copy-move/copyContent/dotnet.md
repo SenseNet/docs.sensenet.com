@@ -1,7 +1,12 @@
 ```csharp
-var body = @"models=[{""targetPath"": ""/Root/Content/IT/Document_Library/Munich"",
-            ""paths"": [""/Root/Content/IT/Document_Library/Chicago/100Pages.pdf""]}]";
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root", "CopyBatch", HttpMethod.Post, body);
-Console.WriteLine(result);
+var result = await repository.InvokeActionAsync<string>(new OperationRequest
+{
+    Path = "/Root",
+    OperationName = "CopyBatch",
+    PostData = new
+    {
+        targetPath = "/Root/Content/Cars/Backup",
+        paths = new[]{"/Root/Content/Cars/AAKE452"}
+    }
+}, cancel);
 ```

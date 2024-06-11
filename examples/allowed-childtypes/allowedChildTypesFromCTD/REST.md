@@ -1,3 +1,3 @@
 ```
-url: https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')/GetAllowedChildTypesFromCTD
+GET https://localhost:44362/OData.svc/Root('Content')/GetAllowedChildTypesFromCTD
 ```

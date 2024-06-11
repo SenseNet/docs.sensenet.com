@@ -1,8 +1,8 @@
 ```
-url: "/OData.svc/Root/Content('IT')",
-type: 'PATCH',
-data: "models=[" + JSON.stringify({
-  'Name': 'NewName',
-  'Index': 142
-}) + "]",
+PATCH https://localhost:44362/OData.svc/Root/Content/Cars/OT1234
+
+models=[{
+  "Model":"126p",
+  "Color":"Dark red"
+}]
 ```

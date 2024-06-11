@@ -1,8 +1,5 @@
 ```
-url: "/OData.svc/Root/Content('IT')",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    '__ContentType':'Folder' ,
-    'DisplayName': 'My new folder'
-  }) + "]",
+POST https://localhost:44362/OData.svc/Root/Content('Cars')
+
+models=[{"Name":"New cars","__ContentType":"Folder"}] 
 ```

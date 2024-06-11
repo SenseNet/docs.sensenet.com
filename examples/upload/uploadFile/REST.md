@@ -1,23 +1,44 @@
 ```
-// initial request
-url: "/OData.svc/Root/Content/IT('Document_Library')/Upload?create=1",
-type: 'POST',
-data: {
-  "ContentType": "File",
-  "FileName": "sampledata.xlsx",
-  "Overwrite": true,
-  "UseChunk": true,
-  "PropertyName": "Binary"
-},
+POST https://localhost:44362/OData.svc/Root/Content('Documents')/Upload
 
-// subsequent request
-url: "/OData.svc/Root/Content/IT/('Document_Library')/Upload",
-type: 'POST',
-data: {
-  "ContentType": "File",
-  "FileName": "sampledata.xlsx",
-  "Overwrite": true,
-  "ChunkToken": "5062*3196*True",
-  "PropertyName": "Binary"
-},
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=FileName
+
+MyFile.txt
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=ContentType
+
+File
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=PropertyName
+
+Binary
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=UseChunk
+
+False
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=Overwrite
+
+True
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=FileLength
+
+21
+-----------------------------8dc86bc2e2dc8b5
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name=ChunkToken
+
+0**True*True
+-----------------------------8dc86bc2e2dc8b5
+Content-Disposition: form-data; name="files[]"; filename=MyFile.txt; filename*=utf-8''MyFile.txt
+
+Content of MyFile.txt
+-----------------------------8dc86bc2e2dc8b5--
 ```

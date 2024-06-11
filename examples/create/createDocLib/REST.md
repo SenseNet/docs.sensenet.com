@@ -1,8 +1,5 @@
 ```
-url: "/OData.svc/Root/Content('IT')",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    '__ContentType':'DocumentLibrary' ,
-    'DisplayName': 'My Doclib',
-  }) + "]",
+POST https://localhost:44362/OData.svc/Root('Content')
+
+models=[{"Name":"My Documents","__ContentType":"DocumentLibrary"}] 
 ```

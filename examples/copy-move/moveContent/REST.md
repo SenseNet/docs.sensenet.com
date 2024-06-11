@@ -1,7 +1,10 @@
 ```
-url: "/OData.svc/Root/Content/IT/Document_Library/Chicago('100Pages.pdf')/MoveTo",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    'targetPath': '/Root/Content/IT/Document_Library/Munich'
-  }) + "]",
+POST https://localhost:44362/OData.svc/('Root')/MoveBatch
+
+models=[{
+  "targetPath":"/Root/Content/Cars/out-of-order",
+  "paths":[
+    "/Root/Content/Cars/AAKE452"
+  ]
+}]
 ```

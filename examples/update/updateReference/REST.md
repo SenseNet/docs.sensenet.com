@@ -1,7 +1,5 @@
 ```
-url: "/OData.svc/Root/Content('IT')",
-type: 'PATCH',
-data: "models=[" + JSON.stringify({
-  'Manager': 12345,
-}) + "]",
+PATCH https://localhost:44362/OData.svc/Root/Content
+
+models=[{"Manager":1}] 
 ```

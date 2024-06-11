@@ -1,6 +1,8 @@
 ```csharp
-var body = @"models=[{""contentTypes"": [""Task"", ""Image""]}]";
-var result = await RESTCaller.GetResponseStringAsync(
-    "/Root/Content/IT", "AddAllowedChildTypes", HttpMethod.Post, body);
-Console.WriteLine(result);
+await repository.InvokeActionAsync(new OperationRequest
+{
+    Path = "/Root/Content",
+    OperationName = "AddAllowedChildTypes",
+    PostData = new {contentTypes = new[] {"Image", "CalendarEvent", "Task"}}
+}, cancel);
 ```
