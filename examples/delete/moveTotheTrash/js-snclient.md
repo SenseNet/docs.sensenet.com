@@ -1,6 +1,6 @@
 ```javascript
 const result = await repository.delete({
-  idOrPath: `/Root/Content/Document_Library/Chicago/100Pages.docx`,
+  idOrPath: `/Root/Content/Cars/AAXY123`,
   permanent: false
 })
 ```

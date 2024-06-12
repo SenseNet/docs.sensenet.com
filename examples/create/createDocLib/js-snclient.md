@@ -3,7 +3,7 @@ const result = await repository.post({
   parentPath: `/Root/Content`,
   contentType: 'DocumentLibrary',
   content: {
-    Name: 'My Documents',
+    Name: 'Documents',
   },
 })
 ```
