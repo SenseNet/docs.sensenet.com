@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Lorem
+GET https://localhost:44362/OData.svc/Root?query=California
 ```

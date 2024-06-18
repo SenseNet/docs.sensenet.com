@@ -1,6 +1,4 @@
 ```csharp
-var result = await Content.QueryAsync("IsCritical:true");
-
-//foreach (dynamic content in result)
-//    Console.WriteLine($"{content.Id} {content.Name}");
+var result = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "InFolder:/Root/Content/Cars AND IsFolder:true" }, cancel);
 ```
