@@ -1,3 +1,3 @@
 ```
-GET https://example.com/OData.svc/content(1368)
+GET https://example.com/OData.svc/content(11)
 ```
