@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import {ExternalLink} from "react-feather";
 import '../styles.css';
 import config from '../../../config';
-import sideMenuConfig from '../../../sidemenuConfig'
 
 // eslint-disable-next-line no-unused-vars
 const ListItem = styled(({ className, active, level, ...props }) => {

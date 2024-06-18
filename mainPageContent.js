@@ -54,7 +54,7 @@ const content = [
         link: '/tutorials/authentication/how-to-authenticate-react'
       },
     ],
-    link: '',
+    link: '/tutorials/getting-started',
     img: '../images/tutorials.png'
   },
   {
