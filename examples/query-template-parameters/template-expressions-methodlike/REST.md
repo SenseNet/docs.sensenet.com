@@ -1,6 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content?query=CreationDate%3A<@@CurrentDate.AddDays(-5)@@
-
-// the special characters should be url encoded
-// the actual query here is ?query=CreationDate:<@@CurrentDate.AddDays(-5)@@
+GET https://localhost:44362/OData.svc/Root?metadata=no&query=TypeIs:Task AND StartDate:<@@CurrentDate.AddDays(-5)@@
 ```

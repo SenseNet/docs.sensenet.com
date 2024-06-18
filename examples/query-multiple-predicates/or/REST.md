@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=apple OR melon
+GET https://localhost:44362/OData.svc/Root?query=Color:White OR Color:Red
 ```

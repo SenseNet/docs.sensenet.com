@@ -1,6 +1,4 @@
 ```csharp
-var result = await Content.QueryAsync("CreationDate:<@@CurrentDate.AddDays(-5)@@");
-
-// foreach (dynamic content in result)
-//     Console.WriteLine($"{content.Id} {content.Name}");
+var result = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "TypeIs:Task AND StartDate:<@@CurrentDate.AddDays(-5)@@" }, cancel);
 ```
