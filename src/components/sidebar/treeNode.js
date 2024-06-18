@@ -5,7 +5,11 @@ import config from '../../../config';
 import Link from "../link";
 import langs from "../mdxComponents/langs";
 
-const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, path, separator, ...rest}) => {
+const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, path, separator, ...rest }) => {
+  let isActiveInit = false;
+  if (url && url.split('/')[3] === window.location.href.split('/').at(-2)) {
+    isActiveInit = true;
+  }
   const isCollapsed = collapsed[url];
   const collapse = () => {
     setCollapsed(url)
@@ -16,7 +20,9 @@ const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, p
     location = document.location;
   }
   const active =
-    location && (location.pathname === url || location.pathname === (config.gatsby.pathPrefix + url) || (location.pathname === config.gatsby.pathPrefix && url === '/basic-concepts'));
+    isActiveInit ||
+    location &&
+    (location.pathname === url || location.pathname === (config.gatsby.pathPrefix + url) || (location.pathname === config.gatsby.pathPrefix && url === '/basic-concepts'));
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
   if (separator) {
     return (

@@ -4,7 +4,6 @@ import sideMenuConfig from '../../../sidemenuConfig';
 import TreeNode from './treeNode';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel,} from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-import Launch from '@material-ui/icons/Launch';
 
 if (typeof window === 'undefined') {
   global.window = {

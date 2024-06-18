@@ -91,7 +91,7 @@ const TabStrip = (props) => {
           backgroundColor: 'rgb(245, 242, 240)',
           position: 'relative'
         }}>
-        <CopyToClipBoard content={copyText}  />
+            <CopyToClipBoard lang={lang} data={data} example={props.example} />
         <Tabs
           value={langs.findIndex(l => l.name === lang)}
           onChange={(event, value) => toggleLanguage(langs[value].name)}
@@ -123,9 +123,6 @@ const TabStrip = (props) => {
         {
         getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
           const text = langs.findIndex(l => l.name.toLowerCase() === lang.toLowerCase())
-          if(i === text){
-           setCopyText(node.internal.content)
-          }
           return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction} style={{ overflow: 'auto' }}>{node.internal.content}</TabPanel>)
           }
         )
