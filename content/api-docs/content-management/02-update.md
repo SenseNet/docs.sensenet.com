@@ -8,25 +8,25 @@ Updating a content could be achieved by sending an http `PATCH` or `PUT` request
 
 # Modifying a field of an entity
 
-First let's change the index of a workspace to 142:
+First let's change the color of a car to "Rosso Corsa":
 
 <tab category="content-management" article="update" example="updatePatch" />
 
 # Modifying multiple fields at once
 
-The following example shows you how you can change a folder's name and index fields at once:
+The following example shows you how you can change a cars's model and color fields at once:
 
 <tab category="content-management" article="update" example="updateMultipleFields" />
 
 # Update the value of a date field
 
-In the next example you can see how you can update the start date of an event:
+In the next example you can see how you can update the starting date of car:
 
 <tab category="content-management" article="update" example="updateDate" />
 
 # Update a choice field
 
-Updating choice fields is a tricky one. Let's see how you can change an event's `EventType` field to choose multiple options:
+Updating choice fields is a tricky one. Let's see how you can change a cars's `Style` field to choose an option:
 
 <tab category="content-management" article="update" example="updateChoice" />
 
