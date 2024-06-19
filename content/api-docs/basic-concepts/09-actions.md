@@ -10,7 +10,7 @@ Every content has executable actions in the sensenet content repository managed 
 
 The content of the result collection depends on availability of each individual Action item, so they can be adjusted not only by their existence as a content, but by permission settings. So in the end this list will contain only those actions and function that can be executed by the current user on the given content.
 
-Following example's results will be the list of actions and functions that are available on the given file:
+Following example's results will be the list of actions and functions that are available on the given Content:
 
 <tab category="basic-concepts" article="action" example="actions" />
 

@@ -16,19 +16,19 @@ The `$filter` option defines a subset of the entries from a specified collection
 
 # Filtering by Field value
 
-The following example returns the items that have an Index greater than 11.
+The following example returns the items that have a Price greater than 1 000 000.
 
 <tab category="basic-concepts" article="search-filter" example="greaterThan" />
 
-The following example returns true if the Description field (given as second param) contains the given string.
+The following example returns true if the `DisplayName` field (given as second param) contains the given string.
 
 <tab category="basic-concepts" article="search-filter" example="substringof" />
 
-The following example returns true if the given Name field starts with the given string.
+The following example returns true if the `DisplayName` field starts with the given string.
 
 <tab category="basic-concepts" article="search-filter" example="startswith" />
 
-The following example returns true if the given Name field ends with the given string.
+The following example returns true if the given `DisplayName` field ends with the given string.
 
 <tab category="basic-concepts" article="search-filter" example="endswith" />
 &nbsp;
@@ -40,7 +40,7 @@ Since the search engine of sensenet is based on Lucene.NET, it is text based and
 
 # Filtering by Date
 
-Following example returns the documents that were uploaded after the given date.
+The following example returns documents that have `StartingDate` field greater value than the specified date.
 
 <tab category="basic-concepts" article="search-filter" example="byDate" />
 
@@ -56,7 +56,7 @@ The following example shows how to get items with an exact type skipping the con
 
 In most of the cases you will use the `IsOf()` operation to filter by type family (by a content type and all of its inherited ones).
 
-The response of the following example will return every content with the type Folder or any inherited type.
+The response of the following example will return every content with the type `Folder` or any inherited type.
 
 <tab category="basic-concepts" article="search-filter" example="byTypeFamily" />
 

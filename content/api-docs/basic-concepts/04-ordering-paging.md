@@ -20,13 +20,13 @@ The following examples shows how to sort the results by the `DisplayName` field:
 
 # Order by a field in an explicit direction
 
-The following examples shows how to sort the results by the `Id` field from lowest to highest:
+The following examples shows how to sort the results by the `Price` field from lowest to highest:
 
 <tab category="basic-concepts" article="ordering-paging" example="orderExplicitDirection" />
 
 # Order by a field in reverse order
 
-The following example shows how to sort the results by the `CreationDate` field from closest to earliest:
+The following example shows how to sort the results by the `StartingDate` field from closest to earliest:
 
 <tab category="basic-concepts" article="ordering-paging" example="reverseOrder" />
 
