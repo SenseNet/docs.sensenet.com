@@ -40,7 +40,7 @@ These are the built-in parameters that you can use in your queries:
 
 Let's see some examples.
 
-The following example results the content shared with the current user:
+The following example results the car content modified with the current user:
 
 <tab category="querying" article="query-template-parameters" example="sharedWithCurrentUser" />
 

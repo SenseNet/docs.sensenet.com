@@ -12,23 +12,19 @@ The `OR` operator is the default conjunction operator. This means that if there 
 
 <tab category="querying" article="query-multiple-predicates" example="or" />
 
-The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for event that have the type demo and meeting in the field EventType, use this query:
+The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document.
 
 <tab category="querying" article="query-multiple-predicates" example="and" />
 
-The + or required operator requires that the term after the "+" symbol exist somewhere in a the field of a single document.
-
-To search for content that must contain meeting type events and may contain demo events use the query:
+Using the + or mandatory operator is an alternative to the AND keyword. This sign must be placed in front of all terms that would be connected with the AND operator.
 
 <tab category="querying" article="query-multiple-predicates" example="plus" />
 
-The `NOT` operator excludes content that contain the term after `NOT`. (It cannot be used with only one term.)
+The `NOT` operator excludes content that contain the term after `NOT`. (The Lucene engine's limitation: it cannot be used with only one term.)
 
 <tab category="querying" article="query-multiple-predicates" example="not" />
 
-The "-" or prohibit operator excludes documents that contain the term after the "-" symbol.
-
-To search for content that contain "upgrade" but not "demo" use the query:
+The "-" or prohibit operator excludes documents that contain the term after the "-" symbol. This is the alternative of the `NOT` operator.
 
 <tab category="querying" article="query-multiple-predicates" example="minus" />
 
