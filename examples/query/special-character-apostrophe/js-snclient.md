@@ -1,8 +1,9 @@
+Under Construction
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `InFolder:"/Root/Content/IT/(1+1):2"`
+    query: "DisplayName:\"(1+1):2\""
   }
 });
 ```

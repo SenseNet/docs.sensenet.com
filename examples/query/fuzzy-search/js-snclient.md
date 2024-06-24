@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root/Content/Cars",
   oDataOptions: {
-    query: "Description:abbreviate~0.8"
+    query: "Name:AACE642~0.85"
   }
 });
 ```

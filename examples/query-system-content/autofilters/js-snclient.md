@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `Type:ContentType .AUTOFILTERS:ON`
+    query: `TypeIs:Folder .AUTOFILTERS:OFF`
   }
 });
 ```

@@ -1,8 +1,9 @@
+Under construction
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: "MemoType:$iaudit",
+    query: "MemoType:'Internal audit'",
   },
 });
 ```

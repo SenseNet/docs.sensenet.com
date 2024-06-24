@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root/Content/Cars",
   oDataOptions: {
-    query: `CreationDate:'2019-02-15'`
+    query: `StartingDate:'2021-04-22'`
   }
 });
 ```

@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/IMS/Public",
+  path: "/Root",
   oDataOptions: {
-    query: `Manager:{{Name:'businesscat'}}`
+    query: `ModifiedBy:{{Name:'jjohnson'}}`
   }
 });
 ```

@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `TypeIs:CalendarEvent AND StartDate:@@Today@@`
+    query: `TypeIs:Task AND StartDate:>@@Today@@`
   }
 });
 ```
