@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/Root/System/Schema/ContentTypes('GenericContent')/Upload
+POST https://example.com/OData.svc/Root/System/Schema/ContentTypes('GenericContent')/Upload
 
 -----------------------------8dc86cabae328e4
 Content-Type: text/plain; charset=utf-8

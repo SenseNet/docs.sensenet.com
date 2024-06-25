@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/Root/System('Settings')/Upload?metadata=no
+POST https://example.com/OData.svc/Root/System('Settings')/Upload?metadata=no
 
 models=[{
   "FileName":"MyCustom.settings",

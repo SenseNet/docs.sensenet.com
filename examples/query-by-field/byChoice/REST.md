@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?query=Style:$roadster
+GET https://example.com/OData.svc/Root?query=Style:$roadster
 ```

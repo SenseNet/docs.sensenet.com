@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?query=Type:Car .SORT:StartingDate
+GET https://example.com/OData.svc/Root?query=Type:Car .SORT:StartingDate
 ```

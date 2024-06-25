@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?query=Type:Car .REVERSESORT:Color .SORT:Name
+GET https://example.com/OData.svc/Root?query=Type:Car .REVERSESORT:Color .SORT:Name
 ```

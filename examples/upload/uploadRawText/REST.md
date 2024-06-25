@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/Root/Content('Documents')/Upload?metadata=no
+POST https://example.com/OData.svc/Root/Content('Documents')/Upload?metadata=no
 
 models=[{
   "FileName":"MyFile.txt",

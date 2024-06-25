@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root('Content')/CheckAllowedChildTypesOfFolders
+GET https://example.com/OData.svc/Root('Content')/CheckAllowedChildTypesOfFolders
 ```

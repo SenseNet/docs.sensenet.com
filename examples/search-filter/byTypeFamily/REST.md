@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root/Content/Cars?$filter=isof('Folder')
+GET https://example.com/OData.svc/Root/Content/Cars?$filter=isof('Folder')
 ```

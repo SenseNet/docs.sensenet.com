@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/('Root')/CopyBatch
+POST https://example.com/OData.svc/('Root')/CopyBatch
 
 models=[{
   "targetPath":"/Root/Content/Cars/Backup",

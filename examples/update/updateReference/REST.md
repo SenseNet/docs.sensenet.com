@@ -1,5 +1,5 @@
 ```
-PATCH https://localhost:44362/OData.svc/Root/Content
+PATCH https://example.com/OData.svc/Root/Content
 
 models=[{"Manager":1}]
 ```

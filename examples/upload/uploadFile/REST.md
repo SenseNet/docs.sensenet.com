@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/Root/Content('Documents')/Upload
+POST https://example.com/OData.svc/Root/Content('Documents')/Upload
 
 -----------------------------8dc86bc2e2dc8b5
 Content-Type: text/plain; charset=utf-8

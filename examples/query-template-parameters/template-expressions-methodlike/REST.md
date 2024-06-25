@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?metadata=no&query=TypeIs:Task AND StartDate:<@@CurrentDate.AddDays(-5)@@
+GET https://example.com/OData.svc/Root?metadata=no&query=TypeIs:Task AND StartDate:<@@CurrentDate.AddDays(-5)@@
 ```

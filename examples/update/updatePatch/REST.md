@@ -1,5 +1,5 @@
 ```
-PATCH https://localhost:44362/OData.svc/Root/Content/Cars/AAXX123
+PATCH https://example.com/OData.svc/Root/Content/Cars/AAXX123
 
 models=[{"Color":"Rosso Corsa"}]
 ```

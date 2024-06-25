@@ -1,5 +1,5 @@
 ```
-POST https://localhost:44362/OData.svc/Root/IMS('Public')
+POST https://example.com/OData.svc/Root/IMS('Public')
 
 models=[{
   "Name":"jsmith",

@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?query=Name:AACE642~0.85
+GET https://example.com/OData.svc/Root?query=Name:AACE642~0.85
 ```

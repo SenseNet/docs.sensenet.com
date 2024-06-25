@@ -1,3 +1,3 @@
 ```
-GET https://localhost:44362/OData.svc/Root?query=StartingDate:'2021-04-22'
+GET https://example.com/OData.svc/Root?query=StartingDate:'2021-04-22'
 ```
