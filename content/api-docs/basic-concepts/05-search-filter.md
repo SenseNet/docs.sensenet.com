@@ -16,7 +16,7 @@ The `$filter` option defines a subset of the entries from a specified collection
 
 # Filtering by Field value
 
-The following example returns the items that have a Price greater than 1 000 000.
+The following example returns the items that have a Price greater than 1&nbsp;000&nbsp;000.
 
 <tab category="basic-concepts" article="search-filter" example="greaterThan" />
 

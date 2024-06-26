@@ -28,7 +28,7 @@ https:/example.com/OData.svc/[CONTENTPATH]
 
 # Query options
 
-Query options are query string parameters a client may specify to control the amount and order of the data that a service returns for the resource identified by the URI. In sensenet there're two types of query options available [OData System Query Options](https://www.odata.org/documentation/odata-version-3-0/url-conventions/) and custom sensenet query options. The OData standard query options' names are prefixed with a "$" character, sensenet query options should be used without a prefix.
+Query options are query string parameters a client may specify to control the amount and order of the data that a service returns for the resource identified by the URI. In sensenet there are two types of query options available [OData System Query Options](https://www.odata.org/documentation/odata-version-3-0/url-conventions/) and custom sensenet query options. The OData standard query options' names are prefixed with a "$" character, sensenet query options should be used without a prefix.
 
 | option |     |
 | ------ | --- |

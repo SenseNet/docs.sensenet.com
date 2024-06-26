@@ -34,7 +34,7 @@ The following example shows how to sort the results by the `StartingDate` field 
 
 You can specify multiple fields to sort the order of your results by. The results will be ordered first by the first field specified. If any of those values are equal, then those results will be sorted by the next specified field. And so on.
 
-Here is an example that will order the results first by the last modification date of the docs from closest to earliest. It will then sort any docs that have the same `ModificationDate` by their `DisplayName`.
+Here is an example that will order the results first by the last modification date of the docs from closest to earliest. It will then sort any docs that have the same `StartingDate` by their `DisplayName`.
 
 <tab category="basic-concepts" article="ordering-paging" example="orderByMultipleFields" />
 

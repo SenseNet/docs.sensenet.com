@@ -33,7 +33,7 @@ This returns the following response:
 ```json
 {
   "d": {
-    "DisplayName": "Cars"
+    "Description": "Oldtimer supercar"
   }
 }
 ```
@@ -46,7 +46,7 @@ Raw value of a property can be accessed if the request is extended with the `/$v
 
 This returns the following response:
 
-```Cars```
+```Oldtimer supercar```
 
 # Accessing binary stream
 
