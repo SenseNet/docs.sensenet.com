@@ -15,6 +15,8 @@ import {LanguageContext} from '../../context/LanguageContext'
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
+  const code = children.split('\n')[1];
+  const showNote = code.startsWith('GET') || code.startsWith('PUT') || code.startsWith('PATCH') || code.startsWith('DELETE');
   return (
     <Typography
       component="div"
@@ -33,7 +35,8 @@ const TabPanel = (props) => {
         <ReactMarkdown
     source={children}
     renderers={{ code: CodeBlock }}
-/>
+        />
+        {showNote && <Box className="rawNote"> &#128712; Special characters should be URL encoded </Box>}
 </Box>}
     </Typography>
   );
@@ -110,19 +113,17 @@ const TabStrip = (props) => {
               }}
         >
             { langs.map((lang, index) =>{
-              return <Tab style={{
-              }}
+              return <Tab
                 disableRipple
                 label={lang.title}
                 {...a11yProps(lang.name)}
                 key={`${lang.name}-tab`} />
-              }
-               )
-          }
+            })}
         </Tabs>
         {
         getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
           const text = langs.findIndex(l => l.name.toLowerCase() === lang.toLowerCase())
+
           return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction} style={{ overflow: 'auto' }}>{node.internal.content}</TabPanel>)
           }
         )

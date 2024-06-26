@@ -829,6 +829,18 @@ pre {
   margin-left: auto;
 }
 
+.rawNote {
+  margin-left: 18px;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: max-content;
+  color: rgb(172, 172, 172);
+  position: absolute;
+  bottom: 20px;
+  border: 1px solid rgb(193, 193, 193);
+}
+
 .rightArrow {
   flex: 0 0 auto;
   font-size: 24px;
