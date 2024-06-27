@@ -1,5 +1,5 @@
 ```javascript
 const result = await repository.load({
-      idOrPath: 1284,
-    });
+  idOrPath: 11,
+});
 ```

@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `apple NOT melon`
+    query: `Color:White AND NOT Style:Sedan`
   }
 });
 ```

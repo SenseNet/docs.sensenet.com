@@ -1,3 +1,3 @@
 ```
-url: https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')/CheckAllowedChildTypesOfFolders
+GET https://example.com/OData.svc/Root('Content')/CheckAllowedChildTypesOfFolders
 ```

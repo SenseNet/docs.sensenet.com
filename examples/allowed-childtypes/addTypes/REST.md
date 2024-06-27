@@ -1,7 +1,5 @@
 ```
-url: "/OData.svc/Root/Content('IT')/AddAllowedChildTypes",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    "contentTypes": ["Task", "Image"]
-  }) + "]",
+POST https://example.com/OData.svc/Root('Content')/AddAllowedChildTypes
+
+models=[{"contentTypes":["Image","CalendarEvent","Task"]}]
 ```

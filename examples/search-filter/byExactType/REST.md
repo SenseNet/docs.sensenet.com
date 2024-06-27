@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$filter=ContentType eq 'Folder'
+GET https://example.com/OData.svc/Root/Content/Cars?metadata=no&$filter=ContentType eq 'Car'
 ```

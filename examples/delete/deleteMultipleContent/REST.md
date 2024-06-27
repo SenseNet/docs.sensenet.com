@@ -1,11 +1,12 @@
 ```
-url: "/OData.svc/Root/Content('IT')/DeleteBatch",
-body: {
+POST https://example.com/OData.svc/('Root')/DeleteBatch?metadata=no
+
+models=[{
+  "permanent":true,
   "paths":[
-    "/Root/Content/IT/Document_Library/Chicago/100Pages.docx",
-    "/Root/Content/IT/Document_Library/Chicago/VehicleLog.xlsx",
-    "/Root/Content/IT/Document_Library/Chicago/SalesTraining.pptx",
-    "/Root/Content/IT/Document_Library/Chicago/ComeCelebrate.pdf"
-    ]
-}
+    "/Root/Content/Cars/AAXY123",
+    "/Root/Content/Cars/AAXY852",
+    "/Root/Content/Cars/AAXY246"
+  ]
+}]
 ```

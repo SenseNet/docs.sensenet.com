@@ -1,4 +1,4 @@
 ```csharp
-var content = repository.CreateContent("/Root/Content/IT", "Folder", "My new folder");
+var content = repository.CreateContent("/Root/Content/Cars", "Folder", "New cars");
 await content.SaveAsync(cancel);
 ```

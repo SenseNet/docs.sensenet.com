@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadContentAsync(new LoadContentRequest
 {
-    Path = "/Root/Content/IT",
+    Path = "/Root/Content/Cars",
     Expand = new[] { "AllowedChildTypes" }
 }, cancel)
 ```

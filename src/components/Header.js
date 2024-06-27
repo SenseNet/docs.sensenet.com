@@ -120,10 +120,6 @@ const Header = ({location}) => (
                 })}
               </ul>
             </div>
-            <div className={'hiddenMobile whatsNew'} id="olvy-trigger">
-                <div className="divider"></div>
-                <Notifications />
-            </div>
           </nav>
         </div>
       );

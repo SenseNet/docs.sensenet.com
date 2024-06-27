@@ -1,8 +1,8 @@
 ```javascript
 const response = await repository.patch({
-  idOrPath: '/Root/Content/IT/Calendar/Release',
+  idOrPath: '/Root/Content/Cars/OT1234',
   content: {
-    StartDate: '2020-03-04 09:30:00',
+    StartDate: '1986-11-21',
   },
 })
 ```

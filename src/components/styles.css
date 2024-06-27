@@ -425,9 +425,6 @@ a:hover {
   color: rgb(59, 69, 78);
   max-width: inherit;
 }
-.mainWrapper img {
-  max-width: inherit;
-}
 .fullWrapper {
   color: rgb(59, 69, 78);
 }
@@ -820,6 +817,28 @@ pre {
   transition: border 200ms ease 0s;
   box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
   text-decoration: none;
+}
+
+.onlyNextBtn {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.onlyNextButtonWrapper {
+  width: 100%;
+  margin-left: auto;
+}
+
+.rawNote {
+  margin-left: 18px;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: max-content;
+  color: rgb(172, 172, 172);
+  position: absolute;
+  bottom: 20px;
+  border: 1px solid rgb(193, 193, 193);
 }
 
 .rightArrow {

@@ -1,8 +1,9 @@
+Under construction
 ```javascript
 const response = await repository.patch({
-  idOrPath: '/Root/Content/IT',
+  idOrPath: '/Root/Content/Cars',
   content: {
-    Customers: ['/Root/Customer1', '/Root/Customer2']
+    Customers: ['/Root/Car1', '/Root/Car2']
   },
 })
 ```

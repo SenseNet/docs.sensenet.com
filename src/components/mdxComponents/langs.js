@@ -1,28 +1,16 @@
 const langs = [
   {
     name: 'rest',
-    title: 'REST',
+    title: 'Raw',
   },
   {
     name: 'dotnet',
-    title: '.NET'
-  },
-  {
-    name: 'js',
-    title: 'JavaScript'
+    title: '.NET Client'
   },
   {
     name: 'js-snclient',
-    title: 'JS client'
+    title: 'JS Client'
   },
-  {
-    name: 'reactjs',
-    title: 'React'
-  },
-  {
-    name: 'react-redux',
-    title: 'Redux'
-  }
 ]
 
 module.exports = langs;

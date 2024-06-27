@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadContentAsync(new LoadContentRequest
 {
-    Path = "/Root/Content/IT",
-    Metadata = MetadataFormat.None
+    Path = "/Root/Content/Cars",
+    Metadata = MetadataFormat.None // None, Minimal, Full (default)
 }, cancel)
 ```

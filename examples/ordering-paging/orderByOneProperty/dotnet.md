@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
-    Path = "/Root/Content/IT/Document_Library",
-    OrderBy = new []{"DisplayName"}
+    Path = "/Root/Content/Cars",
+    OrderBy = new[] {"DisplayName"}
 }, cancel)
 ```

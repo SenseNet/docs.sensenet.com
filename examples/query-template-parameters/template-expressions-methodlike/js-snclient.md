@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `CreationDate:<@@CurrentDate.AddDays(-5)@@`
+    query: `TypeIs:Task AND StartDate:<@@CurrentDate.AddDays(-5)@@`
   }
 });
 ```

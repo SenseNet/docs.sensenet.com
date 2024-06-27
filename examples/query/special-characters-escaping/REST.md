@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/Root/Content/IT?query=Name:\(apps\) .AUTOFILTERS:OFF
+GET https://example.com/OData.svc/Root?query=Name:\(apps\).AUTOFILTERS:OFF
 ```

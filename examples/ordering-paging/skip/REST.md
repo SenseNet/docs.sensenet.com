@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$skip=5
+GET https://example.com/OData.svc/Root/Content/Cars?$skip=5
 ```

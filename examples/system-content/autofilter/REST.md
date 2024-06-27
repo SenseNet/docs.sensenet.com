@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?enableautofilters=true
+GET https://example.com/OData.svc/Root/Content/Cars?enableautofilters=false
 ```

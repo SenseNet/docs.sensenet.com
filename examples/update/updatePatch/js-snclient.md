@@ -1,8 +1,8 @@
 ```javascript
 const response = await repository.patch({
-  idOrPath: '/Root/Content/IT',
+  idOrPath: '/Root/Content/Cars/AAXX123',
   content: {
-    Index: 142
+    Color: 'Rosso Corsa'
   },
 })
 ```

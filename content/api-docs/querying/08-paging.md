@@ -10,7 +10,7 @@ There are a couple of query options that gives you control over your results and
 
 # Limit result count
 
-In most of the cases you will not need all of the content but only a few of them. Following example shows you how to get only the first 10 element in your queries result list:
+In most of the cases you will not need all of the content but only a few of them. Following example shows you how to get only the first 5 element in your queries result list:
 
 <tab category="querying" article="query-paging" example="top" />
 &nbsp;

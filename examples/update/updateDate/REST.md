@@ -1,7 +1,5 @@
 ```
-url: "/OData.svc/Root/Content/IT/Calendar('Release')",
-type: 'PATCH',
-data: "models=[" + JSON.stringify({
-  'StartDate': '2020-03-04 09:30:00',
-}) + "]",
+PATCH https://example.com/OData.svc/Root/Content/Cars/OT1234
+
+models=[{"StartingDate":"1986-11-21T00:00:00"}]
 ```

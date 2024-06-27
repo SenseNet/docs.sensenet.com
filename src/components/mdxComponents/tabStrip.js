@@ -15,6 +15,8 @@ import {LanguageContext} from '../../context/LanguageContext'
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
+  const code = children.split('\n')[1];
+  const showNote = code.startsWith('GET') || code.startsWith('PUT') || code.startsWith('PATCH') || code.startsWith('DELETE');
   return (
     <Typography
       component="div"
@@ -25,7 +27,6 @@ const TabPanel = (props) => {
       {...other}
       style={{
         marginTop: '20px',
-        paddingLeft: '10px',
         width: '100%',
         overflow: 'auto',
       }}
@@ -34,7 +35,8 @@ const TabPanel = (props) => {
         <ReactMarkdown
     source={children}
     renderers={{ code: CodeBlock }}
-/>
+        />
+        {showNote && <Box className="rawNote"> &#128712; Special characters should be URL encoded </Box>}
 </Box>}
     </Typography>
   );
@@ -92,7 +94,7 @@ const TabStrip = (props) => {
           backgroundColor: 'rgb(245, 242, 240)',
           position: 'relative'
         }}>
-        <CopyToClipBoard content={copyText}  />
+            <CopyToClipBoard lang={lang} data={data} example={props.example} />
         <Tabs
           value={langs.findIndex(l => l.name === lang)}
           onChange={(event, value) => toggleLanguage(langs[value].name)}
@@ -100,22 +102,28 @@ const TabStrip = (props) => {
           textColor="primary"
           orientation="vertical"
           variant="scrollable"
-          style={{borderRight: `1px solid ${theme.palette.divider}`}}
+            style={{
+              left: 0,
+              width: 198,
+                borderRight: `1px solid ${theme.palette.divider}`,
+                display: 'flex',
+                flexWrap: 'wrap',
+                flexDirection: 'row',
+                alignContent: 'center',
+              }}
         >
             { langs.map((lang, index) =>{
-               return <Tab style={{minWidth: '120px',
-               fontSize: '0.775rem',
-               minHeight: '40px'}} disableRipple label={lang.title} {...a11yProps(lang.name)} key={`${lang.name}-tab`} />
-              }
-               )
-          }
+              return <Tab
+                disableRipple
+                label={lang.title}
+                {...a11yProps(lang.name)}
+                key={`${lang.name}-tab`} />
+            })}
         </Tabs>
         {
         getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
           const text = langs.findIndex(l => l.name.toLowerCase() === lang.toLowerCase())
-          if(i === text){
-           setCopyText(node.internal.content)
-          }
+
           return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction} style={{ overflow: 'auto' }}>{node.internal.content}</TabPanel>)
           }
         )

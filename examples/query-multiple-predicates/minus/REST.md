@@ -1,3 +1,3 @@
-```javascript
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=upgrade -demo
+```
+GET https://example.com/OData.svc/Root?query=+Color:White -Style:Sedan
 ```

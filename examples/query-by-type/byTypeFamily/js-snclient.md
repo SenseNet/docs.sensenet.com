@@ -1,6 +1,6 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
     query: `TypeIs:Folder`
   }

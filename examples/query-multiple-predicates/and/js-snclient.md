@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `EventType:Demo AND EventType:Meeting`
+    query: `Style:Sedan AND Color:White`
   }
 });
 ```

@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `+TypeIs:Task +DueDate:@@NextWeek@@ +AssignedTo:'@@CurrentUser@@'`
+    query: `+TypeIs:Task +DueDate:>@@NextWeek@@ +AssignedTo:'@@CurrentUser@@'`
   }
 });
 ```

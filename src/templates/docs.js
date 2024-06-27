@@ -96,8 +96,11 @@ export default class MDXRuntimeTest extends Component {
           }
 
           const prefix = cur.split("/").slice(0, -1).join('/');
+          const preprefix = cur.split("/").slice(0, -2).join('/')
           if (prefix && forcedNavOrder.find(url => url === prefix)) {
             return { ...acc, [prefix]: [...acc[prefix], cur] };
+          } else if (preprefix && forcedNavOrder.find(url => url === preprefix)) {
+            return { ...acc, [preprefix]: [...acc[preprefix], cur] };
           } else {
             return { ...acc, items: [...acc.items, cur] };
           }

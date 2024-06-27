@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-    path: '/Root/Content/IT/Document_Library',
-    oDataOptions: {
-      filter: 'Index gt 11'
-    }
-  })
+  path: '/Root/Content/Cars',
+  oDataOptions: {
+    filter: 'Price gt 1000000'
+  }
+})
 ```

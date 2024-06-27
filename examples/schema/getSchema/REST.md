@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/odata.svc/('Root')/GetSchema
+GET https://example.com/OData.svc/('Root')/GetSchema
 ```

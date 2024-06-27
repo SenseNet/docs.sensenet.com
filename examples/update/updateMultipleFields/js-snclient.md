@@ -1,9 +1,9 @@
 ```javascript
 const response = await repository.patch({
-  idOrPath: '/Root/Content/IT',
+  idOrPath: '/Root/Content/Cars/OT1234',
   content: {
-    Name: 'NewName',
-    Index: 142
+    Model: '126p',
+    Color: 'Dark red'
   },
 })
 ```

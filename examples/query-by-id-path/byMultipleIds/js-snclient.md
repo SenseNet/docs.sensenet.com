@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root/Content/Cars",
   oDataOptions: {
-    query: "Id:(1607 1640 1645)"
+    query: "Id:(7 8 11)"
   }
 });
 ```

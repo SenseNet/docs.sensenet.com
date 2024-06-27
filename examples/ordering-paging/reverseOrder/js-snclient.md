@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-    path: '/Root/Content/IT/Document_Library',
-    oDataOptions: {
-        orderby: [['CreationDate', 'desc']]
-      }
-  })
+  path: '/Root/Content/Cars',
+  oDataOptions: {
+    orderby: [['StartingDate', 'desc']]
+  }
+})
 ```

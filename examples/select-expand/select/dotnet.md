@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadContentAsync(new LoadContentRequest
 {
-	Path = "/Root/Content/IT",
-	Select = new[] { "DisplayName", "Description" }
+	Path = "/Root/Content/Cars/AAKE452",
+	Select = new[] { "Make", "Model", "Color" }
 }, cancel)
 ```

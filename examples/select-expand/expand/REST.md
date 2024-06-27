@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')?$expand=CreatedBy
+GET https://example.com/OData.svc/Root/Content/Cars('OT1234')?$expand=CreatedBy
 ```

@@ -26,23 +26,23 @@ In the following examples you will see how you can query by the most common fiel
 
 # Query by a text field
 
-The following query returns the content that's Name is BusinessPlan.docx
+The following query returns the content that's `Color` is `Yellow`
 
 <tab category="querying" article="query-by-field" example="byShortText" />
 
-Following query returns the content that's Description field contains the word 'company' (notice that it is actually a [wildcard search](/api-docs/querying#wildcardsearch))
+Following query returns the content that's `DisplayName` field contains the word 'Astra' (notice that it is actually a [wildcard search](/api-docs/querying#wildcardsearch))
 
 <tab category="querying" article="query-by-field" example="byLongText" />
 
 # Query by a number field
 
-Following example shows how to get the list of tasks that's completion rate is lower than 50% (their Completion field's value is less than 50):
+Following example shows how to get the list of cars that's `Price` lower than 1 000 000:
 
 <tab category="querying" article="query-by-field" example="byNumber" />
 
 # Query by a boolean field
 
-You can also query by a boolean field as it is shown in the following example. The query returns the list of critical workspaces (e.g. content that's IsCritical field's value is `true`).
+You can also query by a boolean field as it is shown in the following example. The query returns the list of folders (e.g. content that's `IsFolder` field's value is `true`).
 
 <tab category="querying" article="query-by-field" example="byBoolean" />
 
