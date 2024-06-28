@@ -39,4 +39,3 @@ The list above contains all the group memberships without filtering out the indi
 It is a common use case to list the workspaces that are related to a user. The closest workspace is stored on every content as a reference, so you get the required info with simply expanding the `Workspace` field. Following example shows you how to get the list of workspaces where the given user is a member of a local group.
 
 <tab category="users-and-groups" article="memberships" example="workspaceMembers" />
-

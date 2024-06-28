@@ -17,6 +17,20 @@ As everything else in sensenet, queries are also contents made with a special co
 A private query means it will be available only for the current user because these type of queries are saved to the current user's user profile (by the way it is a workspace too). With the next example you will save a private query:
 
 <tab category="collaboration" article="saved-queries" example="savePrivateQuery" />
+&nbsp;
+<note severity="info">The use of user profiles is not permitted by default. Profiles can be enabled in the appsettings.json file of the server application.</note>
+
+```json
+{
+  ...
+  "sensenet": {
+    ...
+    "identityManagement": {
+      "UserProfilesEnabled":  true 
+    } 
+  }
+}
+```
 
 # Get saved queries
 

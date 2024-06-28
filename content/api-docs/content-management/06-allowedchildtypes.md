@@ -47,9 +47,3 @@ The next example shows you how to remove a type from the given content's allowed
 <tab category="content-management" article="allowed-childtypes" example="removeTypes" />
 &nbsp;
 <note severity="info">If the list after the remove operation and the list on the matching CTD are the same, the local list will be cleared.</note>
-
-## Check allowed childtypes
-
-With the next example you are able to get all contents/paths where `AllowedChildTypes` list is empty. Paths are categorized by content type names. This is a helper function that can be used to get an overview of your system.
-
-<tab category="content-management" article="allowed-childtypes" example="checkAllowedTypes" />
