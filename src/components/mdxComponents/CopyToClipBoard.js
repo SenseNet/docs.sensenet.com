@@ -15,6 +15,9 @@ const CopyToClipBoard = (props) => {
 
   const getCopyText = () => {
     textToCopy = nodes.find(n => n.name.toLowerCase() === lang.toLowerCase() && n.relativeDirectory.split('/')[1] === example).internal.content;
+    const codeBlockRegex = /```[a-z]*\n([\s\S]*?)```/;
+    const match = textToCopy.match(codeBlockRegex);
+    textToCopy = match ? match[1].trim() : textToCopy;
     copy();
   }
 
