@@ -90,7 +90,7 @@ const TabStrip = (props) => {
           backgroundColor: theme.palette.background.paper,
           flexGrow: 1,
           display: 'flex',
-          height: 229,
+          height: 333,
           backgroundColor: 'rgb(245, 242, 240)',
           position: 'relative'
         }}>

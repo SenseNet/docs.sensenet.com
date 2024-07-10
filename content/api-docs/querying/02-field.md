@@ -64,7 +64,7 @@ It is also possible to query by a choice field. Since choice options could have 
 
 ```
 
-In the following example you can see that if you simply use a verb as a possible value of a choice field it will search for it as a choice option's text, in this case for 'British shorthair' cats.
+In the following example you can see that if you simply use a verb as a possible value of a choice field it will search for it as a choice option's text, in this case for 'Internal audit' memos.
 
 <tab category="querying" article="query-by-field" example="byChoiceLocalized" />
 
