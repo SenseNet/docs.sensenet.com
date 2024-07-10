@@ -830,7 +830,6 @@ pre {
 }
 
 .rawNote {
-  margin-left: 18px;
   background-color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -838,6 +837,7 @@ pre {
   color: rgb(172, 172, 172);
   position: absolute;
   bottom: 20px;
+  right: 20px;
   border: 1px solid rgb(193, 193, 193);
 }
 
