@@ -1,5 +1,5 @@
 ```csharp
-var content = await Content.LoadAsync("/Root/Content/IT");
-content["AllowedChildTypes"] = new[] {"ImageLibrary", "DocumentLibrary", "TaskList"};
-await content.SaveAsync();
+var content = await repository.LoadContentAsync("/Root/Content", cancel);
+content["AllowedChildTypes"] = new[] { "ImageLibrary", "DocumentLibrary", "TaskList" };
+await content.SaveAsync(cancel);
 ```

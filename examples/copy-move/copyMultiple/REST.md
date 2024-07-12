@@ -1,11 +1,11 @@
 ```
-url: "/OData.svc/Root/Content/IT/Document_Library/Chicago/CopyBatch",
-type: 'POST',
-data: "models=[" + JSON.stringify({
-    'targetPath': '/Root/Content/IT/Document_Library/Munich',
-    'paths': [
-      '/Root/Content/IT/Document_Library/Chicago/100Pages.pdf',
-      '/Root/Content/IT/Document_Library/Chicago/400Pages.pdf'
-    ]
-  }) + "]",
+POST https://example.com/OData.svc/('Root')/CopyBatch
+
+models=[{
+  "targetPath":"/Root/Content/Cars/Backup",
+  "paths":[
+    "/Root/Content/Cars/AAKE452",
+    "/Root/Content/Cars/KLT1159"
+  ]
+}]
 ```

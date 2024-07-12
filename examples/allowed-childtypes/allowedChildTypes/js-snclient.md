@@ -1,4 +1,4 @@
 ```javascript
 const result = await repository.allowedChildTypes
-  .getImplicit("/Root/Content/IT");
+  .getImplicit({idOrPath: "/Root/Content"});
 ```

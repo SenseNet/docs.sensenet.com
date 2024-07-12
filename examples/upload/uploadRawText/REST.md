@@ -1,12 +1,13 @@
 ```
-url: "/OData.svc/Root/Content/IT('Document_Library')/Upload",
-type: 'POST',
-data: {
-  "ContentType": "File",
-  "FileName": "MyMarkdown.md",
-  "Overwrite": true,
-  "UseChunk": false,
-  "PropertyName": "Binary",
-  "FileText": " *** file text data ***"
-},
+POST https://example.com/OData.svc/Root/Content('Documents')/Upload?metadata=no
+
+models=[{
+  "FileName":"MyFile.txt",
+  "ContentType":"File",
+  "PropertyName":"Binary",
+  "UseChunk":false,
+  "Overwrite":true,
+  "FileLength":24,
+  "FileText":"**** file text data ****"
+}]
 ```

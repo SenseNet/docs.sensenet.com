@@ -1,8 +1,8 @@
 ```javascript
 const response = await repository.patch({
-  idOrPath: '/Root/Content/IT/Calendar/Release',
+  idOrPath: '/Root/Content/Cars/OT1234',
   content: {
-    EventType: ['Demo','Meeting'],
+    Style: ['Roadster'],
   },
 })
 ```

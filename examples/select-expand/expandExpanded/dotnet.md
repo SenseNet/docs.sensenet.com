@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadContentAsync(new LoadContentRequest
 {
-    Path = "/Root/Content/IT",
+    Path = "/Root/Content/Cars/OT1234",
     Expand = new[] { "CreatedBy/CreatedBy" },
 }, cancel)
 ```

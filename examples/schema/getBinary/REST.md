@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/binaryhandler.ashx?nodeid=1064&propertyname=Binary&checksum=13576519
+GET https://example.com/binaryhandler.ashx?nodepath=/Root/System/Schema/ContentTypes/GenericContent/Car&propertyname=Binary
 ```

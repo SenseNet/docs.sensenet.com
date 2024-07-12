@@ -1,7 +1,5 @@
 ```
-url: "/OData.svc/Root/Content/IT/Calendar('Release')",
-type: 'PATCH',
-data: "models=[" + JSON.stringify({
-  'EventType': ['Demo', 'Meeting'],
-}) + "]",
+PATCH https://example.com/OData.svc/Root/Content/Cars/OT1234
+
+models=[{"Style":["Roadster"]}]
 ```

@@ -423,10 +423,7 @@ a:hover {
 }
 .mainWrapper {
   color: rgb(59, 69, 78);
-  max-width: 750px;
-}
-.mainWrapper img {
-  max-width: 750px;
+  max-width: inherit;
 }
 .fullWrapper {
   color: rgb(59, 69, 78);
@@ -820,6 +817,28 @@ pre {
   transition: border 200ms ease 0s;
   box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
   text-decoration: none;
+}
+
+.onlyNextBtn {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.onlyNextButtonWrapper {
+  width: 100%;
+  margin-left: auto;
+}
+
+.rawNote {
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: max-content;
+  color: rgb(172, 172, 172);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid rgb(193, 193, 193);
 }
 
 .rightArrow {
@@ -1341,6 +1360,21 @@ display: inline-block;
   min-height: 4px !important;
 }
 
+.langMenuIcon {
+  margin-right: '.5em';
+  opacity: .8;
+  color: rgba(0, 0, 0, 0.87);
+  max-height: '1em';
+  line-height: '1em';
+}
+
+.langMenuIconActive {
+  margin-right: '.5em';
+  color: #13a5ad;
+  opacity: .8;
+  max-height: '1em';
+  line-height: '1em';
+}
 
 
 .exampleCards, .integrationCards {
@@ -1436,6 +1470,16 @@ display: inline-block;
 
 .integrationCard .iconContainer img {
   width: 50px;
+}
+
+.noTableOfContents {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .hideTableOfContents {
+    display: none !important;
+  }
 }
 
 @media (max-width: 767px) {

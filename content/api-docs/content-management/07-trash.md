@@ -16,7 +16,7 @@ Trash is a workspace content (/Root/Trash) so that you are able to disable it by
 
 ## Disable Trash for a specific container
 
-It is also possible to switch off Trash for a container (folder or list) by changing the affected content's `TrashDisabled` field's value to false. This field is available by default on every content (it is defined on GenericContent). In the next example you can see how to switch off trash functionality for a workspace:
+It is also possible to switch off Trash for a container (folder or list) by changing the affected content's `TrashDisabled` field's value to false. This field is available by default on every content (it is defined on GenericContent). In the next example you can see how to switch off trash functionality for a content:
 
 <tab category="content-management" article="trash" example="disableTrashOnAContent" />
 

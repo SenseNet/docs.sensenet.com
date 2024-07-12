@@ -1,5 +1,5 @@
 ```csharp
-await repository.LoadContentAsync("/Root/Content/IT", cancel)
+await repository.LoadContentAsync("/Root/Content/Cars", cancel);
 // or
-await repository.LoadContentAsync<MyContent>("/Root/Content/IT", cancel)
+await repository.LoadContentAsync<Folder>("/Root/Content/Cars", cancel);
 ```

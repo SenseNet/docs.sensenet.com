@@ -1,11 +1,13 @@
 ```csharp
-dynamic content = await RESTCaller.GetContentAsync(new ODataRequest
+dynamic content = await repository.LoadContentAsync(new LoadContentRequest
 {
-    Path = "/Root/Content/IT",
+    Path = "/Root/Content/Cars",
     Expand = new[] { "Actions" },
     Select = new[] { "Actions" },
     Parameters = { { "scenario", "ContextMenu" } }
-});
-//foreach(var item in content.Actions)
-//    Console.WriteLine(item.Name);
+}, cancel);
+
+var actionNames = new List<string>();
+foreach (var item in content.Actions)
+    actionNames.Add(item.Name.ToString());
 ```

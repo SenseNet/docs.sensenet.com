@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=tru?k
+GET https://example.com/OData.svc/Root?query=Type:Car AND Name:'AA?E642'
 ```

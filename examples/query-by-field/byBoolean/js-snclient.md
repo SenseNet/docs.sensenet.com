@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root/Content/Cars",
   oDataOptions: {
-    query: "IsCritical:true"
+    query: "InFolder:/Root/Content/Cars AND IsFolder:true"
   }
 });
 ```

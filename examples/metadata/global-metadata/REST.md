@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/$metadata
+GET https://example.com/OData.svc/$metadata
 ```

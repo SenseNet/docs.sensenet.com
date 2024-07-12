@@ -1,8 +1,7 @@
 ```javascript
 const result = await repository.loadCollection({
-      path: '/Root/Content/IT',
+      path: '/Root/Content/Cars/OT1234',
       oDataOptions: {
-        select: ['CreatedBy/FullName'],
         expand: ['CreatedBy/CreatedBy']
       }
     });

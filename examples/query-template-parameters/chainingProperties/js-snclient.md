@@ -1,8 +1,9 @@
+Under construction
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root",
   oDataOptions: {
-    query: `TypeIs:User +CreationDate:<@@CurrentUser.Manager.CreationDate@@`
+    query: `TypeIs:Task +CreationDate:<@@CurrentUser.Manager.CreationDate@@`
   }
 });
 ```

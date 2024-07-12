@@ -11,7 +11,7 @@ In this tutorial we will connect to a sensenet service and load a collection of 
 <note severity="info">If you do not have a repository yet, please head over to <a href="https://www.sensenet.com">www.sensenet.com</a> to get one.</note>
 <div>&nbsp;</div>
 
-If you already have an application set up with the client API, you can learn more about how to work with content items using this client API if you visit the [following article]("/tutorials/content/manage-content-dotnet").
+If you already have an application set up with the client API, you can learn more about how to work with content items using this client API if you visit the [following article](/tutorials/content/manage-content-dotnet).
 
 ## Create a new console application
 Create a new .Net console application either in command line (`dotnet new`), Visual Studio or VS Code.
@@ -62,7 +62,7 @@ var host = Host.CreateDefaultBuilder()
 ### Configuration
 The registration code above loads connection values from configuration. It is also possible to simply set them here in source code, but making these things configurable is always a good idea.
 
-A sample `appsettings.json` file. 
+A sample `appsettings.json` file.
 
 ```json
 {
@@ -91,7 +91,7 @@ A sensenet repository service is represented by an **IRepository** object. This 
 var repositoryCollection = host.Services.GetRequiredService<IRepositoryCollection>();
 
 // Get the repository instance. This instance is already set up with
-// authentication, can be pinned or you can get it using this API 
+// authentication, can be pinned or you can get it using this API
 // any number of times (as it is cached in the background).
 var repository = await repositoryCollection.GetRepositoryAsync(CancellationToken.None);
 ```
@@ -103,7 +103,7 @@ First we want to load all child items in an existing folder.
 var children = await repository.LoadCollectionAsync(repositoryPath, CancellationToken.None);
 ```
 
-Iterate through the collection. 
+Iterate through the collection.
 
 ```csharp
 foreach (Content child in children)
@@ -113,7 +113,7 @@ foreach (Content child in children)
 }
 ```
 
-To learn more about how to work with content items using this client API, please visit the [following article]("/tutorials/content/manage-content-dotnet").
+To learn more about how to work with content items using this client API, please visit the [following article](/tutorials/content/manage-content-dotnet).
 
 ## Connect to multiple repositories
 It is possible to register and access multiple repositories using this client API. In that case you have to configure the repositories by name:
@@ -139,4 +139,4 @@ var repository1 = await repositoryCollection.GetRepositoryAsync("repo1", Cancell
 var repository2 = await repositoryCollection.GetRepositoryAsync("repo2", CancellationToken.None);
 ```
 
-Connecting to multiple repositories is usually required in a migration or import/export scenario. In that case please consider using the [Import-export tool]("/tutorials/content/import-export") or library that adds more features specifically for this use case.
+Connecting to multiple repositories is usually required in a migration or import/export scenario. In that case please consider using the [Import-export tool](/tutorials/content/import-export) or library that adds more features specifically for this use case.

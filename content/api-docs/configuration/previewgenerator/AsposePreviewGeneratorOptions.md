@@ -6,7 +6,6 @@ metaDescription: "AsposePreviewGeneratorOptions"
 
 ## AsposePreviewGeneratorOptions
 
-#endregion
 
 ### Configuration example:
 ``` json

@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$filter=CreationDate gt datetime'2019-03-26T03:55:00'
+GET https://example.com/OData.svc/Root/Content/Cars?$filter=StartingDate gt datetime'2020-01-12T03:55:00'
 ```

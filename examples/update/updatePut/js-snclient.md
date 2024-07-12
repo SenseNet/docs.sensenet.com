@@ -1,8 +1,9 @@
 ```javascript
-const response = await repository.put({
-  idOrPath: '/Root/Content/IT',
+const result = await repository.put({
+  idOrPath: '/Root/Content/Cars/OT1234',
   content: {
-    Manager: '/Root/IMS/Public/businesscat'
+    DisplayName: 'Fiat 126',
+    Color: "Yellow"
   },
 })
 ```

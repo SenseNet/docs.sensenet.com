@@ -25,7 +25,7 @@ In sensenet, the delivery of content happens through APIs. Your solution request
 
 Due to its API-first approach, it is easy to integrate and gives more freedom to the developer to choose the database, framework, and programming language at all level of the application development, whether it is a web, desktop or mobile development project.
 
-You can either install sensenet in your own environment or use sensenet as a service ([SNaaS](/concepts/introduction/04-what-is-snaas)), gaining access to a sensenet instance where we store and host all your content and data securely. SNaaS saves you time and energy by removing the need for installation and all maintenance-related tasks, ensuring easy onboarding, updates, and patches.
+You can either install sensenet in your own environment or use sensenet as a service, gaining access to a sensenet instance where we store and host all your content and data securely. SNaaS saves you time and energy by removing the need for installation and all maintenance-related tasks, ensuring easy onboarding, updates, and patches.
 
 As an open-source software, the source code of sensenet backend and frontend components is fully public and available on GitHub. If you want to fully understand how it works or help us improve sensenet by fixing a bug or contributing a new feature, feel free to do it in the [GitHub repositories under Sense/Net organization](https://github.com/SenseNet).
 

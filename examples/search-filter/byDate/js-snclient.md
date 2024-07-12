@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-    path: '/Root/Content/IT/Document_Library',
-    oDataOptions: {
-      filter: "CreationDate gt datetime'2019-03-26T03:55:00'"
-    }
-  })
+  path: '/Root/Content/Cars',
+  oDataOptions: {
+    filter: "StartingDate gt datetime'2020-01-12T03:55:00'"
+  }
+})
 ```

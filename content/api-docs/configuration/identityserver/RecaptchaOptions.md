@@ -37,7 +37,7 @@ sensenet__Captcha__SiteKey="_string_value_"
 sensenet__Captcha__AcceptedScore="_float_value_"
 ```
 ### Properties:
-- **ProjectId** (`string`): //public string Type { get; set; } // from Google Service account
+- **ProjectId** (`string`): 
 - **PrivateKeyId** (`string`): 
 - **PrivateKey** (`string`): 
 - **ClientEmail** (`string`): 

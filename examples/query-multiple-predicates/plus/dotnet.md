@@ -1,6 +1,4 @@
 ```csharp
-var result = await Content.QueryAsync("+EventType:Demo AND +EventType:Meeting");
-
-// foreach (dynamic content in result)
-//     Console.WriteLine($"{content.Id} {content.Name}");
+var result = await repository.QueryAsync(
+    new QueryContentRequest { ContentQuery = "+Color:White +Style:Sedan" }, cancel);
 ```

@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$orderby=Id asc
+GET https://example.com/OData.svc/Root/Content/Cars?$orderby=Price asc
 ```

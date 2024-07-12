@@ -1,6 +1,4 @@
 ```csharp
-var result = await Content.QueryAsync("apple OR melon");
-
-// foreach (dynamic content in result)
-//     Console.WriteLine($"{content.Id} {content.Name}");
+var result = await repository.QueryAsync(
+    new QueryContentRequest {ContentQuery = "Color:White OR Color:Red"}, cancel);
 ```

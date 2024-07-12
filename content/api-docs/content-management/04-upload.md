@@ -59,21 +59,3 @@ Following examples shows how to create a simple text file adding its raw text (t
 # Update a Settings file
 
 <tab category="content-management" article="upload" example="updateSettings" />
-
-# Upload whole files instead of chunks
-
-If the files are small, you may upload the whole file in one round instead of chunks. In the initial request you can set the UseChunk parameter to false and send the whole file in the next request. It is possible to avoid the initial request. In this case you have to send the whole file and the necessary parameters according to the second request specification (see the OData action article for more info). The chunk token in this case needs to be the following `0*0*False`.
-
-Following example shows you how the whole request looks like in this case:
-
-<tab category="content-management" article="upload" example="uploadFileNoChunks" />
-
-# Upload a structure
-
-<tab category="content-management" article="upload" example="uploadStructure" />
-
-# Interrupted uploads
-
-If the upload process was interrupted, the database may contain a partially uploaded file. If the file existed before the upload operation, you can simply revert to the previous version by choosing the Undo changes action. Partially uploaded new files can only be deleted. If you try to upload the file again, the upload process will be restarted and the whole file will be uploaded again from the beginning. It is only possible to continue a previously interrupted upload process if you have the **chunk token** received from the first request and know the exact position where the upload process stopped. sensenet offers a possibility to resume a previously interrupted upload process.
-
-<tab category="content-management" article="upload" example="uploadResume" />

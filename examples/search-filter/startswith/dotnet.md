@@ -1,7 +1,7 @@
 ```csharp
 await repository.LoadCollectionAsync(new LoadCollectionRequest
 {
-    Path = "/Root/Content/IT/Document_Library",
-    ChildrenFilter = "startswith(Name, 'Document') eq true"
+    Path = "/Root/Content/Cars",
+    ChildrenFilter = "startswith(DisplayName, 'Toyota') eq true"
 }, cancel)
 ```

@@ -1,6 +1,4 @@
 ```csharp
-var result2 = await Content.QueryAsync("Description:*company*");
-
-//foreach (dynamic content in result2)
-//    Console.WriteLine(content.Name);
+var result = await repository.QueryAsync(
+    new QueryContentRequest {ContentQuery = "DisplayName:*Astra*"}, cancel);
 ```

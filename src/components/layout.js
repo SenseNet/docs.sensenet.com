@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import ThemeProvider from "./themeProvider";
@@ -39,7 +39,19 @@ const Content = styled('main')`
   margin: 0px 88px;
   margin-top: 3rem;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1200px) {
+    padding-left: 0;
+    margin: 0 40px;
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+    margin: 0 10px;
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 767px) {
     padding-left: 0;
     margin: 0 10px;
     margin-top: 3rem;
@@ -47,6 +59,22 @@ const Content = styled('main')`
 `;
 
 const MaxWidth = styled('div')`
+
+  max-width: calc(100vw - 715px);
+
+  @media only screen and (max-width: 1200px) {
+    max-width: calc(100vw - 619px);
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+    margin: 0 10px;
+    max-width: calc(100vw - 345px);
+  }
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100vw;
+  }
 
   @media only screen and (max-width: 50rem) {
     width: 100%;
@@ -61,6 +89,13 @@ const LeftSideBarWidth = styled('div')`
 const RightSideBarWidth = styled('div')`
   width: 224px;
   min-width: 224px;
+
+  @media only screen and (max-width: 992px) {
+    position: absolute:
+    top: 100px;
+    left: 100px;
+  }
+
 `;
 const Layout = ({ children, location }) => {
 
@@ -68,13 +103,21 @@ const Layout = ({ children, location }) => {
 
     if (typeof window != 'undefined') {
       localStorage.setItem('chosenLanguage', lang)
-     }
+    }
+    changeUrl(lang);
 
     setState(state => ({
       lang: lang,
       toggleLanguage
     }));
   };
+
+  const changeUrl = (lang) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('chosenLanguage', lang);
+    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({ path: newUrl }, '', newUrl);
+  }
 
   const language = () => {
     let params = new URLSearchParams(window.location.search);
@@ -97,9 +140,18 @@ const Layout = ({ children, location }) => {
   }
 
   const [state, setState] = React.useState({
-    lang: language(),
+    lang: 'rest',
     toggleLanguage: toggleLanguage,
   });
+
+  useEffect(() => {
+    setState((state) => {
+      return {
+        ...state,
+        lang: language()
+      }
+    })
+  }, [])
 
   let container
 

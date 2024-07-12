@@ -14,7 +14,7 @@ This means you **do not have to create models** for your content types if you do
 > We also plan to offer built-in content types for well-known business types in the future (like `User` or `Group`). Please check out our built-in types first before creating your custom model.
 
 ## Creating a strongly typed model
-In this article we will mainly use the strongly typed (generic) methods of the repository API. To see examples for the most common basic Content API, check out the [API docs documentation](/api-docs/basic-concepts). 
+In this article we will mainly use the strongly typed (generic) methods of the repository API. To see examples for the most common basic Content API, check out the [API docs documentation](/api-docs/basic-concepts).
 
 To create a client model, please create it in the following form:
 
@@ -119,8 +119,8 @@ var memo = await repository.LoadContentAsync<Memo>(new LoadContentRequest
 
 The starting point of these operations is a single content defined in the request object which serves as the root of the query. But loading a collection and querying contents have different scopes:
 
-- **collection loading**: applies only to direct children 
-- **querying** applies to the whole subtree 
+- **collection loading**: applies only to direct children
+- **querying** applies to the whole subtree
 
 This means `LoadCollectionAsync` always applies only to children even if `ContentQuery` is used in the request.
 
@@ -150,7 +150,7 @@ var memoCount = await repository.GetContentCountAsync(new LoadCollectionRequest
 ```
 
 #### Querying contents
- 
+
 ```csharp
 var memos = await repository.QueryAsync<Memo>(new QueryContentRequest
 {
@@ -192,6 +192,52 @@ var request = new ODataRequest(repository.Server)
 var result = await repository.GetResponseStringAsync(request, HttpMethod.Get, cancel);
 ```
 
+## Working with Content actions
+Every content has its own [actions and functions](/api-docs/basic-concepts/09-actions) that you can call from the client. The repository API lets you call these actions by name and pass parameters to them. The result can be a strongly typed object that represents the JSON response returned by the repository.
+
+### Calling a function
+A function is an operation that is called using the ```GET``` HTTP method and does not change the state of the repository.
+
+```csharp
+var request = new OperationRequest()
+{
+	ContentId = 2,
+	OperationName = "GetPermissions"
+};
+var result = await repository.InvokeFunctionAsync<GetPermissionsResponse>(request, CancellationToken.None);
+```
+
+### Calling an action
+An action is an operation that is called using the ```POST``` HTTP method and may change the state of the repository.
+
+```csharp
+var postData = new { param1 = "value" };
+var request = new OperationRequest()
+{
+	ContentId = 2,
+	OperationName = "ActionName",
+	PostData = postData
+};
+
+await repository.InvokeActionAsync(request, CancellationToken.None);
+```
+
+### Handling custom operation responses
+There is an API for handling custom operation responses. You can use it to call an operation and get the response as a string. You can also pass an HTTP method to the API.
+
+```csharp
+var request = new OperationRequest()
+{
+	ContentId = 2,
+	OperationName = "GetPermissions"
+};
+
+await repository.ProcessOperationResponseAsync(request, HttpMethod.Get,
+	(response) => {
+		// process response string
+	}, CancellationToken.None);
+```
+
 ## Advanced data binding in Models
 If you create a model class for your type, most of the properties will be simple types (e.g. an integer or a string). There are cases however when a content field is more complex. In this section you will see examples for those cases and how can developers make field data conversions.
 
@@ -219,10 +265,10 @@ If the JSON response and the target object can be matched with simple serializat
   }
 }
 ```
-The type used in the strongly typed model's property could be the following. 
+The type used in the strongly typed model's property could be the following.
 
 > Note that the property names are modified declaratively.
- 
+
 ```csharp
 private class CustomPropertyType
 {

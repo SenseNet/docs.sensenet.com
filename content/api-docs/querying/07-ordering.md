@@ -21,7 +21,7 @@ Please note that sorting works on those indexed fields of the content that the q
 
 # Order by a field - lowest to highest
 
-Following query returns the folders ordered by their name:
+Following query returns the cars ordered by their name:
 
 <tab category="querying" article="query-ordering" example="lowestToHighest" />
 
@@ -33,18 +33,18 @@ The next example query returns the same content as the above one but in reverse 
 
 # Order by multiple fields
 
-Following query example shows how to order results by multiple fields, in this case folders by their name and index fields:
+Following query example shows how to order results by multiple fields, in this case cars by their color and name:
 
 <tab category="querying" article="query-ordering" example="byMultipleFields" />
 
 # Order by multiple fields in different directions
 
-In the following examples we combine all the things above with sorting folders first by their Name and then by their index in reverse order.
+In the following examples we combine all the things above with sorting cars first by then by their color in reverse order and the name in ascending order.
 
 <tab category="querying" article="query-ordering" example="multipleFieldsAndDirections" />
 
 # Order by date
 
-Ordering content items by their creation or last modification date is one of the most common query types. Let's see how you can order the files in a folder by the files' last modification:
+Ordering cars by their `StartingDate` field:
 
 <tab category="querying" article="query-ordering" example="byDate" />

@@ -8,11 +8,11 @@ metaDescription: "CheckAllowedChildTypesOfFolders"
 - Method: **GET** or optionally POST.
 
 Checks all containers in the requested subtree and returns all paths where AllowedChildTypes is empty.
- 
+
 
  The response is a list of content paths where AllowedChildTypes is empty categorized by content type names.
  Here is an annotated example:
- ``` 
+ ```
  {
    "Domain": [              // ContentType name
      "/Root/...",           // Path1

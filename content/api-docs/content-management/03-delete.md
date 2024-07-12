@@ -24,13 +24,13 @@ Deleting a content is an http `DELETE` request under the hood. You can call it b
 
 ## Delete a single content
 
-The following example shows you how to delete a folder:
+The following example shows you how to delete a car:
 
 <tab category="content-management" article="delete" example="deleteContent" />
 
 ## Delete multiple content at once
 
-With the next example you can remove a bunch of documents at once:
+With the next example you can remove a bunch of content at once:
 
 <tab category="content-management" article="delete" example="deleteMultipleContent" />
 

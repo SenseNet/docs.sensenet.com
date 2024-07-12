@@ -5,10 +5,10 @@
  * file property should come from a file input
  */
 const result = await repository.upload.file({
-  parentPath: "/Root/Content/IT/Document_Library",
+  parentPath: "/Root/Content/Documents",
   file,
-  fileName: "sampledata.xlsx",
-  binaryPropertyName: "Binary",
+  fileName: "MyFile.txt",
+  binaryPropertyName: "File",
   overwrite: false,
 });
 ```

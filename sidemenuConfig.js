@@ -55,12 +55,15 @@ const sideMenuConfig = {
       "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
-      "/tutorials/webhooks"
+      "/tutorials/webhooks",
+      "/tutorials/maintenance"
     ],
     "collapsedNav": [
       "/tutorials/authentication",
       "/tutorials/content",
       "/tutorials/content-types",
+      "/tutorials/webhooks",
+      "/tutorials/maintenance"
     ],
   },
   guides: {
