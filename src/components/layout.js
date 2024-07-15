@@ -166,7 +166,7 @@ const Layout = ({ children, location }) => {
         <Content>
           <MaxWidth>{children}</MaxWidth>
         </Content>
-        <RightSideBarWidth className={'hiddenMobile'}>
+        <RightSideBarWidth className={'hideTableOfContents'}>
           <RightSidebar location={location} />
         </RightSideBarWidth>
       </Wrapper>
