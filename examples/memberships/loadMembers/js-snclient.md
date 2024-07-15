@@ -1,10 +1,9 @@
 ```javascript
-const response = await repository.load({
-  idOrPath: '/Root/IMS/Public/developers',
+const result = await repository.load({
+  idOrPath: '/Root/IMS/Public/Developers',
   oDataOptions: {
     select: ['Members/LoginName'],
     expand: ['Members']
   }
 })
-const { Members } = response.d
 ```
