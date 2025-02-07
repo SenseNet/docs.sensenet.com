@@ -4,51 +4,87 @@ metaTitle: "sensenet Admin-ui - Webhooks"
 metaDescription: "A quick overview about webhooks in sensenet"
 ---
 
-> Webhooks are essential tools in a modern enterprise development scenario, when we work in an environment where many micro-services have to connect to each other.
-> Webhooks let developers react to events that may happen inside a service - but without having to execute code directly inside that service.
+> Webhooks are essential tools in a modern enterprise development scenario, especially when multiple microservices need to communicate efficiently.
+> They allow developers to react to events occurring within a service without executing code directly inside that service.
 
-To learn the basic concepts of webhooks in sensenet, please [visit this article](/concepts/webhooks).
+To understand the basic concepts of webhooks in sensenet, please refer to [this article](/concepts/webhooks).
 
-## Webhook subscriptions
+## Webhook Subscriptions
 
-The admin ui of sensenet allows you to subscribe to webhooks and see or edit the already created subscriptions under **Settings / Webhooks**.
+The sensenet admin UI allows you to manage webhook subscriptions under **Settings / Webhooks**.
+
+### Viewing and Managing Webhooks
+
+On the main page, you can see existing webhook subscriptions. Since everything in sensenet is treated as content, webhook subscriptions can be viewed, edited, or deleted like any other content type.
 
 ![Webhooks list](../img/webhooks_list.png "Webhooks list")
 
-On the main page you can see the existing subscriptions. Since everything is a content in sensenet you can see/edit/delete webhook subscriptions like any other content.
+### Webhook Subscription Properties
 
-![Webhooks actions](../img/webhooks_actions.png "Webhooks actions")
+When browsing or editing a webhook subscription, you will find the following fields:
 
- The browse and edit view is a little bit different than in case of other contents:
+| Property      | Description |
+|--------------|-------------|
+| **Status**   | Temporarily suspend a webhook by switching it off in the list. |
+| **Name**     | The name of the webhook subscription. |
+| **HTTP Method** | Choose the HTTP method (GET, POST, PUT, etc.) to use when calling the target service. |
+| **URL**      | The endpoint to send the webhook request when an event is triggered. |
+| **Triggers** | Define which content types and event triggers should activate the webhook. |
+| **Headers**  | Specify custom HTTP headers to include in the request. |
+| **Payload**  | The data payload sent when an event is triggered. |
 
- **Status**: It is possible to temporarily suspend a subscription by switching it off in the list.
+#### Example: Creating a Webhook Subscription
 
- **Name**: The name of your webhook subscription
+1. Navigate to **Settings / Webhooks** in the admin UI.
+2. Click **Create New Webhook Subscription**.
+3. Configure the webhook by setting:
+   - **Name**: `NewContentWebhook`
+   - **URL**: `https://your-service.com/webhook-handler`
+   - **HTTP Method**: `POST`
+   - **Triggers**: Monitor `Documents` for `Created` events.
+   - **Headers**: Add `Authorization: Bearer <your-token>` if required.
+   - **Payload**: Include relevant data, e.g., `{"contentId": "{Id}", "title": "{Name}"}`
+4. Save the webhook and test it manually (explained below).
 
- **Http method**: sensenet offers you to choose the HTTP method to use when calling the target service.
+## Webhook Templates
 
- **Url**: This is the URL of the service to call when an event triggers the webhook.
+sensenet provides built-in webhook templates for popular service providers like Netlify and Heroku. Each template includes predefined fields and logic required for sending notifications to external services.
 
- ![Webhooks edit1](../img/webhooks_edit1.png "Webhooks edit1")
+Check the available webhook templates in the [integrations documentation](/integrations/webhook).
 
- **Triggers**: It contains a container where you want to monitor content items and one or more specific content types and event triggers.
+![Webhook templates](../../integrations/img/netlify-webhook-template.png "Webhook templates")
 
- **Headers**: You have the option to add custom HTTP headers to the request.
+## Triggering a Webhook Manually
 
- ![Webhooks edit2](../img/webhooks_edit2.png "Webhooks edit2")
+You can manually trigger a webhook to validate its configuration:
 
-**Payload**: This is the data we send when an event is triggered
+1. Open the **webhooks list**.
+2. Select the webhook you want to test.
+3. Open the **command palette** using `CTRL+SHIFT+P`.
+4. Search for `FireWebHook`.
+5. Choose an action (based on parameters like path or ID).
+6. Add the required parameters and execute the action.
 
- ![Webhooks edit3](../img/webhooks_edit3.png "Webhooks edit3")
+## Testing Webhooks
 
-To learn how can you subscribe to webhooks and how can you handle the requests sensenet makes [visit this article](/tutorials/webhooks).
+### Using Beeceptor
 
-## Webhook templates
+Beeceptor allows you to test webhook calls without setting up a server. To test your webhook:
 
-sensenet provides you some built-in webhook templates to work with your favorite other service providers like Netlify or Heroku. Every template is a specific webhook subscription content with some custom fields and background logic that are needed to be filled and made when you send notifications to the related external service. Check the currently available webhook templates in the [integrations docs](/integrations/webhook).
+1. Go to [Beeceptor](https://beeceptor.com/).
+2. Create a new endpoint (e.g., `https://mywebhook.beeceptor.com`).
+3. Update your sensenet webhook URL to the Beeceptor endpoint.
+4. Trigger the webhook and inspect the received request in Beeceptor's dashboard.
 
- ![Webhook templates](../../integrations/img/netlify-webhook-template.png "Webhook templates")
+### Using Webhook.site
 
-## Trigger a webhook manually
+Webhook.site is another alternative for testing incoming webhook requests:
 
-It is possible to trigger webhooks manually to try out if all the settings fit your needs. Select the webhook in the webhooks list and open command palette search with CTRL+SHIFT+P. Search for the *FireWebHook* and choose an action from the list based on what parameters you want to test with (path or id). Add the required parameters and execute the action.
+1. Open [Webhook.site](https://webhook.site/).
+2. Copy the unique generated URL.
+3. Configure your sensenet webhook to send data to this URL.
+4. Trigger the webhook and view the request details in real time.
+
+These tools help you debug webhook payloads and ensure your configuration works before integrating with production services.
+
+For more details on subscribing to webhooks and handling incoming requests in sensenet, refer to [this tutorial](/tutorials/webhooks).
