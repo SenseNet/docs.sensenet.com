@@ -1,0 +1,38 @@
+# docker-compose.yml – local development helper
+#
+# Use this to preview the documentation site locally with the same Docker image
+# that runs in production.
+#
+# Quick start:
+#   1. cp .env.example .env
+#   2. Fill in any API keys you want to test (all are optional)
+#   3. docker compose build   # gatsby build runs here (takes a few minutes)
+#   4. docker compose up
+#   5. Open http://localhost:9000
+#
+# Notes:
+#   • The Gatsby build runs inside the Docker build step (multi-stage).
+#     The published image is a minimal nginx container with only the static
+#     files – no Node, no source code, no secrets.
+#     Docker Compose automatically reads .env from the project root and passes
+#     the declared args to `docker build` – no manual --build-arg needed.
+#   • After changing content or .env values, rebuild: docker compose build
+#   • To force a full rebuild:  docker compose build --no-cache
+#   • To stop and remove containers:  docker compose down
+
+services:
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # Docker Compose reads these values from the .env file in the project root
+      # and passes them to `docker build --build-arg` automatically.
+      args:
+        GATSBY_ALGOLIA_APP_ID: ${GATSBY_ALGOLIA_APP_ID:-}
+        GATSBY_ALGOLIA_SEARCH_KEY: ${GATSBY_ALGOLIA_SEARCH_KEY:-}
+        GATSBY_ALGOLIA_ADMIN_KEY: ${GATSBY_ALGOLIA_ADMIN_KEY:-}
+        GOOGLE_TAG_MANAGER_ID: ${GOOGLE_TAG_MANAGER_ID:-}
+        SEGMENT_PRODUCTION_WRITE_KEY: ${SEGMENT_PRODUCTION_WRITE_KEY:-}
+    ports:
+      - "9000:80"
+    restart: unless-stopped

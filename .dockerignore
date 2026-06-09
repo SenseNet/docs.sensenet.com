@@ -1,0 +1,23 @@
+# Dependencies – never copy into image (installed fresh by yarn install)
+node_modules
+
+# Git metadata
+.git
+.gitignore
+
+# CI/CD
+.github
+
+# Local environment files – must NOT be baked into the image
+.env
+.env.*
+
+# Gatsby build/cache output – generated fresh during docker build
+public
+.cache
+
+# Editor / OS artefacts
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
