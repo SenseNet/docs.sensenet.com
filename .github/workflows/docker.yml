@@ -39,7 +39,7 @@ jobs:
       - name: Compute image tags
         id: tags
         run: |
-          IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/docs.sensenet.com"
+          IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/sn-docs"
 
           COMMIT_DATE=$(git log -1 --format=%cd --date=format:'%Y%m%d')
           SHORT_SHA=$(git rev-parse --short HEAD)
