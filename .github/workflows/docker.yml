@@ -1,0 +1,84 @@
+name: Build and push Docker image
+
+on:
+  # Automatic builds on protected branches
+  push:
+    branches:
+      - master
+      - develop
+  # Manual trigger from any branch
+  workflow_dispatch:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # ── Compute image tags ────────────────────────────────────────────────
+      # Versioned tag:  YYYYMMDD-<short-sha>   (idempotent – same commit always
+      #                                          produces the same tag)
+      # Named tag:
+      #   master branch            → latest
+      #   develop branch           → preview
+      #   other branch (manual)    → sanitized branch name
+      - name: Compute image tags
+        id: tags
+        run: |
+          IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/docs.sensenet.com"
+
+          COMMIT_DATE=$(git log -1 --format=%cd --date=format:'%Y%m%d')
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          VERSION_TAG="${COMMIT_DATE}-${SHORT_SHA}"
+
+          BRANCH="${{ github.ref_name }}"
+
+          if [ "$BRANCH" = "master" ]; then
+            NAMED_TAG="latest"
+          elif [ "$BRANCH" = "develop" ]; then
+            NAMED_TAG="preview"
+          else
+            # Sanitize: replace slashes and any non-[a-zA-Z0-9._-] with hyphens,
+            # strip leading/trailing hyphens or dots, truncate to 128 chars.
+            NAMED_TAG=$(
+              echo "$BRANCH" \
+              | tr '/' '-' \
+              | sed 's/[^a-zA-Z0-9._-]/-/g' \
+              | sed 's/^[-.]*//; s/[-.]*$//' \
+              | cut -c1-128
+            )
+          fi
+
+          echo "tags=${IMAGE}:${NAMED_TAG},${IMAGE}:${VERSION_TAG}" >> "$GITHUB_OUTPUT"
+          echo "named_tag=${NAMED_TAG}"    >> "$GITHUB_OUTPUT"
+          echo "version_tag=${VERSION_TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.tags.outputs.tags }}
+          build-args: |
+            GATSBY_ALGOLIA_APP_ID=${{ secrets.GATSBY_ALGOLIA_APP_ID }}
+            GATSBY_ALGOLIA_SEARCH_KEY=${{ secrets.GATSBY_ALGOLIA_SEARCH_KEY }}
+            GATSBY_ALGOLIA_ADMIN_KEY=${{ secrets.GATSBY_ALGOLIA_ADMIN_KEY }}
+            GOOGLE_TAG_MANAGER_ID=${{ secrets.GOOGLE_TAG_MANAGER_ID }}
+            SEGMENT_PRODUCTION_WRITE_KEY=${{ secrets.SEGMENT_PRODUCTION_WRITE_KEY }}
+          # Reuse GitHub Actions cache to speed up repeated builds
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
